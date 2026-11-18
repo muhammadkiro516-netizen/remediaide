@@ -17,7 +17,7 @@ angka kunci (dengan path sumbernya), masalah, dan langkah berikutnya.
 - Kuota GPU Kaggle terpakai minggu ini: 0 jam
 
 ## Blocker (butuh Salman)
-- **M1** token Kaggle dan **M2** setujui aturan MAP → memblokir T03, T11, T23, T31.
+- **M1** token Kaggle → memblokir T03, T23, T31. (M2: lisensi MIT sudah dikonfirmasi; persetujuan aturan cukup bila tombol sudah diklik.)
 - Pertanyaan T00: apakah ada remote GitHub lama yang ingin dihubungkan? (tidak akan push tanpa izin)
 
 ## Angka kunci terbaru

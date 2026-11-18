@@ -29,11 +29,18 @@
       "recorded": "2026-11-18T21:22:47"
     },
     "data/raw/map/LICENSE_NOTE.md": {
-      "source": "written by Claude Code (T11)",
+      "source": "written by Claude Code (T11) + Kaggle Data tab text (M2)",
       "license": "n/a",
-      "size_bytes": 905,
-      "sha256": "9f2d216070bcc52559cbda981808cb2303a6b23df3dfd43df34d1d1045235ba9",
-      "recorded": "2026-11-18T21:24:51"
+      "size_bytes": 2621,
+      "sha256": "9af6dcd2b73a378a937bd59f90e3ce8f169dd932f1df44800fa8d7b0ba36a2df",
+      "recorded": "2026-11-18T21:52:02"
+    },
+    "data/raw/eedi_neurips2020/data.zip": {
+      "source": "https://dqanonymousdata.blob.core.windows.net/neurips-public/data.zip (official Eedi NeurIPS 2020 public blob, Last-Modified 2020-11-19)",
+      "license": "CC BY-NC-ND 4.0",
+      "size_bytes": 656787242,
+      "sha256": "c7f01672360f1adeb3cf9507d72455d7be035bf897e4a167293e8938049800e1",
+      "recorded": "2026-11-18T21:52:03"
     }
   }
 }

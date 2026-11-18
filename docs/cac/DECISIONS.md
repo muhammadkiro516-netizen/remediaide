@@ -25,5 +25,5 @@ Keputusan di bawah ini dikunci sebelum melihat hasil. Perubahan hanya boleh lewa
 ## Catatan verifikasi data (diisi Claude Code saat T10–T13)
 - [ ] Nama dan kolom file Eedi sesuai 02_DATA_SPEC? Catat perbedaannya.
 - [ ] Arti PremiumPupil terverifikasi dari paper? (ya/tidak + kutipan halaman)
-- [x] Kolom MAP sesuai? **Ya**, persis `row_id, QuestionId, QuestionText, MC_Answer, StudentExplanation, Category, Misconception` (36.696 baris, 15 soal, 65 target, 35 label). Lisensi: **MIT** menurut kartu HF `kaggle-map/data` dan diskusi HF #2 (lihat `ml/data/raw/map/LICENSE_NOTE.md`). Halaman Kaggle belum terbaca (JS); dicek visual saat M2.
+- [x] Kolom MAP sesuai? **Ya**, persis `row_id, QuestionId, QuestionText, MC_Answer, StudentExplanation, Category, Misconception` (36.696 baris, 15 soal, 65 target, 35 label). Lisensi: **MIT** menurut kartu HF `kaggle-map/data` dan diskusi HF #2 (lihat `ml/data/raw/map/LICENSE_NOTE.md`). Tab Data Kaggle dicek Salman (M2): MIT, teks disalin ke LICENSE_NOTE.md.
 - [ ] Persentase confidence kosong di Eedi T3&4: ____
