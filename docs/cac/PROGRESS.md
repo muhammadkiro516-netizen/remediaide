@@ -17,7 +17,7 @@ angka kunci (dengan path sumbernya), masalah, dan langkah berikutnya.
 - Kuota GPU Kaggle terpakai minggu ini: 0 jam
 
 ## Blocker (butuh Salman)
-- **M1** token Kaggle → memblokir T03, T23, T31. (M2: lisensi MIT sudah dikonfirmasi; persetujuan aturan cukup bila tombol sudah diklik.)
+_(tidak ada blocker aktif; M2 opsional: klik persetujuan aturan MAP)_
 - Pertanyaan T00: apakah ada remote GitHub lama yang ingin dihubungkan? (tidak akan push tanpa izin)
 
 ## Angka kunci terbaru
@@ -41,6 +41,17 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 ±1,4 juta baris × SHAP/Optuna; (5) jadwal 9 hari sangat padat, sehingga freeze 25 Nov harus dipatuhi.
 
 ## Log
+
+### 2026-11-18 22:03 — T23 + T31 dikirim ke Kaggle GPU — berjalan
+- Dataset privat: `avlsalmoon/remediaide-ml-src` (src+configs+scripts), `avlsalmoon/remediaide-processed`
+  (map, map_splits, map_candidates, eedi_features_a/b, eedi_splits; privat sesuai D-11).
+- Kernel `avlsalmoon/remediaide-cokt` (full 5 seed; no_conf, no_option 3 seed) dan `avlsalmoon/remediaide-l2-mdeberta`
+  (target 5 fold + category3 5 fold) RUNNING sejak 22:02. Watcher: `ml/scripts/kaggle_watch.sh`.
+- Smoke lokal: CO-KT 2% siswa 3 epoch, loss 2,16→1,93; mDeBERTa 200 contoh 20 step CPU fp32, loss 3,30→3,06, tanpa NaN.
+
+### 2026-11-18 — T03 Kaggle CLI — selesai
+- M1 selesai: `kaggle auth login` (akun `avlsalmoon`). `kaggle competitions list -s map` sukses.
+  File MAP diambil dari mirror HF (T11), jadi daftar file kompetisi tidak diperlukan.
 
 ### 2026-11-18 — T20 B0 di Eedi + E1 (pengembangan, CV) — selesai
 - `scripts/e1_b0.py` → `ml/reports/tables/E1_b0_cv.csv`, `E1_b0_cv_confusion.csv`, `ml/reports/figures/E1_confusion_b0_cv.png`.

@@ -4,7 +4,7 @@ Claude Code mengerjakan semua hal lainnya. Kerjakan item ini, centang, lalu keti
 `M<n> sudah selesai`.
 
 ## Hari ini (Rab 18 Nov) — supaya pekerjaan teknis tidak terhenti
-- [ ] **M1. Token Kaggle**
+- [x] **M1. Token Kaggle** — selesai 18 Nov (OAuth, akun `avlsalmoon`)
   1. Buat atau login akun di kaggle.com, lalu verifikasi nomor HP (Settings → Phone verification). Ini syarat GPU.
   2. Settings → API → **Create New Token**.
   3. Jika yang terunduh `kaggle.json`: pindahkan ke `~/.kaggle/kaggle.json`, lalu jalankan
@@ -15,10 +15,10 @@ Claude Code mengerjakan semua hal lainnya. Kerjakan item ini, centang, lalu keti
   5. **Cara termudah (Kaggle CLI 2.2.5 sudah terpasang di venv):** buka Terminal dan jalankan
      `~/Downloads/remediaide-main/ml/.venv/bin/kaggle auth login`. Ikuti login di browser. Kredensial
      tersimpan lokal; langkah 2–3 tidak perlu. Cek: `~/Downloads/remediaide-main/ml/.venv/bin/kaggle competitions list -s map`.
-- [ ] **M2. Setujui aturan kompetisi MAP:** buka
+- [~] **M2. Setujui aturan kompetisi MAP:** — lisensi MIT dikonfirmasi 18 Nov; `userHasEntered` masih False (tidak memblokir, data MAP lewat dataset privat). buka
   https://www.kaggle.com/competitions/map-charting-student-math-misunderstandings → tab Data/Rules →
   klik "I Understand and Accept" atau "Join". Sambil di sana, lihat tab Data dan catat lisensinya.
-- [ ] **M3. (Hanya jika Claude Code minta)** unduh dataset Eedi manual dari
+- [x] **M3. (Tidak diperlukan — blob resmi terunduh otomatis)** unduh dataset Eedi manual dari
   https://eedi.com/projects/neurips-education-challenge (tombol "Download Eedi Dataset"), lalu taruh file zip
   di `ml/data/raw/eedi_neurips2020/`.
 - [ ] **M4. Surat:** minta surat pengantar penelitian dari kampus ke SMA Advent Tanjung Barat. Tanyakan ke

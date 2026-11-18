@@ -35,7 +35,7 @@ Semua path ML relatif terhadap `ml/`.
   - Jika RAM < 16 GB: semua pandas memakai dtype hemat dan parquet, serta baca kolom seperlunya.
   - Selesai jika: env_report.json ada dan placement tercatat.
 
-- [!] **T03 [S] Kaggle CLI** — dep: T01 · butuh **M1**, **M2**
+- [x] **T03 [S] Kaggle CLI** — dep: T01 · butuh **M1**, **M2**
   - **[!] 18 Nov: belum terautentikasi, menunggu M1/M2.**
   - `kaggle competitions list -s map-charting`. Gagal → tandai `[!]`, tulis blocker M1/M2, lanjut T10.
   - Sukses → `kaggle competitions files -c map-charting-student-math-misunderstandings`, lalu catat daftar file.
@@ -115,7 +115,7 @@ Semua path ML relatif terhadap `ml/`.
   - Selesai jika: tabel E2 CV + gambar draft, model fold tersimpan, dan SHAP global
     (`reports/figures/L1_shap_beeswarm.png`).
 
-- [ ] **T23 [S] M1 CO-KT** — dep: T15, T03
+- [~] **T23 [S] M1 CO-KT** — dep: T15, T03
   - `src/remediaide_ml/l1/cokt.py` (03 §1, M1) + `scripts/train_cokt.py`.
   - Smoke test lokal (1% siswa, 1 epoch) harus lulus sebelum push ke Kaggle.
   - Upload dataset privat (`remediaide-processed`, `remediaide-ml-src`), lalu buat kernel `kaggle/kernels/cokt/`.
@@ -139,7 +139,7 @@ Semua path ML relatif terhadap `ml/`.
   - Split random (MAP@3) dan per soal (`category3` macro-F1). OOF disimpan.
   - Selesai jika: tabel CV B0 L2 ada.
 
-- [ ] **T31 [S] M1 mDeBERTa di Kaggle** — dep: T30, T03
+- [~] **T31 [S] M1 mDeBERTa di Kaggle** — dep: T30, T03
   - `src/remediaide_ml/l2/encoder.py` + `kaggle/kernels/l2_mdeberta/`. Smoke test lokal (200 contoh, 20 step).
   - 5 fold random (target, masking kandidat) + 5 fold per soal (`category3`). Simpan OOF logits.
     Cek NaN pada fp16; jika ada → fp32 dan catat di DECISIONS.
