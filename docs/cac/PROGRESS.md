@@ -18,7 +18,7 @@ angka kunci (dengan path sumbernya), masalah, dan langkah berikutnya.
 ## Langkah lanjut untuk sesi berikutnya (`/lanjut`) — diperbarui 19 Nov 00:05
 Selesai: T22 (LightGBM), T23 (CO-KT). Berjalan: LightGBM 5 seed (nohup, `ml/runs/logs/l1_lgbm_seeds.log`, ±20 menit) dan
 Kaggle `avlsalmoon/remediaide-l2-mdeberta` (perkiraan selesai 02:00–04:00).
-1. **T24 keputusan D-15:** setelah `runs/20261118-2205_l1_lgbm/oof_b_ens5.parquet` ada, ubah `LGBM`/kolom di
+1. ~~T24 keputusan D-15~~ **SELESAI → D-18: CO-KT ens5 untuk kuadran, LightGBM ens5 untuk penjelasan/fallback.** (catatan lama:) setelah `runs/20261118-2205_l1_lgbm/oof_b_ens5.parquet` ada, ubah `LGBM`/kolom di
    `scripts/l1_select.py` agar membandingkan CO-KT ens5 vs LightGBM ens5 (baris sama). Hasil 1-seed:
    `reports/tables/L1_model_selection.csv` (CO-KT lebih baik: salah kelompok −0,012 [−0,014; −0,010]). Seri → LightGBM.
    Jika CO-KT dipilih: penjelasan (SHAP) tetap dari LightGBM sebagai model penjelas — **wajib diungkap** di laporan.
@@ -30,7 +30,10 @@ Kaggle `avlsalmoon/remediaide-l2-mdeberta` (perkiraan selesai 02:00–04:00).
 4. T24 artefak `models/`, lalu T46 `scripts/final_eval.py` (buka test sekali), T47, P5.
 
 ## Blocker (butuh Salman)
-_(tidak ada blocker aktif; M2 opsional: klik persetujuan aturan MAP)_
+- **M1b (19 Nov 00:48): login Kaggle kedaluwarsa.** Jalankan lagi di Terminal:
+  `~/Downloads/remediaide-main/ml/.venv/bin/kaggle auth login --force`. Kernel mDeBERTa tetap jalan di server; hanya
+  status/unduhan output yang tertahan.
+- M2 opsional: klik persetujuan aturan MAP.
 - Pertanyaan T00: apakah ada remote GitHub lama yang ingin dihubungkan? (tidak akan push tanpa izin)
 
 ## Angka kunci terbaru
@@ -54,6 +57,13 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 ±1,4 juta baris × SHAP/Optuna; (5) jadwal 9 hari sangat padat, sehingga freeze 25 Nov harus dipatuhi.
 
 ## Log
+
+### 2026-11-19 00:50 — T24 keputusan model L1 (D-18) — sebagian
+- LightGBM ensemble 5 seed (parameter Optuna T22, tanpa tuning ulang): `ml/runs/20261118-2205_l1_lgbm/oof_b_ens5.parquet`,
+  model `models_seed<s>_*`. Macro-F1 E1 0,465, salah kelompok 0,358 (sumber `ml/reports/tables/L1_model_selection.csv`).
+- CO-KT ens5 vs LightGBM ens5 pada baris sama: salah kelompok −0,011 [−0,013; −0,009], macro-F1 +0,014 [+0,011; +0,018] → D-18.
+- Sisa T24: ekspor artefak ke `models/` (CO-KT bobot ada di Kaggle output? kernel hanya menyimpan OOF — **perlu latih ulang CO-KT
+  produksi** pada seluruh siswa CV untuk 5 seed, atau 1 seed jika kuota terbatas; catat), notebook 03/04.
 
 ### 2026-11-18 23:55 — T22 B2 LightGBM + Optuna + E2 — selesai
 - Run `ml/runs/20261118-2205_l1_lgbm/` (±1 j 49 m lokal): Optuna 50 trial × 3 (a, b 4 kelas, b biner) di fold 0, 5 fold,

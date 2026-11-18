@@ -19,7 +19,7 @@ q = {"P": 0, "L": 1, "M": 2, "T": 3}
 parts = [pd.read_parquet(f, columns=["AnswerId", *PQ]).dropna().groupby("AnswerId").first()
          for f in sorted(COKT.glob("oof_full_seed*.parquet"))]
 ck = pd.concat(parts, keys=range(len(parts))).groupby(level="AnswerId").mean()
-lb = pd.read_parquet(LGBM / "oof_b.parquet").set_index("AnswerId")
+lb = pd.read_parquet(LGBM / "oof_b_ens5.parquet").set_index("AnswerId")
 meta = pd.read_parquet(PROCESSED / "eedi_features_b.parquet", columns=["AnswerId", "UserId", "has_conf", "fut_quadrant"]).set_index("AnswerId")
 d = meta[meta.has_conf & meta.fut_quadrant.notna()].join(ck, how="inner").join(lb[["p4_P", "p4_L", "p4_M", "p4_T"]], how="inner")
 y = d.fut_quadrant.astype(str).map(q).to_numpy()
@@ -42,6 +42,6 @@ for name, f, boots in (("salah kelompok", S.cm_misgroup, dm), ("macro-F1", S.cm_
     lo, hi = np.quantile(boots, [.025, .975])
     rows.append({"metrik": name, "cokt": f(cc.sum(0)), "lgbm": f(cl.sum(0)), "selisih_cokt_minus_lgbm": f(cc.sum(0)) - f(cl.sum(0)),
                  "ci_lo": lo, "ci_hi": hi, "seri": bool(lo <= 0 <= hi), "n_baris": len(d), "n_siswa": n,
-                 "catatan": f"CO-KT ensemble {len(parts)} seed vs LightGBM 1 seed"})
+                 "catatan": f"CO-KT ensemble {len(parts)} seed vs LightGBM ensemble 5 seed"})
 pd.DataFrame(rows).to_csv(TABLES / "L1_model_selection.csv", index=False)
 print(json.dumps(rows, indent=2, default=float))

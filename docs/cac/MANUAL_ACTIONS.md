@@ -26,6 +26,9 @@ Claude Code mengerjakan semua hal lainnya. Kerjakan item ini, centang, lalu keti
 - [ ] **M5. Sekolah:** hubungi SMA Advent Tanjung Barat. Minta 2–3 kelas X (30 menit per kelas) dan
   2 guru matematika sebagai pelabel (±2 jam total per guru).
 
+## Mendesak (19 Nov)
+- [ ] **M1b. Login ulang Kaggle** (token OAuth kedaluwarsa): `~/Downloads/remediaide-main/ml/.venv/bin/kaggle auth login --force`.
+
 ## Minggu ini
 - [ ] **M6. Panitia:** simpan bukti izin pemakaian konsep RemediAide. Minta rulebook revisi terbaru dan tanyakan
   format pengumpulan dataset (link, unggah, batas ukuran) dan apakah ada laporan wajib.
