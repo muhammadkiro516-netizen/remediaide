@@ -12,8 +12,8 @@ angka kunci (dengan path sumbernya), masalah, dan langkah berikutnya.
   `avlsalmoon/remediaide-l2-mdeberta` (unduh output: `kaggle kernels output avlsalmoon/<k> -p runs/<id>/kaggle_output`).
 - **Kode siap, menunggu hasil di atas:** `scripts/l3_eval.py` (T40–T42; uji coba `tables/E5_l3_dev_b1.json`),
   `src/remediaide_ml/diagnose.py` (T43, 6 tes kontrak), `l1/explain.py` (T24), `l3/*` (7 tes).
-- Hari tersisa menuju submit internal (Jum 27 Nov): 9
-- Kuota GPU Kaggle terpakai minggu ini: 0 jam
+- Hari tersisa menuju submit internal (Jum 27 Nov): 9 (hari ke-1)
+- Kuota GPU Kaggle terpakai minggu ini: 1 j 46 m / 30 j (dicek Salman 18 Nov ~22:55, 2 kernel paralel = 2 j kuota per jam)
 
 ## Blocker (butuh Salman)
 _(tidak ada blocker aktif; M2 opsional: klik persetujuan aturan MAP)_
