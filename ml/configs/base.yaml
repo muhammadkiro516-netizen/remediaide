@@ -1,0 +1,32 @@
+# Locked project configuration. Changing any value requires a new entry in docs/cac/DECISIONS.md.
+seed: 20261118
+ensemble_seeds: [20261118, 1, 2, 3, 4]
+
+eedi:
+  task: "3_4"                 # NeurIPS 2020 Task 3&4 (948 questions)
+  kc_level: "deepest"         # knowledge component = deepest SubjectId in the question's subject list
+  min_seq_len: 3
+  test_student_frac: 0.20     # pyKT protocol: 20% of students held out as test
+  n_folds: 5                  # 5-fold CV over remaining 80%, grouped by UserId
+  temporal_check: true        # extra robustness split: last 20% of each student's timeline
+  cri_mapping: "half_up"      # confidence_to_cri(): cri>=3 <=> confidence>=50
+  future_window_k: 3          # E1 proxy label window (next k attempts on same KC)
+
+map:
+  splits:
+    random: {n_folds: 5, stratify: "target"}       # comparable with Kaggle
+    by_question: {group: "QuestionId"}             # leave-question-out generalisation
+  restrict_candidates_by_correctness: true          # True_* vs False_* known at inference
+  metric: "map@3"
+
+translation:
+  model: "Helsinki-NLP/opus-mt-en-id"              # Apache-2.0
+  qa_sample: 100
+
+l3:
+  conformal_alpha: 0.10       # 90% coverage target
+  defer_grid: [0.0, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30]
+
+eval:
+  bootstrap_reps: 1000
+  ci: 0.95

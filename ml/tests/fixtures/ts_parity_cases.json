@@ -1,0 +1,10742 @@
+{
+ "words": [
+  {
+   "text": "",
+   "words": 0,
+   "tau": 1
+  },
+  {
+   "text": "   ",
+   "words": 0,
+   "tau": 1
+  },
+  {
+   "text": "Berapakah hasil dari 3/4 + 1/2?",
+   "words": 7,
+   "tau": 3
+  },
+  {
+   "text": "Mana yang lebih besar: 0,25 atau 0,3?",
+   "words": 9,
+   "tau": 4
+  },
+  {
+   "text": "A car travels 60 km in 1.5 hours. What is its average speed in km/h?",
+   "words": 17,
+   "tau": 7
+  },
+  {
+   "text": "Hello, world!!! ... ---",
+   "words": 2,
+   "tau": 1
+  },
+  {
+   "text": "x² + 2x − 3 = 0, tentukan akar-akarnya",
+   "words": 7,
+   "tau": 3
+  },
+  {
+   "text": "one two three four five six seven eight nine ten eleven",
+   "words": 11,
+   "tau": 5
+  },
+  {
+   "text": "naïve café résumé",
+   "words": 5,
+   "tau": 2
+  }
+ ],
+ "items": [
+  {
+   "input": {
+    "itemId": "it0",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 15937,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it1",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 297,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it2",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 13073,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it3",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 264,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it4",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 7308,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it5",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 17927,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it6",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 14222,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it7",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 431,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it8",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 18210,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it9",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 6955,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it10",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 14609,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it11",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 2794,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it12",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 1937,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it13",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 3453,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it14",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 5497,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it15",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 15475,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it16",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 11845,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it17",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 3948,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it18",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 13886,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it19",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 7476,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it20",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 13758,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it21",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 7424,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it22",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 14393,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it23",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 5758,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it24",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 8599,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it25",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 13314,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it26",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 10051,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it27",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 13798,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it28",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 10496,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it29",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 18150,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it30",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 12751,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it31",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 17776,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it32",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 10482,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it33",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 16260,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it34",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 19482,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it35",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 15463,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it36",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 1469,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it37",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 5566,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it38",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 17113,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it39",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 6191,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it40",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 671,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it41",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 11775,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it42",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 18814,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it43",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 8965,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it44",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 16353,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it45",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 3030,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it46",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 18356,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it47",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 18740,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it48",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 3532,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it49",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 6819,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it50",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 14962,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it51",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 5851,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it52",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 15527,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it53",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 13558,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it54",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 12822,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it55",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 1535,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it56",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 15170,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it57",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 693,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it58",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 19463,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it59",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 1491,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it60",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 8246,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it61",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 10825,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it62",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 9398,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it63",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 5488,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it64",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 18941,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it65",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 7079,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it66",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 14622,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it67",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 1993,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it68",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 8794,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it69",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 5129,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it70",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 17499,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it71",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 10283,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it72",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 8405,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it73",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 2223,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it74",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 5402,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it75",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 19058,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it76",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 834,
+    "tauMinMs": 1000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it77",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 4000,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it78",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 16188,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it79",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 1488,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it80",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 1378,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it81",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 14062,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it82",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 18125,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it83",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 6666,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it84",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 724,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it85",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 17098,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it86",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 3563,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it87",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 17511,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it88",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 10892,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it89",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 17859,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it90",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 13013,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it91",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 14293,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it92",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 8925,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it93",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 18706,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it94",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 10039,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it95",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 6396,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it96",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 8530,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it97",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 9423,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it98",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 6690,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it99",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 17934,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it100",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 631,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it101",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 13883,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it102",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 17007,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it103",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 17663,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it104",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 10246,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it105",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 6521,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it106",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 18213,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it107",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 8551,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it108",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 2249,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it109",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 19757,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it110",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 7683,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it111",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 469,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it112",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 1563,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it113",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 15429,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it114",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 2949,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it115",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 4747,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it116",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 13877,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it117",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 17998,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it118",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 10953,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it119",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 10459,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it120",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 18131,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it121",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 13514,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it122",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 5656,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it123",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 14018,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it124",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 19303,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it125",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 19939,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it126",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 19949,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it127",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 11175,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it128",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 15059,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it129",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 9126,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it130",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 9722,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it131",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 14115,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it132",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 432,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it133",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 12190,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it134",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 13859,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it135",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 8134,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it136",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 3533,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it137",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 15599,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it138",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 3029,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it139",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 17164,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it140",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 5817,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it141",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 11899,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it142",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 10479,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it143",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 341,
+    "tauMinMs": 1000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it144",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 12439,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it145",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 15285,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it146",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 7299,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it147",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 9480,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it148",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 4852,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it149",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 967,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it150",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 9156,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it151",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 15551,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it152",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 11474,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it153",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 5912,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it154",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 15116,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it155",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 15336,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it156",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 2412,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it157",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 17636,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it158",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 13129,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it159",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 9134,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it160",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 17340,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it161",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 1465,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it162",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 10648,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it163",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 341,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it164",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 8549,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it165",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 17830,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it166",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 17567,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it167",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 2441,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it168",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 10625,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it169",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 290,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it170",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 8803,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it171",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 11440,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it172",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 12098,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it173",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 18373,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it174",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 16986,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it175",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 12370,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it176",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 4251,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it177",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 2536,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it178",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 11705,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it179",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 8484,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it180",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 19917,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it181",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 256,
+    "tauMinMs": 1000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it182",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 12637,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it183",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 5098,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it184",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 19149,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it185",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 866,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it186",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 10739,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it187",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 12113,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it188",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 15078,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it189",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 4521,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it190",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 15594,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it191",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 2244,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it192",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 16424,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it193",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 9343,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it194",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 6737,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it195",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 14583,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it196",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 2228,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it197",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 9224,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it198",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 18747,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it199",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 8697,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it200",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 14998,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it201",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 6346,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it202",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 19365,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it203",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 14570,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it204",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 9458,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it205",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 19123,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it206",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 4416,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it207",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 10489,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it208",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 11369,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it209",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 439,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it210",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 4650,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it211",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 3604,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it212",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 3721,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it213",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 254,
+    "tauMinMs": 1000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it214",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 3998,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it215",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 17750,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it216",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 13971,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it217",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 17976,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it218",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 5184,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it219",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 4973,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it220",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 4921,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it221",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 8145,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it222",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 11058,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it223",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 11527,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it224",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 2692,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it225",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 2706,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it226",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 18782,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it227",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 5909,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it228",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 15862,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it229",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 9414,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it230",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 6887,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it231",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 9969,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it232",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 7599,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it233",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 3688,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it234",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 3478,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it235",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 11473,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it236",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 13356,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it237",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 11410,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it238",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 16567,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it239",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 17646,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it240",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 19182,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it241",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 19191,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it242",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 12797,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it243",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 12591,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it244",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 4943,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it245",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 14088,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it246",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 16282,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it247",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 17167,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it248",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 4985,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it249",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 14781,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it250",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 2371,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it251",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 15564,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it252",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 19620,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it253",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 5711,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it254",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 5736,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it255",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 3287,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it256",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 19185,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it257",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 3946,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it258",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 7150,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it259",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 9658,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it260",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 18454,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it261",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 5293,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it262",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 13329,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it263",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 3766,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it264",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 11264,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it265",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 5602,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it266",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 8239,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it267",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 2915,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it268",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 2828,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it269",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 12125,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it270",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 19177,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it271",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 1751,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it272",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 18474,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it273",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 12922,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it274",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 11555,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it275",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 14291,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it276",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 17821,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it277",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 3325,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it278",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 12940,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it279",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 822,
+    "tauMinMs": 1000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it280",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 12027,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it281",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 8563,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it282",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 17791,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it283",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 6829,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it284",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 12143,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it285",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 18705,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it286",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 8651,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it287",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 9225,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it288",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 9548,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it289",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 9681,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it290",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 15617,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it291",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 9634,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it292",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 10501,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it293",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 10169,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it294",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 4552,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it295",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 9582,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it296",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 10569,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it297",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 11238,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it298",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 14885,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it299",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 18209,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it300",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 8858,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it301",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 16883,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it302",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 7242,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it303",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 19132,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it304",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 17967,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it305",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 10228,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it306",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 14092,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it307",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 11385,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it308",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 10066,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it309",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 8009,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it310",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 4156,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it311",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 7523,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it312",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 5754,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it313",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 6846,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it314",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 17796,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it315",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 10476,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it316",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 8666,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it317",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 10051,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it318",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 2183,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it319",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 7054,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it320",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 19180,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it321",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 18765,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it322",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 10441,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it323",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 12352,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it324",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 7957,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it325",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 8770,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it326",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 10778,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it327",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 17357,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it328",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 11115,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it329",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 5702,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it330",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 14656,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it331",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 8814,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it332",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 15162,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it333",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 12817,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it334",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 8302,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it335",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 2514,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it336",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 17034,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it337",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 11705,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it338",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 18067,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it339",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 10409,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it340",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 13813,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it341",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 11139,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it342",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 431,
+    "tauMinMs": 1000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it343",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 9989,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it344",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 14169,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it345",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 18391,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it346",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 8662,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it347",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 8930,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it348",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 8387,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it349",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 3486,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it350",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 8193,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it351",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 19679,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it352",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 15417,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it353",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 16917,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it354",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 7834,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it355",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 5847,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it356",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 8919,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it357",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 13986,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it358",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 2940,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it359",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 1528,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it360",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 8294,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it361",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 19407,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it362",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 11158,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it363",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 3996,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it364",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 14577,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it365",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 1467,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it366",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 2469,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it367",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 11064,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it368",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 18039,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it369",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 11928,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it370",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 12419,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it371",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 3741,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it372",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 6572,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it373",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 4566,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it374",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 7653,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it375",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 7461,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it376",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 3611,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it377",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 12903,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it378",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 6830,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it379",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 12900,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it380",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 13616,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it381",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 16071,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it382",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 1847,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it383",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 12337,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it384",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 7466,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it385",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 16650,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it386",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 6647,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it387",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 86,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it388",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 9550,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it389",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 9549,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it390",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 19658,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it391",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 12742,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it392",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 3761,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it393",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 17887,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it394",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 9282,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it395",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 11208,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it396",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 639,
+    "tauMinMs": 1000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it397",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 7188,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it398",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 18695,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it399",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 17415,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it400",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 12968,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it401",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 658,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it402",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 463,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it403",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 2307,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it404",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 647,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it405",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 1345,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it406",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 12001,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it407",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 18677,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it408",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 19228,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it409",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 5885,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it410",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 19048,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it411",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 19034,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it412",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 5702,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it413",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 2180,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it414",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 19606,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it415",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 3452,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it416",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 11923,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it417",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 3246,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it418",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 495,
+    "tauMinMs": 1000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it419",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 15053,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it420",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 807,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it421",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 3315,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it422",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 10738,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it423",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 13599,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it424",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 10194,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it425",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 13053,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it426",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 5344,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it427",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 7806,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it428",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 18765,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it429",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 14166,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it430",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 4905,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it431",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 17221,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it432",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 12319,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it433",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 9024,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it434",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 11941,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it435",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 3532,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it436",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 667,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it437",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 3481,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it438",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 17660,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it439",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 5828,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it440",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 8778,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it441",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 18659,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it442",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 5084,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it443",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 16464,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it444",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 18132,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it445",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 14650,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it446",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 4040,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it447",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 12461,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it448",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 6464,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it449",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 7534,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it450",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 11094,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it451",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 17488,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it452",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 8693,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it453",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 981,
+    "tauMinMs": 1000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it454",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 5912,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it455",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 10122,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it456",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 18494,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it457",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 16072,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it458",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 10549,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it459",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 2268,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it460",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 8283,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it461",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 18916,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it462",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 354,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it463",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 9797,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it464",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 13,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it465",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 19374,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it466",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 4713,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it467",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 8136,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it468",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 13624,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it469",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 1925,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it470",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 950,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it471",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 10574,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it472",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 2427,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it473",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 7142,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it474",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 7187,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it475",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 2867,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it476",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 13232,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it477",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 16703,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it478",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 13314,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it479",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 11177,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it480",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 18615,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it481",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 7418,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it482",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 14609,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it483",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 2687,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it484",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 19958,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it485",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 7015,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it486",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 12459,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it487",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 5134,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it488",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 15615,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it489",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 5030,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it490",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 11693,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it491",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 16511,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it492",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 2020,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it493",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 13386,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it494",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 17646,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it495",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 19256,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it496",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 3626,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it497",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 19439,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it498",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 1650,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it499",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 6024,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it500",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 19113,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it501",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 2407,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it502",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 8721,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it503",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 5344,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it504",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 9312,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it505",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 2263,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it506",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 1909,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it507",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 12115,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it508",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 11449,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it509",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 18775,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it510",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 19127,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it511",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 4127,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it512",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 16298,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it513",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 18567,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it514",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 7407,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it515",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 19265,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it516",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 9129,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it517",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 15272,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it518",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 6152,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it519",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 7783,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it520",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 3913,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it521",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 15431,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it522",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 14645,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it523",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 18104,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it524",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 10681,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it525",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 19988,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it526",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 3171,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it527",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 15635,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it528",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 10255,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it529",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 10307,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it530",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 1069,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it531",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 15169,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it532",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 2494,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it533",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 11542,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it534",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 12095,
+    "tauMinMs": 3000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it535",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 19030,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it536",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 2547,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it537",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 580,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it538",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 2007,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it539",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 13180,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it540",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 7787,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it541",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 13421,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it542",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 4625,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it543",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 11490,
+    "tauMinMs": 8000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it544",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 5655,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it545",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 6262,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it546",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 4576,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it547",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 5321,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it548",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 3884,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it549",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 7138,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it550",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 14761,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it551",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 10837,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it552",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 2235,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it553",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 10503,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it554",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 14015,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it555",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 12101,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it556",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 15613,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it557",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 8323,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it558",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 19946,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it559",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 2764,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it560",
+    "isCorrect": false,
+    "criValue": 5,
+    "responseTimeMs": 6045,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it561",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 19669,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it562",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 19715,
+    "tauMinMs": 8000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it563",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 18623,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it564",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 106,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it565",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 2044,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it566",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 6473,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it567",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 15045,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it568",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 5978,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it569",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 11878,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it570",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 6301,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it571",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 5240,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it572",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 7637,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it573",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 1113,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it574",
+    "isCorrect": true,
+    "criValue": 1,
+    "responseTimeMs": 5123,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6799999999999999,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it575",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 13386,
+    "tauMinMs": 3000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it576",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 4829,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it577",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 6334,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it578",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 16795,
+    "tauMinMs": 5000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it579",
+    "isCorrect": false,
+    "criValue": 3,
+    "responseTimeMs": 14105,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it580",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 3022,
+    "tauMinMs": 8000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it581",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 18188,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it582",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 5659,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it583",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 19434,
+    "tauMinMs": 5000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it584",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 4666,
+    "tauMinMs": 1000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it585",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 15115,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it586",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 15740,
+    "tauMinMs": 3000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it587",
+    "isCorrect": false,
+    "criValue": 4,
+    "responseTimeMs": 13507,
+    "tauMinMs": 1000
+   },
+   "status": "MISKONSEPSI",
+   "ii": 0,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it588",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 19854,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it589",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 17891,
+    "tauMinMs": 8000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it590",
+    "isCorrect": true,
+    "criValue": 3,
+    "responseTimeMs": 13621,
+    "tauMinMs": 5000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it591",
+    "isCorrect": false,
+    "criValue": 1,
+    "responseTimeMs": 16710,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.36,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it592",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 851,
+    "tauMinMs": 3000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it593",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 10102,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it594",
+    "isCorrect": true,
+    "criValue": 4,
+    "responseTimeMs": 490,
+    "tauMinMs": 5000
+   },
+   "status": "INVALID",
+   "ii": 0,
+   "below": true
+  },
+  {
+   "input": {
+    "itemId": "it595",
+    "isCorrect": false,
+    "criValue": 0,
+    "responseTimeMs": 18934,
+    "tauMinMs": 5000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.3,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it596",
+    "isCorrect": true,
+    "criValue": 0,
+    "responseTimeMs": 12935,
+    "tauMinMs": 1000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.6,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it597",
+    "isCorrect": true,
+    "criValue": 2,
+    "responseTimeMs": 16659,
+    "tauMinMs": 8000
+   },
+   "status": "LUCKY_GUESS",
+   "ii": 0.76,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it598",
+    "isCorrect": true,
+    "criValue": 5,
+    "responseTimeMs": 1080,
+    "tauMinMs": 1000
+   },
+   "status": "PAHAM_KONSEP",
+   "ii": 1,
+   "below": false
+  },
+  {
+   "input": {
+    "itemId": "it599",
+    "isCorrect": false,
+    "criValue": 2,
+    "responseTimeMs": 9264,
+    "tauMinMs": 3000
+   },
+   "status": "TIDAK_PAHAM",
+   "ii": 0.42,
+   "below": false
+  }
+ ],
+ "aggs": [
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "INVALID",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "MISKONSEPSI",
+    "TIDAK_PAHAM"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "TIDAK_PAHAM",
+    "INVALID"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "INVALID",
+    "INVALID"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "INVALID",
+    "INVALID"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "PAHAM_KONSEP",
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "INVALID",
+    "TIDAK_PAHAM",
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "INVALID"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "MISKONSEPSI",
+    "LUCKY_GUESS",
+    "INVALID"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "TIDAK_PAHAM",
+    "INVALID"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "INVALID",
+    "PAHAM_KONSEP",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "INVALID",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "TIDAK_PAHAM",
+    "PAHAM_KONSEP",
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "PAHAM_KONSEP"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "MISKONSEPSI",
+    "INVALID",
+    "PAHAM_KONSEP"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "INVALID",
+    "LUCKY_GUESS",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS",
+    "INVALID"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "INVALID"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "PAHAM_KONSEP",
+    "PAHAM_KONSEP",
+    "TIDAK_PAHAM"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM",
+    "INVALID",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "INVALID",
+    "MISKONSEPSI",
+    "LUCKY_GUESS"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "PAHAM_KONSEP",
+    "TIDAK_PAHAM",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": true,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM",
+    "PAHAM_KONSEP",
+    "INVALID"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "PAHAM_KONSEP",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "MISKONSEPSI"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "INVALID"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "PAHAM_KONSEP",
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "INVALID",
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM",
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "LUCKY_GUESS"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "INVALID",
+    "INVALID"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "LUCKY_GUESS",
+    "INVALID",
+    "INVALID"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "TIDAK_PAHAM",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "INVALID",
+    "MISKONSEPSI",
+    "PAHAM_KONSEP"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "PAHAM_KONSEP"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP",
+    "MISKONSEPSI",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "INVALID",
+    "LUCKY_GUESS",
+    "MISKONSEPSI"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "PAHAM_KONSEP",
+    "LUCKY_GUESS",
+    "INVALID"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "INVALID"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "PAHAM_KONSEP",
+    "TIDAK_PAHAM",
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "MISKONSEPSI",
+    "INVALID"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "PAHAM_KONSEP"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "TIDAK_PAHAM",
+    "MISKONSEPSI",
+    "PAHAM_KONSEP"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "PAHAM_KONSEP",
+    "TIDAK_PAHAM"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "TIDAK_PAHAM",
+    "MISKONSEPSI",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "TIDAK_PAHAM",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "INVALID",
+    "INVALID",
+    "LUCKY_GUESS"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "TIDAK_PAHAM",
+    "TIDAK_PAHAM",
+    "MISKONSEPSI"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "LUCKY_GUESS",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "MISKONSEPSI",
+    "MISKONSEPSI",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "TIDAK_PAHAM"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "INVALID",
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "TIDAK_PAHAM",
+    "MISKONSEPSI"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "TIDAK_PAHAM",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "MISKONSEPSI"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "LUCKY_GUESS",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP",
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "LUCKY_GUESS",
+    "INVALID"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "INVALID",
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "INVALID",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "INVALID"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "TIDAK_PAHAM",
+    "MISKONSEPSI",
+    "INVALID"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "PAHAM_KONSEP",
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "INVALID",
+    "INVALID",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "LUCKY_GUESS"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "INVALID"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM",
+    "INVALID",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "LUCKY_GUESS",
+    "INVALID",
+    "INVALID"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "MISKONSEPSI",
+    "TIDAK_PAHAM",
+    "PAHAM_KONSEP"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "MISKONSEPSI",
+    "INVALID",
+    "INVALID"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "INVALID",
+    "TIDAK_PAHAM"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "TIDAK_PAHAM",
+    "INVALID",
+    "MISKONSEPSI"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "MISKONSEPSI",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "MISKONSEPSI",
+    "INVALID"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "MISKONSEPSI",
+    "TIDAK_PAHAM"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "MISKONSEPSI",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM",
+    "MISKONSEPSI"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP",
+    "INVALID"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "TIDAK_PAHAM",
+    "MISKONSEPSI"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "INVALID"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "INVALID",
+    "INVALID",
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP",
+    "INVALID"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "MISKONSEPSI"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "MISKONSEPSI",
+    "PAHAM_KONSEP",
+    "LUCKY_GUESS"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "MISKONSEPSI",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "INVALID",
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "TIDAK_PAHAM",
+    "PAHAM_KONSEP"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "TIDAK_PAHAM",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "PAHAM_KONSEP",
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "PAHAM_KONSEP"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "MISKONSEPSI",
+    "MISKONSEPSI",
+    "TIDAK_PAHAM"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "INVALID"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "INVALID",
+    "MISKONSEPSI",
+    "PAHAM_KONSEP"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "INVALID"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "PAHAM_KONSEP",
+    "INVALID",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "TIDAK_PAHAM",
+    "PAHAM_KONSEP"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM",
+    "MISKONSEPSI",
+    "PAHAM_KONSEP"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "INVALID",
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "INVALID",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "PAHAM_KONSEP",
+    "INVALID",
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "TIDAK_PAHAM",
+    "INVALID"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "PAHAM_KONSEP",
+    "INVALID",
+    "INVALID"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "MISKONSEPSI",
+    "INVALID",
+    "LUCKY_GUESS"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 3
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "PAHAM_KONSEP",
+    "INVALID",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "TIDAK_PAHAM",
+    "PAHAM_KONSEP",
+    "INVALID"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM",
+    "INVALID"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "INVALID",
+    "PAHAM_KONSEP",
+    "INVALID"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "INVALID",
+    "LUCKY_GUESS",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "MISKONSEPSI",
+    "PAHAM_KONSEP",
+    "INVALID"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "PAHAM_KONSEP",
+    "INVALID"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "PAHAM_KONSEP",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "MISKONSEPSI",
+    "INVALID",
+    "PAHAM_KONSEP"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "PAHAM_KONSEP",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "MISKONSEPSI"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM",
+    "PAHAM_KONSEP"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "LUCKY_GUESS",
+    "MISKONSEPSI",
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "INVALID",
+    "INVALID"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "INVALID"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "PAHAM_KONSEP",
+    "MISKONSEPSI",
+    "INVALID"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "LUCKY_GUESS",
+    "INVALID"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "PAHAM_KONSEP",
+    "MISKONSEPSI",
+    "LUCKY_GUESS"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "PAHAM_KONSEP"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "INVALID",
+    "INVALID",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "INVALID"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "MISKONSEPSI",
+    "TIDAK_PAHAM",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "INVALID",
+    "TIDAK_PAHAM",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "INVALID",
+    "TIDAK_PAHAM",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 3
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "MISKONSEPSI",
+    "MISKONSEPSI",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "TIDAK_PAHAM",
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "INVALID",
+    "TIDAK_PAHAM"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "MISKONSEPSI",
+    "PAHAM_KONSEP",
+    "INVALID"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "MISKONSEPSI",
+    "PAHAM_KONSEP",
+    "LUCKY_GUESS"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "INVALID"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "INVALID",
+    "MISKONSEPSI",
+    "LUCKY_GUESS"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP",
+    "INVALID"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "LUCKY_GUESS",
+    "MISKONSEPSI",
+    "PAHAM_KONSEP"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 3
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "INVALID"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "PAHAM_KONSEP"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "INVALID",
+    "INVALID"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP",
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "MISKONSEPSI",
+    "PAHAM_KONSEP",
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "INVALID"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "INVALID"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "PAHAM_KONSEP",
+    "TIDAK_PAHAM",
+    "MISKONSEPSI"
+   ],
+   "final": "PAHAM_KONSEP",
+   "tie": false,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "LUCKY_GUESS"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "MISKONSEPSI",
+    "TIDAK_PAHAM"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 2
+  },
+  {
+   "statuses": [
+    "INVALID",
+    "TIDAK_PAHAM",
+    "MISKONSEPSI",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "INVALID",
+    "LUCKY_GUESS",
+    "MISKONSEPSI"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "INVALID"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [
+    "INVALID"
+   ],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP",
+    "INVALID",
+    "MISKONSEPSI"
+   ],
+   "final": "MISKONSEPSI",
+   "tie": true,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 1
+  },
+  {
+   "statuses": [],
+   "final": "INSUFFICIENT_DATA",
+   "tie": false,
+   "valid": 0
+  },
+  {
+   "statuses": [
+    "PAHAM_KONSEP",
+    "TIDAK_PAHAM",
+    "PAHAM_KONSEP",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": true,
+   "valid": 4
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "TIDAK_PAHAM",
+    "TIDAK_PAHAM"
+   ],
+   "final": "TIDAK_PAHAM",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "TIDAK_PAHAM",
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "INVALID"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 3
+  },
+  {
+   "statuses": [
+    "LUCKY_GUESS",
+    "LUCKY_GUESS",
+    "PAHAM_KONSEP",
+    "MISKONSEPSI"
+   ],
+   "final": "LUCKY_GUESS",
+   "tie": false,
+   "valid": 4
+  }
+ ]
+}

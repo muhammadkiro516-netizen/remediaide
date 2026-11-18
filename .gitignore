@@ -38,3 +38,14 @@ next-env.d.ts
 
 # prisma
 prisma/migrations/
+
+# macOS / zip artifacts
+__MACOSX/
+._*
+
+# ML (rinci di ml/.gitignore) — data tidak pernah masuk git
+ml/.venv/
+ml/data/raw/
+ml/data/interim/
+ml/data/processed/
+ml/data/pilot/
