@@ -50,7 +50,7 @@ def gmm_thresholds(df: pd.DataFrame, item_col: str = "item_id", rt_col: str = "r
         sub = df[df[item_col].isin(small)]
         if words_col and words_col in df:
             bucket = pd.cut(sub[words_col], [-1, 10, 20, 40, 1e9], labels=False)
-            for b, s in sub.groupby(bucket):
+            for _b, s in sub.groupby(bucket):
                 rt = s[rt_col].to_numpy(float)
                 rt = rt[rt > 0]
                 thr = _gmm_threshold(np.log(rt), seed) if len(rt) >= min_n else np.nan

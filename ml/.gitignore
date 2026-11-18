@@ -20,3 +20,5 @@ kaggle/**/output/
 kaggle.json
 .bootstrap/
 *.egg-info/
+kaggle/datasets/
+kaggle/kernels/*/kernel-metadata.json
