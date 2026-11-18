@@ -53,7 +53,7 @@ Semua path ML relatif terhadap `ml/`.
 
 ## P1 — Data (Kam 19 – Jum 20 Nov) · spesifikasi: 02_DATA_SPEC.md
 
-- [~] **T10 [S] Unduh Eedi 2020** — dep: T01
+- [x] **T10 [S] Unduh Eedi 2020** — dep: T01
   - Ikuti 02 §1 (curl halaman → cari href unduhan). Simpan ke `data/raw/eedi_neurips2020/`, ekstrak,
     hitung sha256, dan tulis `data/manifest.json`.
   - Gagal mendapat link → `[!]` + blocker M3. Kerjakan T13 jika MAP tersedia.
@@ -65,7 +65,7 @@ Semua path ML relatif terhadap `ml/`.
   - Catat lisensi di `data/raw/map/LICENSE_NOTE.md` dan update DECISIONS (catatan verifikasi).
   - Selesai jika: train.csv terbaca, kolom diverifikasi, jumlah baris tercatat.
 
-- [ ] **T12 [S] Loader + cleaning Eedi** — dep: T10
+- [x] **T12 [S] Loader + cleaning Eedi** — dep: T10
   - `src/remediaide_ml/data/eedi.py`: `load_raw()`, `build_interim()` sesuai 02 §1 → `data/interim/eedi_t34.parquet`.
   - Tes `tests/test_eedi_loader.py` pada fixture kecil sintetis (tidak memakai data asli).
   - Data card → `reports/tables/data_card_eedi.md`, lalu isi catatan verifikasi DECISIONS (kolom, PremiumPupil,

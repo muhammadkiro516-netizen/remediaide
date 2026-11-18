@@ -42,6 +42,19 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 
 ## Log
 
+### 2026-11-18 — T12 Loader + cleaning Eedi — selesai
+- `data/interim/eedi_t34.parquet` (1.382.727 baris, 4.918 siswa, 948 soal, 57 KC). Data card `ml/reports/tables/data_card_eedi.md`.
+- **Confidence kosong 74,95% baris**; nilai Confidence hanya {0,25,50,75,100}. Baris berkeyakinan: 346.428.
+  Kuadran B0 (baris berkeyakinan): P 57,48%, M 29,20%, T 8,60%, L 4,72%.
+- PremiumPupil = berhak makan siang gratis/pupil premium (arXiv 2007.12061 §2.3), kosong untuk 57% siswa.
+- D-17: gambar soal Eedi tidak boleh dipakai di luar kompetisi NeurIPS → tidak dipakai untuk demo.
+- Tes `tests/test_eedi_loader.py` (4, sintetis) lulus.
+
+### 2026-11-18 — T10 Unduh Eedi 2020 — selesai
+- Halaman eedi.com/projects/neurips-education-challenge 404. Dipakai blob resmi publik
+  `https://dqanonymousdata.blob.core.windows.net/neurips-public/data.zip` (656.787.242 byte, Last-Modified 19 Nov 2020),
+  sha256 `c7f01672…` di `ml/data/manifest.json`. M3 tidak diperlukan.
+
 ### 2026-11-18 — T44 Modul Pengaman — selesai (simulasi saja, bukan hasil)
 - `src/remediaide_ml/guard/rapid_guess.py`: NT10/20/30, GMM 2 komponen per soal (pooled per bucket kata bila < 30 respons),
   τmin B0, `evaluate_flags` (flag rate, akurasi flagged vs unflagged), `agreement` (kappa antarmetode), `simulate`.
