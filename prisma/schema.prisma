@@ -1,0 +1,301 @@
+// Prisma schema file for RemediAide
+// Multi-tenant shared-schema architecture with school_id isolation
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  // DATABASE_URL uses pgbouncer (port 6543) — required for Vercel serverless
+  url       = env("DATABASE_URL")
+  // DIRECT_URL bypasses pgbouncer (port 5432) — required for Prisma migrations
+  // and for connection types that pgbouncer does not support (e.g. LISTEN/NOTIFY)
+  directUrl = env("DIRECT_URL")
+}
+
+// ============================================================================
+// Core Models
+// ============================================================================
+
+model School {
+  id                    String                 @id @default(uuid())
+  name                  String
+  subdomain             String                 @unique
+  createdAt             DateTime               @default(now()) @map("created_at")
+  teachers              Teacher[]
+  classes               Class[]
+  students              Student[]
+  tests                 Test[]
+  exitTicketTokens      ExitTicketToken[]
+  exitTicketSubmissions ExitTicketSubmission[]
+  @@map("schools")
+}
+
+model Teacher {
+  id           String        @id @default(uuid())
+  schoolId     String        @map("school_id")
+  email        String        @unique
+  name         String
+  passwordHash String        @map("password_hash")
+  role         TeacherRole   @default(TEACHER)
+  createdAt    DateTime      @default(now()) @map("created_at")
+  school       School        @relation(fields: [schoolId], references: [id])
+  classes      Class[]
+  tests        Test[]
+  autoWipeLogs AutoWipeLog[]
+  @@map("teachers")
+}
+
+model Class {
+  id           String    @id @default(uuid())
+  schoolId     String    @map("school_id")
+  teacherId    String    @map("teacher_id")
+  name         String
+  grade        String
+  academicYear Int       @map("academic_year")
+  createdAt    DateTime  @default(now()) @map("created_at")
+  school       School    @relation(fields: [schoolId], references: [id])
+  teacher      Teacher   @relation(fields: [teacherId], references: [id])
+  students     Student[]
+  tests        Test[]
+  @@map("classes")
+}
+
+model Student {
+  id             String             @id @default(uuid())
+  classId        String             @map("class_id")
+  schoolId       String             @map("school_id")
+  anonymousLabel String             @unique @map("anonymous_label")
+  createdAt      DateTime           @default(now()) @map("created_at")
+  class          Class              @relation(fields: [classId], references: [id])
+  school         School             @relation(fields: [schoolId], references: [id])
+  responses      Response[]
+  diagnoses      ConceptDiagnosis[]
+  @@map("students")
+}
+
+model Test {
+  id              String       @id @default(uuid())
+  schoolId        String       @map("school_id")
+  classId         String       @map("class_id")
+  teacherId       String       @map("teacher_id")
+  topic           String
+  durationSeconds Int          @default(900) @map("duration_seconds")
+  createdAt       DateTime     @default(now()) @map("created_at")
+  school          School       @relation(fields: [schoolId], references: [id])
+  class           Class        @relation(fields: [classId], references: [id])
+  teacher         Teacher      @relation(fields: [teacherId], references: [id])
+  questions       Question[]
+  sessions        SessionPin[]
+  @@map("tests")
+}
+
+model Question {
+  id                  String             @id @default(uuid())
+  testId              String             @map("test_id")
+  schoolId            String             @map("school_id")
+  templateText        String             @map("template_text")
+  templateAst         Json               @map("template_ast")
+  variableDefinitions Json               @map("variable_definitions")
+  constraints         Json
+  itemOrder           Int                @map("item_order")
+  createdAt           DateTime           @default(now()) @map("created_at")
+  test                Test               @relation(fields: [testId], references: [id])
+  variants            ItemVariant[]
+  diagnoses           ConceptDiagnosis[]
+  @@map("questions")
+}
+
+model ItemVariant {
+  id                String            @id @default(uuid())
+  questionId        String            @map("question_id")
+  variableValues    Json              @map("variable_values")
+  renderedText      String            @map("rendered_text")
+  renderedOptions   Json              @map("rendered_options")
+  correctOptionKey  String            @map("correct_option_key")
+  tauMinSeconds     Int               @map("tau_min_seconds")
+  calibrationStatus CalibrationStatus @default(EXPERT_ESTIMATED) @map("calibration_status")
+  hasPotentialIssue Boolean           @default(false) @map("has_potential_issue")
+  usageStats        Json              @default("{}") @map("usage_stats")
+  createdAt         DateTime          @default(now()) @map("created_at")
+  question          Question          @relation(fields: [questionId], references: [id])
+  responses         Response[]
+  @@map("item_variants")
+}
+
+model SessionPin {
+  id                 String             @id @default(uuid())
+  testId             String             @map("test_id")
+  schoolId           String             @map("school_id")
+  pinCode            String             @unique @map("pin_code")
+  state              SessionState       @default(LOCKED)
+  startedAt          DateTime?          @map("started_at")
+  closedAt           DateTime?          @map("closed_at")
+  pinFallbackEnabled Boolean            @default(false) @map("pin_fallback_enabled")
+  createdAt          DateTime           @default(now()) @map("created_at")
+  test               Test               @relation(fields: [testId], references: [id])
+  responses          Response[]
+  diagnoses          ConceptDiagnosis[]
+  remedialGroups     RemedialGroup[]
+  autoWipeLog        AutoWipeLog?
+  exitTicketTokens   ExitTicketToken[]
+  @@map("session_pins")
+}
+
+model Response {
+  id               String        @id @default(uuid())
+  sessionPinId     String        @map("session_pin_id")
+  studentId        String        @map("student_id")
+  itemVariantId    String        @map("item_variant_id")
+  schoolId         String        @map("school_id")
+  chosenOptionKey  String        @map("chosen_option_key")
+  criValue         Int           @map("cri_value")
+  responseTimeMs   Int           @map("response_time_ms")
+  integrityIndex   Decimal       @map("integrity_index") @db.Decimal(4, 3)
+  isBelowThreshold Boolean       @default(false) @map("is_below_threshold")
+  perItemStatus    PerItemStatus @map("per_item_status")
+  submittedAt      DateTime      @default(now()) @map("submitted_at")
+  session          SessionPin    @relation(fields: [sessionPinId], references: [id])
+  student          Student       @relation(fields: [studentId], references: [id])
+  itemVariant      ItemVariant   @relation(fields: [itemVariantId], references: [id])
+  @@unique([sessionPinId, studentId, itemVariantId])
+  @@map("responses")
+}
+
+model ConceptDiagnosis {
+  id                 String      @id @default(uuid())
+  sessionPinId       String      @map("session_pin_id")
+  studentId          String      @map("student_id")
+  questionId         String      @map("question_id")
+  schoolId           String      @map("school_id")
+  finalStatus        FinalStatus @map("final_status")
+  votingTally        Json        @map("voting_tally")
+  tiebreakerApplied  Boolean     @default(false) @map("tiebreaker_applied")
+  validItemCount     Int         @map("valid_item_count")
+  manuallyOverridden Boolean     @default(false) @map("manually_overridden")
+  diagnosedAt        DateTime    @default(now()) @map("diagnosed_at")
+  session            SessionPin  @relation(fields: [sessionPinId], references: [id])
+  student            Student     @relation(fields: [studentId], references: [id])
+  question           Question    @relation(fields: [questionId], references: [id])
+  @@unique([sessionPinId, studentId, questionId])
+  @@map("concept_diagnoses")
+}
+
+model RemedialGroup {
+  id                String            @id @default(uuid())
+  sessionPinId      String            @map("session_pin_id")
+  schoolId          String            @map("school_id")
+  cognitiveStatus   FinalStatus       @map("cognitive_status")
+  memberLabels      Json              @map("member_labels")
+  prescription      String
+  createdAt         DateTime          @default(now()) @map("created_at")
+  session           SessionPin        @relation(fields: [sessionPinId], references: [id])
+  exitTicketTokens  ExitTicketToken[]
+  @@map("remedial_groups")
+}
+
+model CalibrationConfig {
+  id                         String   @id @default(uuid())
+  minSessionsForCalibrating  Int      @default(5) @map("min_sessions_for_calibrating")
+  minResponsesForCalibrating Int      @default(50) @map("min_responses_for_calibrating")
+  minSessionsForValidated    Int      @default(10) @map("min_sessions_for_validated")
+  minResponsesForValidated   Int      @default(100) @map("min_responses_for_validated")
+  maxStdDevForValidated      Decimal  @default(0.15) @map("max_std_dev_for_validated") @db.Decimal(4, 3)
+  updatedAt                  DateTime @updatedAt @map("updated_at")
+  @@map("calibration_configs")
+}
+
+model AutoWipeLog {
+  id             String     @id @default(uuid())
+  sessionPinId   String     @unique @map("session_pin_id")
+  confirmedById  String     @map("confirmed_by")
+  schoolId       String     @map("school_id")
+  recordsDeleted Int        @map("records_deleted")
+  success        Boolean    @default(true)
+  errorMessage   String?    @map("error_message")
+  executedAt     DateTime   @default(now()) @map("executed_at")
+  session        SessionPin @relation(fields: [sessionPinId], references: [id])
+  confirmedBy    Teacher    @relation(fields: [confirmedById], references: [id])
+  @@map("auto_wipe_logs")
+}
+
+// ============================================================================
+// Enums
+// ============================================================================
+
+enum TeacherRole {
+  TEACHER
+  PRINCIPAL
+  SUPERADMIN
+}
+
+enum SessionState {
+  LOCKED
+  ACTIVE
+  CLOSED
+}
+
+enum CalibrationStatus {
+  EXPERT_ESTIMATED
+  CALIBRATING
+  VALIDATED
+}
+
+enum PerItemStatus {
+  PAHAM_KONSEP
+  LUCKY_GUESS
+  MISKONSEPSI
+  TIDAK_PAHAM
+  INVALID
+}
+
+enum FinalStatus {
+  PAHAM_KONSEP
+  LUCKY_GUESS
+  MISKONSEPSI
+  TIDAK_PAHAM
+  INSUFFICIENT_DATA
+}
+
+// ============================================================================
+// Exit Ticket Models
+// ============================================================================
+
+enum ExitTicketStatus {
+  UNUSED
+  USED
+}
+
+model ExitTicketToken {
+  id              String               @id @default(uuid())
+  token           String               @unique
+  sessionPinId    String               @map("session_pin_id")
+  remedialGroupId String?              @map("remedial_group_id")
+  schoolId        String               @map("school_id")
+  status          ExitTicketStatus     @default(UNUSED)
+  createdAt       DateTime             @default(now()) @map("created_at")
+  usedAt          DateTime?            @map("used_at")
+
+  session         SessionPin           @relation(fields: [sessionPinId], references: [id])
+  remedialGroup   RemedialGroup?       @relation(fields: [remedialGroupId], references: [id])
+  school          School               @relation(fields: [schoolId], references: [id])
+  submission      ExitTicketSubmission?
+
+  @@index([sessionPinId])
+  @@map("exit_ticket_tokens")
+}
+
+model ExitTicketSubmission {
+  id                String          @id @default(uuid())
+  exitTicketTokenId String          @unique @map("exit_ticket_token_id")
+  reflectionText    String          @map("reflection_text") @db.VarChar(1000)
+  confidenceScore   Int             @map("confidence_score")
+  submittedAt       DateTime        @default(now()) @map("submitted_at")
+  schoolId          String          @map("school_id")
+
+  exitTicketToken   ExitTicketToken @relation(fields: [exitTicketTokenId], references: [id])
+  school            School          @relation(fields: [schoolId], references: [id])
+
+  @@map("exit_ticket_submissions")
+}
