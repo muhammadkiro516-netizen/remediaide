@@ -42,6 +42,12 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 
 ## Log
 
+### 2026-11-18 — T16 EDA — selesai
+- `src/remediaide_ml/eda.py` + `ml/notebooks/01_eda.ipynb` (dieksekusi bersih). Gambar `ml/reports/figures/E0_*.png` (6),
+  angka `ml/reports/tables/E0_eda_numbers.json`, `E0_self_calibration.csv`. Lima temuan di `ml/reports/RESULTS.md` §2.
+- Kunci: akurasi naik 0,335→0,733 dari keyakinan 0→100 (overconfident); keyakinan kosong tidak acak
+  (akurasi 0,622 berkeyakinan vs 0,509 tanpa).
+
 ### 2026-11-18 — T21 B1 baselines — selesai
 - Run `ml/runs/20261118-2156_l1_b1/` (OOF `oof_a.parquet`, `oof_b.parquet`), tabel `ml/reports/tables/L1_b0_b1_cv.csv`.
 - (a) next-correct AUC: B1a 0,673 [0,670–0,676]; B1b 0,744 [0,741–0,747].

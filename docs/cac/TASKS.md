@@ -93,7 +93,7 @@ Semua path ML relatif terhadap `ml/`.
   - Tes: bandingkan dengan sklearn; DeLong vs kasus buku teks; MAP@3 vs contoh manual.
   - Selesai jika: semua tes lulus dan split tersimpan (cek tidak ada UserId/QuestionId yang bocor antar split).
 
-- [ ] **T16 [S] EDA** — dep: T14, T13
+- [x] **T16 [S] EDA** — dep: T14, T13
   - `notebooks/01_eda.ipynb` memanggil modul. Gambar: distribusi confidence, **kalibrasi diri siswa**
     (akurasi vs confidence per bin, sumbu Bahasa Indonesia), missingness, panjang sekuens, kategori MAP per
     soal, panjang alasan. Simpan ke `reports/figures/E0_*.png`.
