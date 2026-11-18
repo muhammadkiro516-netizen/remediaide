@@ -22,7 +22,7 @@ import pandas as pd
 
 from remediaide_ml.data.splits import calibration_groups
 from remediaide_ml.eval import metrics as M
-from remediaide_ml.l3.calibration import IsotonicMulticlass, Temperature
+from remediaide_ml.l3.calibration import IsotonicMulticlass, Temperature, TemperatureProb
 from remediaide_ml.l3.conformal import APS, LAC, avg_set_size, coverage
 from remediaide_ml.l3.selective import choose_operating_point, coverage_risk, doubt_max_prob, threshold_for_rate
 from remediaide_ml.paths import FIGURES, INTERIM, MODELS, TABLES
@@ -44,7 +44,7 @@ def reliability(ax, y, P, label, n_bins=15):
     ax.plot(xs, ys, "o-", label=f"{label} (ECE {M.ece(y, P):.3f})")
 
 
-def l1_block(path: Path, cols: list[str], tag: str, out: dict, write_models: bool):
+def l1_block(path: Path, cols: list[str], tag: str, out: dict, write_models: bool, calib: str = "isotonic"):
     o = pd.read_parquet(path)
     if "UserId" not in o:
         from remediaide_ml.paths import PROCESSED
@@ -56,10 +56,11 @@ def l1_block(path: Path, cols: list[str], tag: str, out: dict, write_models: boo
     P = P / P.sum(1, keepdims=True)
     y = o.y4.to_numpy()
     cal = calibration_groups(o.UserId.to_numpy())
-    iso = IsotonicMulticlass().fit(P[cal], y[cal])
+    # 03 §3: isotonic for LightGBM, temperature scaling for neural networks (CO-KT)
+    iso = (TemperatureProb() if calib == "temperature" else IsotonicMulticlass()).fit(P[cal], y[cal])
     Pe, ye = P[~cal], y[~cal]
     Pc = iso.predict(Pe)
-    res = {"n_cal": int(cal.sum()), "n_eval": int((~cal).sum()), "ece_before": M.ece(ye, Pe), "ece_after": M.ece(ye, Pc),
+    res = {"calibrator": calib, "temperature": getattr(iso, "T", None), "n_cal": int(cal.sum()), "n_eval": int((~cal).sum()), "ece_before": M.ece(ye, Pe), "ece_after": M.ece(ye, Pc),
            "macro_f1_after": M.macro_f1(ye, Pc.argmax(1), labels=[0, 1, 2, 3]),
            "misgroup_after": M.misgroup_rate(ye, Pc.argmax(1))}
     lac = LAC(0.10).fit(iso.predict(P[cal]), y[cal])
@@ -79,7 +80,7 @@ def l1_block(path: Path, cols: list[str], tag: str, out: dict, write_models: boo
     fig, ax = plt.subplots(figsize=(5.5, 4.5))
     ax.plot([0, 1], [0, 1], "--", color="gray")
     reliability(ax, ye, Pe, "sebelum kalibrasi")
-    reliability(ax, ye, Pc, "sesudah isotonic")
+    reliability(ax, ye, Pc, f"sesudah {'temperature' if calib == 'temperature' else 'isotonic'}")
     ax.set_xlabel("Keyakinan model (prob. tertinggi)")
     ax.set_ylabel("Akurasi aktual")
     ax.set_title(f"Reliability L1 kuadran masa depan ({tag}, CV)")
@@ -140,12 +141,13 @@ def main():
     ap.add_argument("--l1-cols", nargs=4, default=["p4_P", "p4_L", "p4_M", "p4_T"])
     ap.add_argument("--l2-oof", type=Path)
     ap.add_argument("--tag", default="dev")
+    ap.add_argument("--l1-calib", choices=["isotonic", "temperature"], default="isotonic")
     ap.add_argument("--write-models", action="store_true")
     a = ap.parse_args()
     TABLES.mkdir(parents=True, exist_ok=True)
     FIGURES.mkdir(parents=True, exist_ok=True)
     out: dict = {"tag": a.tag, "l1_oof": str(a.l1_oof), "l2_oof": str(a.l2_oof)}
-    curve = l1_block(a.l1_oof, a.l1_cols, a.tag, out, a.write_models) if a.l1_oof else None
+    curve = l1_block(a.l1_oof, a.l1_cols, a.tag, out, a.write_models, a.l1_calib) if a.l1_oof else None
     if a.l2_oof:
         l2_block(a.l2_oof, a.tag, out)
     if curve is not None:

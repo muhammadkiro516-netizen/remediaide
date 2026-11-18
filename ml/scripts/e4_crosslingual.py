@@ -20,7 +20,7 @@ import pandas as pd
 from remediaide_ml.data.map import build_candidates
 from remediaide_ml.eval import metrics as M
 from remediaide_ml.l2.tfidf import build_text, candidate_mask
-from remediaide_ml.paths import INTERIM, PROCESSED, TABLES
+from remediaide_ml.paths import INTERIM, PROCESSED, RUNS, TABLES
 
 CAT3 = ["Correct", "Misconception", "Neither"]
 
@@ -110,6 +110,10 @@ def main():
     TABLES.mkdir(parents=True, exist_ok=True)
     tag = a.tag or ("tfidf" if a.tfidf else "mdeberta")
     pd.DataFrame(rows).to_csv(TABLES / f"E4_crosslingual_{tag}.csv", index=False)
+    # per-row reciprocal ranks, for paired model-vs-model comparison (D-19)
+    (RUNS / "e4").mkdir(parents=True, exist_ok=True)
+    pd.DataFrame({"row_id": va.row_id, "rr_en": per["en"][0], "rr_id": per["id"][0], "pred3_en": per["en"][1],
+                  "pred3_id": per["id"][1]}).to_parquet(RUNS / "e4" / f"rows_{tag}.parquet", index=False)
     print(json.dumps(rows, indent=2, default=float))
 
 

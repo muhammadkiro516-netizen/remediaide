@@ -112,7 +112,8 @@ def _model(n_q: int, n_kc: int, cfg: CoktConfig):
             if not cfg.no_option:
                 x = x + self.e_opt(b["opt"])
             causal = torch.triu(torch.ones(T, T, dtype=torch.bool, device=x.device), 1)
-            pad = b["q"] == 0
+            # explicit mask (serving: unknown items use id 0 = zero embedding but are real steps); training: q == 0
+            pad = b["pad"] if "pad" in b else b["q"] == 0
             h = self.enc(x, mask=causal, src_key_padding_mask=pad)
             # next-step query for position t uses item at t+1, attends to h_{<=t}
             qn = self.qq(b["q"][:, 1:]) + self.qkc(b["kc"][:, 1:]) + self.e_pos(pos[1:])[None]
@@ -131,7 +132,8 @@ def _batches(seq: dict, idx: np.ndarray, bs: int, device, shuffle: bool, rng: np
     for i in range(0, len(idx), bs):
         j = idx[i : i + bs]
         L = int(seq["len"][j].max())
-        yield {k: torch.as_tensor(seq[k][j, :L], device=device) for k in ("q", "kc", "corr", "opt", "cri", "gap", "quad")}, j, L
+        keys = ("q", "kc", "corr", "opt", "cri", "gap", "quad") + (("pad",) if "pad" in seq else ())
+        yield {k: torch.as_tensor(seq[k][j, :L], device=device) for k in keys}, j, L
 
 
 def train_eval(seq: dict, tr_idx: np.ndarray, va_idx: np.ndarray, n_q: int, n_kc: int, cfg: CoktConfig, seed: int,

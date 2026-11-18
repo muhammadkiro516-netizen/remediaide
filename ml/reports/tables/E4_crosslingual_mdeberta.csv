@@ -1,0 +1,4 @@
+metric,EN,ID,selisih_ID_minus_EN,ci_lo,ci_hi,n,model,catatan
+MAP@3,0.9110127157129883,0.89452770208901,-0.01648501362397825,-0.020323001816530354,-0.012941076294277983,7340,runs/20261118-2202_l2_mdeberta_kaggle/kaggle_output/model_target_fold0,"terjemahan mesin opus-mt-en-id, bukan tulisan asli siswa"
+macro-F1 category3,0.8436701964878601,0.8117811805544237,-0.031889015933436404,-0.03965948783515115,-0.024365032334925405,7340,runs/20261118-2202_l2_mdeberta_kaggle/kaggle_output/model_target_fold0,"terjemahan mesin opus-mt-en-id, bukan tulisan asli siswa"
+recall True_Misconception,0.3037974683544304,0.20253164556962025,-0.10126582278481014,,,7340,runs/20261118-2202_l2_mdeberta_kaggle/kaggle_output/model_target_fold0,"terjemahan mesin opus-mt-en-id, bukan tulisan asli siswa"

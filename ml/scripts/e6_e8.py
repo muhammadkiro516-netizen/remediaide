@@ -21,7 +21,7 @@ import pandas as pd
 from remediaide_ml.data.splits import calibration_groups
 from remediaide_ml.eval import metrics as M
 from remediaide_ml.l1.common import quad_labels
-from remediaide_ml.l3.calibration import IsotonicBinary, IsotonicMulticlass
+from remediaide_ml.l3.calibration import IsotonicBinary, IsotonicMulticlass, TemperatureProb
 from remediaide_ml.l3.selective import choose_operating_point, coverage_risk, doubt_max_prob, threshold_for_rate
 from remediaide_ml.paths import PROCESSED, TABLES
 from remediaide_ml.seed import GLOBAL_SEED
@@ -56,6 +56,8 @@ def main():
     ap.add_argument("--pbin", default="p_bin")
     ap.add_argument("--tag", default="dev")
     ap.add_argument("--n-boot", type=int, default=1000)
+    ap.add_argument("--calib", choices=["isotonic", "temperature"], default="isotonic",
+                    help="03 §3: isotonic for LightGBM, temperature for neural nets (CO-KT)")
     a = ap.parse_args()
     o = pd.read_parquet(a.oof)
     meta = pd.read_parquet(PROCESSED / "eedi_features_b.parquet",
@@ -69,10 +71,15 @@ def main():
     P = o[a.p4].to_numpy(float, copy=True)
     P /= P.sum(1, keepdims=True)
     lab = (o.y4 >= 0).to_numpy()
-    iso4 = IsotonicMulticlass().fit(P[cal & lab], o.y4.to_numpy()[cal & lab])
+    iso4 = (TemperatureProb() if a.calib == "temperature" else IsotonicMulticlass()).fit(P[cal & lab], o.y4.to_numpy()[cal & lab])
     o[["c_P", "c_L", "c_M", "c_T"]] = iso4.predict(P)
-    isob = IsotonicBinary().fit(o[a.pbin].to_numpy()[cal], o.y_bin.to_numpy()[cal])
-    o["c_bin"] = isob.predict(o[a.pbin].to_numpy())
+    pb = o[a.pbin].to_numpy(float, copy=True)
+    if a.calib == "temperature":
+        isob = TemperatureProb().fit(np.column_stack([1 - pb, pb])[cal], o.y_bin.to_numpy()[cal].astype(int))
+        o["c_bin"] = isob.predict(np.column_stack([1 - pb, pb]))[:, 1]
+    else:
+        isob = IsotonicBinary().fit(pb[cal], o.y_bin.to_numpy()[cal])
+        o["c_bin"] = isob.predict(pb)
     Pc = o[["c_P", "c_L", "c_M", "c_T"]].to_numpy()
     o["doubt"] = doubt_max_prob(Pc)
     o["pred4"] = Pc.argmax(1)

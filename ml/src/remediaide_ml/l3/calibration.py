@@ -48,3 +48,14 @@ class Temperature:
 
     def predict(self, logits):
         return softmax(np.asarray(logits, float) / self.T, axis=1)
+
+
+class TemperatureProb(Temperature):
+    """Temperature scaling for models that output probabilities (e.g. a seed-averaged neural ensemble):
+    logits = log p. Same fit/predict interface as IsotonicMulticlass (input = probabilities)."""
+
+    def fit(self, P, y):
+        return super().fit(np.log(np.clip(np.asarray(P, float), 1e-12, 1)), y)
+
+    def predict(self, P):
+        return super().predict(np.log(np.clip(np.asarray(P, float), 1e-12, 1)))

@@ -1,0 +1,35 @@
+{
+  "tag": "final_cv",
+  "l1_oof": "runs/20261118-2202_cokt_kaggle/oof_b_ens5.parquet",
+  "l2_oof": "runs/20261118-2131_l2_tfidf/oof_target.parquet",
+  "L1": {
+    "calibrator": "temperature",
+    "temperature": 0.9723864427578951,
+    "n_cal": 45645,
+    "n_eval": 171835,
+    "ece_before": 0.005043235098215503,
+    "ece_after": 0.0036512932073311764,
+    "macro_f1_after": 0.48164721345068484,
+    "misgroup_after": 0.35149998545115957,
+    "lac_qhat": 0.8294344358390476,
+    "coverage": 0.8903366601681846,
+    "avg_set_size": 1.866668606512061,
+    "singleton_share": 0.2907265690924433,
+    "operating_point": {
+      "defer_rate": 0.3,
+      "rule": "smallest defer with >= 25% relative reduction (D-09)"
+    },
+    "doubt_threshold": 0.4561847502946433,
+    "eval_defer_rate_at_threshold": 0.33255157563942156,
+    "eval_misgroup_kept": 0.2495836639317819
+  },
+  "L2": {
+    "temperature": 1.2019477581500233,
+    "ece_before": 0.025388322289010695,
+    "ece_after": 0.009567862592002492,
+    "aps_qhat": 0.9942362310145121,
+    "coverage": 0.9504036515992779,
+    "avg_set_size": 1.8965153115100317,
+    "map3_eval": 0.9164367385404957
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "weights": [
+    "cokt_final_seed1.pt",
+    "cokt_final_seed2.pt",
+    "cokt_final_seed20261118.pt",
+    "cokt_final_seed3.pt",
+    "cokt_final_seed4.pt"
+  ],
+  "source": "runs/20261119-0620_cokt_final_kaggle/kaggle_output",
+  "role": "L1 quadrant probabilities (D-18)",
+  "ensemble": "mean of seed probabilities"
+}

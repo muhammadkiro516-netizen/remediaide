@@ -1,0 +1,28 @@
+{
+  "alpha": 0.1,
+  "l1_temperature": 1.0125947523113925,
+  "l1_lac_qhat": 0.8371441506753501,
+  "l1_doubt_threshold": 0.525368172682699,
+  "l1_operating_point": {
+    "defer_rate": 0.2,
+    "rule": "no grid point met 25% reduction within 30% -> fallback 20% (D-09)"
+  },
+  "l1_bin_temperature": 0.9751038310692324,
+  "mastery_prior": 0.4952155850105684,
+  "source": "scripts/l3_production.py (calibration users of the production CO-KT; CV OOF calibration rows for L2)",
+  "l2_tfidf": {
+    "temperature": 1.2019477581500233,
+    "aps_qhat": 0.9942362310145121,
+    "hidden_threshold": 0.2
+  },
+  "l2_mdeberta": {
+    "temperature": 1.4124958591718477,
+    "aps_qhat": 0.9842566907917449,
+    "hidden_threshold": 0.25
+  },
+  "l2_by_lang": {
+    "en": "tfidf",
+    "id": "mdeberta"
+  },
+  "hidden_threshold": 0.25
+}

@@ -15,28 +15,23 @@ angka kunci (dengan path sumbernya), masalah, dan langkah berikutnya.
 - Hari tersisa menuju submit internal (Jum 27 Nov): 9 (hari ke-1)
 - Kuota GPU Kaggle terpakai minggu ini: 1 j 46 m / 30 j (dicek Salman 18 Nov ~22:55, 2 kernel paralel = 2 j kuota per jam)
 
-## Langkah lanjut untuk sesi berikutnya (`/lanjut`) — diperbarui 19 Nov 00:05
-Selesai: T22 (LightGBM), T23 (CO-KT). Berjalan: LightGBM 5 seed (nohup, `ml/runs/logs/l1_lgbm_seeds.log`, ±20 menit) dan
-Kaggle `avlsalmoon/remediaide-l2-mdeberta` (perkiraan selesai 02:00–04:00).
-1. ~~T24 keputusan D-15~~ **SELESAI → D-18: CO-KT ens5 untuk kuadran, LightGBM ens5 untuk penjelasan/fallback.** (catatan lama:) setelah `runs/20261118-2205_l1_lgbm/oof_b_ens5.parquet` ada, ubah `LGBM`/kolom di
-   `scripts/l1_select.py` agar membandingkan CO-KT ens5 vs LightGBM ens5 (baris sama). Hasil 1-seed:
-   `reports/tables/L1_model_selection.csv` (CO-KT lebih baik: salah kelompok −0,012 [−0,014; −0,010]). Seri → LightGBM.
-   Jika CO-KT dipilih: penjelasan (SHAP) tetap dari LightGBM sebagai model penjelas — **wajib diungkap** di laporan.
-1b. **CO-KT produksi (perlu untuk T46 + layanan):** kernel T23 tidak menyimpan bobot. Tambah mode `--final` di
-   `scripts/train_cokt.py`: latih pada semua siswa CV (early stopping pada subset kalibrasi `splits.calibration_groups`),
-   5 seed, simpan `state_dict` + vocab ke `/kaggle/working/cokt_final_seed<s>.pt`, dan prediksi siswa test sekali (T46 saja,
-   output disimpan tanpa dilihat sampai T46). Smoke lokal dulu, lalu `kaggle datasets version` src + push kernel `cokt_final`.
-2. mDeBERTa: `.venv/bin/kaggle kernels output avlsalmoon/remediaide-l2-mdeberta -p runs/20261118-2202_l2_mdeberta_kaggle/kaggle_output`;
-   lalu E3 (`scripts/e3_true_misconception.py --oof "B0 TF-IDF=runs/20261118-2131_l2_tfidf/oof_target.parquet" "M1 mDeBERTa=runs/20261118-2202_l2_mdeberta_kaggle/kaggle_output"`),
-   E4 (`scripts/e4_crosslingual.py --model runs/20261118-2202_l2_mdeberta_kaggle/kaggle_output/model_target_fold0 --device cpu`), catat T31/T33/T34.
-3. L3 + E6/E8 dengan model L1 terpilih: `scripts/l3_eval.py --l1-oof <oof> --l2-oof <oof L2 terbaik> --tag final_cv --write-models`;
-   `scripts/e6_e8.py --oof <oof> --tag final_cv` (CO-KT OOF perlu kolom p4_*/p_bin: p_bin = pq_M + pq_T).
-4. T24 artefak `models/`, lalu T46 `scripts/final_eval.py` (buka test sekali), T47, P5.
+## Langkah lanjut untuk sesi berikutnya (`/lanjut`) — diperbarui 19 Nov 06:45
+Selesai sampai T45 (P3 dan P4 kecuali T46/T47). Tidak ada proses yang berjalan. Kernel Kaggle selesai semua.
+1. **T46 `scripts/final_eval.py` (buka test SEKALI).** Bahan yang sudah siap, jangan dibaca sebelum T46:
+   - L1 CO-KT produksi: `ml/runs/20261119-0620_cokt_final_kaggle/kaggle_output/pred_test_seed*.parquet` (5 seed, rata-rata,
+     lalu `models/l1_calibrator_v1.joblib` = TemperatureProb; ambang di `models/l3_conformal_v1.json`).
+   - L1 pembanding pada siswa test yang sama: B0 (`quadrant_b0`), B1a/B1b (`scripts/train_l1_baselines.py` refit pada CV),
+     LightGBM 25 model (`runs/20261118-2205_l1_lgbm/model*_b4_fold*.txt`, `models_seed<s>_*`) dengan fitur test dari
+     `l1.common.load(include_test=True)` + `add_fold_encodings(train_mask = semua CV)`.
+   - Framing (a) AUC: CO-KT `p_next` vs LightGBM `model_a_fold*`; DeLong + CI klaster siswa.
+   - E5/E6/E8 pada siswa test dengan parameter produksi (D-21: defer 20%, ambang 0,525), tanpa refit.
+   - Robustness: `splits.temporal_test_flag`.
+   - MAP: tidak ada fold test terkunci (D-06 hanya CV) → laporkan L2 sebagai CV (sudah final) dan nyatakan jelas di RESULTS.
+   - Isi `ml/reports/RESULTS.md` (semua placeholder) + kalimat utama.
+2. T47 freeze (Rab 25 Nov 23:59), lalu P5 (T50–T53), P6 web.
 
 ## Blocker (butuh Salman)
-- **M1b (19 Nov 00:48): login Kaggle kedaluwarsa.** Jalankan lagi di Terminal:
-  `~/Downloads/remediaide-main/ml/.venv/bin/kaggle auth login --force`. Kernel mDeBERTa tetap jalan di server; hanya
-  status/unduhan output yang tertahan.
+- ~~M1b login Kaggle~~ beres (19 Nov pagi; Kaggle CLI bisa dipakai lagi).
 - M2 opsional: klik persetujuan aturan MAP.
 - Pertanyaan T00: apakah ada remote GitHub lama yang ingin dihubungkan? (tidak akan push tanpa izin)
 
@@ -61,6 +56,29 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 ±1,4 juta baris × SHAP/Optuna; (5) jadwal 9 hari sangat padat, sehingga freeze 25 Nov harus dipatuhi.
 
 ## Log
+
+### 2026-11-19 06:45 — T24, T31, T33, T34, T40–T43, T45 — selesai
+- **T24:** CO-KT produksi `scripts/train_cokt_final.py` (kernel `avlsalmoon/remediaide-cokt-final`, ±6 menit GPU, 5 seed):
+  latih pada 70% siswa CV, early stopping 10%, kalibrasi 20% (tidak disentuh training). AUC early-stop per seed 0,781–0,783
+  (`ml/runs/20261119-0620_cokt_final_kaggle/kaggle_output/report_seed*.json`). Bobot → `ml/models/l1_cokt_v1/`;
+  LightGBM penjelas/fallback → `ml/models/l1_lgbm_v1/`; `ml/reports/tables/L1_cv_summary.csv`; notebook 03/04 dieksekusi.
+  **Keterbatasan yang harus diungkap:** OOF CV CO-KT (T23) memakai early stopping pada fold validasi yang sama
+  (best_val_auc = auc_next) → angka CV CO-KT sedikit optimistis; evaluasi test T46 memakai model produksi yang bebas bias ini.
+- **T31:** `ml/reports/tables/L2_cv.csv`. mDeBERTa MAP@3 0,912 [0,910–0,914] vs TF-IDF 0,916 (selisih −0,004 [−0,005; −0,002]);
+  category3 per soal 0,637 [0,584–0,685] vs 0,611 (+0,026 [−0,035; +0,078], seri). GPU ±5 × 33 menit × 2 tugas. → D-19.
+- **T33:** `ml/reports/tables/E3_true_misconception.csv`: recall True_Misconception TF-IDF 0,375, mDeBERTa 0,323 [0,277–0,367],
+  presisi 0,807; B0 0.
+- **T34:** `ml/reports/tables/E4_crosslingual.csv`: input Indonesia (terjemahan mesin) MAP@3 mDeBERTa 0,895 (−0,016 dari EN)
+  vs TF-IDF 0,766 (−0,150); selisih model +0,129 [+0,121; +0,136] → D-21(b): mDeBERTa untuk input Indonesia.
+- **T40–T42:** `scripts/l3_eval.py --tag final_cv` (CO-KT OOF + temperature, 03 §3): ECE L1 0,0050→0,0037; LAC cakupan 0,890,
+  ukuran himpunan 1,87; L2 ECE 0,025→0,010, APS cakupan 0,950 (`ml/reports/tables/E5_l3_final_cv.json`, gambar E5_*_final_cv).
+  Parameter produksi `scripts/l3_production.py` → `ml/models/l3_conformal_v1.json`, `ml/reports/tables/L3_production_params.json` (D-20, D-21).
+- **T43:** `src/remediaide_ml/bundle.py` (`load_bundle`) memasang artefak nyata ke `diagnose()`; bug padding untuk soal di luar
+  kosakata Eedi diperbaiki (masker eksplisit, tes kesetaraan). `tests/test_bundle.py`; 84+ tes lulus. Latensi ±0,1–0,2 s/sesi kecil di CPU.
+  Keterbatasan: soal aplikasi tidak ada di kosakata Eedi → CO-KT hanya memakai urutan benar/salah, opsi, keyakinan, jeda waktu.
+- **T45:** `scripts/e6_e8.py --calib temperature --tag final_cv` → `ml/reports/tables/E6_fairness_final_cv.csv`, `E8_impact_final_cv.csv`:
+  salah kelompok B0 0,448 vs ML 0,345 (selisih [−0,107; −0,100]); defer 20% → sisa 0,282, 35% kesalahan tertangkap,
+  ±96 kasus/kelas 32×15. Kesenjangan besar antar kuartil kemampuan dan PremiumPupil (lihat tabel); Gender CI memuat 0 untuk AUC/ECE.
 
 ### 2026-11-19 00:50 — T24 keputusan model L1 (D-18) — sebagian
 - LightGBM ensemble 5 seed (parameter Optuna T22, tanpa tuning ulang): `ml/runs/20261118-2205_l1_lgbm/oof_b_ens5.parquet`,

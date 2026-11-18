@@ -123,7 +123,7 @@ Semua path ML relatif terhadap `ml/`.
   - Unduh output ke `runs/<id>/kaggle_output/`. Catat jam GPU.
   - Selesai jika: metrik CV CO-KT (a) AUC dan (b) macro-F1 + ablation tercatat dengan CI.
 
-- [~] **T24 [S] Konsolidasi L1** — dep: T22, T23
+- [x] **T24 [S] Konsolidasi L1** — dep: T22, T23
   - Pilih model produksi berdasarkan CV (D-15). Simpan artefak ke `models/` (03 §5). Fungsi `explain()` yang
     menghasilkan 3 alasan Bahasa Indonesia dari SHAP. Evaluasi akurasi prediksi opsi.
   - Selesai jika: `models/l1_*` ada, `reports/tables/L1_cv_summary.csv` ada, notebook 03/04 bersih.
@@ -139,7 +139,7 @@ Semua path ML relatif terhadap `ml/`.
   - Split random (MAP@3) dan per soal (`category3` macro-F1). OOF disimpan.
   - Selesai jika: tabel CV B0 L2 ada.
 
-- [~] **T31 [S] M1 mDeBERTa di Kaggle** — dep: T30, T03
+- [x] **T31 [S] M1 mDeBERTa di Kaggle** — dep: T30, T03
   - `src/remediaide_ml/l2/encoder.py` + `kaggle/kernels/l2_mdeberta/`. Smoke test lokal (200 contoh, 20 step).
   - 5 fold random (target, masking kandidat) + 5 fold per soal (`category3`). Simpan OOF logits.
     Cek NaN pada fp16; jika ada → fp32 dan catat di DECISIONS.
@@ -152,10 +152,10 @@ Semua path ML relatif terhadap `ml/`.
   - QA 100 sampel → `reports/tables/translation_qa.csv` + `reports/translation_card.md`.
   - Selesai jika: `data/processed/map_id.parquet` lengkap dan tingkat kesalahan QA tercatat.
 
-- [ ] **T33 [S] E3 jebakan jawaban benar** — dep: T31
+- [x] **T33 [S] E3 jebakan jawaban benar** — dep: T31
   - Selesai jika: `reports/tables/E3_true_misconception.csv` (B0 vs B0-TFIDF vs M1) dan PR curve ada.
 
-- [ ] **T34 [S] E4 lintas bahasa** — dep: T31, T32
+- [x] **T34 [S] E4 lintas bahasa** — dep: T31, T32
   - Inferensi M1 pada test fold terjemahan (kernel Kaggle atau lokal MPS jika muat).
   - Selesai jika: `reports/tables/E4_crosslingual.csv` ada beserta selisih dan CI.
 
@@ -169,19 +169,19 @@ Semua path ML relatif terhadap `ml/`.
 
 ## P4 — Lapis 3 + evaluasi (Sel 24 – Rab 25 Nov) · spesifikasi: 03 §3–4, 04 E5–E8
 
-- [ ] **T40 [S] Kalibrasi** — dep: T24, T31
+- [x] **T40 [S] Kalibrasi** — dep: T24, T31
   - `src/remediaide_ml/l3/calibration.py`. ECE sebelum dan sesudah. Reliability diagram L1 & L2.
   - Selesai jika: gambar E5_reliability_* dan tabel ECE ada.
 
-- [ ] **T41 [S] Ensemble + conformal** — dep: T40
+- [x] **T41 [S] Ensemble + conformal** — dep: T40
   - `l3/conformal.py` (LAC, APS). Cakupan empiris di CV. Simpan `models/l3_conformal_v1.json`.
   - Selesai jika: cakupan ≈ 90% (laporkan nilai sebenarnya) dan ukuran himpunan tercatat.
 
-- [ ] **T42 [S] Selective prediction + titik operasi (E5)** — dep: T41
+- [x] **T42 [S] Selective prediction + titik operasi (E5)** — dep: T41
   - Kurva coverage-risk. Titik operasi menurut aturan D-09, dihitung di validasi.
   - Selesai jika: `E5_coverage_risk.png` ada dan titik operasi dicatat di DECISIONS (sebagai hasil penerapan D-09, bukan revisi).
 
-- [ ] **T43 [S] Fusi L3 + `hidden_misconception`** — dep: T42
+- [x] **T43 [S] Fusi L3 + `hidden_misconception`** — dep: T42
   - `l3/fusion.py`: produk naive-Bayes (siap tanpa label) + kerangka stacking (aktif saat label pilot ada).
     Tes pada data sintetis, termasuk bahwa probabilitas ternormalisasi.
   - Fungsi `diagnose(payload) -> response` sesuai kontrak 05 §4. Ini inti layanan.
@@ -192,7 +192,7 @@ Semua path ML relatif terhadap `ml/`.
     **Tidak dilaporkan sebagai hasil** sebelum ada data pilot.
   - Selesai jika: tes lulus dan API siap dipakai.
 
-- [ ] **T45 [S] E6 fairness + E8 dampak** — dep: T42
+- [x] **T45 [S] E6 fairness + E8 dampak** — dep: T42
   - Selesai jika: `E6_fairness.csv` dan `E8_impact.csv` versi CV ada.
 
 - [ ] **T46 [S] Buka test set (sekali) + RESULTS.md** — dep: T20–T24, T30–T34, T40–T45

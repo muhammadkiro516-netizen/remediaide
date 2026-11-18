@@ -1,0 +1,9 @@
+metric,EN,ID,selisih_ID_minus_EN,ci_lo,ci_hi,n,model,catatan,selisih
+MAP@3,0.9159173478655767,0.7656448683015441,-0.15027247956403256,-0.1579263169845594,-0.14277815622161671,7340,B0 TF-IDF+LR,"terjemahan mesin opus-mt-en-id, bukan tulisan asli siswa",
+macro-F1 category3,0.8390376956076606,0.6308255269982982,-0.20821216860936242,-0.22084627213571406,-0.19615553371529842,7340,B0 TF-IDF+LR,"terjemahan mesin opus-mt-en-id, bukan tulisan asli siswa",
+recall True_Misconception,0.34177215189873417,0.012658227848101266,-0.3291139240506329,,,7340,B0 TF-IDF+LR,"terjemahan mesin opus-mt-en-id, bukan tulisan asli siswa",
+MAP@3,0.9110127157129883,0.89452770208901,-0.01648501362397825,-0.020323001816530354,-0.012941076294277983,7340,M1 mDeBERTa-v3-base,"terjemahan mesin opus-mt-en-id, bukan tulisan asli siswa",
+macro-F1 category3,0.8436701964878601,0.8117811805544237,-0.031889015933436404,-0.03965948783515115,-0.024365032334925405,7340,M1 mDeBERTa-v3-base,"terjemahan mesin opus-mt-en-id, bukan tulisan asli siswa",
+recall True_Misconception,0.3037974683544304,0.20253164556962025,-0.10126582278481014,,,7340,M1 mDeBERTa-v3-base,"terjemahan mesin opus-mt-en-id, bukan tulisan asli siswa",
+MAP@3 (input ID),,,,0.1210944595821981,0.1361495231607629,7340,selisih mDeBERTa − TF-IDF,,0.1288828337874659
+macro-F1 category3 (input ID),,,,0.16801169385904577,0.19391403264925042,7340,selisih mDeBERTa − TF-IDF,,0.18095565355612553
