@@ -42,6 +42,31 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 
 ## Log
 
+### 2026-11-18 — T20 B0 di Eedi + E1 (pengembangan, CV) — selesai
+- `scripts/e1_b0.py` → `ml/reports/tables/E1_b0_cv.csv`, `E1_b0_cv_confusion.csv`, `ml/reports/figures/E1_confusion_b0_cv.png`.
+  Hanya siswa CV (test 984 siswa tidak disentuh). Baris E1: 217.480 (3.054 siswa).
+- Angka (CI 95% bootstrap per UserId, sumber `ml/reports/tables/E1_b0_cv.csv`): salah kelompok 4 kelas **0,450 [0,440–0,459]**;
+  macro-F1 0,412 [0,403–0,419]; "Paham" B0 belum tuntas berikutnya **0,282 [0,270–0,294]**; "Miskonsepsi" B0 tuntas
+  berikutnya 0,507 [0,495–0,519]; error biner butuh_remediasi 0,367 [0,363–0,370] (912.731 baris).
+- **Keterbatasan wajib di laporan:** label kuadran masa depan adalah proxy. Sebagian "Miskonsepsi → tuntas" berasal dari
+  pembelajaran setelah umpan balik Eedi, bukan semata kesalahan aturan. Dibahas di RESULTS §E1.
+
+### 2026-11-18 — T15 Split + utilitas evaluasi — selesai
+- `data/processed/eedi_splits.parquet`: test 984 siswa; fold 0–4: 787/787/787/787/786 siswa. UserId unik (dicek).
+- `data/processed/map_splits.parquet`: random 5 fold (7.339–7.340 baris), per soal 5 fold × 3 soal; tiap soal di satu fold (dicek).
+- `eval/metrics.py`, `eval/stats.py` (+ bootstrap konfusi per kluster cepat): 12 tes lulus (sklearn, DeLong brute-force, MAP@3 manual).
+
+### 2026-11-18 — T14 Fitur L1 anti-leakage — selesai
+- `scripts/build_features.py` → `data/processed/eedi_features_{a,b}.parquet` dalam **51 detik**, puncak memori 1,27 GB
+  (`data/processed/eedi_features_info.json`). Label biner: 1.139.163 baris; label kuadran 4 kelas: 335.216; dengan
+  confidence saat ini: 276.443; dikeluarkan (< 2 percobaan berikutnya di KC): 243.564.
+- Distribusi kuadran masa depan: P 53,8%, M 27,4%, T 11,5%, L 7,2%.
+- Tes `tests/test_features_leakage.py` (8) lulus, termasuk tiga tes wajib 02 §4.
+
+### 2026-11-18 — T31 temuan teknis — mDeBERTa NaN
+- transformers 5.23 memuat bobot sesuai dtype checkpoint (mdeberta-v3-base = fp16). AdamW pada bobot fp16 → NaN setelah
+  1 langkah (SGD aman, gradien finite). Perbaikan: `dtype=torch.float32` saat load; fp16 hanya lewat autocast di CUDA.
+
 ### 2026-11-18 — T12 Loader + cleaning Eedi — selesai
 - `data/interim/eedi_t34.parquet` (1.382.727 baris, 4.918 siswa, 948 soal, 57 KC). Data card `ml/reports/tables/data_card_eedi.md`.
 - **Confidence kosong 74,95% baris**; nilai Confidence hanya {0,25,50,75,100}. Baris berkeyakinan: 346.428.

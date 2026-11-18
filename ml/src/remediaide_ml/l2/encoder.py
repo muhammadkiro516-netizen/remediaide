@@ -77,7 +77,10 @@ def train_fold(df: pd.DataFrame, text: np.ndarray, y: np.ndarray, tr: np.ndarray
     set_seed(seed)
     dev = pick_device()
     tok = AutoTokenizer.from_pretrained(cfg["model_name"])
-    model = AutoModelForSequenceClassification.from_pretrained(cfg["model_name"], num_labels=n_labels).to(dev)
+    # transformers>=5 keeps the checkpoint dtype (mdeberta-v3-base is stored in fp16). fp16 master weights make
+    # AdamW (eps=1e-8) produce NaN after one step, so master weights are forced to fp32; fp16 is autocast-only.
+    model = AutoModelForSequenceClassification.from_pretrained(cfg["model_name"], num_labels=n_labels,
+                                                               dtype=torch.float32).to(dev)
 
     def enc(idx):
         e = tok(list(text[idx]), truncation=True, max_length=cfg["max_len"], padding="max_length", return_tensors="pt")

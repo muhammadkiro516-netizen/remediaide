@@ -79,13 +79,13 @@ Semua path ML relatif terhadap `ml/`.
   - Data card → `reports/tables/data_card_map.md`. Tes dengan fixture sintetis.
   - Selesai jika: parquet + kamus + data card ada dan tes lulus.
 
-- [ ] **T14 [S] Fitur L1 anti-leakage** — dep: T12
+- [x] **T14 [S] Fitur L1 anti-leakage** — dep: T12
   - `src/remediaide_ml/features/history.py` (framing a dan b, 02 §4) dan `labels.py` (kuadran masa depan, 02 §5).
     Implementasi vektor (groupby + shift/cumsum), tanpa loop per baris.
   - `tests/test_features_leakage.py` dengan tiga tes wajib di 02 §4.
   - Selesai jika: `data/processed/eedi_features_{a,b}.parquet` ada, tes leakage lulus, dan waktu build tercatat.
 
-- [~] **T15 [S] Split + utilitas evaluasi** — dep: T12, T13
+- [x] **T15 [S] Split + utilitas evaluasi** — dep: T12, T13
   - `src/remediaide_ml/data/splits.py` (02 §6) → `data/processed/{eedi,map}_splits.parquet`.
   - `src/remediaide_ml/eval/metrics.py`: auc, logloss, brier, ece, map_at_k, macro_f1, per-class recall,
     cohen_kappa, misgroup_rate. `eval/stats.py`: cluster bootstrap CI, fast DeLong (paired), McNemar
@@ -101,11 +101,11 @@ Semua path ML relatif terhadap `ml/`.
 
 ## P2 — Lapis 1 (Jum 20 – Min 22 Nov) · spesifikasi: 03 §1, 04 E1/E2
 
-- [ ] **T20 [S] B0 di Eedi + E1 (pengembangan)** — dep: T14, T15
+- [x] **T20 [S] B0 di Eedi + E1 (pengembangan)** — dep: T14, T15
   - `classify_quadrant` pada baris berkeyakinan. Hitung E1 di fold CV (test **belum** disentuh).
   - Selesai jika: `reports/tables/E1_b0_cv.csv` dan confusion matrix CV ada.
 
-- [ ] **T21 [S] B1 baselines** — dep: T20
+- [~] **T21 [S] B1 baselines** — dep: T20
   - B1a dan B1b untuk framing (a) dan (b), 5 fold. Simpan OOF di `runs/<id>/oof.parquet`.
   - Selesai jika: tabel CV B0/B1 ada.
 
