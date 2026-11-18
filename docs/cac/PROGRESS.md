@@ -41,6 +41,16 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 
 ## Log
 
+### 2026-11-18 — T34 E4 lintas bahasa — sebagian (baseline TF-IDF)
+- `scripts/e4_crosslingual.py --tfidf` → `ml/reports/tables/E4_crosslingual_tfidf.csv` (fold 0, n=7.340, paired bootstrap 1000).
+- TF-IDF (dilatih EN): MAP@3 0,916 → 0,766 (selisih **−0,150 [−0,158; −0,143]**); macro-F1 category3 0,839 → 0,631
+  (−0,208 [−0,221; −0,196]); recall True_Misconception 0,342 → 0,013.
+- Menunggu model mDeBERTa fold 0 dari kernel Kaggle untuk baris M1.
+
+### 2026-11-18 — T33 E3 — sebagian (B0 + TF-IDF)
+- `ml/reports/tables/E3_true_misconception.csv`, `ml/reports/figures/E3_pr_curve.png`. B0 recall 0 (desain);
+  TF-IDF recall **0,375 [0,329–0,422]**, presisi 0,821 [0,760–0,874], PR-AUC 0,582. Menunggu mDeBERTa.
+
 ### 2026-11-18 — T32 Terjemahan Indonesia + QA — selesai
 - `data/processed/map_id.parquet` lengkap (36.696 baris); 35.668 alasan unik dalam 2.744 s (MPS).
 - Diagnostik: angka tidak cocok 845 (2,4%), tidak berubah 246, halusinasi (sumber dipertahankan) 18.

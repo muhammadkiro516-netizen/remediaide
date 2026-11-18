@@ -4,7 +4,7 @@ evaluated on fold-0 validation rows in English and in machine-translated Indones
   python scripts/e4_crosslingual.py --model runs/<id>/kaggle_output/model_target_fold0 [--device cpu]
 Needs data/processed/map_id.parquet (T32). Metrics: MAP@3 (target), macro-F1 category3 (derived from target probs),
 recall True_Misconception. Difference ID - EN with paired row bootstrap (1000).
-Output: reports/tables/E4_crosslingual.csv.
+Output: reports/tables/E4_crosslingual_<tag>.csv (tag tfidf | mdeberta).
 """
 
 from __future__ import annotations
@@ -54,7 +54,9 @@ def metrics_from_logits(L, classes, df, mask):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--model", type=Path, required=True)
+    ap.add_argument("--model", type=Path, default=None, help="HF model dir (encoder); omit with --tfidf")
+    ap.add_argument("--tfidf", action="store_true", help="B0 TF-IDF+LR (C from T30) trained on English fold!=0")
+    ap.add_argument("--tag", default=None)
     ap.add_argument("--device", default=os.environ.get("RA_DEVICE", "cpu"))
     ap.add_argument("--limit", type=int, default=None)
     a = ap.parse_args()
@@ -65,7 +67,14 @@ def main():
     va = m[m.fold_random == 0].reset_index(drop=True)
     if a.limit:
         va = va.head(a.limit)
-    classes = np.array(json.loads((a.model / "classes.json").read_text()))
+    if a.tfidf:
+        from remediaide_ml.l2.tfidf import TfidfLR
+
+        trn = m[m.fold_random != 0]
+        tf = TfidfLR(C=10.0, seed=20261118).fit(build_text(trn, "en"), trn.target.to_numpy())
+        classes = tf.classes_
+    else:
+        classes = np.array(json.loads((a.model / "classes.json").read_text()))
     mask = candidate_mask(va, classes, build_candidates(m[m.fold_random != 0]))
     txt_en = build_text(va, "en").tolist()
     # Indonesian: translated question/answer/explanation, Indonesian template (03 §2)
@@ -73,7 +82,10 @@ def main():
     res = {}
     per = {}
     for lang, txt in (("en", txt_en), ("id", txt_id)):
-        L = predict(a.model, txt, a.device)
+        if a.tfidf:
+            L = np.log(np.clip(tf.predict_proba(pd.Series(txt)), 1e-12, 1))
+        else:
+            L = predict(a.model, txt, a.device)
         rr, pred3, tm = metrics_from_logits(L, classes, va, mask)
         per[lang] = (rr, pred3, tm)
         is_tm = (va.Category == "True_Misconception").to_numpy()
@@ -94,9 +106,10 @@ def main():
         row = {"metric": metric, "EN": en, "ID": idv, "selisih_ID_minus_EN": None if en is None or idv is None else idv - en}
         if boots is not None:
             row |= {"ci_lo": float(np.quantile(boots, .025)), "ci_hi": float(np.quantile(boots, .975))}
-        rows.append(row | {"n": n, "model": str(a.model), "catatan": "terjemahan mesin opus-mt-en-id, bukan tulisan asli siswa"})
+        rows.append(row | {"n": n, "model": "B0 TF-IDF" if a.tfidf else str(a.model), "catatan": "terjemahan mesin opus-mt-en-id, bukan tulisan asli siswa"})
     TABLES.mkdir(parents=True, exist_ok=True)
-    pd.DataFrame(rows).to_csv(TABLES / "E4_crosslingual.csv", index=False)
+    tag = a.tag or ("tfidf" if a.tfidf else "mdeberta")
+    pd.DataFrame(rows).to_csv(TABLES / f"E4_crosslingual_{tag}.csv", index=False)
     print(json.dumps(rows, indent=2, default=float))
 
 
