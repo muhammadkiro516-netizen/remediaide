@@ -24,18 +24,19 @@ Semua path ML relatif terhadap `ml/`.
   - Baca seluruh `docs/cac/*.md` sekali. Tulis ringkasan pemahaman 10 baris di PROGRESS.md.
   - Selesai jika: commit v1 + branch `cac/ml` + commit T00 ada (`git log --oneline` menunjukkan keduanya).
 
-- [~] **T01 [S] Lingkungan Python** — dep: T00
+- [x] **T01 [S] Lingkungan Python** — dep: T00
   - `cd ml && make setup`. Jika python3.12 tidak ada: `brew install python@3.12` (atau pakai `uv`).
   - Jika `import lightgbm` gagal karena libomp → `brew install libomp`, lalu ulangi.
   - Torch untuk macOS arm64 dari pip standar (MPS). Jangan pasang CUDA build.
   - Selesai jika: `make test` lulus (27 tes B0) dan `requirements-lock.txt` ter-commit.
 
-- [ ] **T02 [S] Cek mesin** — dep: T01
+- [x] **T02 [S] Cek mesin** — dep: T01
   - `make env` → `runs/env_report.json`. Catat RAM, MPS, dan placement di PROGRESS.md.
   - Jika RAM < 16 GB: semua pandas memakai dtype hemat dan parquet, serta baca kolom seperlunya.
   - Selesai jika: env_report.json ada dan placement tercatat.
 
-- [ ] **T03 [S] Kaggle CLI** — dep: T01 · butuh **M1**, **M2**
+- [!] **T03 [S] Kaggle CLI** — dep: T01 · butuh **M1**, **M2**
+  - **[!] 18 Nov: belum terautentikasi, menunggu M1/M2.**
   - `kaggle competitions list -s map-charting`. Gagal → tandai `[!]`, tulis blocker M1/M2, lanjut T10.
   - Sukses → `kaggle competitions files -c map-charting-student-math-misunderstandings`, lalu catat daftar file.
   - Selesai jika: autentikasi sukses dan daftar file MAP tercatat.

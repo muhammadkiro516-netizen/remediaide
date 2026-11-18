@@ -6,7 +6,7 @@ angka kunci (dengan path sumbernya), masalah, dan langkah berikutnya.
 
 ## Status ringkas
 - Fase aktif: P0
-- Task berikutnya: T01
+- Task berikutnya: T10 (unduh Eedi berjalan), T11 via cadangan HF
 - Hari tersisa menuju submit internal (Jum 27 Nov): 9
 - Kuota GPU Kaggle terpakai minggu ini: 0 jam
 
@@ -35,6 +35,23 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 ±1,4 juta baris × SHAP/Optuna; (5) jadwal 9 hari sangat padat, sehingga freeze 25 Nov harus dipatuhi.
 
 ## Log
+
+### 2026-11-18 — T03 Kaggle CLI — terblokir (M1, M2)
+- `kaggle` 2.2.5 terpasang di `ml/.venv/bin/`. `kaggle competitions list -s map-charting` → "Authentication required".
+- Menunggu M1 (disarankan `ml/.venv/bin/kaggle auth login`) dan M2. T11/T23/T31 ikut tertahan; T11 dicoba lewat cadangan HF.
+
+### 2026-11-18 — T02 Cek mesin — selesai
+- `runs/env_report.json`: macOS 27.2.1 arm64 (Apple M5), 10 CPU, **RAM 17,2 GB** (16 GiB), disk bebas 364,8 GB,
+  **MPS = true**, CUDA = false. torch 2.15.0, lightgbm 4.7.0, transformers 5.23.0, pandas 3.1.1.
+- Placement: data/EDA/LightGBM/kalibrasi lokal; CO-KT dan encoder L2 di Kaggle GPU; opus-mt lokal (CPU/MPS).
+- RAM 16 GiB → pandas memakai dtype hemat (int32/float32/category), parquet, baca kolom seperlunya.
+
+### 2026-11-18 — T01 Lingkungan Python — selesai
+- Tidak ada python3.12/Homebrew di mesin. Python 3.12.16 dipasang lewat `uv` (pip install di `ml/.bootstrap/`,
+  lalu `uv python install 3.12` → `~/.local/bin/python3.12`). `make setup` dijalankan dengan `PATH=~/.local/bin:$PATH`.
+- `import lightgbm` gagal (libomp). Tanpa Homebrew: target baru `make fix-libomp` menambah rpath ke `torch/lib/libomp.dylib`
+  + codesign ad-hoc. LightGBM 4.7.0 jalan.
+- `make test`: **27 passed** (B0 parity). `requirements-lock.txt` (189 paket) ter-commit.
 
 ### 2026-11-18 — T05 Kunci keputusan — selesai
 - D-01…D-15 ditinjau; tidak ada yang mustahil secara teknis, jadi tidak ada revisi.

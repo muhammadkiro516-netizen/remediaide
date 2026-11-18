@@ -12,6 +12,9 @@ Claude Code mengerjakan semua hal lainnya. Kerjakan item ini, centang, lalu keti
      Jika yang tampil token teks: simpan sebagai variabel `KAGGLE_API_TOKEN` di `~/.zshrc`
      (`export KAGGLE_API_TOKEN=...`), lalu buka terminal baru.
   4. **Jangan** tempel token di chat atau commit ke git.
+  5. **Cara termudah (Kaggle CLI 2.2.5 sudah terpasang di venv):** buka Terminal dan jalankan
+     `~/Downloads/remediaide-main/ml/.venv/bin/kaggle auth login`. Ikuti login di browser. Kredensial
+     tersimpan lokal; langkah 2–3 tidak perlu. Cek: `~/Downloads/remediaide-main/ml/.venv/bin/kaggle competitions list -s map`.
 - [ ] **M2. Setujui aturan kompetisi MAP:** buka
   https://www.kaggle.com/competitions/map-charting-student-math-misunderstandings → tab Data/Rules →
   klik "I Understand and Accept" atau "Join". Sambil di sana, lihat tab Data dan catat lisensinya.

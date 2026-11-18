@@ -19,3 +19,4 @@ kaggle/**/output/
 .env
 kaggle.json
 .bootstrap/
+*.egg-info/
