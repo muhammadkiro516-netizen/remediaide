@@ -18,3 +18,4 @@ __pycache__/
 kaggle/**/output/
 .env
 kaggle.json
+.bootstrap/
