@@ -41,6 +41,13 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 
 ## Log
 
+### 2026-11-18 — T32 Terjemahan Indonesia + QA — selesai
+- `data/processed/map_id.parquet` lengkap (36.696 baris); 35.668 alasan unik dalam 2.744 s (MPS).
+- Diagnostik: angka tidak cocok 845 (2,4%), tidak berubah 246, halusinasi (sumber dipertahankan) 18.
+- QA manual 100 sampel berstrata → `ml/reports/tables/translation_qa.csv`, kartu `ml/reports/translation_card.md`:
+  **baik 46, kecil 34, berat 20**; angka rusak 7. Opsi soal peluang salah makna ("Unlikely" → "Tidak mungkin").
+- Konsekuensi: E4 = ketahanan terhadap terjemahan mesin, bukan tulisan asli; instrumen pilot diterjemahkan manual.
+
 ### 2026-11-18 — T30 B0 TF-IDF (L2) — selesai
 - Run `ml/runs/20261118-2131_l2_tfidf/` (OOF `oof_target.parquet`, `oof_category3.parquet`), tabel `ml/reports/tables/L2_b0_tfidf_cv.csv`.
 - Split acak, target 65 kelas + masking kandidat dari fold latih: **MAP@3 0,916 [0,914–0,918]** (std antarfold 0,002),

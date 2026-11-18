@@ -146,7 +146,7 @@ Semua path ML relatif terhadap `ml/`.
   - Selesai jika: MAP@3 CV dan macro-F1 per soal tercatat dengan CI, dan model fold terbaik tersimpan
     (Kaggle dataset privat atau HF private).
 
-- [ ] **T32 [S] Terjemahan Indonesia + QA** — dep: T13
+- [x] **T32 [S] Terjemahan Indonesia + QA** — dep: T13
   - `src/remediaide_ml/data/translate.py` (02 §3): placeholder matematika, opus-mt-en-id, dan tes pada 20 contoh.
   - Terjemahkan seluruh MAP (dipakai juga untuk instrumen pilot T70). Jalankan di background karena makan waktu.
   - QA 100 sampel → `reports/tables/translation_qa.csv` + `reports/translation_card.md`.
