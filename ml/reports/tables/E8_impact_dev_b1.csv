@@ -1,0 +1,13 @@
+metrik,nilai
+n_eval_rows,167155
+n_eval_users,2424
+operating_point,"{""defer_rate"": 0.2, ""rule"": ""no grid point met 25% reduction within 30% -> fallback 20% (D-09)""}"
+doubt_threshold,0.5410731579790994
+b0_misgroup,0.4476862792019383
+ml_misgroup,0.40057431725045617
+defer_rate,0.20713708833118963
+ml_misgroup_kept,0.3487863216907742
+b0_misgroup_on_kept,0.3971146373301341
+errors_caught_by_defer,0.3096418650497327
+teacher_reviews_per_class_32x15,99.4
+ml_minus_b0_misgroup_ci,"[-0.050972168455905645, -0.043749843983940925]"
