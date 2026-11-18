@@ -42,6 +42,16 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 
 ## Log
 
+### 2026-11-18 — T30 B0 TF-IDF (L2) — selesai
+- Run `ml/runs/20261118-2131_l2_tfidf/` (OOF `oof_target.parquet`, `oof_category3.parquet`), tabel `ml/reports/tables/L2_b0_tfidf_cv.csv`.
+- Split acak, target 65 kelas + masking kandidat dari fold latih: **MAP@3 0,916 [0,914–0,918]** (std antarfold 0,002),
+  akurasi top-1 0,841. True_Misconception top-1: recall **0,375**, presisi 0,821 (n=403).
+- Split per soal (3 soal/fold), `category3`: **macro-F1 0,611** [0,606–0,616 per baris; 0,542–0,674 kluster soal];
+  per fold 0,713/0,568/0,593/0,468/0,609; recall Correct 0,863, Neither 0,626, Misconception 0,349.
+  → Jarak generalisasi besar ke soal baru (alasan utama E3/E4 dan T36).
+- C terbaik (fold 0): target 10 (ujung atas grid {0,3;1;3;10}), category3 0,3 (ujung bawah). Grid tidak diubah; dicatat.
+- CI MAP: bootstrap per baris (tidak ada ID siswa di MAP publik).
+
 ### 2026-11-18 — T16 EDA — selesai
 - `src/remediaide_ml/eda.py` + `ml/notebooks/01_eda.ipynb` (dieksekusi bersih). Gambar `ml/reports/figures/E0_*.png` (6),
   angka `ml/reports/tables/E0_eda_numbers.json`, `E0_self_calibration.csv`. Lima temuan di `ml/reports/RESULTS.md` §2.

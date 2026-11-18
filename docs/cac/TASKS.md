@@ -135,7 +135,7 @@ Semua path ML relatif terhadap `ml/`.
 
 ## P3 — Lapis 2 (Min 22 – Sel 24 Nov) · spesifikasi: 03 §2, 04 E3/E4
 
-- [ ] **T30 [S] B0 TF-IDF** — dep: T13, T15
+- [x] **T30 [S] B0 TF-IDF** — dep: T13, T15
   - Split random (MAP@3) dan per soal (`category3` macro-F1). OOF disimpan.
   - Selesai jika: tabel CV B0 L2 ada.
 
