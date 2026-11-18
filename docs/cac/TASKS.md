@@ -187,7 +187,7 @@ Semua path ML relatif terhadap `ml/`.
   - Fungsi `diagnose(payload) -> response` sesuai kontrak 05 §4. Ini inti layanan.
   - Selesai jika: tes kontrak lulus dengan input contoh.
 
-- [ ] **T44 [S] Modul Pengaman** — dep: T15
+- [x] **T44 [S] Modul Pengaman** — dep: T15
   - `guard/rapid_guess.py`: NT10/20/30, GMM, dan pembanding τmin B0. Tes dengan data simulasi.
     **Tidak dilaporkan sebagai hasil** sebelum ada data pilot.
   - Selesai jika: tes lulus dan API siap dipakai.

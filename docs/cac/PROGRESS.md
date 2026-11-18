@@ -36,6 +36,11 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 
 ## Log
 
+### 2026-11-18 — T44 Modul Pengaman — selesai (simulasi saja, bukan hasil)
+- `src/remediaide_ml/guard/rapid_guess.py`: NT10/20/30, GMM 2 komponen per soal (pooled per bucket kata bila < 30 respons),
+  τmin B0, `evaluate_flags` (flag rate, akurasi flagged vs unflagged), `agreement` (kappa antarmetode), `simulate`.
+- `tests/test_guard.py` 4 tes lulus pada data simulasi. **Tidak dilaporkan sebagai hasil** sampai data pilot ada.
+
 ### 2026-11-18 — T13 Loader + cleaning MAP — selesai
 - `src/remediaide_ml/data/map.py` → `data/interim/map.parquet` + `data/interim/map_candidates.json` (30 kunci soal×prefiks, maks 6 kandidat).
 - Kamus `reports/tables/map_misconception_dictionary.csv`: 39 pasangan (soal, label), deskripsi EN dari Tabel 1

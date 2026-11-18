@@ -102,3 +102,16 @@ def test_cluster_bootstrap_ci_contains_point_and_is_deterministic():
     assert r1 == r2
     assert r1["lo"] <= r1["point"] <= r1["hi"]
     assert r1["n_boot_ok"] == 200
+
+
+def test_confusion_bootstrap_point_matches_sklearn():
+    from sklearn.metrics import f1_score
+
+    y = rng.choice(list("PLMT"), 2000)
+    p = np.where(rng.random(2000) < 0.6, y, rng.choice(list("PLMT"), 2000))
+    cl = rng.integers(0, 150, 2000)
+    _, counts = S.cluster_confusion_counts(y, p, cl, list("PLMT"))
+    r = S.bootstrap_confusion_metric(counts, S.cm_macro_f1, n_boot=200)
+    assert r["point"] == pytest.approx(f1_score(y, p, average="macro"))
+    assert S.cm_misgroup(counts.sum(0)) == pytest.approx(np.mean(y != p))
+    assert r["lo"] < r["point"] < r["hi"]

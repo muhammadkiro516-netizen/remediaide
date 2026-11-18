@@ -141,3 +141,50 @@ def holm(pvalues) -> np.ndarray:
         running = max(running, (m - rank) * p[i])
         adj[i] = min(1.0, running)
     return adj
+
+
+# ---------------------------------------------------------------- fast cluster bootstrap for confusion metrics
+def cluster_confusion_counts(y_true, y_pred, clusters, labels) -> tuple[np.ndarray, np.ndarray]:
+    """Per-cluster confusion counts: returns (cluster ids, array (n_clusters, K, K))."""
+    lab = {v: i for i, v in enumerate(labels)}
+    t = np.array([lab[v] for v in np.asarray(y_true)])
+    p = np.array([lab[v] for v in np.asarray(y_pred)])
+    uniq, inv = np.unique(np.asarray(clusters), return_inverse=True)
+    K = len(labels)
+    flat = inv * K * K + t * K + p
+    counts = np.bincount(flat, minlength=len(uniq) * K * K).reshape(len(uniq), K, K)
+    return uniq, counts
+
+
+def bootstrap_confusion_metric(counts: np.ndarray, metric: Callable[[np.ndarray], float], n_boot: int = 1000,
+                               ci: float = 0.95, seed: int = GLOBAL_SEED) -> dict:
+    """Cluster bootstrap where each replicate's confusion matrix = sum of resampled clusters' matrices.
+
+    Equivalent to resampling clusters with replacement (multinomial weights), but O(n_clusters) per replicate.
+    """
+    rng = np.random.default_rng(seed)
+    n = counts.shape[0]
+    flat = counts.reshape(n, -1).astype(np.float64)
+    point = float(metric(counts.sum(axis=0)))
+    vals = []
+    for _ in range(n_boot):
+        w = rng.multinomial(n, np.full(n, 1.0 / n))
+        cm = (w @ flat).reshape(counts.shape[1:])
+        v = metric(cm)
+        if np.isfinite(v):
+            vals.append(v)
+    a = (1 - ci) / 2
+    lo, hi = np.quantile(vals, [a, 1 - a])
+    return {"point": point, "lo": float(lo), "hi": float(hi), "n_boot_ok": len(vals)}
+
+
+def cm_misgroup(cm: np.ndarray) -> float:
+    return float(1 - np.trace(cm) / cm.sum())
+
+
+def cm_macro_f1(cm: np.ndarray) -> float:
+    tp = np.diag(cm)
+    prec = np.divide(tp, cm.sum(axis=0), out=np.zeros_like(tp, dtype=float), where=cm.sum(axis=0) > 0)
+    rec = np.divide(tp, cm.sum(axis=1), out=np.zeros_like(tp, dtype=float), where=cm.sum(axis=1) > 0)
+    f1 = np.divide(2 * prec * rec, prec + rec, out=np.zeros_like(prec), where=(prec + rec) > 0)
+    return float(f1.mean())
