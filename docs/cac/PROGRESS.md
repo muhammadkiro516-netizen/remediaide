@@ -22,6 +22,10 @@ Kaggle `avlsalmoon/remediaide-l2-mdeberta` (perkiraan selesai 02:00–04:00).
    `scripts/l1_select.py` agar membandingkan CO-KT ens5 vs LightGBM ens5 (baris sama). Hasil 1-seed:
    `reports/tables/L1_model_selection.csv` (CO-KT lebih baik: salah kelompok −0,012 [−0,014; −0,010]). Seri → LightGBM.
    Jika CO-KT dipilih: penjelasan (SHAP) tetap dari LightGBM sebagai model penjelas — **wajib diungkap** di laporan.
+1b. **CO-KT produksi (perlu untuk T46 + layanan):** kernel T23 tidak menyimpan bobot. Tambah mode `--final` di
+   `scripts/train_cokt.py`: latih pada semua siswa CV (early stopping pada subset kalibrasi `splits.calibration_groups`),
+   5 seed, simpan `state_dict` + vocab ke `/kaggle/working/cokt_final_seed<s>.pt`, dan prediksi siswa test sekali (T46 saja,
+   output disimpan tanpa dilihat sampai T46). Smoke lokal dulu, lalu `kaggle datasets version` src + push kernel `cokt_final`.
 2. mDeBERTa: `.venv/bin/kaggle kernels output avlsalmoon/remediaide-l2-mdeberta -p runs/20261118-2202_l2_mdeberta_kaggle/kaggle_output`;
    lalu E3 (`scripts/e3_true_misconception.py --oof "B0 TF-IDF=runs/20261118-2131_l2_tfidf/oof_target.parquet" "M1 mDeBERTa=runs/20261118-2202_l2_mdeberta_kaggle/kaggle_output"`),
    E4 (`scripts/e4_crosslingual.py --model runs/20261118-2202_l2_mdeberta_kaggle/kaggle_output/model_target_fold0 --device cpu`), catat T31/T33/T34.
