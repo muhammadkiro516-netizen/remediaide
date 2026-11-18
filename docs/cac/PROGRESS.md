@@ -7,12 +7,11 @@ angka kunci (dengan path sumbernya), masalah, dan langkah berikutnya.
 ## Status ringkas
 - Fase aktif: P0
 - Task berikutnya: T10→T12→T14→T15(Eedi)→T20→T21→T22 begitu unduhan Eedi selesai
-- **Sedang berjalan (sesi 1):** unduh Eedi `ml/data/raw/eedi_neurips2020/data.zip` (657 MB, blob resmi
-  dqanonymousdata); T32 terjemahan penuh (`ml/runs/*_translate_map/train.log`); T30 TF-IDF penuh
-  (`ml/runs/logs/l2_tfidf_full.log`); smoke mDeBERTa CPU (`ml/runs/logs/l2_mdeberta_smoke_cpu.log`).
-- **Kode siap, menunggu data Eedi:** `data/eedi.py` (+`--extract`), `data/eedi_card.py`, `scripts/build_features.py`,
-  `data/splits.py eedi`, `scripts/e1_b0.py`, `scripts/train_l1_baselines.py`, `scripts/train_l1_lgbm.py`.
-- **Menunggu M1:** `scripts/kaggle_prepare.py --user <u>` lalu push `kaggle/kernels/l2_mdeberta`.
+- **Sedang berjalan (sesi 1, 22:10):** T22 LightGBM penuh (PID nohup, log `ml/runs/logs/l1_lgbm_full.log`);
+  T32 terjemahan (`ml/runs/20261118-2129_translate_map/train.log`); Kaggle `avlsalmoon/remediaide-cokt` dan
+  `avlsalmoon/remediaide-l2-mdeberta` (unduh output: `kaggle kernels output avlsalmoon/<k> -p runs/<id>/kaggle_output`).
+- **Kode siap, menunggu hasil di atas:** `scripts/l3_eval.py` (T40–T42; uji coba `tables/E5_l3_dev_b1.json`),
+  `src/remediaide_ml/diagnose.py` (T43, 6 tes kontrak), `l1/explain.py` (T24), `l3/*` (7 tes).
 - Hari tersisa menuju submit internal (Jum 27 Nov): 9
 - Kuota GPU Kaggle terpakai minggu ini: 0 jam
 
