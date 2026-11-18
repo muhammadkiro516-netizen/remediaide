@@ -42,6 +42,16 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 
 ## Log
 
+### 2026-11-18 — T21 B1 baselines — selesai
+- Run `ml/runs/20261118-2156_l1_b1/` (OOF `oof_a.parquet`, `oof_b.parquet`), tabel `ml/reports/tables/L1_b0_b1_cv.csv`.
+- (a) next-correct AUC: B1a 0,673 [0,670–0,676]; B1b 0,744 [0,741–0,747].
+- (b) butuh_remediasi AUC (912.731 baris): B0 0,633 [0,629–0,636]; B1a 0,558; B1b 0,736 [0,731–0,740].
+- (b) 4 kelas pada baris E1: B0 macro-F1 0,412 / salah kelompok 0,450 (sama dengan T20 — konsisten);
+  B1b macro-F1 0,379 [0,371–0,386], salah kelompok **0,404 [0,393–0,414]**. Argmax LR condong ke kelas mayoritas →
+  salah kelompok turun tetapi macro-F1 juga turun. Dilaporkan apa adanya.
+- C terbaik di fold 0: B1a 0,01, B1b biner 0,01, B1b 4 kelas 1,0. Dua di ujung bawah grid 03 §1 (grid tidak diubah).
+- CI dari 200 replikasi bootstrap untuk AUC (pengembangan); hasil final T46 memakai 1000.
+
 ### 2026-11-18 22:03 — T23 + T31 dikirim ke Kaggle GPU — berjalan
 - Dataset privat: `avlsalmoon/remediaide-ml-src` (src+configs+scripts), `avlsalmoon/remediaide-processed`
   (map, map_splits, map_candidates, eedi_features_a/b, eedi_splits; privat sesuai D-11).

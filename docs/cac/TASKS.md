@@ -105,11 +105,11 @@ Semua path ML relatif terhadap `ml/`.
   - `classify_quadrant` pada baris berkeyakinan. Hitung E1 di fold CV (test **belum** disentuh).
   - Selesai jika: `reports/tables/E1_b0_cv.csv` dan confusion matrix CV ada.
 
-- [~] **T21 [S] B1 baselines** — dep: T20
+- [x] **T21 [S] B1 baselines** — dep: T20
   - B1a dan B1b untuk framing (a) dan (b), 5 fold. Simpan OOF di `runs/<id>/oof.parquet`.
   - Selesai jika: tabel CV B0/B1 ada.
 
-- [ ] **T22 [S] B2 LightGBM + Optuna + E2** — dep: T21
+- [~] **T22 [S] B2 LightGBM + Optuna + E2** — dep: T21
   - `src/remediaide_ml/l1/lgbm.py`. Optuna 50 trial (fold 0), lalu 5 fold. Ablation S0–S6 (E2) pada framing (b).
   - Jalankan di background. Log ke `runs/<id>/train.log`.
   - Selesai jika: tabel E2 CV + gambar draft, model fold tersimpan, dan SHAP global
