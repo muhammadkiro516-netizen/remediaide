@@ -23,6 +23,7 @@ if src.exists():
     shutil.rmtree(src)
 shutil.copytree(ML_ROOT / "src", src / "src", ignore=shutil.ignore_patterns("__pycache__", "*.egg-info"))
 shutil.copytree(ML_ROOT / "configs", src / "configs")
+shutil.copytree(ML_ROOT / "scripts", src / "scripts", ignore=shutil.ignore_patterns("__pycache__"))
 proc = ds / "remediaide-processed"
 proc.mkdir(parents=True, exist_ok=True)
 for f in [INTERIM / "map.parquet", PROCESSED / "map_splits.parquet", PROCESSED / "eedi_features_b.parquet",
