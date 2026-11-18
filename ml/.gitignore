@@ -22,3 +22,6 @@ kaggle.json
 *.egg-info/
 kaggle/datasets/
 kaggle/kernels/*/kernel-metadata.json
+models/l1_lgbm_v1/
+models/l1_cokt_v1/*.pt
+models/l2_*/
