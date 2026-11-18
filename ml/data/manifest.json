@@ -1,0 +1,39 @@
+{
+  "files": {
+    "data/raw/map/train.csv": {
+      "source": "https://huggingface.co/datasets/kaggle-map/data (revision 1996686e4be5de6de2f5c35bc683e93e6b1bdbdd); mirror of Kaggle competition map-charting-student-math-misunderstandings",
+      "license": "MIT (HF dataset card); Kaggle page to be confirmed after M2",
+      "size_bytes": 7936617,
+      "sha256": "f347a34f62be3b1bc188b11290f5615b5bf050a7b7c3aeb21b1966feed7615a0",
+      "recorded": "2026-11-18T21:22:47"
+    },
+    "data/raw/map/test.csv": {
+      "source": "https://huggingface.co/datasets/kaggle-map/data (revision 1996686e4be5de6de2f5c35bc683e93e6b1bdbdd); mirror of Kaggle competition map-charting-student-math-misunderstandings",
+      "license": "MIT (HF dataset card); Kaggle page to be confirmed after M2",
+      "size_bytes": 687,
+      "sha256": "869589a08a46766b8ce9f08a18e393bb5316b119de2520ef1391faa51ad3d0c0",
+      "recorded": "2026-11-18T21:22:47"
+    },
+    "data/raw/map/sample_submission.csv": {
+      "source": "https://huggingface.co/datasets/kaggle-map/data (revision 1996686e4be5de6de2f5c35bc683e93e6b1bdbdd); mirror of Kaggle competition map-charting-student-math-misunderstandings",
+      "license": "MIT (HF dataset card); Kaggle page to be confirmed after M2",
+      "size_bytes": 240,
+      "sha256": "ebae55e3d11595b1e718ce0431ead92e4a53ea4346b5e4346fb9d0586524a5cd",
+      "recorded": "2026-11-18T21:22:47"
+    },
+    "data/raw/map/README.md": {
+      "source": "https://huggingface.co/datasets/kaggle-map/data (revision 1996686e4be5de6de2f5c35bc683e93e6b1bdbdd); mirror of Kaggle competition map-charting-student-math-misunderstandings",
+      "license": "MIT (HF dataset card); Kaggle page to be confirmed after M2",
+      "size_bytes": 21,
+      "sha256": "3e0e15fa0c5cc81675bd69af8eb469d128a725c1a7bfc71f03b7877b7b650567",
+      "recorded": "2026-11-18T21:22:47"
+    },
+    "data/raw/map/LICENSE_NOTE.md": {
+      "source": "written by Claude Code (T11)",
+      "license": "n/a",
+      "size_bytes": 905,
+      "sha256": "9f2d216070bcc52559cbda981808cb2303a6b23df3dfd43df34d1d1045235ba9",
+      "recorded": "2026-11-18T21:24:51"
+    }
+  }
+}

@@ -36,6 +36,20 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 
 ## Log
 
+### 2026-11-18 — T13 Loader + cleaning MAP — selesai
+- `src/remediaide_ml/data/map.py` → `data/interim/map.parquet` + `data/interim/map_candidates.json` (30 kunci soal×prefiks, maks 6 kandidat).
+- Kamus `reports/tables/map_misconception_dictionary.csv`: 39 pasangan (soal, label), deskripsi EN dari Tabel 1
+  Rittle-Johnson dkk. 2025 (hlm. 22–23) + terjemahan ID manual. Cocok 100% dengan pasangan di data (diassert).
+  Beda penamaan: data `Subtraction`/`Positive` = paper [Subtracts]/[Two negatives is positive].
+- Data card `reports/tables/data_card_map.md`: True_Misconception **403 (1,10%)**, 18 baris `prefix_conflict` (D-16),
+  median panjang alasan 13 kata. Paper: 52.463 alasan (38.095 asli + 14.368 sintetis), 24% dikode ganda, kappa 0,70–0,90;
+  train.csv publik = 36.696 baris, tanpa penanda sintetis.
+- Tes `tests/test_map_loader.py` (5 tes, fixture sintetis) lulus.
+
+### 2026-11-18 — T11 Unduh MAP — selesai (via cadangan HF)
+- Kaggle belum terautentikasi → mirror HF `kaggle-map/data` rev `1996686e…`. train.csv 36.696 baris × 7 kolom; sha256 di `data/manifest.json`.
+- Lisensi: MIT (kartu HF + diskusi HF #2) → `data/raw/map/LICENSE_NOTE.md`. Verifikasi halaman Kaggle tertunda M2.
+
 ### 2026-11-18 — T03 Kaggle CLI — terblokir (M1, M2)
 - `kaggle` 2.2.5 terpasang di `ml/.venv/bin/`. `kaggle competitions list -s map-charting` → "Authentication required".
 - Menunggu M1 (disarankan `ml/.venv/bin/kaggle auth login`) dan M2. T11/T23/T31 ikut tertahan; T11 dicoba lewat cadangan HF.

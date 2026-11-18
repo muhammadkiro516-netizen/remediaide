@@ -59,7 +59,7 @@ Semua path ML relatif terhadap `ml/`.
   - Gagal mendapat link → `[!]` + blocker M3. Kerjakan T13 jika MAP tersedia.
   - Selesai jika: kelima file Task 3&4 ada dan jumlah baris train_task_3_4 tercatat (harapan ±1,38 juta).
 
-- [ ] **T11 [S] Unduh MAP** — dep: T03 (atau cadangan HF)
+- [x] **T11 [S] Unduh MAP** — dep: T03 (atau cadangan HF)
   - `kaggle competitions download -c map-charting-student-math-misunderstandings -p data/raw/map && unzip`.
     Cadangan: `datasets.load_dataset("kaggle-map/data")` disimpan ke parquet.
   - Catat lisensi di `data/raw/map/LICENSE_NOTE.md` dan update DECISIONS (catatan verifikasi).
@@ -72,7 +72,7 @@ Semua path ML relatif terhadap `ml/`.
     % confidence kosong).
   - Selesai jika: parquet ada, tes lulus, data card terisi angka nyata.
 
-- [ ] **T13 [S] Loader + cleaning MAP** — dep: T11
+- [x] **T13 [S] Loader + cleaning MAP** — dep: T11
   - `src/remediaide_ml/data/map.py` → `data/interim/map.parquet`, kandidat per soal, kamus miskonsepsi
     (`reports/tables/map_misconception_dictionary.csv`, deskripsi dari tabel di paper Rittle-Johnson 2025,
     dengan terjemahan Indonesia manual).
@@ -85,7 +85,7 @@ Semua path ML relatif terhadap `ml/`.
   - `tests/test_features_leakage.py` dengan tiga tes wajib di 02 §4.
   - Selesai jika: `data/processed/eedi_features_{a,b}.parquet` ada, tes leakage lulus, dan waktu build tercatat.
 
-- [ ] **T15 [S] Split + utilitas evaluasi** — dep: T12, T13
+- [~] **T15 [S] Split + utilitas evaluasi** — dep: T12, T13
   - `src/remediaide_ml/data/splits.py` (02 §6) → `data/processed/{eedi,map}_splits.parquet`.
   - `src/remediaide_ml/eval/metrics.py`: auc, logloss, brier, ece, map_at_k, macro_f1, per-class recall,
     cohen_kappa, misgroup_rate. `eval/stats.py`: cluster bootstrap CI, fast DeLong (paired), McNemar

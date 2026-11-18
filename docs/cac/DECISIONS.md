@@ -20,9 +20,10 @@ Keputusan di bawah ini dikunci sebelum melihat hasil. Perubahan hanya boleh lewa
 | D-13 | 2026-11-18 | Kelompok fairness: Gender (1 vs 2), PremiumPupil (jika artinya terverifikasi), kuartil kemampuan. Atribut ini tidak dipakai sebagai fitur model. | SDG 10, menghindari diskriminasi langsung |
 | D-14 | 2026-11-18 | Training DL berat di GPU Kaggle. Lokal hanya untuk tabular dan smoke test. | MacBook Air tanpa CUDA |
 | D-15 | 2026-11-18 | Model produksi L1 dipilih dari CV (bukan test). Kalau seri, pilih yang lebih sederhana. | Mencegah overfitting pada test |
+| D-16 | 2026-11-18 | MAP: 18 baris (0,049%) dengan prefiks True/False yang bertentangan dengan mayoritas pasangan (QuestionId, MC_Answer) — semuanya di Q31778 — **dipertahankan apa adanya** dan ditandai `prefix_conflict`. Label resmi tidak diubah. Kandidat (D-06) memakai prefiks dari Category. | Tidak mengubah label benchmark. Dampaknya sangat kecil dan dilaporkan di data card |
 
 ## Catatan verifikasi data (diisi Claude Code saat T10–T13)
 - [ ] Nama dan kolom file Eedi sesuai 02_DATA_SPEC? Catat perbedaannya.
 - [ ] Arti PremiumPupil terverifikasi dari paper? (ya/tidak + kutipan halaman)
-- [ ] Kolom MAP sesuai? Lisensi MAP terkonfirmasi? Salin teks lisensinya.
+- [x] Kolom MAP sesuai? **Ya**, persis `row_id, QuestionId, QuestionText, MC_Answer, StudentExplanation, Category, Misconception` (36.696 baris, 15 soal, 65 target, 35 label). Lisensi: **MIT** menurut kartu HF `kaggle-map/data` dan diskusi HF #2 (lihat `ml/data/raw/map/LICENSE_NOTE.md`). Halaman Kaggle belum terbaca (JS); dicek visual saat M2.
 - [ ] Persentase confidence kosong di Eedi T3&4: ____
