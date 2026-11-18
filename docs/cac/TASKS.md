@@ -123,7 +123,7 @@ Semua path ML relatif terhadap `ml/`.
   - Unduh output ke `runs/<id>/kaggle_output/`. Catat jam GPU.
   - Selesai jika: metrik CV CO-KT (a) AUC dan (b) macro-F1 + ablation tercatat dengan CI.
 
-- [ ] **T24 [S] Konsolidasi L1** — dep: T22, T23
+- [~] **T24 [S] Konsolidasi L1** — dep: T22, T23
   - Pilih model produksi berdasarkan CV (D-15). Simpan artefak ke `models/` (03 §5). Fungsi `explain()` yang
     menghasilkan 3 alasan Bahasa Indonesia dari SHAP. Evaluasi akurasi prediksi opsi.
   - Selesai jika: `models/l1_*` ada, `reports/tables/L1_cv_summary.csv` ada, notebook 03/04 bersih.

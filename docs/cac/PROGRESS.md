@@ -15,17 +15,19 @@ angka kunci (dengan path sumbernya), masalah, dan langkah berikutnya.
 - Hari tersisa menuju submit internal (Jum 27 Nov): 9 (hari ke-1)
 - Kuota GPU Kaggle terpakai minggu ini: 1 j 46 m / 30 j (dicek Salman 18 Nov ~22:55, 2 kernel paralel = 2 j kuota per jam)
 
-## Langkah lanjut untuk sesi berikutnya (`/lanjut`) — ditulis 18 Nov 23:00
-1. Cek LightGBM: `tail ml/runs/logs/l1_lgbm_full.log` (harus berakhir `done -> runs/<ts>_l1_lgbm`). Jika proses mati
-   sebelum selesai: jalankan ulang `nohup .venv/bin/python scripts/train_l1_lgbm.py --n-trials 50 --stages all > runs/logs/l1_lgbm_full.log 2>&1 &`.
-   Lalu catat T22 (tabel `reports/tables/E2_ablation_cv.csv`, `L1_lgbm_cv.csv`, `figures/L1_shap_beeswarm.png`).
-2. Cek Kaggle: `.venv/bin/kaggle kernels status avlsalmoon/remediaide-cokt` dan `.../remediaide-l2-mdeberta`.
-   COMPLETE → `.venv/bin/kaggle kernels output avlsalmoon/<k> -p runs/<ts>_<k>/kaggle_output`. ERROR → baca log output, perbaiki, push ulang.
-3. Setelah output mDeBERTa ada: `scripts/e3_true_misconception.py --oof "B0 TF-IDF=runs/20261118-2131_l2_tfidf/oof_target.parquet" "M1 mDeBERTa=runs/<ts>/kaggle_output"`;
-   `scripts/e4_crosslingual.py --model runs/<ts>/kaggle_output/model_target_fold0 --device cpu`.
-4. Setelah LightGBM: `scripts/l3_eval.py --l1-oof runs/<lgbm>/oof_b.parquet --l2-oof <oof terbaik> --tag lgbm --write-models`;
-   `scripts/e6_e8.py --oof runs/<lgbm>/oof_b.parquet --tag lgbm`. Lalu T24 (pilih model produksi per D-15, simpan `models/`).
-5. Kemudian T46 (final_eval, buka test sekali), T47, P5.
+## Langkah lanjut untuk sesi berikutnya (`/lanjut`) — diperbarui 19 Nov 00:05
+Selesai: T22 (LightGBM), T23 (CO-KT). Berjalan: LightGBM 5 seed (nohup, `ml/runs/logs/l1_lgbm_seeds.log`, ±20 menit) dan
+Kaggle `avlsalmoon/remediaide-l2-mdeberta` (perkiraan selesai 02:00–04:00).
+1. **T24 keputusan D-15:** setelah `runs/20261118-2205_l1_lgbm/oof_b_ens5.parquet` ada, ubah `LGBM`/kolom di
+   `scripts/l1_select.py` agar membandingkan CO-KT ens5 vs LightGBM ens5 (baris sama). Hasil 1-seed:
+   `reports/tables/L1_model_selection.csv` (CO-KT lebih baik: salah kelompok −0,012 [−0,014; −0,010]). Seri → LightGBM.
+   Jika CO-KT dipilih: penjelasan (SHAP) tetap dari LightGBM sebagai model penjelas — **wajib diungkap** di laporan.
+2. mDeBERTa: `.venv/bin/kaggle kernels output avlsalmoon/remediaide-l2-mdeberta -p runs/20261118-2202_l2_mdeberta_kaggle/kaggle_output`;
+   lalu E3 (`scripts/e3_true_misconception.py --oof "B0 TF-IDF=runs/20261118-2131_l2_tfidf/oof_target.parquet" "M1 mDeBERTa=runs/20261118-2202_l2_mdeberta_kaggle/kaggle_output"`),
+   E4 (`scripts/e4_crosslingual.py --model runs/20261118-2202_l2_mdeberta_kaggle/kaggle_output/model_target_fold0 --device cpu`), catat T31/T33/T34.
+3. L3 + E6/E8 dengan model L1 terpilih: `scripts/l3_eval.py --l1-oof <oof> --l2-oof <oof L2 terbaik> --tag final_cv --write-models`;
+   `scripts/e6_e8.py --oof <oof> --tag final_cv` (CO-KT OOF perlu kolom p4_*/p_bin: p_bin = pq_M + pq_T).
+4. T24 artefak `models/`, lalu T46 `scripts/final_eval.py` (buka test sekali), T47, P5.
 
 ## Blocker (butuh Salman)
 _(tidak ada blocker aktif; M2 opsional: klik persetujuan aturan MAP)_
