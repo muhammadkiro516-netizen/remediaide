@@ -15,6 +15,18 @@ angka kunci (dengan path sumbernya), masalah, dan langkah berikutnya.
 - Hari tersisa menuju submit internal (Jum 27 Nov): 9 (hari ke-1)
 - Kuota GPU Kaggle terpakai minggu ini: 1 j 46 m / 30 j (dicek Salman 18 Nov ~22:55, 2 kernel paralel = 2 j kuota per jam)
 
+## Langkah lanjut untuk sesi berikutnya (`/lanjut`) — ditulis 18 Nov 23:00
+1. Cek LightGBM: `tail ml/runs/logs/l1_lgbm_full.log` (harus berakhir `done -> runs/<ts>_l1_lgbm`). Jika proses mati
+   sebelum selesai: jalankan ulang `nohup .venv/bin/python scripts/train_l1_lgbm.py --n-trials 50 --stages all > runs/logs/l1_lgbm_full.log 2>&1 &`.
+   Lalu catat T22 (tabel `reports/tables/E2_ablation_cv.csv`, `L1_lgbm_cv.csv`, `figures/L1_shap_beeswarm.png`).
+2. Cek Kaggle: `.venv/bin/kaggle kernels status avlsalmoon/remediaide-cokt` dan `.../remediaide-l2-mdeberta`.
+   COMPLETE → `.venv/bin/kaggle kernels output avlsalmoon/<k> -p runs/<ts>_<k>/kaggle_output`. ERROR → baca log output, perbaiki, push ulang.
+3. Setelah output mDeBERTa ada: `scripts/e3_true_misconception.py --oof "B0 TF-IDF=runs/20261118-2131_l2_tfidf/oof_target.parquet" "M1 mDeBERTa=runs/<ts>/kaggle_output"`;
+   `scripts/e4_crosslingual.py --model runs/<ts>/kaggle_output/model_target_fold0 --device cpu`.
+4. Setelah LightGBM: `scripts/l3_eval.py --l1-oof runs/<lgbm>/oof_b.parquet --l2-oof <oof terbaik> --tag lgbm --write-models`;
+   `scripts/e6_e8.py --oof runs/<lgbm>/oof_b.parquet --tag lgbm`. Lalu T24 (pilih model produksi per D-15, simpan `models/`).
+5. Kemudian T46 (final_eval, buka test sekali), T47, P5.
+
 ## Blocker (butuh Salman)
 _(tidak ada blocker aktif; M2 opsional: klik persetujuan aturan MAP)_
 - Pertanyaan T00: apakah ada remote GitHub lama yang ingin dihubungkan? (tidak akan push tanpa izin)
