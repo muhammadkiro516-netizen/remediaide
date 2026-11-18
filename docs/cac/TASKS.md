@@ -24,7 +24,7 @@ Semua path ML relatif terhadap `ml/`.
   - Baca seluruh `docs/cac/*.md` sekali. Tulis ringkasan pemahaman 10 baris di PROGRESS.md.
   - Selesai jika: commit v1 + branch `cac/ml` + commit T00 ada (`git log --oneline` menunjukkan keduanya).
 
-- [ ] **T01 [S] Lingkungan Python** — dep: T00
+- [~] **T01 [S] Lingkungan Python** — dep: T00
   - `cd ml && make setup`. Jika python3.12 tidak ada: `brew install python@3.12` (atau pakai `uv`).
   - Jika `import lightgbm` gagal karena libomp → `brew install libomp`, lalu ulangi.
   - Torch untuk macOS arm64 dari pip standar (MPS). Jangan pasang CUDA build.
@@ -40,19 +40,19 @@ Semua path ML relatif terhadap `ml/`.
   - Sukses → `kaggle competitions files -c map-charting-student-math-misunderstandings`, lalu catat daftar file.
   - Selesai jika: autentikasi sukses dan daftar file MAP tercatat.
 
-- [ ] **T04 [S] Cek aplikasi v1 (tanpa DB)** — dep: T00
+- [x] **T04 [S] Cek aplikasi v1 (tanpa DB)** — dep: T00
   - `npm ci` lalu jalankan tes modul murni (`npx vitest run src/lib/diagnostic src/lib/template src/lib/exit-ticket`).
     Tes yang butuh Prisma client boleh gagal sebelum `prisma generate`; jalankan `npx prisma generate` dulu.
   - Selesai jika: jumlah tes lulus/gagal tercatat sebagai baseline untuk P6.
 
-- [ ] **T05 [S] Kunci keputusan** — dep: T00
+- [x] **T05 [S] Kunci keputusan** — dep: T00
   - Baca DECISIONS.md D-01…D-15. Jika ada yang mustahil dijalankan secara teknis, tambahkan entri revisi
     beserta alasannya. Jangan diam-diam berbeda.
   - Selesai jika: DECISIONS ditinjau dan catatannya ada di PROGRESS.
 
 ## P1 — Data (Kam 19 – Jum 20 Nov) · spesifikasi: 02_DATA_SPEC.md
 
-- [ ] **T10 [S] Unduh Eedi 2020** — dep: T01
+- [~] **T10 [S] Unduh Eedi 2020** — dep: T01
   - Ikuti 02 §1 (curl halaman → cari href unduhan). Simpan ke `data/raw/eedi_neurips2020/`, ekstrak,
     hitung sha256, dan tulis `data/manifest.json`.
   - Gagal mendapat link → `[!]` + blocker M3. Kerjakan T13 jika MAP tersedia.

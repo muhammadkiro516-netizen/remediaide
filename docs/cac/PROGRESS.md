@@ -36,6 +36,21 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 
 ## Log
 
+### 2026-11-18 — T05 Kunci keputusan — selesai
+- D-01…D-15 ditinjau; tidak ada yang mustahil secara teknis, jadi tidak ada revisi.
+- Hal yang diverifikasi saat data ada (bukan revisi): (1) D-03: nilai Confidence Eedi yang sebenarnya muncul
+  (diskret atau kontinu) dan hasil pemetaannya ke CRI; (2) D-05: jendela masa depan tanpa satu pun confidence →
+  `fut_conf` tak terdefinisi, jadi baris dikeluarkan dari evaluasi kuadran 4 kelas (tetap dipakai untuk biner
+  `butuh_remediasi`). Jumlahnya dilaporkan di data card. Ini interpretasi langsung 02 §5, bukan aturan baru.
+- D-13: arti PremiumPupil diverifikasi di T12.
+
+### 2026-11-18 — T04 Cek aplikasi v1 (tanpa DB) — selesai
+- `npm ci` (Node v26.13.1, npm 11.20.0) sukses. npm 11 memblokir install-scripts (prisma, fsevents, msgpackr);
+  `npx prisma generate` tetap jalan.
+- Tes modul murni (`src/lib/diagnostic src/lib/template src/lib/exit-ticket`): **9 file, 117 tes lulus, 0 gagal**
+  (01_CONTEXT menyebut 123; angka yang benar di mesin ini 117).
+- `npm test` (vitest run) penuh: **38 file, 561 tes lulus, 0 gagal**. Ini baseline P6.
+
 ### 2026-11-18 — T00 Bootstrap repo — selesai
 - `git init -b main`; commit `v1: RemediAide LIDM 2026 (snapshot dari zip)` hanya berisi kode v1 (.gitignore asli).
 - Branch `cac/ml`; `.gitignore` root ditambah `__MACOSX/`, `._*`, `ml/.venv/`, `ml/data/{raw,interim,processed,pilot}/`.
