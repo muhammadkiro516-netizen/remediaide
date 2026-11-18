@@ -53,6 +53,19 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 
 ## Log
 
+### 2026-11-18 23:55 — T22 B2 LightGBM + Optuna + E2 — selesai
+- Run `ml/runs/20261118-2205_l1_lgbm/` (±1 j 49 m lokal): Optuna 50 trial × 3 (a, b 4 kelas, b biner) di fold 0, 5 fold,
+  model fold tersimpan, OOF `oof_a.parquet`, `oof_b.parquet`. Tabel `ml/reports/tables/L1_lgbm_cv.csv`, `E2_ablation_cv.csv`;
+  gambar `ml/reports/figures/E2_ablation.png`, `L1_shap_beeswarm.png`.
+- (a) AUC **0,789 [0,786–0,793]**. (b) baris E1: macro-F1 **0,465 [0,453–0,477]**, salah kelompok **0,359 [0,349–0,368]**;
+  AUC butuh_remediasi **0,800 [0,796–0,804]** (B0 0,633, B1b 0,736).
+- E2 (macro-F1 / AUC biner): S0 0,178/0,631 → S1 +keyakinan 0,291/0,652 → S2 +riwayat 0,400/0,778 → S3 +riwayat keyakinan
+  0,440/**0,777** → S4 +kesulitan 0,462/0,797 → S5 +opsi 0,463/0,798 → S6 +waktu 0,465/0,800. DeLong berurutan (Holm)
+  semua p < 1e-30; **S3 menurunkan AUC biner sedikit (−0,001) meski menaikkan macro-F1** — dilaporkan apa adanya.
+- SHAP: fitur teratas untuk kelas Miskonsepsi masa depan = kecenderungan terlalu yakin, akurasi sebelumnya, kemudahan topik.
+- Perbandingan baris sama (`ml/reports/tables/L1_cokt_cv.csv`): CO-KT ensemble lebih baik di (b) (0,480 / 0,347) dan (a) (+0,004).
+  Pemilihan model produksi di T24 (D-15).
+
 ### 2026-11-18 23:35 — T23 M1 CO-KT — selesai
 - Kernel `avlsalmoon/remediaide-cokt` COMPLETE (55 run: full 5 seed, no_conf 3, no_option 3; rata-rata 89 s/run, ±80 menit GPU,
   13,9 epoch rata-rata). Output `ml/runs/20261118-2202_cokt_kaggle/kaggle_output/` (550 MB, tidak di-commit).

@@ -5,3 +5,5 @@ b,M1 CO-KT (ensemble 5 seed),macro_f1,0.479805160535468,0.46881714065690017,0.49
 b,M1 CO-KT (ensemble 5 seed),misgroup,0.3470388081662682,0.33760897302574466,0.3558126599536326,217480,
 b,B0 aturan v1 (baris yang sama),macro_f1,0.41157414706255835,,,217480,
 b,B0 aturan v1 (baris yang sama),misgroup,0.450087364355343,,,217480,
+b,B2 LightGBM (baris yang sama),macro_f1,0.4647399977689442,,,217480,
+b,B2 LightGBM (baris yang sama),misgroup,0.35925142541842925,,,217480,
