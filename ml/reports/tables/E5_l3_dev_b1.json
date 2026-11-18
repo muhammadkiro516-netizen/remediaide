@@ -1,0 +1,33 @@
+{
+  "tag": "dev_b1",
+  "l1_oof": "runs/20261118-2156_l1_b1/oof_b.parquet",
+  "l2_oof": "runs/20261118-2131_l2_tfidf/oof_target.parquet",
+  "L1": {
+    "n_cal": 45645,
+    "n_eval": 171835,
+    "ece_before": 0.018193502773998393,
+    "ece_after": 0.015121092567638302,
+    "macro_f1_after": 0.3755840262792149,
+    "misgroup_after": 0.409817557540664,
+    "lac_qhat": 0.8566881259249608,
+    "coverage": 0.8840166438734833,
+    "avg_set_size": 2.1297931154886958,
+    "singleton_share": 0.1431198533476882,
+    "operating_point": {
+      "defer_rate": 0.2,
+      "rule": "no grid point met 25% reduction within 30% -> fallback 20% (D-09)"
+    },
+    "doubt_threshold": 0.5254090143869714,
+    "eval_defer_rate_at_threshold": 0.23079116594407426,
+    "eval_misgroup_kept": 0.35345029770686276
+  },
+  "L2": {
+    "temperature": 1.2019477581500233,
+    "ece_before": 0.025388322289010695,
+    "ece_after": 0.009567862592002492,
+    "aps_qhat": 0.9942362310145121,
+    "coverage": 0.9504036515992779,
+    "avg_set_size": 1.8965153115100317,
+    "map3_eval": 0.9164367385404957
+  }
+}
