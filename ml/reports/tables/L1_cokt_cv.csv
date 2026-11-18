@@ -1,0 +1,7 @@
+framing,model,metric,value,ci_lo,ci_hi,n_rows,note
+a,M1 CO-KT (ensemble 5 seed),auc,0.7935970785523616,0.7899711882463823,0.7970767642629789,1100165,
+a,B2 LightGBM (baris yang sama),auc,0.7894567960000755,,,1100165,"DeLong CO-KT - LightGBM = +0.0041, p = 4.3e-106"
+b,M1 CO-KT (ensemble 5 seed),macro_f1,0.479805160535468,0.46881714065690017,0.4903913569818211,217480,
+b,M1 CO-KT (ensemble 5 seed),misgroup,0.3470388081662682,0.33760897302574466,0.3558126599536326,217480,
+b,B0 aturan v1 (baris yang sama),macro_f1,0.41157414706255835,,,217480,
+b,B0 aturan v1 (baris yang sama),misgroup,0.450087364355343,,,217480,

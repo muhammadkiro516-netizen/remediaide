@@ -115,7 +115,7 @@ Semua path ML relatif terhadap `ml/`.
   - Selesai jika: tabel E2 CV + gambar draft, model fold tersimpan, dan SHAP global
     (`reports/figures/L1_shap_beeswarm.png`).
 
-- [~] **T23 [S] M1 CO-KT** — dep: T15, T03
+- [x] **T23 [S] M1 CO-KT** — dep: T15, T03
   - `src/remediaide_ml/l1/cokt.py` (03 §1, M1) + `scripts/train_cokt.py`.
   - Smoke test lokal (1% siswa, 1 epoch) harus lulus sebelum push ke Kaggle.
   - Upload dataset privat (`remediaide-processed`, `remediaide-ml-src`), lalu buat kernel `kaggle/kernels/cokt/`.

@@ -53,6 +53,17 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 
 ## Log
 
+### 2026-11-18 23:35 — T23 M1 CO-KT — selesai
+- Kernel `avlsalmoon/remediaide-cokt` COMPLETE (55 run: full 5 seed, no_conf 3, no_option 3; rata-rata 89 s/run, ±80 menit GPU,
+  13,9 epoch rata-rata). Output `ml/runs/20261118-2202_cokt_kaggle/kaggle_output/` (550 MB, tidak di-commit).
+- Evaluasi `scripts/cokt_eval.py` → `ml/reports/tables/L1_cokt_cv.csv`, `E2_cokt_ablation_cv.csv`, `runs/20261118-2202_cokt_kaggle/eval.json`.
+- (a) next-correct AUC, ensemble 5 seed, 1.100.165 baris: **0,794 [0,790–0,797]**; LightGBM (a, 1 seed) pada baris yang
+  sama 0,790 → selisih +0,004, DeLong p ≈ 4e-106 (efek kecil; catatan: ensemble vs model tunggal).
+- (b) kuadran masa depan pada 217.480 baris E1: macro-F1 **0,480 [0,469–0,490]**, salah kelompok **0,347 [0,338–0,356]**
+  vs B0 0,412 / 0,450.
+- Ablation: tanpa keyakinan → macro-F1 kuadran turun **0,158 [0,146–0,171]**, AUC turun 0,002; tanpa opsi → macro-F1
+  turun 0,002 [0,000–0,004], AUC turun 0,0035. Keyakinan = sinyal terpenting untuk diagnosis (RQ1).
+
 ### 2026-11-18 — T34 E4 lintas bahasa — sebagian (baseline TF-IDF)
 - `scripts/e4_crosslingual.py --tfidf` → `ml/reports/tables/E4_crosslingual_tfidf.csv` (fold 0, n=7.340, paired bootstrap 1000).
 - TF-IDF (dilatih EN): MAP@3 0,916 → 0,766 (selisih **−0,150 [−0,158; −0,143]**); macro-F1 category3 0,839 → 0,631
