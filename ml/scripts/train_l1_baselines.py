@@ -21,7 +21,7 @@ from sklearn.preprocessing import StandardScaler
 from remediaide_ml.eval import metrics as M
 from remediaide_ml.eval import stats as S
 from remediaide_ml.l1.common import QUAD, iter_folds, load, quad_labels
-from remediaide_ml.paths import RUNS, TABLES
+from remediaide_ml.paths import TABLES, run_dir
 from remediaide_ml.seed import set_seed
 
 C_GRID = [0.01, 0.1, 1.0, 10.0]
@@ -49,7 +49,7 @@ def lr(C):
 
 def main():
     seed = set_seed()
-    run = RUNS / f"{dt.datetime.now():%Y%m%d-%H%M}_l1_b1"
+    run = run_dir("l1_b1")
     run.mkdir(parents=True, exist_ok=True)
     res: dict = {}
     for framing in ("a", "b"):

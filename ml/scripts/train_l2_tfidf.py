@@ -20,7 +20,7 @@ from remediaide_ml.data.map import build_candidates
 from remediaide_ml.eval import metrics as M
 from remediaide_ml.eval.stats import cluster_bootstrap_ci
 from remediaide_ml.l2.tfidf import TfidfLR, apply_mask, build_text, candidate_mask
-from remediaide_ml.paths import INTERIM, PROCESSED, RUNS, TABLES
+from remediaide_ml.paths import INTERIM, PROCESSED, TABLES, run_dir
 from remediaide_ml.seed import set_seed
 
 CAT3 = ["Correct", "Misconception", "Neither"]
@@ -49,7 +49,7 @@ def main():
     if a.quick:
         df = df.sample(3000, random_state=seed).reset_index(drop=True)
     text = build_text(df).to_numpy()
-    run = RUNS / f"{dt.datetime.now():%Y%m%d-%H%M}_l2_tfidf{'_quick' if a.quick else ''}"
+    run = run_dir(f"l2_tfidf{'_quick' if a.quick else ''}")
     run.mkdir(parents=True, exist_ok=True)
     cfg = {"task": "T30", "model": "tfidf(word1-2,char_wb3-5)+LR", "c_grid": a.c_grid, "seed": seed,
            "c_selection": "fold 0 validation (random split: MAP@3; question split: macro-F1)", "n_rows": len(df)}

@@ -20,7 +20,7 @@ from remediaide_ml.eval import metrics as M
 from remediaide_ml.eval import stats as S
 from remediaide_ml.l1.common import FEAT_A, QUAD, iter_folds, load, quad_labels
 from remediaide_ml.l1.lgbm import ABLATION_STAGES, ALL_B, fit_predict, stage_features, tune
-from remediaide_ml.paths import FIGURES, RUNS, TABLES
+from remediaide_ml.paths import FIGURES, TABLES, run_dir
 from remediaide_ml.seed import set_seed
 
 
@@ -36,7 +36,7 @@ def main():
     ap.add_argument("--tune-frac", type=float, default=1.0, help="fraction of fold-0 training users used by Optuna")
     a = ap.parse_args()
     seed = set_seed()
-    run = RUNS / f"{dt.datetime.now():%Y%m%d-%H%M}_l1_lgbm{'_quick' if a.quick else ''}"
+    run = run_dir(f"l1_lgbm{'_quick' if a.quick else ''}")
     run.mkdir(parents=True, exist_ok=True)
     (run / "config.yaml").write_text(yaml.safe_dump(vars(a) | {"seed": seed, "task": "T22"}))
     n_trials = 3 if a.quick else a.n_trials

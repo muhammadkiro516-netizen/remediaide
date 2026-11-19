@@ -9,7 +9,6 @@ Outputs: reports/tables/E1_b0_cv.csv, reports/tables/E1_b0_cv_confusion.csv,
 
 from __future__ import annotations
 
-import datetime as dt
 import json
 
 import matplotlib
@@ -20,7 +19,7 @@ import pandas as pd
 
 from remediaide_ml.data.splits import TEST
 from remediaide_ml.eval import stats as S
-from remediaide_ml.paths import FIGURES, PROCESSED, RUNS, TABLES
+from remediaide_ml.paths import FIGURES, PROCESSED, TABLES, run_dir
 
 Q = ["P", "L", "M", "T"]
 Q_ID = {"P": "Paham", "L": "Tebakan beruntung", "M": "Miskonsepsi", "T": "Tidak paham"}
@@ -64,7 +63,7 @@ def main() -> None:
            "pct_b0_paham_not_mastered_next": s1, "pct_b0_miskonsepsi_mastered_next": s2,
            "binary_needs_remediation_error": berr, "n_rows_binary": int(len(b)),
            "ci": "95% cluster bootstrap over UserId, 1000 reps"}
-    run = RUNS / f"{dt.datetime.now():%Y%m%d-%H%M}_e1_b0"
+    run = run_dir("e1_b0")
     run.mkdir(parents=True, exist_ok=True)
     (run / "metrics.json").write_text(json.dumps(res, indent=2))
 

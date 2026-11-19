@@ -24,3 +24,13 @@ MODELS = ML_ROOT / "models"         # exported production artefacts (joblib/onnx
 def ensure_dirs() -> None:
     for p in (RAW_EEDI, RAW_MAP, INTERIM, PROCESSED, PILOT, RUNS, FIGURES, TABLES, KAGGLE, MODELS):
         p.mkdir(parents=True, exist_ok=True)
+
+
+def run_dir(suffix: str) -> Path:
+    """New run folder RUNS/<YYYYMMDD-HHMM>_<suffix>. `make all` pins the name via env RA_RUN_<SUFFIX> (T47) so a
+    reproduction writes to the same canonical run ids that downstream scripts and RESULTS.md refer to."""
+    import datetime as _dt
+    import os
+
+    name = os.environ.get(f"RA_RUN_{suffix.upper()}")
+    return RUNS / (name or f"{_dt.datetime.now():%Y%m%d-%H%M}_{suffix}")
