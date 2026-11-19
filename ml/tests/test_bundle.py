@@ -6,7 +6,10 @@ from remediaide_ml.paths import MODELS
 
 from .test_diagnose_contract import payload
 
-needs_models = pytest.mark.skipif(not (MODELS / "l1_cokt_v1").exists() or not (MODELS / "l3_conformal_v1.json").exists(),
+# binary artefacts are git-ignored (models/README.md); skip on a fresh clone until `make l3` has exported them
+needs_models = pytest.mark.skipif(not any((MODELS / "l1_cokt_v1").glob("*.pt"))
+                                  or not (MODELS / "l1_lgbm_v1" / "model_b4_fold0.txt").exists()
+                                  or not (MODELS / "l3_conformal_v1.json").exists(),
                                   reason="production artefacts not present")
 
 
