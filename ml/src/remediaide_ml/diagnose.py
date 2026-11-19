@@ -34,7 +34,8 @@ class L1Model(Protocol):
 
 
 class L2Model(Protocol):
-    def predict(self, rows: pd.DataFrame) -> dict[str, np.ndarray]: ...  # {"cat3": (n,3), "misc_label": (n,), "misc_prob": (n,), "p_true_misc": (n,)}
+    # returns {"cat3": (n,3), "misc_label": (n,), "misc_prob": (n,), "p_true_misc": (n,)}
+    def predict(self, rows: pd.DataFrame) -> dict[str, np.ndarray]: ...
 
 
 @dataclass

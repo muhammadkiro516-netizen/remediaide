@@ -67,11 +67,11 @@ def main():
         score = P[:, tm].sum(1)
         top1_tm = tm[P.argmax(1)]
 
-        def rec(r):
-            return float(top1_tm[r][y[r]].mean())
+        def rec(r, t=top1_tm):
+            return float(t[r][y[r]].mean())
 
-        def prec(r):
-            return float(y[r][top1_tm[r]].mean()) if top1_tm[r].any() else np.nan
+        def prec(r, t=top1_tm):
+            return float(y[r][t[r]].mean()) if t[r].any() else np.nan
 
         r_ci = cluster_bootstrap_ci(rec, (rows_idx,), rows_idx, n_boot=1000)
         p_ci = cluster_bootstrap_ci(prec, (rows_idx,), rows_idx, n_boot=1000)

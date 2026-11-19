@@ -56,6 +56,16 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 
 ## Log
 
+### 2026-11-19 11:20 — T47 FREEZE Tingkat S — selesai
+- Clone segar + venv segar (dari `requirements-lock.txt`) + data mentah tersalin + output Kaggle tersimpan → `make test`
+  (82 lulus, 2 di-skip tanpa artefak biner) → `make all` (07:05–11:14: terjemahan, LightGBM + Optuna, TF-IDF, L3, evaluasi
+  test) → `make check-repro`: **0 file di luar toleransi; semua tabel hasil `make all` identik** dengan repo
+  (laporan `scratchpad/repro2/ml/runs/check_repro.json`). Tidak ikut `make all`: QA terjemahan (manual), kamus miskonsepsi,
+  tabel dev_b1, dan hasil Tingkat A. Bug yang ditemukan di clone segar: skip `test_bundle` (diperbaiki, f543218).
+- Tag `freeze-tierS` → commit yang direproduksi (f543218). Lint ruff bersih; 89 tes ML + 586 tes web lulus.
+- Hosting: https://remediaide.vercel.app (branch `main`, Neon Postgres, migrasi + seed diterapkan). Repo:
+  https://github.com/muhammadkiro516-netizen/remediaide.
+
 ### 2026-11-19 07:40 — P5 draf + P6 (branch `feat/ml-integration`, worktree `.worktrees/web`)
 - **T63:** `ml/service/app.py` (FastAPI `/health`, `/v1/diagnose`), Dockerfile, `ml/tests/test_service.py`. Alasan SHAP kini
   hanya untuk jawaban terakhir per siswa (latensi 40×15: 0,59 s tanpa L2, 8,25 s dengan mDeBERTa; `ml/reports/tables/E7_latency_service_cpu.json`).

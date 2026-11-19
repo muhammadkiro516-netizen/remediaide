@@ -128,7 +128,8 @@ class MdebertaL2:
         self.net = AutoModelForSequenceClassification.from_pretrained(d, dtype=torch.float32).to(device).eval()
         self.classes = np.array(json.loads((d / "classes.json").read_text()))
         cpath = models_dir / "l2_candidates_v1.json"
-        self.candidates = json.loads(cpath.read_text()) if cpath.exists() else build_candidates(pd.read_parquet(INTERIM / "map.parquet"))
+        self.candidates = (json.loads(cpath.read_text()) if cpath.exists()
+                           else build_candidates(pd.read_parquet(INTERIM / "map.parquet")))
         self.T, self.lang, self.device = temperature, lang, device
 
     def predict(self, rows: pd.DataFrame) -> dict[str, np.ndarray]:
@@ -162,7 +163,8 @@ class StudentOnnxL2:
         self.sess = ort.InferenceSession(str(d / "model_int8.onnx"), providers=["CPUExecutionProvider"])
         self.classes = np.array(json.loads((d / "classes.json").read_text()))
         cpath = models_dir / "l2_candidates_v1.json"
-        self.candidates = json.loads(cpath.read_text()) if cpath.exists() else build_candidates(pd.read_parquet(INTERIM / "map.parquet"))
+        self.candidates = (json.loads(cpath.read_text()) if cpath.exists()
+                           else build_candidates(pd.read_parquet(INTERIM / "map.parquet")))
         self.lang = lang
 
     def predict(self, rows: pd.DataFrame) -> dict[str, np.ndarray]:

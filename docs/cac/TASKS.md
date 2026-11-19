@@ -201,7 +201,7 @@ Semua path ML relatif terhadap `ml/`.
   - Isi `reports/RESULTS.md` sesuai format 04, **termasuk kalimat utama**.
   - Selesai jika: RESULTS.md lengkap, setiap angka menunjuk ke tabel sumber, dan gambar final tersedia.
 
-- [ ] **T47 [S] FREEZE Tingkat S** — dep: T46 · tenggat Rab 25 Nov 23:59
+- [x] **T47 [S] FREEZE Tingkat S** — dep: T46 · tenggat Rab 25 Nov 23:59
   - `make all` dari data mentah (bagian GPU memakai output Kaggle yang tersimpan) lalu bandingkan dengan
     RESULTS (toleransi 07 §6). Tag git `freeze-tierS`.
   - Selesai jika: reproduksi lolos dan tag dibuat.

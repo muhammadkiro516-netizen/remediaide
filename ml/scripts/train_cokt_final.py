@@ -75,7 +75,7 @@ def main():
     cfg = CoktConfig()
     a.out.mkdir(parents=True, exist_ok=True)
     (a.out / "roles.json").write_text(json.dumps({k: [int(x) for x in v] for k, v in roles.items()}))
-    log(f"windows: " + ", ".join(f"{r} {len(i):,}" for r, i in idx.items()) + f"; device {dev}")
+    log("windows: " + ", ".join(f"{r} {len(i):,}" for r, i in idx.items()) + f"; device {dev}")
     for s in a.seeds:
         t0 = time.time()
         _, rep, model = train_eval(seq, idx["train"], idx["early_stop"], len(qv), len(kv), cfg, seed=s, device=dev,

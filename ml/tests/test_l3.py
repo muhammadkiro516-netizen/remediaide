@@ -53,7 +53,6 @@ def test_conformal_coverage(cls):
 def test_selective_and_d09_rule():
     p = rng.random((5000, 4))
     p /= p.sum(1, keepdims=True)
-    y = p.argmax(1).copy()
     doubt = doubt_max_prob(p)
     err_prob = np.clip(doubt * 1.5, 0, 1)
     error = rng.random(5000) < err_prob
