@@ -117,7 +117,7 @@ data/                README + skrip unduh + manifest sha256 (data mentah tidak d
 - **Riwayat:** RemediAide v1 (aplikasi web Next.js dengan aturan CRI 2×2 tanpa ML) pernah diikutkan pada LIDM 2026.
   Seluruh komponen ML, dataset olahan, eksperimen, dan hasil di repo ini baru dibuat untuk CAC MLSC 2026. Aturan v1
   dipakai apa adanya sebagai baseline B0 (`src/remediaide_ml/cri_rule.py`, setara dengan `engine.ts` — 27 tes kesetaraan).
-- **Kontributor:** Salman (pemilik proyek).
+- **Tim:** Salman [nama lengkap] (ketua), Luna [nama lengkap] (anggota), Farel [nama lengkap] (anggota).
 - **Lisensi kode:** MIT (`LICENSE`). Data mengikuti lisensi masing-masing (lihat `DATA_CARD.md`).
 - **Sitasi dataset:** Wang dkk. (2020), *Diagnostic Questions: The NeurIPS 2020 Education Challenge*, arXiv:2007.12061;
   Rittle-Johnson dkk. (2025), MAP/MIME, AIME-Con WIP ([aclanthology 2025.aimecon-wip.3](https://aclanthology.org/2025.aimecon-wip.3.pdf)).

@@ -60,6 +60,8 @@ Claude Code mengerjakan semua hal lainnya. Kerjakan item ini, centang, lalu keti
      `ML_SERVICE_TOKEN=<token Read>`, `ML_TIMEOUT_MS=15000` (Space gratis bisa tidur; panggilan pertama lambat),
      `RESEARCH_EXPORT_SALT` sudah ada. Lalu *Redeploy*.
   6. Ketik `M17 sudah selesai` agar Claude Code menguji end-to-end di produksi.
+- [ ] **M19. Nama lengkap tim** untuk README (`README.md` bagian Riwayat, `ml/README.md` §8): ganti `[nama lengkap]` untuk
+  Salman (ketua), Luna, dan Farel. Cukup ketik nama lengkapnya ke Claude Code.
 - [ ] **M18. Lisensi kode aplikasi web:** README lama menulis "Proprietary"; kode ML sudah MIT. Putuskan lisensi kode web
   (misalnya MIT) bila rulebook meminta kode terbuka.
 
