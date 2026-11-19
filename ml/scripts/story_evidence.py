@@ -70,6 +70,20 @@ def headline() -> None:
         "teacher_reviews_per_class_32x15": float(e8["teacher_reviews_per_class_32x15"]),
         "kept_ci_note": "E8_impact.csv tidak memuat CI untuk salah kelompok kasus yang tidak diserahkan",
     }
+    pw = pd.read_csv(TABLES / "L1_test_pairwise.csv").set_index("perbandingan")
+    f1 = pd.read_csv(TABLES / "L1_test.csv").query("framing == 'b' and metric == 'macro_f1'").set_index("model")
+    out |= {
+        "b1b_misgroup": float(lt.loc["B1b", "value"]), "b1b_misgroup_ci": [float(lt.loc["B1b", "ci_lo"]), float(lt.loc["B1b", "ci_hi"])],
+        "cokt_minus_b1b": float(pw.loc["CO-KT vs B1b", "selisih_salah_kelompok"]),
+        "cokt_minus_b1b_ci": [float(pw.loc["CO-KT vs B1b", "ci_lo"]), float(pw.loc["CO-KT vs B1b", "ci_hi"])],
+        "cokt_minus_b1b_points": 100 * float(pw.loc["CO-KT vs B1b", "selisih_salah_kelompok"]),
+        "cokt_minus_b1b_points_ci": [100 * float(pw.loc["CO-KT vs B1b", "ci_lo"]), 100 * float(pw.loc["CO-KT vs B1b", "ci_hi"])],
+        "cokt_minus_b1b_p_mcnemar_holm": float(pw.loc["CO-KT vs B1b", "p_mcnemar_holm"]),
+        "b1a_misgroup": float(lt.loc["B1a", "value"]), "b1a_misgroup_ci": [float(lt.loc["B1a", "ci_lo"]), float(lt.loc["B1a", "ci_hi"])],
+        "b0_minus_b1a": b0 - float(lt.loc["B1a", "value"]),
+        "b1a_macro_f1": float(f1.loc["B1a", "value"]), "b0_macro_f1": float(f1.loc["B0", "value"]),
+        "b0_vs_b1a_note": "tidak ada uji berpasangan B0 vs B1a di L1_test_pairwise.csv; CI masing-masing tumpang tindih",
+    }
     (TABLES / "headline.json").write_text(json.dumps(out, indent=2))
     print(json.dumps(out, indent=1))
 

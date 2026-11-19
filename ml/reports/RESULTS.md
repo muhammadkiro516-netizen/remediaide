@@ -5,6 +5,10 @@
 > turun **10,3 poin** [9,7–10,9], atau **22,9% relatif** (aproksimasi 21,6–24,2%). Model lalu menyerahkan **20,6%**
 > kasus paling meragukan ke guru. Pada **79,4%** kasus sisanya, salah kelompok **28,3%**, sedangkan aturan v1 pada
 > kasus yang sama **39,2%**.
+> Terhadap baseline sederhana terkuat (regresi logistik B1b, **40,1%** [38,0–42,2]), RemediAide 2.0 tetap lebih baik
+> **5,3 poin** [4,8–5,9]. Aturan v1 (45,1%) bahkan lebih buruk dari baseline B1a yang hanya memakai kesulitan soal
+> (**42,9%** [40,3–45,8]; tanpa uji berpasangan, CI tumpang tindih), walaupun B1a hampir selalu menebak *Paham*
+> (macro-F1 0,182 vs aturan v1 0,392).
 > Sumber: `tables/headline.json` (diturunkan dari `tables/E8_impact.csv` dan `tables/L1_test.csv`; CI relatif adalah
 > aproksimasi CI selisih absolut dibagi titik B0, bukan bootstrap rasio). Gambar: `figures/E8_v1_vs_ml.png`.
 
