@@ -115,7 +115,7 @@ function StudentCard({ s }: { s: MlStudentView }) {
 
 function OnDevicePanel({ sessionId }: { sessionId: string }) {
   const [state, setState] = useState<'idle' | 'running' | 'done' | 'error'>('idle');
-  const [rows, setRows] = useState<{ label: string; quadrant: string; probs: Record<string, number>; pRemed: number }[]>([]);
+  const [rows, setRows] = useState<{ label: string; quadrant: string; probs: Record<string, number>; pRemed: number; fast: number; n: number }[]>([]);
   async function run() {
     setState('running');
     try {
@@ -123,12 +123,17 @@ function OnDevicePanel({ sessionId }: { sessionId: string }) {
       if (!res.success) throw new Error('data');
       const { loadOfflineModels, offlineDiagnose } = await import('@/lib/ml/offline');
       const out: OfflineRow[] = await offlineDiagnose(res.data, await loadOfflineModels());
+      const fastBy = new Map<string, number>();
+      (res.data as { studentKey: string; tooFast?: boolean }[]).forEach((r) => {
+        if (r.tooFast) fastBy.set(r.studentKey, (fastBy.get(r.studentKey) ?? 0) + 1);
+      });
       const by = new Map<string, OfflineRow[]>();
       out.forEach((r) => by.set(r.studentKey, [...(by.get(r.studentKey) ?? []), r]));
       setRows(Array.from(by.entries()).sort(([a], [b]) => a.localeCompare(b)).map(([label, rs]) => {
         const probs = Object.fromEntries(Object.keys(QCOLOR).map((q) => [q, rs.reduce((s, r) => s + r.quadrantProbs[q as keyof typeof r.quadrantProbs], 0) / rs.length]));
         const quadrant = Object.entries(probs).sort((a, b) => b[1] - a[1])[0][0];
-        return { label, quadrant, probs, pRemed: rs.reduce((s, r) => s + r.pNeedsRemediation, 0) / rs.length };
+        return { label, quadrant, probs, pRemed: rs.reduce((s, r) => s + r.pNeedsRemediation, 0) / rs.length,
+                 fast: fastBy.get(label) ?? 0, n: rs.length };
       }));
       setState('done');
     } catch {
@@ -154,7 +159,10 @@ function OnDevicePanel({ sessionId }: { sessionId: string }) {
                 <td className="py-1 pr-2 font-semibold">{r.label}</td>
                 <td className="py-1 pr-2"><ProbBar probs={r.probs} /></td>
                 <td className="py-1 pr-2">{QLABEL[r.quadrant] ?? r.quadrant}</td>
-                <td className="py-1 text-gray-600">butuh remediasi {Math.round(r.pRemed * 100)}%</td>
+                <td className="py-1 pr-2 text-gray-600">butuh remediasi {Math.round(r.pRemed * 100)}%</td>
+                <td className="py-1 text-amber-700">
+                  {r.fast > 0 ? `⚠ ${r.fast} dari ${r.n} jawaban terlalu cepat — hasil AI kurang bisa dipercaya, cek langsung` : ''}
+                </td>
               </tr>
             ))}
           </tbody>

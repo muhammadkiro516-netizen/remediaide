@@ -26,7 +26,7 @@ export async function GET(_request: NextRequest, context: RouteContext) {
   }
   const rows = await prisma.response.findMany({
     where: { sessionPinId: id, schoolId: session.schoolId },
-    select: { chosenOptionKey: true, criValue: true, submittedAt: true, student: { select: { anonymousLabel: true } },
+    select: { chosenOptionKey: true, criValue: true, submittedAt: true, isBelowThreshold: true, student: { select: { anonymousLabel: true } },
               itemVariant: { select: { questionId: true, correctOptionKey: true } } },
   });
   return NextResponse.json({
@@ -34,6 +34,7 @@ export async function GET(_request: NextRequest, context: RouteContext) {
     data: rows.map((r) => ({
       studentKey: r.student.anonymousLabel, questionId: r.itemVariant.questionId, kcId: r.itemVariant.questionId,
       isCorrect: r.chosenOptionKey === r.itemVariant.correctOptionKey, cri: r.criValue, answeredAt: r.submittedAt.toISOString(),
+      tooFast: r.isBelowThreshold, // v1 rule: answered faster than tau_min (rapid guess)
     })),
   });
 }
