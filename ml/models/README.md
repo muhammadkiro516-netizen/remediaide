@@ -11,3 +11,5 @@ File biner besar tidak masuk git. Cara membuat ulang atau mengambilnya:
 | `l2_mdeberta_v1/` | encoder mDeBERTa-v3 (format HF) | kernel Kaggle privat `remediaide-l2-mdeberta` |
 
 Model dilatih hanya pada siswa CV (80%); siswa test tidak pernah dipakai untuk melatih atau memilih model.
+| `l2_student_v1/` | MiniLM-L12 student int8 ONNX (118 MB) — Lapis 2 ringan (Tingkat A, D-23) | kernel Kaggle `remediaide-l2-distill` (`scripts/t35_distill.py`), lalu `scripts/e7_efficiency.py` |
+| `l1_onnx_v1/` | LightGBM fold 0 (b4, bbin) dalam ONNX untuk browser (T68) | `scripts/export_l1_onnx.py --web-dir <repo web>` |

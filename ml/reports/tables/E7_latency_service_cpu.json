@@ -14,5 +14,10 @@
   "n_responses": 600,
   "n_explanations": 600
  },
- "device": "MacBook Air Apple Silicon CPU, bersamaan dengan job reproduksi T47 (beban CPU tinggi)"
+ "device": "MacBook Air Apple Silicon CPU, bersamaan dengan job reproduksi T47 (beban CPU tinggi)",
+ "L2_student_onnx_int8_id": {
+  "median_s": 1.87,
+  "n_responses": 600,
+  "n_explanations": 600
+ }
 }

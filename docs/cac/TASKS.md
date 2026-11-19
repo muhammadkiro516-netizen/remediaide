@@ -128,7 +128,7 @@ Semua path ML relatif terhadap `ml/`.
     menghasilkan 3 alasan Bahasa Indonesia dari SHAP. Evaluasi akurasi prediksi opsi.
   - Selesai jika: `models/l1_*` ada, `reports/tables/L1_cv_summary.csv` ada, notebook 03/04 bersih.
 
-- [ ] **T25 [A] Baseline pyKT resmi** — dep: T23
+- [ ] **T25 [A] Baseline pyKT resmi** — dep: T23 · **TIDAK DIJALANKAN (19 Nov, rencana):** pyKT memakai preprocessing + split sekuens sendiri untuk Eedi (nips_task34); menyamakannya dengan split per siswa + test terkunci kita butuh menulis ulang pipeline data pyKT, dan test Eedi sudah dibuka di T46 sehingga baseline baru hanya boleh dilaporkan di CV. Pembanding literatur (AKT 0,8033, simpleKT 0,8035; arXiv 2302.06881) dikutip di REPORT §4.2 dengan catatan protokol berbeda.
   - Di Kaggle, `pip install pykt-toolkit`, lalu jalankan DKT/AKT/simpleKT pada split yang sama (framing a).
     Jika instalasi bermasalah lebih dari 1 jam, hentikan dan catat.
   - Selesai jika: tabel pembanding resmi, atau catatan gagal beserta alasannya.
@@ -159,11 +159,11 @@ Semua path ML relatif terhadap `ml/`.
   - Inferensi M1 pada test fold terjemahan (kernel Kaggle atau lokal MPS jika muat).
   - Selesai jika: `reports/tables/E4_crosslingual.csv` ada beserta selisih dan CI.
 
-- [ ] **T35 [A] Distilasi + ONNX + E7** — dep: T31
+- [x] **T35 [A] Distilasi + ONNX + E7** — dep: T31
   - Student MiniLM multibahasa → ONNX int8. Ukur ukuran, latensi, dan penurunan metrik.
   - Selesai jika: `reports/tables/E7_efficiency.csv` ada.
 
-- [ ] **T36 [A] Retrieval untuk soal baru** — dep: T31
+- [x] **T36 [A] Retrieval untuk soal baru** — dep: T31
   - multilingual-e5 (alasan ↔ deskripsi miskonsepsi soal tersebut) pada split per soal.
   - Selesai jika: MAP@3 retrieval per soal tercatat.
 
@@ -208,16 +208,16 @@ Semua path ML relatif terhadap `ml/`.
 
 ## P5 — Submisi (Kam 26 – Jum 27 Nov) · spesifikasi: 07_SUBMISSION.md
 
-- [ ] **T50 [S] Susun repo submisi** — dep: T47
+- [~] **T50 [S] Susun repo submisi** — dep: T47
   - `submission/remediaide-ml/` sesuai struktur 07 §1 (salin dari `ml/`, bersihkan). Notebook 01–07 dijalankan.
   - Selesai jika: struktur lengkap dan notebook ber-output.
 
-- [ ] **T51 [S] README + REPORT + kartu model/data** — dep: T50
+- [~] **T51 [S] README + REPORT + kartu model/data** — dep: T50
   - Tulis sesuai 07 §2–4 dalam Bahasa Indonesia yang jelas. Diagram arsitektur dibuat sebagai PNG dengan matplotlib.
   - `scripts/check_numbers.py` lulus.
   - Selesai jika: keempat dokumen selesai dan pemeriksaan angka lulus.
 
-- [ ] **T52 [S] Paket dataset** — dep: T50 · cek **M6**
+- [~] **T52 [S] Paket dataset** — dep: T50 · cek **M6**
   - Sesuai 07 §5 dan jawaban panitia soal format.
   - Selesai jika: `data/README.md` + skrip unduh + checksum ada, dan arsip asli/terjemahan disertakan bila diizinkan.
 
@@ -232,15 +232,15 @@ Semua path ML relatif terhadap `ml/`.
 
 ## P6 — Integrasi web (mulai Kam 26 Nov, setelah P5 aman) · spesifikasi: 05_INTEGRATION_SPEC.md
 
-- [ ] **T60 [S] Jalankan aplikasi lokal** — dep: T04 · mungkin butuh **M7**
-- [ ] **T61 [S] Migrasi Prisma `ml_integration`** — dep: T60
-- [ ] **T62 [S] Input alasan di portal siswa** — dep: T61
+- [x] **T60 [S] Jalankan aplikasi lokal** — dep: T04 · mungkin butuh **M7**
+- [x] **T61 [S] Migrasi Prisma `ml_integration`** — dep: T60
+- [x] **T62 [S] Input alasan di portal siswa** — dep: T61
 - [x] **T63 [S] Layanan FastAPI `ml/service/` + Dockerfile + tes** — dep: T43
-- [ ] **T64 [S] Panggilan ML di compute.ts + fallback + tes** — dep: T61, T63
-- [ ] **T65 [S] Mode AI, antrean guru, umpan balik guru** — dep: T64
-- [ ] **T66 [S] Ekspor riset berbasis persetujuan** — dep: T61
-- [ ] **T67 [S] Perbaikan landing page** — dep: T60
-- [ ] **T68 [A] Mode offline ONNX** — dep: T65, T35
+- [x] **T64 [S] Panggilan ML di compute.ts + fallback + tes** — dep: T61, T63
+- [x] **T65 [S] Mode AI, antrean guru, umpan balik guru** — dep: T64
+- [x] **T66 [S] Ekspor riset berbasis persetujuan** — dep: T61
+- [x] **T67 [S] Perbaikan landing page** — dep: T60
+- [x] **T68 [A] Mode offline ONNX** — dep: T65, T35
 - [ ] **T69 [S] Deploy web + layanan ML, uji end-to-end dari HP** — dep: T65 · butuh **M9**
   - Setiap task P6 selesai jika: tes baru + seluruh `npm test` lulus, fitur diperiksa manual di browser
     (catat langkahnya), dan fallback tanpa layanan ML terbukti jalan.
