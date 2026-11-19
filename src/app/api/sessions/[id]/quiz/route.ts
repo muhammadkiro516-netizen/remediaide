@@ -99,6 +99,7 @@ export async function GET(
               templateText: true,
               itemOrder: true,
               requireExplanation: true,
+              mapQuestionId: true,
               variants: {
                 select: {
                   id: true,
@@ -160,6 +161,7 @@ export async function GET(
         options: [],
         tauMinSeconds: 1,
         requireExplanation: question.requireExplanation,
+        mapQuestionId: question.mapQuestionId ?? null,
       };
     }
 
@@ -211,6 +213,7 @@ export async function GET(
       tauMinSeconds: chosenVariant.tauMinSeconds,
       calibrationStatus: chosenVariant.calibrationStatus,
       requireExplanation: question.requireExplanation,
+      mapQuestionId: question.mapQuestionId ?? null,
     };
   });
 

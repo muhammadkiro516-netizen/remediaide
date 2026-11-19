@@ -97,9 +97,11 @@ export function parseMlResult(json: unknown): MlResult | null {
 
 export async function callMlService(
   payload: MlPayload,
-  opts: { url?: string; timeoutMs?: number; fetchImpl?: typeof fetch } = {}
+  opts: { url?: string; token?: string; timeoutMs?: number; fetchImpl?: typeof fetch } = {}
 ): Promise<MlResult | null> {
   const url = opts.url ?? process.env.ML_SERVICE_URL;
+  // optional bearer token, e.g. a read token for a private Hugging Face Space (never logged)
+  const token = opts.token ?? process.env.ML_SERVICE_TOKEN;
   if (!url) return null;
   const timeoutMs = opts.timeoutMs ?? Number(process.env.ML_TIMEOUT_MS ?? 4000);
   const doFetch = opts.fetchImpl ?? fetch;
@@ -108,7 +110,7 @@ export async function callMlService(
   try {
     const res = await doFetch(`${url.replace(/\/$/, '')}/v1/diagnose`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
       body: JSON.stringify(payload),
       signal: ctrl.signal,
     });

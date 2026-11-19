@@ -24,6 +24,7 @@ import { useRouter, useParams } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import MetacognitiveSlider from "@/components/student/MetacognitiveSlider";
 import { cn } from "@/lib/utils";
+import { pilotFigure, type PilotFigure } from '@/lib/pilot/figures';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -38,6 +39,7 @@ interface QuizItem {
   renderedOptions: RenderedOption[];  // mapped from options in API response
   tauMinSeconds: number;
   requireExplanation: boolean;  // RemediAide 2.0: ask for a one-sentence reason
+  figure: PilotFigure | null;   // pilot instrument (T70): redrawn picture for MAP questions that need one
 }
 
 interface QuizData {
@@ -167,6 +169,7 @@ export default function StudentQuizPage() {
             options: RenderedOption[];
             tauMinSeconds: number;
             requireExplanation?: boolean;
+            mapQuestionId?: number | null;
           }>)
             .filter((item) => item.variantId !== null && item.options.length > 0)
             .map((item) => ({
@@ -175,6 +178,7 @@ export default function StudentQuizPage() {
               renderedOptions: item.options,
               tauMinSeconds: item.tauMinSeconds,
               requireExplanation: item.requireExplanation === true,
+              figure: pilotFigure(item.mapQuestionId),
             })),
         };
         setQuiz(quizData);
@@ -460,6 +464,10 @@ export default function StudentQuizPage() {
           <h2 className="text-lg font-semibold text-slate-900 leading-relaxed">
             {item.renderedText}
           </h2>
+          {item.figure && (
+            // eslint-disable-next-line @next/next/no-img-element -- small static SVG, no optimisation needed
+            <img src={item.figure.src} alt={item.figure.alt} className="mx-auto mt-4 max-h-64 w-auto" />
+          )}
         </div>
 
         {/* Answer options */}
