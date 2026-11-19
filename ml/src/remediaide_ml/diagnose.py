@@ -79,7 +79,8 @@ def _frame(payload: dict) -> pd.DataFrame:
                      "Confidence": float(r["cri"]) * 20, "has_conf": True, "cri": int(r["cri"]),
                      "attempt_no": 1, "response_time_ms": r.get("response_time_ms"), "tau_min_ms": r.get("tau_min_ms"),
                      "explanation": (r.get("explanation") or "").strip(), "map_question_id": it.get("map_question_id"),
-                     "question_text": it.get("question_text") or "", "chosen_option": r["chosen_option"]})
+                     "question_text": it.get("question_text") or "", "chosen_option": r["chosen_option"],
+                     "chosen_option_text": r.get("chosen_option_text") or str(r["chosen_option"])})
     df = pd.DataFrame(rows)
     df["cri"] = df["cri"].astype("Int8")
     df = df.sort_values(["UserId", "DateAnswered", "AnswerId"], kind="mergesort").reset_index(drop=True)

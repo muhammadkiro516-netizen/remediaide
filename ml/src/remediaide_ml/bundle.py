@@ -91,7 +91,7 @@ class CoktL1:
 
 def _l2_frame(rows: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame({"QuestionText": rows["question_text"].astype(str).to_numpy(),
-                         "MC_Answer": rows["chosen_option"].astype(str).to_numpy(),
+                         "MC_Answer": rows.get("chosen_option_text", rows["chosen_option"]).astype(str).to_numpy(),
                          "StudentExplanation": rows["explanation"].astype(str).to_numpy(),
                          "is_correct_answer": rows["IsCorrect"].astype(bool).to_numpy(),
                          "QuestionId": rows["map_question_id"].astype(int).astype(str).to_numpy(),
