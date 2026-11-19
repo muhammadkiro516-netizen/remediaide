@@ -27,11 +27,11 @@ export async function GET(_request: NextRequest, context: RouteContext) {
   }
   const rows = await prisma.mlDiagnosis.findMany({
     where: { sessionPinId: id, schoolId: session.schoolId },
-    include: { student: { select: { anonymousLabel: true } } },
+    include: { student: { select: { anonymousLabel: true } }, question: { select: { itemOrder: true } } },
   });
   const view = buildMlView(rows.map((r) => ({
     id: r.id, studentId: r.studentId, anonymousLabel: r.student.anonymousLabel, questionId: r.questionId,
-    quadrantProbs: (r.quadrantProbs ?? {}) as Record<string, number>, quadrant: r.quadrant, masteryProb: r.masteryProb,
+    questionOrder: r.question?.itemOrder ?? null, quadrantProbs: (r.quadrantProbs ?? {}) as Record<string, number>, quadrant: r.quadrant, masteryProb: r.masteryProb,
     misconceptionLabel: r.misconceptionLabel, misconceptionProb: r.misconceptionProb,
     hiddenMisconception: r.hiddenMisconception, predictionSet: (r.predictionSet ?? []) as string[], deferred: r.deferred,
     reasons: (r.reasons ?? []) as { text: string; impact: number }[], ruleStatus: r.ruleStatus, modelVersion: r.modelVersion,

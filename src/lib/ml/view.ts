@@ -9,6 +9,7 @@ export interface MlRow {
   studentId: string;
   anonymousLabel: string;
   questionId: string | null;
+  questionOrder?: number | null;   // itemOrder of the question (display only)
   quadrantProbs: Record<string, number>;
   quadrant: string;
   masteryProb: number;
@@ -56,7 +57,8 @@ export function buildMlView(rows: MlRow[]): MlView {
   const students: MlStudentView[] = [];
   for (const [studentId, rs] of Array.from(byStudent.entries())) {
     const summary = rs.find((r) => r.questionId === null) ?? null;
-    const perQuestion = rs.filter((r) => r.questionId !== null);
+    const perQuestion = rs.filter((r) => r.questionId !== null)
+      .sort((a, b) => (a.questionOrder ?? 0) - (b.questionOrder ?? 0));
     students.push({
       studentId,
       anonymousLabel: rs[0].anonymousLabel,

@@ -28,6 +28,7 @@ export const PUBLIC_ROUTES: RegExp[] = [
   /^\/api\/student\/join$/,
   /^\/api\/health$/,
   /^\/$/,
+  /^\/metodologi$/,  // RemediAide 2.0 public methodology page
   /^\/student\/join$/,
   /^\/exit-ticket(\/.*)?$/,
   /^\/api\/exit-ticket\/.*/,

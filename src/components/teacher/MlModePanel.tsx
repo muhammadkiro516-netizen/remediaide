@@ -99,7 +99,7 @@ function StudentCard({ s }: { s: MlStudentView }) {
         <tbody>
           {s.perQuestion.map((q) => (
             <tr key={q.id} className="border-t border-gray-100">
-              <td className="py-1 pr-2 text-gray-500">Soal</td>
+              <td className="py-1 pr-2 text-gray-500">Soal {q.questionOrder ?? ''}</td>
               <td className="py-1 pr-2"><ProbBar probs={q.quadrantProbs} /></td>
               <td className="py-1 pr-2">{QLABEL[q.quadrant] ?? q.quadrant}</td>
               <td className="py-1 pr-2 text-gray-700">{q.misconceptionLabel ?? ''}</td>
