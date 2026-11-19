@@ -159,11 +159,11 @@ Semua path ML relatif terhadap `ml/`.
   - Inferensi M1 pada test fold terjemahan (kernel Kaggle atau lokal MPS jika muat).
   - Selesai jika: `reports/tables/E4_crosslingual.csv` ada beserta selisih dan CI.
 
-- [ ] **T35 [A] Distilasi + ONNX + E7** — dep: T31
+- [x] **T35 [A] Distilasi + ONNX + E7** — dep: T31
   - Student MiniLM multibahasa → ONNX int8. Ukur ukuran, latensi, dan penurunan metrik.
   - Selesai jika: `reports/tables/E7_efficiency.csv` ada.
 
-- [ ] **T36 [A] Retrieval untuk soal baru** — dep: T31
+- [x] **T36 [A] Retrieval untuk soal baru** — dep: T31
   - multilingual-e5 (alasan ↔ deskripsi miskonsepsi soal tersebut) pada split per soal.
   - Selesai jika: MAP@3 retrieval per soal tercatat.
 
@@ -240,7 +240,7 @@ Semua path ML relatif terhadap `ml/`.
 - [x] **T65 [S] Mode AI, antrean guru, umpan balik guru** — dep: T64
 - [x] **T66 [S] Ekspor riset berbasis persetujuan** — dep: T61
 - [x] **T67 [S] Perbaikan landing page** — dep: T60
-- [ ] **T68 [A] Mode offline ONNX** — dep: T65, T35
+- [x] **T68 [A] Mode offline ONNX** — dep: T65, T35
 - [ ] **T69 [S] Deploy web + layanan ML, uji end-to-end dari HP** — dep: T65 · butuh **M9**
   - Setiap task P6 selesai jika: tes baru + seluruh `npm test` lulus, fitur diperiksa manual di browser
     (catat langkahnya), dan fallback tanpa layanan ML terbukti jalan.

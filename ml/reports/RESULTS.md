@@ -136,8 +136,30 @@ Sumber: `tables/data_card_eedi.md`, `tables/data_card_map.md`, `tables/E0_eda_nu
   hilang. Mitigasi yang sudah ada: kasus ragu (lebih banyak di kelompok rentan) masuk antrean guru.
 - **Keterbatasan:** tidak ada klaim "adil". PremiumPupil adalah proxy sosial-ekonomi Inggris, bukan konteks Indonesia.
 
-### E7 — Ringan untuk offline
-Tingkat A — rencana (belum dijalankan).
+### E7 — Ringan untuk offline (Tingkat A, CV MAP fold 0; D-23)
+- **Setup:** student Multilingual-MiniLM-L12 didistilasi dari mDeBERTa (logit OOF) pada fold ≠ 0, diekspor ke ONNX dan
+  dikuantisasi int8 (`tables/E7_efficiency.csv`). Latensi: batch 1, CPU laptop, 4 thread, 200 alasan.
+
+| Model | Ukuran | MAP@3 EN | MAP@3 ID | Latensi p50 / p95 |
+| --- | --- | --- | --- | --- |
+| mDeBERTa-v3-base (teacher) | 1131,5 MB | 0,911 | 0,895 | — |
+| MiniLM student ONNX fp32 | 471,0 MB | 0,859 | 0,835 | 8,1 / 10,2 ms |
+| MiniLM student ONNX int8 | **118,3 MB** | **0,860** | **0,834** | **7,8 / 9,2 ms** |
+
+- **Interpretasi:** model 10× lebih kecil kehilangan 0,061 MAP@3 pada input Indonesia, tetapi tetap jauh di atas TF-IDF
+  (0,766, `tables/E4_crosslingual.csv`). Kuantisasi int8 hampir tanpa penurunan.
+- **Lapis 1 di perangkat (T68):** LightGBM fold 0 diekspor ke ONNX (14,1 + 14,9 MB) dan dijalankan di browser
+  (onnxruntime-web). Selisih probabilitas maksimum terhadap LightGBM 0,0046 (`tables/T68_onnx_parity.json`); fitur
+  TypeScript setara Python (tes paritas web).
+- **Keterbatasan:** student 118 MB masih terlalu besar untuk diunduh di browser HP; mode perangkat saat ini L1 saja.
+
+### T36 — Retrieval untuk soal baru (Tingkat A, D-22): hasil negatif
+- **Setup:** multilingual-e5-base zero-shot, alasan ↔ deskripsi miskonsepsi soal itu (2–4 kandidat), 9.860 baris
+  kategori Misconception, CI klaster soal (`tables/T36_retrieval.csv`).
+- **Hasil:** MAP@3 EN 0,689 [0,615–0,771] vs acak 0,669 [0,625–0,714]; ID 0,632 [0,573–0,705] (di bawah acak).
+  Acuan "label terbanyak soal" 0,857.
+- **Interpretasi:** kemiripan kalimat umum tidak cukup untuk membedakan miskonsepsi dalam satu soal. Untuk soal baru,
+  guru tetap perlu memberi contoh berlabel; pendekatan ini **tidak** dipakai di produk.
 
 ### E8 — Dampak bagi guru (simulasi, test)
 - **Setup:** L1 CO-KT + L3 pada titik operasi produksi (D-21). 58.963 kasus, 773 siswa (`tables/E8_impact.csv`).

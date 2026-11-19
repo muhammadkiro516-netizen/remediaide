@@ -26,3 +26,4 @@ models/l1_lgbm_v1/
 models/l1_cokt_v1/*.pt
 models/l2_*/
 models/l2_tfidf_v1.joblib
+models/l1_onnx_v1/

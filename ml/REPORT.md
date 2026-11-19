@@ -345,11 +345,20 @@ Sumber: `reports/tables/E6_fairness.csv`.
 - Pengaman tebakan cepat belum divalidasi pada data nyata.
 - Model ini **tidak untuk** menentukan nilai rapor atau kenaikan kelas.
 
+**Hasil tambahan (Tingkat A, `reports/RESULTS.md`):**
+- **E7:** model student MiniLM int8 berukuran 118,3 MB, dengan MAP@3 Indonesia 0,834 dan latensi p50 7,8 ms di CPU
+  laptop (`reports/tables/E7_efficiency.csv`).
+- **T68:** Lapis 1 berjalan di browser guru (ONNX), dengan selisih probabilitas maksimum 0,0046 terhadap LightGBM
+  (`reports/tables/T68_onnx_parity.json`).
+- **T36:** retrieval zero-shot untuk soal baru tidak lebih baik dari acak, yaitu MAP@3 0,689 vs 0,669
+  (`reports/tables/T36_retrieval.csv`). Hasil negatif ini dilaporkan apa adanya.
+
 **Rencana lanjut (Tingkat A dan B):**
 - Pilot sekolah: dua guru melabeli ≥ 200 alasan, lalu diukur kappa (E9).
 - Studi dampak belajar dua kelas (E10).
-- Distilasi + ONNX untuk mode offline (E7). Sekolah yang belum punya internet tetap adalah 86% [9].
-- Retrieval untuk soal baru.
+- Lapis 2 di perangkat: student 118 MB masih perlu diperkecil untuk HP. Ini penting karena 86% sekolah belum punya
+  internet tetap [9].
+- Pendekatan lain untuk soal baru, misalnya few-shot dengan contoh guru, karena retrieval zero-shot gagal (T36).
 - Mitigasi fairness, misalnya ambang defer per kelompok.
 
 ---
