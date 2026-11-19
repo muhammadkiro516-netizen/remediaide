@@ -1,0 +1,46 @@
+{
+  "source": [
+    "reports/tables/E8_impact.csv",
+    "reports/tables/L1_test.csv",
+    "reports/tables/E5_test.json"
+  ],
+  "split": "test (20% siswa Eedi, dibuka sekali di T46; tidak dihitung ulang)",
+  "n_rows": 58963,
+  "n_users": 773,
+  "b0_misgroup": 0.45051981751267745,
+  "b0_misgroup_ci": [
+    0.4314058295158637,
+    0.4693469465572431
+  ],
+  "ml_misgroup": 0.34743822397096485,
+  "ml_misgroup_ci": [
+    0.3295495410993658,
+    0.3657063001747214
+  ],
+  "abs_diff_ml_minus_b0": -0.10308159354171259,
+  "abs_diff_ci": [
+    -0.10913394930335055,
+    -0.097159542645712
+  ],
+  "abs_diff_points": -10.30815935417126,
+  "abs_diff_points_ci": [
+    -10.913394930335055,
+    -9.7159542645712
+  ],
+  "rel_reduction": 0.22880590272549312,
+  "rel_reduction_approx_ci": [
+    0.21566097398807094,
+    0.2422400637243434
+  ],
+  "rel_reduction_ci_note": "aproksimasi: CI selisih absolut dibagi titik B0 (B0 dianggap tetap); bukan bootstrap rasio",
+  "defer_rate": 0.20560351406814442,
+  "kept_share": 0.7943964859318555,
+  "ml_misgroup_kept": 0.2831127241673783,
+  "b0_misgroup_on_kept": 0.39225021349274125,
+  "kept_abs_diff_ml_minus_b0": -0.10913748932536294,
+  "kept_rel_reduction_vs_b0": 0.2782343656452403,
+  "kept_rel_reduction_vs_ml_all": 0.18514226520154609,
+  "errors_caught_by_defer": 0.3526798789417163,
+  "teacher_reviews_per_class_32x15": 98.7,
+  "kept_ci_note": "E8_impact.csv tidak memuat CI untuk salah kelompok kasus yang tidak diserahkan"
+}

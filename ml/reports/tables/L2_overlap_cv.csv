@@ -1,0 +1,10 @@
+ukuran,nilai,n
+porsi baris validasi (split acak) yang alasannya persis ada di baris latih soal yang sama,0.08829300196206671,36696
+MAP@3 B0 TF-IDF+LR pada baris duplikat,0.9566358024691358,3240
+MAP@3 B0 TF-IDF+LR pada baris bukan duplikat,0.9119739359158298,33456
+MAP@3 M1 mDeBERTa-v3-base pada baris duplikat,0.9365740740740741,3240
+MAP@3 M1 mDeBERTa-v3-base pada baris bukan duplikat,0.9099314522556989,33456
+"selisih MAP@3 mDeBERTa − TF-IDF, total (= kontribusi duplikat + bukan duplikat)",-0.003633456870867036,36696
+kontribusi baris duplikat ke selisih (porsi × selisih),-0.0017713102245476328,3240
+kontribusi baris bukan duplikat ke selisih,-0.0018621466463194028,33456
+split per soal: porsi baris validasi yang soalnya ada di latih,0.0,36696
