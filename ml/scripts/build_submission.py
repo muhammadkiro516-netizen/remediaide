@@ -85,6 +85,8 @@ def main():
             for f in ("train.py", "kernel-metadata.template.json"):
                 if (k / f).exists():
                     shutil.copy2(k / f, out / "kaggle" / "kernels" / k.name / f)
+    # kernel logs + metrics (sanitised by export_kaggle_evidence.py) so judges can verify without Kaggle access
+    shutil.copytree(ML_ROOT / "kaggle" / "evidence", out / "kaggle" / "evidence", ignore=IGNORE)
     # reports
     rep = out / "reports"
     rep.mkdir()
@@ -102,8 +104,10 @@ def main():
             shutil.copy2(p, mo / "l1_cokt_v1" / p.name)
     # docs: locked decisions + experiment protocol
     (out / "docs").mkdir()
-    for f in ("DECISIONS.md", "04_EXPERIMENTS.md", "03_MODEL_SPEC.md", "02_DATA_SPEC.md"):
+    for f in ("DECISIONS.md", "04_EXPERIMENTS.md", "03_MODEL_SPEC.md", "02_DATA_SPEC.md", "06_PILOT_PROTOCOL.md",
+              "LAPORAN_REVIEW.md", "AUDIT_2026-11-20.md", "SECURITY_NOTES.md"):
         shutil.copy2(REPO_ROOT / "docs" / "cac" / f, out / "docs" / f)
+    shutil.copytree(REPO_ROOT / "docs" / "cac" / "pilot", out / "docs" / "pilot", ignore=IGNORE)  # pilot materials (no data)
     # data package (T52)
     dd = out / "data"
     (dd / "original" / "map").mkdir(parents=True)

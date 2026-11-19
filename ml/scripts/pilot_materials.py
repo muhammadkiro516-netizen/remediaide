@@ -14,10 +14,10 @@ from __future__ import annotations
 
 import pandas as pd
 
-from remediaide_ml.paths import INTERIM, PROCESSED, REPO_ROOT, TABLES
+from remediaide_ml.paths import INTERIM, PILOT_DOCS, PROCESSED, TABLES
 from remediaide_ml.pilot.instrument import build_instrument, key_question_ranking, write_instrument, write_svgs
 
-PILOT = REPO_ROOT / "docs" / "cac" / "pilot"
+PILOT = PILOT_DOCS
 EXTRA_CODES = [("BENAR", "Benar dengan nalar benar"), ("TIDAK_JELAS", "Tidak jelas / tidak cukup informasi"),
                ("LAIN", "Miskonsepsi lain (tulis di kolom catatan)")]
 

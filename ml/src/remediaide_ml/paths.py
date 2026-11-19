@@ -34,3 +34,7 @@ def run_dir(suffix: str) -> Path:
 
     name = os.environ.get(f"RA_RUN_{suffix.upper()}")
     return RUNS / (name or f"{_dt.datetime.now():%Y%m%d-%H%M}_{suffix}")
+
+
+# pilot materials: docs/cac/pilot in the full repo, docs/pilot inside the submission package (build_submission.py)
+PILOT_DOCS = ML_ROOT / "docs" / "pilot" if (ML_ROOT / "docs" / "pilot").is_dir() else REPO_ROOT / "docs" / "cac" / "pilot"

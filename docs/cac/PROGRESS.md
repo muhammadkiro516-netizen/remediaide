@@ -63,6 +63,8 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
   riset), skrip analisis pilot + tes sintetis, paket HF Space (393,3 MB) + M17.
 - **E audit:** `docs/cac/AUDIT_2026-11-20.md` — semua tes lulus (ML 95, web 593, leakage 10, paritas 27, build OK),
   0 angka tanpa sumber, 3 klaim dilunakkan, ketidaksesuaian proposal vs kode v1 ditulis di REPORT, PDF/xlsx deterministik.
+- **Paket submisi v3:** `submission/remediaide-ml-v3.zip` (tidak di git; 280 berkas, 18.133.276 byte) kini memuat
+  `kaggle/evidence/` dan `docs/pilot/`; diekstrak dan diuji: 88 lulus, 7 di-skip (butuh data/model besar).
 
 ### 2026-11-19 16:58 — Pelengkap audit D-24 + LAPORAN_REVIEW v2 — selesai
 - `docs/cac/LAPORAN_REVIEW.md` (audit untuk juri) ditulis, lalu empat kekurangan yang diungkapnya ditutup **hanya dengan CV**
