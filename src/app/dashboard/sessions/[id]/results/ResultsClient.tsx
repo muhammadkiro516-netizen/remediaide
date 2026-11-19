@@ -15,6 +15,7 @@ import React, { useState, useCallback } from 'react';
 import PDFDownloadPanel from '@/components/teacher/PDFDownloadPanel';
 import AutoWipeDialog from '@/components/teacher/AutoWipeDialog';
 import { ExitTicketSummaryBadge } from '@/components/teacher/ExitTicketSummaryBadge';
+import MlModePanel from '@/components/teacher/MlModePanel';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -92,6 +93,7 @@ export default function ResultsClient({
   const [groups, setGroups] = useState<RemedialGroupData[]>(initialGroups);
   const [generating, setGenerating] = useState(false);
   const [generateError, setGenerateError] = useState<string | null>(null);
+  const [aiMode, setAiMode] = useState(false);
 
   // ── Summary counts ────────────────────────────────────────────────────────
   const statusCounts = diagnoses.reduce<Record<string, number>>((acc, d) => {
@@ -172,6 +174,16 @@ export default function ResultsClient({
         <div className="flex items-center gap-3">
           <button
             type="button"
+            onClick={() => setAiMode((v) => !v)}
+            aria-pressed={aiMode}
+            className={`min-h-[48px] px-4 py-2 rounded-lg font-semibold text-sm transition-colors ${
+              aiMode ? 'bg-violet-700 text-white hover:bg-violet-800' : 'border border-violet-300 bg-white text-violet-700 hover:bg-violet-50'
+            }`}
+          >
+            {aiMode ? 'Mode AI: aktif' : 'Mode AI'}
+          </button>
+          <button
+            type="button"
             onClick={handleGenerate}
             disabled={generating}
             className="min-h-[48px] px-4 py-2 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
@@ -194,6 +206,8 @@ export default function ResultsClient({
           />
         </div>
       </div>
+
+      {aiMode && <MlModePanel sessionId={sessionId} />}
 
       {generateError && (
         <div className="text-sm text-red-700 bg-red-50 rounded-md px-4 py-3" role="alert">
