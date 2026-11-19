@@ -195,7 +195,7 @@ Semua path ML relatif terhadap `ml/`.
 - [x] **T45 [S] E6 fairness + E8 dampak** — dep: T42
   - Selesai jika: `E6_fairness.csv` dan `E8_impact.csv` versi CV ada.
 
-- [ ] **T46 [S] Buka test set (sekali) + RESULTS.md** — dep: T20–T24, T30–T34, T40–T45
+- [x] **T46 [S] Buka test set (sekali) + RESULTS.md** — dep: T20–T24, T30–T34, T40–T45
   - Jalankan semua model terpilih + baseline pada test Eedi dan test fold MAP dalam satu skrip
     `scripts/final_eval.py`. Hitung E1, E2, E3, E4, E5, E6, E8 dengan CI dan uji signifikansi.
   - Isi `reports/RESULTS.md` sesuai format 04, **termasuk kalimat utama**.

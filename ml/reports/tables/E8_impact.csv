@@ -1,0 +1,12 @@
+metrik,nilai
+n_eval_rows,58963
+n_eval_users,773
+b0_misgroup,0.45051981751267745
+ml_misgroup,0.34743822397096485
+defer_rate,0.20560351406814442
+ml_misgroup_kept,0.2831127241673783
+b0_misgroup_on_kept,0.39225021349274125
+errors_caught_by_defer,0.3526798789417163
+ml_minus_b0_misgroup_ci,"[-0.10913394930335055, -0.097159542645712]"
+teacher_reviews_per_class_32x15,98.7
+system_misgroup_if_teacher_fixes_deferred,0.22490375320116004

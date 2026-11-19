@@ -1,0 +1,16 @@
+{
+  "ece_before": 0.006321761187365959,
+  "ece_after": 0.006785038468844989,
+  "lac_coverage": 0.9003442837033394,
+  "lac_avg_set_size": 1.8976307175686447,
+  "lac_singleton_share": 0.2956260705866391,
+  "defer_rate_at_production_threshold": 0.20560351406814442,
+  "production_defer_target": {
+    "defer_rate": 0.2,
+    "rule": "no grid point met 25% reduction within 30% -> fallback 20% (D-09)"
+  },
+  "misgroup_no_defer": 0.34743822397096485,
+  "misgroup_kept": 0.2831127241673783,
+  "ece_bin_needs_remediation": 0.01562846558470935,
+  "n_rows": 58963
+}

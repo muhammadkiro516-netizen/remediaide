@@ -1,0 +1,3 @@
+model,ambang,n_positif,positif_masuk_antrean,recall_antrean,presisi_antrean,porsi_jawaban_benar_ditandai,split
+tfidf,0.2,322,161,0.5,0.6939655172413793,0.014104200863274362,"CV MAP, 80% baris evaluasi (bukan kalibrasi)"
+mdeberta,0.25,322,165,0.5124223602484472,0.5749128919860628,0.017447869171378198,"CV MAP, 80% baris evaluasi (bukan kalibrasi)"

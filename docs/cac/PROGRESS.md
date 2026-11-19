@@ -15,20 +15,14 @@ angka kunci (dengan path sumbernya), masalah, dan langkah berikutnya.
 - Hari tersisa menuju submit internal (Jum 27 Nov): 9 (hari ke-1)
 - Kuota GPU Kaggle terpakai minggu ini: 1 j 46 m / 30 j (dicek Salman 18 Nov ~22:55, 2 kernel paralel = 2 j kuota per jam)
 
-## Langkah lanjut untuk sesi berikutnya (`/lanjut`) — diperbarui 19 Nov 06:45
-Selesai sampai T45 (P3 dan P4 kecuali T46/T47). Tidak ada proses yang berjalan. Kernel Kaggle selesai semua.
-1. **T46 `scripts/final_eval.py` (buka test SEKALI).** Bahan yang sudah siap, jangan dibaca sebelum T46:
-   - L1 CO-KT produksi: `ml/runs/20261119-0620_cokt_final_kaggle/kaggle_output/pred_test_seed*.parquet` (5 seed, rata-rata,
-     lalu `models/l1_calibrator_v1.joblib` = TemperatureProb; ambang di `models/l3_conformal_v1.json`).
-   - L1 pembanding pada siswa test yang sama: B0 (`quadrant_b0`), B1a/B1b (`scripts/train_l1_baselines.py` refit pada CV),
-     LightGBM 25 model (`runs/20261118-2205_l1_lgbm/model*_b4_fold*.txt`, `models_seed<s>_*`) dengan fitur test dari
-     `l1.common.load(include_test=True)` + `add_fold_encodings(train_mask = semua CV)`.
-   - Framing (a) AUC: CO-KT `p_next` vs LightGBM `model_a_fold*`; DeLong + CI klaster siswa.
-   - E5/E6/E8 pada siswa test dengan parameter produksi (D-21: defer 20%, ambang 0,525), tanpa refit.
-   - Robustness: `splits.temporal_test_flag`.
-   - MAP: tidak ada fold test terkunci (D-06 hanya CV) → laporkan L2 sebagai CV (sudah final) dan nyatakan jelas di RESULTS.
-   - Isi `ml/reports/RESULTS.md` (semua placeholder) + kalimat utama.
-2. T47 freeze (Rab 25 Nov 23:59), lalu P5 (T50–T53), P6 web.
+## Langkah lanjut untuk sesi berikutnya (`/lanjut`) — diperbarui 19 Nov 07:10
+T46 selesai: test Eedi **sudah dibuka** (segel `ml/reports/TEST_OPENED.json`). Jangan jalankan ulang `final_eval.py`
+kecuali bug kode (pakai `--rerun-reason`, tercatat di segel). Tidak ada proses berjalan.
+1. **T47 freeze** (tenggat Rab 25 Nov 23:59): `make all` dari data mentah (GPU = output Kaggle tersimpan), bandingkan
+   dengan RESULTS (toleransi 07 §6), tag `freeze-tierS`. Periksa dulu target Makefile mencakup skrip baru
+   (export_l1/l2, l3_production, cokt_oof_export, l2_eval, e4_combine, final_eval).
+2. Lalu P5: T50 (susun repo submisi), T51 (README + REPORT + kartu model/data), T52 (paket dataset, cek M6), T53 audit.
+3. P6 web setelah submisi aman.
 
 ## Blocker (butuh Salman)
 - ~~M1b login Kaggle~~ beres (19 Nov pagi; Kaggle CLI bisa dipakai lagi).
@@ -56,6 +50,16 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 ±1,4 juta baris × SHAP/Optuna; (5) jadwal 9 hari sangat padat, sehingga freeze 25 Nov harus dipatuhi.
 
 ## Log
+
+### 2026-11-19 07:10 — T46 buka test (sekali) + RESULTS.md — selesai
+- `ml/scripts/final_eval.py` di-commit (3888665) **sebelum** test dibuka; dry-run memakai siswa kalibrasi (2 bug kecil
+  diperbaiki saat dry-run, sebelum test). Run test `ml/runs/20261119-0652_final_eval/` (±7 menit, satu kali).
+- Test (773 siswa berlabel, 58.963 baris E1): salah kelompok B0 **0,451** [0,431–0,469] → CO-KT **0,347** [0,330–0,366],
+  selisih [−0,109; −0,097]; LightGBM 0,362, B1b 0,401. Defer 20,6% → sisa 0,283; cakupan LAC 0,900.
+  AUC (a) CO-KT 0,796 vs LightGBM 0,795. Sumber `ml/reports/tables/L1_test.csv`, `E8_impact.csv`, `E5_test.json`.
+- E6 test: kesenjangan Gender (salah kelompok +0,048 [+0,005; +0,093]) muncul di test (tidak di CV); PremiumPupil dan
+  kuartil kemampuan tetap besar. ECE L1 sesudah kalibrasi tidak membaik di test (0,0063 → 0,0068) — dilaporkan apa adanya.
+- `ml/reports/RESULTS.md` lengkap (tanpa placeholder), termasuk kalimat utama.
 
 ### 2026-11-19 06:45 — T24, T31, T33, T34, T40–T43, T45 — selesai
 - **T24:** CO-KT produksi `scripts/train_cokt_final.py` (kernel `avlsalmoon/remediaide-cokt-final`, ±6 menit GPU, 5 seed):

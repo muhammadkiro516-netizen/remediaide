@@ -1,0 +1,18 @@
+{
+  "runs": [
+    {
+      "opened_at": "2026-11-19T06:59:06",
+      "run": "20261119-0652_final_eval",
+      "rerun_reason": null,
+      "inputs": {
+        "pred_test_seed1.parquet": "82de4c4bcad42c56",
+        "pred_test_seed2.parquet": "4730581602160075",
+        "pred_test_seed20261118.parquet": "62a4db7547b75ca5",
+        "pred_test_seed3.parquet": "95a400733d0eb5a0",
+        "pred_test_seed4.parquet": "7a6dbc874ba5dcb5",
+        "l3_conformal_v1.json": "14f24eb62a39b519",
+        "l1_calibrator_v1.joblib": "7b10d4de4c27a7a4"
+      }
+    }
+  ]
+}
