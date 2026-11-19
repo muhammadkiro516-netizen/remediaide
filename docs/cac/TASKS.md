@@ -208,16 +208,16 @@ Semua path ML relatif terhadap `ml/`.
 
 ## P5 — Submisi (Kam 26 – Jum 27 Nov) · spesifikasi: 07_SUBMISSION.md
 
-- [ ] **T50 [S] Susun repo submisi** — dep: T47
+- [~] **T50 [S] Susun repo submisi** — dep: T47
   - `submission/remediaide-ml/` sesuai struktur 07 §1 (salin dari `ml/`, bersihkan). Notebook 01–07 dijalankan.
   - Selesai jika: struktur lengkap dan notebook ber-output.
 
-- [ ] **T51 [S] README + REPORT + kartu model/data** — dep: T50
+- [~] **T51 [S] README + REPORT + kartu model/data** — dep: T50
   - Tulis sesuai 07 §2–4 dalam Bahasa Indonesia yang jelas. Diagram arsitektur dibuat sebagai PNG dengan matplotlib.
   - `scripts/check_numbers.py` lulus.
   - Selesai jika: keempat dokumen selesai dan pemeriksaan angka lulus.
 
-- [ ] **T52 [S] Paket dataset** — dep: T50 · cek **M6**
+- [~] **T52 [S] Paket dataset** — dep: T50 · cek **M6**
   - Sesuai 07 §5 dan jawaban panitia soal format.
   - Selesai jika: `data/README.md` + skrip unduh + checksum ada, dan arsip asli/terjemahan disertakan bila diizinkan.
 
@@ -232,14 +232,14 @@ Semua path ML relatif terhadap `ml/`.
 
 ## P6 — Integrasi web (mulai Kam 26 Nov, setelah P5 aman) · spesifikasi: 05_INTEGRATION_SPEC.md
 
-- [ ] **T60 [S] Jalankan aplikasi lokal** — dep: T04 · mungkin butuh **M7**
-- [ ] **T61 [S] Migrasi Prisma `ml_integration`** — dep: T60
-- [ ] **T62 [S] Input alasan di portal siswa** — dep: T61
+- [x] **T60 [S] Jalankan aplikasi lokal** — dep: T04 · mungkin butuh **M7**
+- [x] **T61 [S] Migrasi Prisma `ml_integration`** — dep: T60
+- [x] **T62 [S] Input alasan di portal siswa** — dep: T61
 - [x] **T63 [S] Layanan FastAPI `ml/service/` + Dockerfile + tes** — dep: T43
-- [ ] **T64 [S] Panggilan ML di compute.ts + fallback + tes** — dep: T61, T63
-- [ ] **T65 [S] Mode AI, antrean guru, umpan balik guru** — dep: T64
-- [ ] **T66 [S] Ekspor riset berbasis persetujuan** — dep: T61
-- [ ] **T67 [S] Perbaikan landing page** — dep: T60
+- [x] **T64 [S] Panggilan ML di compute.ts + fallback + tes** — dep: T61, T63
+- [x] **T65 [S] Mode AI, antrean guru, umpan balik guru** — dep: T64
+- [x] **T66 [S] Ekspor riset berbasis persetujuan** — dep: T61
+- [x] **T67 [S] Perbaikan landing page** — dep: T60
 - [ ] **T68 [A] Mode offline ONNX** — dep: T65, T35
 - [ ] **T69 [S] Deploy web + layanan ML, uji end-to-end dari HP** — dep: T65 · butuh **M9**
   - Setiap task P6 selesai jika: tes baru + seluruh `npm test` lulus, fitur diperiksa manual di browser

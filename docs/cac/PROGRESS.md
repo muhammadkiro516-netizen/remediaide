@@ -18,7 +18,7 @@ angka kunci (dengan path sumbernya), masalah, dan langkah berikutnya.
 ## Langkah lanjut untuk sesi berikutnya (`/lanjut`) — diperbarui 19 Nov 07:10
 T46 selesai: test Eedi **sudah dibuka** (segel `ml/reports/TEST_OPENED.json`). Jangan jalankan ulang `final_eval.py`
 kecuali bug kode (pakai `--rerun-reason`, tercatat di segel). Tidak ada proses berjalan.
-0. **BERJALAN (19 Nov ±07:25): reproduksi T47** — `scratchpad/repro.sh` (PID 25362): clone segar → venv dari
+0. **BERJALAN (19 Nov ±07:25): reproduksi T47** — `scratchpad/repro.sh` (PID 25491, folder repro2): clone segar → venv dari
    `requirements-lock.txt` → salin data mentah + output Kaggle → `make test` → `make all` → `make check-repro`.
    Log: `/private/tmp/claude-501/-Users-salmonella-Downloads-remediaide-main/7d6cbfb3-3e97-4e56-89d6-e1261a24f4b2/scratchpad/repro.log`
    (perkiraan 4–5 jam: terjemahan ±45 m, LightGBM ±2 j 10 m). Selesai jika log berisi `REPRO_DONE` dan check-repro 0 gagal.
@@ -55,6 +55,19 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 ±1,4 juta baris × SHAP/Optuna; (5) jadwal 9 hari sangat padat, sehingga freeze 25 Nov harus dipatuhi.
 
 ## Log
+
+### 2026-11-19 07:40 — P5 draf + P6 (branch `feat/ml-integration`, worktree `.worktrees/web`)
+- **T63:** `ml/service/app.py` (FastAPI `/health`, `/v1/diagnose`), Dockerfile, `ml/tests/test_service.py`. Alasan SHAP kini
+  hanya untuk jawaban terakhir per siswa (latensi 40×15: 0,59 s tanpa L2, 8,25 s dengan mDeBERTa; `ml/reports/tables/E7_latency_service_cpu.json`).
+- **T50–T52 (draf, final setelah T47):** README/REPORT/MODEL_CARD/DATA_CARD (Bahasa Indonesia, untuk juri), `check_numbers.py`
+  (0 angka tanpa sumber), notebook 02/05/06/07, diagram `reports/figures/arsitektur.png`, `scripts/build_submission.py`
+  (uji: 207 file, 35,6 MB; Eedi via skrip unduh, MAP asli + terjemahan ID), LICENSE MIT.
+- **P6 (semua di `feat/ml-integration`, 583 tes Vitest lulus, `next build` lulus):** T61 migrasi `ml_integration` + init
+  (dibuat dengan `prisma migrate diff`, kini di-commit), T62 alasan siswa + toggle "Minta alasan", T64 panggilan ML + fallback B0
+  (HMAC student_key), T65 Mode AI + antrean "Perlu dicek guru" + umpan balik guru, T66 ekspor riset (consent → 403),
+  T67 landing page bersumber + `/metodologi`. T60: Postgres lokal via `pgserver` (pip; tanpa Docker/Homebrew), migrasi tanpa
+  drift, seed OK, `scripts/e2e-ml.ts`: 12 ConceptDiagnosis + 18 MlDiagnosis dari layanan ML asli.
+- Belum: LKPD per miskonsepsi (tombol unduh; rencana), T68 [A] offline ONNX, T69 deploy (butuh M9), merge ke main.
 
 ### 2026-11-19 07:10 — T46 buka test (sekali) + RESULTS.md — selesai
 - `ml/scripts/final_eval.py` di-commit (3888665) **sebelum** test dibuka; dry-run memakai siswa kalibrasi (2 bug kecil
