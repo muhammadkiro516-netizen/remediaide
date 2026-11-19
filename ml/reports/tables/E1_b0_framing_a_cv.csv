@@ -1,0 +1,7 @@
+model,metrik,nilai,ci_lo,ci_hi,n_baris,n_siswa,delong_vs_b0_ord_p,catatan
+"B0 (a) skor ordinal P=3,L=2,T=1,M=0",auc,0.5972373947872538,0.5931031757228115,0.6018744147987208,415300,3414,,"CV 5 fold, baris dengan kuadran B0 sebelumnya di KC yang sama; CI bootstrap klaster siswa 1000x"
+"B0 (a) biner {P,L}=1",auc,0.5920927076581304,0.5881474773604598,0.5963101891063355,415300,3414,1.7812828805437504e-71,"CV 5 fold, baris dengan kuadran B0 sebelumnya di KC yang sama; CI bootstrap klaster siswa 1000x"
+B1b (a) LR,auc,0.7579337175614129,0.7543943997523973,0.7615147923860132,415300,3414,0.0,"CV 5 fold, baris dengan kuadran B0 sebelumnya di KC yang sama; CI bootstrap klaster siswa 1000x"
+B2 LightGBM (a),auc,0.7997606557020087,0.7954905474940399,0.8042176872606084,415300,3414,0.0,"CV 5 fold, baris dengan kuadran B0 sebelumnya di KC yang sama; CI bootstrap klaster siswa 1000x"
+"B0 (a) skor ordinal, semua baris (tanpa kuadran sebelumnya = 1,5)",auc,0.5629199391785541,0.5596964028459473,0.566371093903727,1107657,3934,,"CV 5 fold, semua baris; CI bootstrap klaster siswa 1000x"
+cakupan skor B0 (a),porsi baris dengan kuadran sebelumnya,0.3749355621821557,,,1107657,3934,,baris CV framing (a)

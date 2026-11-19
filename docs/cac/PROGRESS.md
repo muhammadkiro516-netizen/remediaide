@@ -51,6 +51,15 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 
 ## Log
 
+### 2026-11-19 16:58 — Pelengkap audit D-24 + LAPORAN_REVIEW v2 — selesai
+- `docs/cac/LAPORAN_REVIEW.md` (audit untuk juri) ditulis, lalu empat kekurangan yang diungkapnya ditutup **hanya dengan CV**
+  (test tidak dibuka lagi): `ml/scripts/gap_fill.py` (juga di `make l3`), log `ml/runs/logs/gap_fill.log`.
+- Hasil: `reports/tables/E1_b0_framing_a_cv.csv` (B0 framing (a) AUC 0,5972), `E5_lac_binary_L1_cv.json` (cakupan 0,9011),
+  `L1_cokt_option_cv.csv` (top-1 opsi 0,5652 vs 0,5436 opsi terbanyak per soal), `E6_fairness_gender_codes_cv.csv` +
+  `E6_gender_counts.json` (Gender 0; kode 3 hanya 5 siswa evaluasi). Ringkasan di RESULTS.md, keputusan D-24.
+- `ml/data/manifest.json`: teks lisensi MAP basi diperbaiki (hanya kolom `license`).
+- `make test` 89 lulus; `check_numbers.py` 0 angka tanpa sumber; ruff bersih.
+
 ### 2026-11-19 11:30 — T50–T53 paket submisi + audit akhir — selesai
 - `ml/scripts/build_submission.py` → `submission/remediaide-ml/` (217 file, 35,6 MB) + zip 17,7 MB; zip diekstrak dan diuji
   (82 tes lulus, 7 di-skip tanpa model besar); tidak ada token/password/path lokal; tidak ada file > 20 MB.

@@ -1,0 +1,22 @@
+{
+  "cv_users": {
+    "0": 1488,
+    "1": 1230,
+    "2": 1210,
+    "3": 6
+  },
+  "test_users": {
+    "0": 386,
+    "1": 294,
+    "2": 303,
+    "3": 1
+  },
+  "cv_eval_users_e6": {
+    "0": 1199,
+    "1": 969,
+    "2": 974,
+    "3": 5
+  },
+  "rule": "04 E6: codes 0/3 reported separately if n >= 200 (CV evaluation users). Code 3 below threshold -> count only.",
+  "test_note": "Test users counted from metadata only; no test predictions read (test opened once at T46)."
+}
