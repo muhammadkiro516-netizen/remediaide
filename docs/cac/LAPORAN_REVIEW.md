@@ -1,6 +1,6 @@
 # LAPORAN REVIEW — RemediAide 2.0 (CAC MLSC 2026)
 
-Disusun 19 Nov 2026 oleh Claude Code untuk ditinjau pihak luar (juri ML yang skeptis). Laporan ini **tidak mengubah kode
+Disusun 19 Nov 2026 oleh Claude Code untuk ditinjau pihak luar (juri ML yang skeptis); **versi 3, 20 Nov 2026** (perubahan di §0b). Laporan ini **tidak mengubah kode
 atau hasil apa pun** (versi 2: ditambah §7 "Pelengkap audit D-24" — empat butir spesifikasi yang terlewat, dihitung dari OOF CV saja dengan skrip baru `ml/scripts/gap_fill.py`, tanpa mengubah model/angka lama); semua angka disalin dari file di `ml/reports/` (path disebut di setiap tabel). Angka di tabel
 ditampilkan 4 desimal (nilai < 1e-4 dalam notasi ilmiah); nilai presisi penuh ada di file sumber dan sebagian disalin
 mentah di Lampiran D. Istilah: **CV** = validasi silang pada 80% siswa Eedi; **test** = 20% siswa Eedi yang dikunci
@@ -11,9 +11,9 @@ mentah di Lampiran D. Istilah: **CV** = validasi silang pada 80% siswa Eedi; **t
 
 **`cd ml && make test`**
 ```
-........................................................................ [ 80%]
-.................                                                        [100%]
-89 passed in 5.29s
+........................................................................ [ 75%]
+.......................                                                  [100%]
+95 passed in 5.97s
 ```
 
 **Tes leakage (`ml/tests/test_features_leakage.py`) + kausalitas CO-KT (`ml/tests/test_cokt.py`)**
@@ -28,26 +28,28 @@ tests/test_features_leakage.py::test_vector_quadrant_equals_b0_scalar PASSED
 tests/test_cokt.py::test_sequences_windows_and_padding PASSED
 tests/test_cokt.py::test_next_correct_is_causal PASSED
 tests/test_cokt.py::test_training_smoke_loss_and_outputs PASSED
-============================== 10 passed in 1.52s ==============================
+============================== 10 passed in 1.47s ==============================
 ```
 
 **`npm test`** (di worktree `feat/ml-integration` = `main`)
 ```
- Test Files  45 passed (45)
-      Tests  586 passed (586)
-   Duration  1.65s (transform 1.44s, setup 0ms, import 2.61s, tests 4.59s, environment 1.37s)
+ Test Files  48 passed (48)
+      Tests  593 passed (593)
+   Duration  1.33s (transform 938ms, setup 0ms, import 2.03s, tests 3.81s, environment 1.75s)
 ```
 
 **`git status`**
 ```
 checkout utama, branch cac/ml:
-M docs/cac/LAPORAN_REVIEW.md
+(bersih, tidak ada perubahan)
 worktree .worktrees/web, branch feat/ml-integration:
 (bersih, tidak ada perubahan)
 ```
 
 **`git log --oneline -40`** (branch `main`)
 ```
+05623c4 merge cac/ml (LAPORAN_REVIEW v2)
+6153b04 docs: LAPORAN_REVIEW v2 — tambah bagian pelengkap audit D-24
 ad4bdfe merge cac/ml (D-24 pelengkap audit)
 a2f668e D-24: pelengkap audit (CV saja) — B0 framing (a), LAC biner L1, akurasi opsi CO-KT, Gender 0/3; lisensi manifest
 318000f merge cac/ml (LAPORAN_REVIEW)
@@ -86,9 +88,32 @@ cf8e8a2 T51: README, REPORT, MODEL_CARD, DATA_CARD (Bahasa Indonesia) + check_nu
 0c63272 T50: notebook 02, 05, 06, 07 (tipis, dieksekusi)
 ae0e50e T63: layanan FastAPI /health + /v1/diagnose, Dockerfile, tes kontrak; alasan SHAP hanya untuk jawaban terakhir per siswa (latensi 40x15: 0,6 s tanpa L2, 8,3 s dengan mDeBERTa)
 f543218 T47: test_bundle di-skip bila artefak biner belum diekspor (ditemukan di clone segar)
-f34f702 progress: reproduksi T47 berjalan
-90dc466 T47: make all (data/l1/l2/l3/final), kaggle-outputs, data-raw, check_repro; run id kanonik
 ```
+
+## 0b. Perubahan versi 3 (19–20 Nov 2026): penguatan untuk juri, tanpa membuka test
+Semua analisis baru memakai CV/OOF yang sudah ada; angka test hanya disalin dari tabel yang ada. Audit lengkap:
+`docs/cac/AUDIT_2026-11-20.md`. Keamanan: `docs/cac/SECURITY_NOTES.md`.
+
+| Bagian | Yang berubah | Bukti |
+| --- | --- | --- |
+| A Keamanan | pemindai rahasia (semua ref; 0 rahasia asli), `.gitignore` diperketat, password seed dari env + skrip rotasi | `ml/scripts/scan_secrets.py`, `docs/cac/SECURITY_NOTES.md`, `scripts/rotate-seed-passwords.ts` |
+| B Cerita juri | kalimat utama dari angka test yang ada (selisih absolut + relatif); gambar aturan v1 vs ML; pembingkaian L2 (split acak vs per soal, alasan duplikat); analisis error CV; klaim "tahu batas diri" dilunakkan di dokumen + web | `headline.json`, `figures/E8_v1_vs_ml.png`, `L2_split_gap_cv.csv`, `L2_overlap_cv.csv`, `EA_*` |
+| C Dokumen juri | REPORT ditulis ulang per 5 kriteria (+ riwayat v1, proposal vs kode, pustaka); README root + `ml/README.md`; kartu model/data lengkap; log + metrik kernel Kaggle | `ml/REPORT.md`, `README.md`, `ml/kaggle/evidence/` |
+| D Pilot | T70/T71 selesai: instrumen 15 soal MAP-ID (D-25), 3 SVG [cek guru], PDF persetujuan + info guru, `labeling_sheet.xlsx`, panduan sesi, tes kering 3 siswa dummy (4/4 lulus), tombol *Catat persetujuan riset*; skrip analisis pilot (diuji sintetis saja); paket HF Space | `docs/cac/pilot/`, `ml/scripts/pilot_analysis.py`, `tests/e2e/pilot-dry-run.spec.ts`, `ml/service/hf_space/` |
+| E Verifikasi | ML 95 + web 593 tes lulus, `next build` lulus, 0 angka tanpa sumber, 3 klaim dilunakkan, PDF/xlsx deterministik | `docs/cac/AUDIT_2026-11-20.md` |
+
+**Kalimat utama (test; `ml/reports/tables/headline.json`):** salah kelompok aturan v1 0.4505
+[0.4314–0.4693] → RemediAide 2.0 0.3474
+[0.3295–0.3657]; selisih -0.1031
+[-0.1091; -0.0972]; penurunan relatif 0.2288 (aproksimasi
+0.2157–0.2422: CI absolut dibagi titik B0, bukan bootstrap
+rasio). Defer 0.2056; salah kelompok kasus sisa 0.2831 vs aturan v1 pada kasus yang
+sama 0.3923 (tanpa CI; tidak ada di `E8_impact.csv`).
+
+**Tetap kurang (v3):** E9/E10 belum ada (pilot belum berjalan); layanan ML belum di-hosting (M17); kalimat utama relatif
+hanya punya CI aproksimasi; 11 run lama tanpa `config.yaml`; `NUMBERS_SHEET.md` belum ada; `check_numbers.py` tidak
+memeriksa angka di landing page/`/metodologi`.
+
 
 ## 1. Ringkasan
 - **Fase saat ini:** P5 (submisi) selesai secara teknis; P6 (web) selesai kecuali layanan ML penuh di hosting. Freeze
@@ -170,7 +195,10 @@ tetapi kriteria "Selesai jika" atau spesifikasinya tidak terpenuhi sepenuhnya.
 | T67 | Landing page | [x] | `src/app/page.tsx`, `/metodologi` | — |
 | T68 | Mode offline [A] | [x] | `public/models/*.onnx`, tes paritas | ⚠ bukan offline sungguhan: butuh endpoint `/api/sessions/:id/ml-input` (jaringan); tanpa sinkronisasi; L2 tidak di browser |
 | T69 | Deploy + uji HP | [~] | https://remediaide.vercel.app | web + DB Neon jalan; layanan ML Python **belum** di-hosting; uji dari HP oleh Salman (1 siswa), tidak tercatat formal |
-| T70–T75 | Pilot (Tingkat B) | [ ] | — | belum dimulai; butuh izin sekolah/orang tua |
+| T70 | Instrumen pilot + tes kering | [x] | `docs/cac/pilot/instrument_map_id.*`, `scripts/seed-pilot-instrument.ts`, `tests/e2e/pilot-dry-run.spec.ts` (4/4) | 20 Nov; soal kunci D-25 berbeda dari daftar sementara; 3 gambar digambar ulang, belum dicek guru |
+| T71 | PDF persetujuan + info guru + lembar label | [x] | `consent_form.pdf`, `teacher_info.pdf`, `labeling_sheet.xlsx`, `PANDUAN_SESI.md` | kontak tim & tanggal hapus diisi tangan |
+| T72, T74 | Sesi kelas, label guru [MANUAL] | [ ] | — | butuh izin sekolah + persetujuan orang tua |
+| T73, T75 | Ingest + evaluasi pilot | [ ] | `ml/scripts/pilot_analysis.py` (kode siap, diuji sintetis) | menunggu data; hasil sintetis tidak dilaporkan |
 | T80–T84 | Bahan final (Tingkat B) | [ ] | — | belum dimulai |
 
 
@@ -575,7 +603,7 @@ Gambar `figures/E3_pr_curve.png`. Tidak ada uji signifikansi TF-IDF vs mDeBERTa 
 
 *Sumber: `ml/reports/tables/E4_crosslingual.csv`*
 
-### E5 — Tahu batas diri (selesai; L1 test, L2 CV)
+### E5 — Ketidakpastian dan defer (selesai; L1 test, L2 CV; target D-09 tidak tercapai)
 | kunci | nilai |
 | --- | --- |
 | ece_before | 0.0063 |
@@ -812,7 +840,73 @@ Catatan: cakupan 0.9011 untuk target 0,90; 0.4374 baris mendapat himpunan berisi
 
 *Sumber: `ml/reports/tables/E6_gender_counts.json`*
 
-### E9, E10 — **belum dijalankan** (Tingkat B, butuh pilot sekolah).
+### Bukti v3: pembingkaian Lapis 2 (CV MAP)
+| model | split | metric | value | ci_lo | ci_hi | ci_unit |
+| --- | --- | --- | --- | --- | --- | --- |
+| B0 TF-IDF+LR | acak (5-fold, soal yang sama ada di latih) | macro-F1 category3 | 0.8396 | 0.8255 | 0.8539 | soal (15 klaster) |
+| M1 mDeBERTa-v3-base | acak (5-fold, soal yang sama ada di latih) | macro-F1 category3 | 0.8435 | 0.8270 | 0.8561 | soal (15 klaster) |
+| M1 mDeBERTa-v3-base | per soal (5-fold, soal validasi tidak pernah dilihat) | macro-F1 category3 | 0.6375 | 0.5839 | 0.6849 | soal (15 klaster) |
+| B0 TF-IDF+LR | per soal (5-fold, soal validasi tidak pernah dilihat) | macro-F1 category3 | 0.6112 | 0.5422 | 0.6740 | soal (15 klaster) |
+| B0 TF-IDF+LR | selisih per soal − acak | macro-F1 category3 | -0.2284 | — | — | — |
+| M1 mDeBERTa-v3-base | selisih per soal − acak | macro-F1 category3 | -0.2060 | — | — | — |
+
+*Sumber: `ml/reports/tables/L2_split_gap_cv.csv`*
+
+| ukuran | nilai | n |
+| --- | --- | --- |
+| porsi baris validasi (split acak) yang alasannya persis ada di baris latih soal yang sama | 0.0883 | 36696 |
+| MAP@3 B0 TF-IDF+LR pada baris duplikat | 0.9566 | 3240 |
+| MAP@3 B0 TF-IDF+LR pada baris bukan duplikat | 0.9120 | 33456 |
+| MAP@3 M1 mDeBERTa-v3-base pada baris duplikat | 0.9366 | 3240 |
+| MAP@3 M1 mDeBERTa-v3-base pada baris bukan duplikat | 0.9099 | 33456 |
+| selisih MAP@3 mDeBERTa − TF-IDF, total (= kontribusi duplikat + bukan duplikat) | -0.0036 | 36696 |
+| kontribusi baris duplikat ke selisih (porsi × selisih) | -0.0018 | 3240 |
+| kontribusi baris bukan duplikat ke selisih | -0.0019 | 33456 |
+| split per soal: porsi baris validasi yang soalnya ada di latih | 0.0000 | 36696 |
+
+*Sumber: `ml/reports/tables/L2_overlap_cv.csv`*
+
+### Bukti v3: analisis error (CV)
+| kunci | nilai |
+| --- | --- |
+| source | runs/20261118-2202_cokt_kaggle/oof_b_ens5.parquet (CV OOF, baris E1) |
+| n_rows | 217480 |
+| n_kc_min_1000_rows | 32 |
+| n_kc_cokt_better_than_b0 | 32 |
+| kc_diff_min | -0.1525 |
+| kc_diff_max | -0.0579 |
+| kc_misgroup_cokt_min | 0.2343 |
+| kc_misgroup_cokt_max | 0.4310 |
+| misgroup_cokt | 0.3470 |
+| misgroup_b0 | 0.4501 |
+| share_future_M_predicted_P | 0.4906 |
+| share_future_L_predicted_L | 0.0911 |
+| corr_kc_misgroup_vs_share_future_M | 0.5670 |
+
+*Sumber: `ml/reports/tables/EA_l1_summary_cv.json`*
+
+| label_masa_depan \ prediksi_cokt | Paham | Tebakan beruntung | Miskonsepsi | Tidak paham |
+| --- | --- | --- | --- | --- |
+| Paham | 0.8580 | 0.0046 | 0.1156 | 0.0219 |
+| Tebakan beruntung | 0.4924 | 0.0911 | 0.1290 | 0.2876 |
+| Miskonsepsi | 0.4906 | 0.0031 | 0.4448 | 0.0616 |
+| Tidak paham | 0.2517 | 0.0281 | 0.2419 | 0.4782 |
+
+*Sumber: `ml/reports/tables/EA_l1_confusion_cv.csv`*
+
+| jenis_kesalahan | porsi_di_semua_kesalahan | n |
+| --- | --- | --- |
+| 5 Correct ↔ Neither | 0.5094 | 2979 |
+| 3 miskonsepsi dibaca Neither/Correct | 0.2114 | 1236 |
+| 4 Neither/Correct dibaca miskonsepsi | 0.2110 | 1234 |
+| 1 jebakan jawaban benar terlewat | 0.0431 | 252 |
+| 2 nama miskonsepsi tertukar | 0.0251 | 147 |
+
+*Sumber: `ml/reports/tables/EA_l2_error_types_cv.csv`*
+
+Per KC: `EA_l1_per_kc_cv.csv`; per keyakinan/riwayat: `EA_l1_buckets_cv.csv`; 10 contoh MAP: `EA_l2_examples_cv.csv` (ditampilkan di `ml/REPORT.md` §4.9).
+
+### E9, E10 — **belum dijalankan** (Tingkat B, butuh pilot sekolah). Instrumen, materi, dan skrip analisis siap (§0b).
 
 
 ## 8. Angka utama
@@ -886,34 +980,32 @@ tanpa refit); defer = 1 − max p ≥ 0,5254 (ambang dari siswa kalibrasi model 
 
 ## 13. Submisi dan web
 - **Repo:** https://github.com/muhammadkiro516-netizen/remediaide (proyek penuh; branch `main`, `cac/ml`,
-  `feat/ml-integration`; tag `freeze-tierS`). Visibilitas (privat/publik) belum dicek terhadap rulebook.
-- **Dokumen:** `ml/README.md`, `ml/REPORT.md`, `ml/MODEL_CARD.md`, `ml/DATA_CARD.md` (Bahasa Indonesia);
-  `ml/scripts/check_numbers.py` → 0 angka tanpa sumber (dengan whitelist konstanta protokol `scripts/number_whitelist.txt`).
-- **Paket dataset:** `submission/remediaide-ml.zip` 17.739.567 byte (MAP asli + terjemahan Indonesia, skrip unduh Eedi
-  + sha256; data olahan Eedi tidak disertakan karena ND). Diekstrak dan diuji: 82 lulus, 7 di-skip.
-- **Web (P6):** https://remediaide.vercel.app (Vercel + Neon Postgres, migrasi `init` + `ml_integration` diterapkan, seed
-  demo). Fitur: alasan siswa (maks 280), toggle "Minta alasan", Mode AI (antrean "Perlu dicek guru", kelompok per
-  miskonsepsi, LKPD per miskonsepsi, umpan balik guru), ekspor riset (consent → 403), landing page bersumber, `/metodologi`,
-  Lapis 1 di browser (ONNX). 586 tes Vitest lulus; `next build` lulus; Playwright 3 lulus (lokal, Chrome).
-- **Belum di web:** layanan ML Python tidak di-hosting → di produksi Mode AI hanya Lapis 1 di perangkat (tanpa CO-KT, tanpa L2,
-  tanpa kalibrasi/conformal). Data demo di produksi hanya dari uji manual Salman (1 siswa).
+  `feat/ml-integration`; tag `freeze-tierS`). **Publik** (API GitHub tanpa login mengembalikan HTTP 200, 19 Nov).
+  Tautan bukti per commit: `docs/cac/REVIEW_INDEX.md`.
+- **Dokumen juri:** `README.md` (root), `ml/README.md`, `ml/REPORT.md`, `ml/MODEL_CARD.md`, `ml/DATA_CARD.md`;
+  `ml/scripts/check_numbers.py` → 0 angka tanpa sumber (juga memeriksa README root).
+- **Kaggle:** kernel tetap privat; kode di `ml/kaggle/kernels/*/train.py`, metadata tanpa username
+  (`kernel-metadata.template.json`), log + metrik di `ml/kaggle/evidence/`. Dataset Eedi olahan tidak dipublikasikan.
+- **Web:** https://remediaide.vercel.app. Ditambah v3: gambar soal pilot, tombol *Catat persetujuan riset*, token opsional
+  layanan ML (`ML_SERVICE_TOKEN`), klaim landing dilunakkan. 593 tes Vitest lulus; `next build` lulus.
+- **Belum di web:** layanan ML Python tidak di-hosting → di produksi Mode AI hanya Lapis 1 di perangkat. Paket HF Space
+  siap (393,3 MB, L2 = student ONNX), deploy butuh akun Salman (M17).
 
 
 ## 14. Yang belum dan risiko
-| Prioritas | Pekerjaan | Estimasi | Pemilik |
-| --- | --- | --- | --- |
-| 1 | Cabut token GitHub, reset password Neon (perbarui `DIRECT_URL`), ganti password akun seed demo/superadmin | 15 menit | Salman |
-| 2 | Cek rulebook: repo publik atau dibagikan; tanya panitia format dataset (M6) | 30 menit | Salman |
-| 3 | Kirim formulir panitia (M15/T54) + simpan bukti | 15 menit | Salman (Jum 27 Nov) |
-| 4 | ~~Perbaiki catatan lisensi basi di `ml/data/manifest.json`~~ **selesai 19 Nov** | — | Claude Code |
-| 5 | ~~Lengkapi kekurangan kecil: B0 framing (a), LAC biner, tabel akurasi opsi CO-KT, Gender kode 0/3~~ **selesai 19 Nov** (D-24, §7 "Pelengkap audit"; CV saja) | — | Claude Code |
-| 6 | Hosting layanan ML (HF Spaces Docker, `RA_L2_MODEL=student`) + isi `ML_SERVICE_URL` | 2–3 jam | Claude Code + akun Salman |
-| 7 | Bahan final T80–T84 (naskah demo, slide, tanya jawab) | 1 hari | setelah 30 Nov |
-| 8 | Pilot T70–T75 (E9/E10) | minggu | butuh izin sekolah + persetujuan orang tua |
+| Prioritas | Pekerjaan | Pemilik |
+| --- | --- | --- |
+| 1 | **M16 keamanan:** cabut token GitHub; reset password Neon + perbarui `DATABASE_URL`/`DIRECT_URL` di Vercel; jalankan `scripts/rotate-seed-passwords.ts` di produksi | Salman (segera) |
+| 2 | M6: cek rulebook (repo publik boleh?), format pengumpulan dataset | Salman |
+| 3 | M17: deploy HF Space (privat) + `ML_SERVICE_URL`/`ML_SERVICE_TOKEN` di Vercel; lalu Claude Code uji end-to-end produksi | Salman + Claude Code |
+| 4 | M15/T54: kirim formulir panitia (Jum 27 Nov) | Salman |
+| 5 | M18: lisensi kode web (README lama "Proprietary") | Salman |
+| 6 | Pilot T72–T75 (M4, M5, M11–M14): izin sekolah, formulir, sesi, label guru | Salman, lalu Claude Code |
+| 7 | T80–T84 bahan final (NUMBERS_SHEET, demo, slide, tanya jawab) | setelah 30 Nov |
 
-**Risiko:** juri menolak label proxy sebagai kebenaran; pertanyaan fairness; kernel Kaggle privat tidak bisa diakses juri;
-password/token yang sempat ditempel di chat; akun demo dengan password seed publik di repo (`prisma/seed.ts`); demo
-produksi tanpa layanan ML penuh; ketergantungan pada satu laptop.
+**Risiko:** juri menolak label proxy sebagai kebenaran; kesenjangan fairness; L2 Indonesia hanya diuji dengan terjemahan
+mesin; defer di bawah target awal; password seed publik sampai M16 dikerjakan; demo produksi tanpa layanan ML penuh sampai
+M17; kernel Kaggle privat (diganti log di `ml/kaggle/evidence/`); bobot Lapis 1 turunan Eedi (NC) bila Space dibuat publik.
 
 
 ## 15. Lampiran
@@ -921,17 +1013,23 @@ produksi tanpa layanan ML penuh; ketergantungan pada satu laptop.
 
 #### RESULTS — RemediAide 2.0 (CAC MLSC 2026)
 
+> **Angka utama (test, 20% siswa Eedi yang dikunci sejak awal; 58.963 kasus, 773 siswa).** Aturan CRI v1 salah
+> mengelompokkan **45,1%** kasus [CI 95% 43,1–46,9]. RemediAide 2.0 salah mengelompokkan **34,7%** [33,0–36,6]:
+> turun **10,3 poin** [9,7–10,9], atau **22,9% relatif** (aproksimasi 21,6–24,2%). Model lalu menyerahkan **20,6%**
+> kasus paling meragukan ke guru. Pada **79,4%** kasus sisanya, salah kelompok **28,3%**, sedangkan aturan v1 pada
+> kasus yang sama **39,2%**.
+> Sumber: `tables/headline.json` (diturunkan dari `tables/E8_impact.csv` dan `tables/L1_test.csv`; CI relatif adalah
+> aproksimasi CI selisih absolut dibagi titik B0, bukan bootstrap rasio). Gambar: `figures/E8_v1_vs_ml.png`.
+
 Status: **final Tingkat S (test dibuka sekali, 19 Nov 2026 06:52–06:59, run `20261119-0652_final_eval`; segel
 `ml/reports/TEST_OPENED.json`).** Setiap angka menunjuk ke file sumber di `ml/reports/`. Angka bertanda "CV" berasal
 dari validasi silang 80% siswa; angka bertanda "test" dari 20% siswa Eedi yang dikunci sejak awal (D-04) dan tidak
 pernah dipakai untuk melatih, memilih, atau mengkalibrasi model. MAP tidak punya fold test terkunci (D-06), sehingga
-semua angka Lapis 2 adalah CV.
+semua angka Lapis 2 adalah CV. Semua analisis yang ditambahkan setelah test dibuka (D-24, pembingkaian L2, analisis
+error) memakai CV saja.
 
 ##### 1. Ringkasan angka utama
-**Kalimat utama** (sumber `tables/E8_impact.csv`, test):
-"Aturan CRI v1 salah mengelompokkan **45,1%** kasus siswa–soal. RemediAide 2.0 menurunkannya menjadi **34,7%**
-(selisih −10,3 poin [−10,9; −9,7]), dan **20,6%** kasus paling meragukan diserahkan ke guru; pada kasus yang tidak
-diserahkan, salah kelompok tinggal **28,3%**."
+Kalimat utama: lihat kotak di atas (sama persis di `README.md`, `ml/README.md`, dan `ml/REPORT.md`).
 
 | Angka kunci | Nilai | Sumber |
 | --- | --- | --- |
@@ -940,6 +1038,7 @@ diserahkan, salah kelompok tinggal **28,3%**."
 | Recall jebakan jawaban benar, L2 TF-IDF (CV MAP; B0 = 0) | 0,375 [0,329–0,422] | `tables/E3_true_misconception.csv` |
 | Selisih MAP@3 EN → ID: mDeBERTa vs TF-IDF (CV MAP) | −0,016 vs −0,150 | `tables/E4_crosslingual.csv` |
 | Cakupan conformal L1, target 90% (test) | 0,900 (ukuran himpunan 1,90) | `tables/E5_test.json` |
+| Penurunan relatif salah kelompok karena defer 20,6% (test; target D-09 ≥ 25%, tidak tercapai) | 18,5% | `tables/E5_coverage_risk_L1_test.csv`, `tables/headline.json` |
 
 ##### 2. Data
 Sumber: `tables/data_card_eedi.md`, `tables/data_card_map.md`, `tables/E0_eda_numbers.json`, `tables/E0_self_calibration.csv`.
@@ -1031,7 +1130,7 @@ Sumber: `tables/data_card_eedi.md`, `tables/data_card_map.md`, `tables/E0_eda_nu
 - **Catatan wajib:** terjemahan mesin bukan tulisan asli siswa Indonesia (QA 100 sampel: 20 kesalahan besar,
   `tables/translation_qa.csv`). Validasi native menyusul di pilot (E9).
 
-###### E5 — Tahu batas diri
+###### E5 — Ketidakpastian dan defer ke guru
 - **L1 test (`tables/E5_test.json`, `figures/E5_coverage_risk.png`, `figures/E5_reliability_L1.png`; parameter produksi
   tanpa refit, D-21):** ECE kuadran 0,0063 sebelum → 0,0068 sesudah temperature (CO-KT sudah terkalibrasi baik;
   kalibrasi tidak memperbaiki di test). Conformal LAC α = 0,1: cakupan **0,900**, ukuran himpunan rata-rata 1,90,
@@ -1040,6 +1139,9 @@ Sumber: `tables/data_card_eedi.md`, `tables/data_card_map.md`, `tables/E0_eda_nu
 - **L2 CV (`tables/E5_l3_final_cv.json`, `figures/E5_reliability_L2_final_cv.png`):** TF-IDF ECE 0,025 → 0,010
   (temperature 1,20); APS cakupan 0,950 (target 0,90; over-coverage karena skor diskret), ukuran himpunan 1,90.
 - **Pembanding literatur:** Mitton dkk. 2025 (+1,9–2,4 AUC pada coverage 80%); metrik berbeda.
+- **Klaim yang dipakai:** "menandai kasus ragu untuk guru, dengan cakupan conformal yang tepat". Aturan D-09 tidak
+  terpenuhi pada siswa kalibrasi model produksi, sehingga dipakai fallback 20%. Di test, defer 30% akan memberi
+  penurunan 26,8% (`tables/E5_coverage_risk_L1_test.csv`), tetapi ambang tidak dipilih dari test dan tidak diubah.
 
 ###### E6 — Fairness (test)
 - **Setup:** Gender (1 perempuan vs 2 laki-laki), PremiumPupil (1 vs 0), kuartil kemampuan (Q1 vs Q4). Atribut tidak
@@ -1113,6 +1215,32 @@ Tingkat B — menunggu pilot.
 ###### E10 — Dampak belajar
 Tingkat B — menunggu pilot.
 
+###### Pembingkaian Lapis 2: kenapa TF-IDF menang di bahasa Inggris (CV MAP)
+`scripts/story_evidence.py --only l2gap`; sumber `tables/L2_split_gap_cv.csv`, `tables/L2_overlap_cv.csv`.
+
+| Bukti | TF-IDF+LR | mDeBERTa |
+| --- | --- | --- |
+| Macro-F1 kategori, split acak (soal sama di latih) | 0,840 [0,825–0,854] | 0,844 [0,827–0,856] |
+| Macro-F1 kategori, split per soal (`tables/L2_cv.csv`) | 0,611 [0,542–0,674] | 0,637 [0,584–0,685] |
+| Penurunan acak → per soal | −0,228 | −0,206 |
+| MAP@3 pada 8,83% baris yang alasannya persis ada di latih (soal sama) | 0,957 | 0,937 |
+| MAP@3 pada baris lain | 0,912 | 0,910 |
+
+- Selisih MAP@3 mDeBERTa − TF-IDF total −0,0036; baris duplikat menyumbang −0,0018. Keunggulan TF-IDF di bahasa Inggris
+  sekitar separuhnya hafalan teks per soal; untuk soal baru kedua model seri (CI selisih memuat 0, 15 klaster soal).
+- Untuk input Indonesia hanya encoder multibahasa yang bertahan (E4). T36 menunjukkan bahwa soal baru tetap butuh
+  contoh berlabel dari guru.
+
+###### Analisis error (CV saja)
+`scripts/story_evidence.py --only errors`. Eedi hanya agregat; teks MAP (MIT) boleh dikutip.
+- **L1 (`tables/EA_l1_summary_cv.json`, `tables/EA_l1_confusion_cv.csv`, `tables/EA_l1_per_kc_cv.csv`,
+  `tables/EA_l1_buckets_cv.csv`):** CO-KT lebih baik dari B0 di 32 dari 32 KC dengan ≥ 1.000 baris (selisih −0,152
+  s.d. −0,058). 49,1% kasus *Miskonsepsi* masa depan diprediksi *Paham*. *Tebakan beruntung* recall 0,091; pada kelas
+  ini CO-KT lebih buruk dari B0 (0,909 vs 0,829).
+- **L2 (`tables/EA_l2_error_types_cv.csv`, `tables/EA_l2_examples_cv.csv`, `tables/EA_l2_per_question_cv.csv`):**
+  kesalahan TF-IDF terbanyak adalah Correct ↔ Neither (50,9%); jebakan jawaban benar terlewat 4,3% dari semua kesalahan.
+  Sepuluh contoh representatif dan rekomendasi perbaikan ada di `REPORT.md` §4.9.
+
 ###### Pelengkap audit (D-24, CV saja; dihitung 19 Nov setelah test dibuka)
 Empat butir spesifikasi yang terlewat, dihitung oleh `scripts/gap_fill.py` dari OOF CV yang sudah ada. Tidak ada model,
 ambang, atau angka di atas yang berubah, dan angka ini tidak dipakai untuk keputusan apa pun.
@@ -1183,6 +1311,7 @@ Keputusan di bawah ini dikunci sebelum melihat hasil. Perubahan hanya boleh lewa
 | D-22 | 2026-11-19 | **Protokol T36 (Tingkat A, dikunci sebelum dijalankan).** Retrieval zero-shot untuk soal baru: intfloat/multilingual-e5-base (MIT), `query: <alasan>` vs `passage: <deskripsi miskonsepsi>` dari `map_misconception_dictionary.csv`, kandidat = label miskonsepsi soal itu saja (2–4). Baris evaluasi = semua baris kategori *_Misconception (tidak ada pelatihan, jadi setiap soal adalah "soal baru"). Metrik: MAP@3 dan akurasi top-1; pembanding: acak (nilai harapan eksak) dan "label terbanyak di soal itu" (acuan atas yang butuh data berlabel soal tersebut). Bahasa: EN↔EN dan ID (terjemahan mesin)↔ID. CI: bootstrap klaster soal (15), 1000×. Tidak memakai Eedi test. | Hasil dilaporkan apa adanya walau kalah dari pembanding |
 | D-23 | 2026-11-19 | **Protokol T35 (Tingkat A, dikunci sebelum dijalankan).** Student `microsoft/Multilingual-MiniLM-L12-H384` (MIT, tokenizer xlm-roberta-base) dilatih pada baris MAP fold_random ≠ 0 (teks Inggris) dengan loss 0,5·CE(label) + 0,5·KL(teacher, T = 2); teacher = logit OOF mDeBERTa (masking kandidat), 3 epoch, lr 5e-5, batch 32, max_len 192, seed 20261118, GPU Kaggle. Evaluasi fold 0 (baris yang sama dengan E4): MAP@3 EN dan ID (terjemahan mesin), dibandingkan dengan teacher fold 0 di `E4_crosslingual.csv`. Ekspor ONNX + kuantisasi dinamis int8 (onnxruntime). E7: ukuran (MB), latensi p50/p95 per alasan di CPU laptop (batch 1, 200 alasan), dan selisih MAP@3 FP32 vs int8. Tidak ada pemilihan model berdasarkan hasil ini. | Untuk mode offline (T68); dilaporkan apa adanya |
 | D-24 | 2026-11-19 | **Pelengkap audit (bukan revisi), dihitung setelah test dibuka di T46, hanya CV.** Empat butir spesifikasi yang terlewat dihitung dengan `ml/scripts/gap_fill.py` dari file OOF CV yang sudah ada, tanpa melatih, memilih, atau mengkalibrasi ulang model produksi: (1) B0 framing (a) 03 §1, skor = kuadran B0 terakhir siswa di KC yang sama sebelum t (ordinal P=3, L=2, T=1, M=0, dan biner {P, L}); baris tanpa kuadran sebelumnya tidak punya skor B0 → dilaporkan pada subset yang punya skor + varian semua baris (nilai kosong = 1,5); (2) LAC biner L1 03 §3 dengan siswa kalibrasi dan temperature yang sama seperti `e6_e8 --calib temperature`; (3) akurasi kepala opsi CO-KT (T24) dengan pembanding acak dan opsi terbanyak per soal dari fold latih; (4) Gender kode 0 (04 E6, n ≥ 200 di siswa evaluasi CV); kode 3 di bawah ambang → hanya dihitung jumlahnya. Untuk test hanya jumlah siswa per kode dari metadata; tidak ada prediksi test yang dibaca. Hasil tidak mengubah angka utama, model, atau ambang mana pun. | Menutup kekurangan yang diungkap di `LAPORAN_REVIEW.md` §3/§14; test tetap dibuka sekali |
+| D-25 | 2026-11-19 | **Soal kunci pilot yang meminta alasan (06 §1, T70).** Aturan: 5 soal dengan entropi label miskonsepsi tertinggi di MAP (dihitung pada baris kategori Misconception; seri → porsi baris Misconception). Hasil: MAP 31774, 32829, 31777, 76870, 33472. Daftar sementara di 06 §1 (desimal, menjumlah pecahan, bilangan negatif, mencari y, pecahan × bilangan bulat) hanya sama pada 32829 dan 33472; protokol menyebut daftar final ditetapkan di T70 dari distribusi MAP, jadi daftar sementara diganti. Juga: tanda desimal diubah ke koma, nama Sally/Robert diganti Sari/Rudi, dan tiga gambar digambar ulang (ditandai untuk dicek guru). | Sumber `ml/reports/tables/T70_key_question_selection.csv`, `docs/cac/pilot/instrument_map_id.json`. Tidak memakai data Eedi test atau hasil model |
 
 ##### Catatan verifikasi data (diisi Claude Code saat T10–T13)
 - [x] Nama dan kolom file Eedi sesuai 02_DATA_SPEC? **Ya.** Path di zip: `data/train_data/…`, `data/metadata/…`. Kolom answer_metadata: `AnswerId, DateAnswered, Confidence, GroupId, QuizId, SchemeOfWorkId` (kunci join AnswerId; tidak ada kolom UserId). 1.382.727 baris, 4.918 siswa, 948 soal, 57 KC terdalam. Tidak ada duplikat, tidak ada IsCorrect yang tidak konsisten, tidak ada percobaan ulang (attempt_no selalu 1). Confidence hanya {0,25,50,75,100} → CRI {0,1,3,4,5}.
@@ -1190,11 +1319,11 @@ Keputusan di bawah ini dikunci sebelum melihat hasil. Perubahan hanya boleh lewa
 - [x] Kolom MAP sesuai? **Ya**, persis `row_id, QuestionId, QuestionText, MC_Answer, StudentExplanation, Category, Misconception` (36.696 baris, 15 soal, 65 target, 35 label). Lisensi: **MIT** menurut kartu HF `kaggle-map/data` dan diskusi HF #2 (lihat `ml/data/raw/map/LICENSE_NOTE.md`). Tab Data Kaggle dicek Salman (M2): MIT, teks disalin ke LICENSE_NOTE.md.
 - [x] Persentase confidence kosong di Eedi T3&4: **74,95% baris** (median per siswa 90,53%; 12,89% siswa tanpa confidence sama sekali). Sumber: `ml/reports/tables/data_card_eedi.md`.
 
-### C. File di `ml/reports/tables/` (55) dan `ml/reports/figures/` (22)
+### C. File di `ml/reports/tables/` (66) dan `ml/reports/figures/` (23)
 
-**tables:** `.gitkeep`, `E0_eda_numbers.json`, `E0_self_calibration.csv`, `E1_b0_cv.csv`, `E1_b0_cv_confusion.csv`, `E1_b0_framing_a_cv.csv`, `E1_b0_test.csv`, `E1_cokt_test_per_class.csv`, `E1_confusion_cokt_test.csv`, `E1_confusion_test.csv`, `E2_ablation_cv.csv`, `E2_ablation_increments_cv.csv`, `E2_cokt_ablation_cv.csv`, `E3_queue_cv.csv`, `E3_true_misconception.csv`, `E4_crosslingual.csv`, `E4_crosslingual_mdeberta.csv`, `E4_crosslingual_tfidf.csv`, `E5_coverage_risk_L1_dev_b1.csv`, `E5_coverage_risk_L1_final_cv.csv`, `E5_coverage_risk_L1_test.csv`, `E5_l3_dev_b1.json`, `E5_l3_final_cv.json`, `E5_lac_binary_L1_cv.json`, `E5_test.json`, `E6_fairness.csv`, `E6_fairness_dev_b1.csv`, `E6_fairness_final_cv.csv`, `E6_fairness_gender_codes_cv.csv`, `E6_gender_counts.json`, `E7_efficiency.csv`, `E7_latency_service_cpu.json`, `E8_impact.csv`, `E8_impact_dev_b1.csv`, `E8_impact_final_cv.csv`, `L1_b0_b1_cv.csv`, `L1_cokt_cv.csv`, `L1_cokt_option_cv.csv`, `L1_cv_summary.csv`, `L1_lgbm_cv.csv`, `L1_model_selection.csv`, `L1_test.csv`, `L1_test_pairwise.csv`, `L2_b0_tfidf_cv.csv`, `L2_cv.csv`, `L3_production_params.json`, `T36_retrieval.csv`, `T36_retrieval_per_question.csv`, `T68_onnx_parity.json`, `compute_summary.csv`, `data_card_eedi.md`, `data_card_map.md`, `map_misconception_dictionary.csv`, `robustness_temporal_test.csv`, `translation_qa.csv`
+**tables:** `.gitkeep`, `E0_eda_numbers.json`, `E0_self_calibration.csv`, `E1_b0_cv.csv`, `E1_b0_cv_confusion.csv`, `E1_b0_framing_a_cv.csv`, `E1_b0_test.csv`, `E1_cokt_test_per_class.csv`, `E1_confusion_cokt_test.csv`, `E1_confusion_test.csv`, `E2_ablation_cv.csv`, `E2_ablation_increments_cv.csv`, `E2_cokt_ablation_cv.csv`, `E3_queue_cv.csv`, `E3_true_misconception.csv`, `E4_crosslingual.csv`, `E4_crosslingual_mdeberta.csv`, `E4_crosslingual_tfidf.csv`, `E5_coverage_risk_L1_dev_b1.csv`, `E5_coverage_risk_L1_final_cv.csv`, `E5_coverage_risk_L1_test.csv`, `E5_l3_dev_b1.json`, `E5_l3_final_cv.json`, `E5_lac_binary_L1_cv.json`, `E5_test.json`, `E6_fairness.csv`, `E6_fairness_dev_b1.csv`, `E6_fairness_final_cv.csv`, `E6_fairness_gender_codes_cv.csv`, `E6_gender_counts.json`, `E7_efficiency.csv`, `E7_latency_service_cpu.json`, `E8_impact.csv`, `E8_impact_dev_b1.csv`, `E8_impact_final_cv.csv`, `EA_l1_buckets_cv.csv`, `EA_l1_confusion_cv.csv`, `EA_l1_per_kc_cv.csv`, `EA_l1_summary_cv.json`, `EA_l2_error_types_cv.csv`, `EA_l2_examples_cv.csv`, `EA_l2_per_question_cv.csv`, `L1_b0_b1_cv.csv`, `L1_cokt_cv.csv`, `L1_cokt_option_cv.csv`, `L1_cv_summary.csv`, `L1_lgbm_cv.csv`, `L1_model_selection.csv`, `L1_test.csv`, `L1_test_pairwise.csv`, `L2_b0_tfidf_cv.csv`, `L2_cv.csv`, `L2_overlap_cv.csv`, `L2_split_gap_cv.csv`, `L3_production_params.json`, `T36_retrieval.csv`, `T36_retrieval_per_question.csv`, `T68_onnx_parity.json`, `T70_key_question_selection.csv`, `compute_summary.csv`, `data_card_eedi.md`, `data_card_map.md`, `headline.json`, `map_misconception_dictionary.csv`, `robustness_temporal_test.csv`, `translation_qa.csv`
 
-**figures:** `.gitkeep`, `E0_confidence_distribution.png`, `E0_map_categories.png`, `E0_map_explanation_length.png`, `E0_missingness.png`, `E0_self_calibration.png`, `E0_sequence_length.png`, `E1_confusion_b0.png`, `E1_confusion_b0_cv.png`, `E1_confusion_cokt.png`, `E2_ablation.png`, `E3_pr_curve.png`, `E5_coverage_risk.png`, `E5_coverage_risk_dev_b1.png`, `E5_coverage_risk_final_cv.png`, `E5_reliability_L1.png`, `E5_reliability_L1_dev_b1.png`, `E5_reliability_L1_final_cv.png`, `E5_reliability_L2_dev_b1.png`, `E5_reliability_L2_final_cv.png`, `L1_shap_beeswarm.png`, `arsitektur.png`
+**figures:** `.gitkeep`, `E0_confidence_distribution.png`, `E0_map_categories.png`, `E0_map_explanation_length.png`, `E0_missingness.png`, `E0_self_calibration.png`, `E0_sequence_length.png`, `E1_confusion_b0.png`, `E1_confusion_b0_cv.png`, `E1_confusion_cokt.png`, `E2_ablation.png`, `E3_pr_curve.png`, `E5_coverage_risk.png`, `E5_coverage_risk_dev_b1.png`, `E5_coverage_risk_final_cv.png`, `E5_reliability_L1.png`, `E5_reliability_L1_dev_b1.png`, `E5_reliability_L1_final_cv.png`, `E5_reliability_L2_dev_b1.png`, `E5_reliability_L2_final_cv.png`, `E8_v1_vs_ml.png`, `L1_shap_beeswarm.png`, `arsitektur.png`
 
 ### D. Salinan mentah (presisi penuh) tabel kunci
 
