@@ -52,6 +52,12 @@ untuk CAC MLSC 2026**. Kode aturan v1 tidak diubah: ia menjadi baseline **B0** (
 27 tes kesetaraan membuktikan hasilnya identik dengan `engine.ts` di aplikasi v1. Dengan begitu, setiap angka
 "aturan v1" di laporan ini adalah perilaku aplikasi yang benar-benar dipakai, bukan versi yang dilemahkan.
 
+**Proposal LIDM ≠ kode v1.** Proposal LIDM menulis ambang CRI 2,5, penalti asimetris (α hanya untuk jawaban salah), dan
+syarat Aᵢ ≥ 0,7. Kode v1 yang dipakai aplikasi berbeda: ambang `cri >= 3`, semua respons di bawah τmin langsung INVALID
+(termasuk yang benar), rumus indeks integritas berbeda, dan voting per soal lintas varian. B0 di laporan ini mengikuti
+**kode**, bukan proposal. Pada data Eedi kedua ambang setara, karena keyakinan 0–100 dikonversi ke CRI bilangan bulat
+sehingga CRI ≥ 3 ⇔ keyakinan ≥ 50 ⇔ keyakinan/20 ≥ 2,5 (D-03).
+
 ### 1.3 Rumusan masalah dan pertanyaan riset
 Seberapa sering aturan CRI salah mengelompokkan siswa, dan bisakah ML (a) mengurangi kesalahan itu, (b) memberi nama
 miskonsepsi, termasuk pada jawaban benar, dan (c) memisahkan kasus yang cukup jelas dari kasus yang perlu dicek guru?
@@ -453,9 +459,9 @@ Pada 20% interaksi terakhir tiap siswa test, semua model memburuk (salah kelompo
    nalar keliru", yang tidak mungkin ditangkap aturan v1 (recall 0,375 vs 0).
 3. **Menandai kasus ragu, dengan cakupan yang terukur.** Himpunan prediksi conformal mencapai cakupan 0,900 sesuai target.
    Kasus ragu (20,6%) diserahkan ke guru, sehingga guru tetap memegang keputusan untuk sekitar seperlima kasus.
-4. **Siap untuk alasan berbahasa Indonesia.** mDeBERTa kehilangan MAP@3 hanya 0,016 saat alasan diterjemahkan, dibanding
+4. **Diuji untuk alasan berbahasa Indonesia (terjemahan mesin).** mDeBERTa kehilangan MAP@3 hanya 0,016 saat alasan diterjemahkan, dibanding
    0,150 untuk TF-IDF.
-5. **Siap diimplementasikan di kelas.**
+5. **Terpasang di aplikasi kelas (belum diuji di kelas sungguhan).**
    - Aplikasi web https://remediaide.vercel.app (branch `feat/ml-integration`): Mode AI, antrean "Perlu dicek guru",
      LKPD per miskonsepsi, umpan balik guru, ekspor riset dengan persetujuan orang tua, dan Lapis 1 di browser (ONNX).
      Bila layanan ML tidak tersedia, aplikasi kembali ke aturan v1.

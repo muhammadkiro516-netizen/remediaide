@@ -42,8 +42,8 @@ Bukti kernel GPU Kaggle (log + metrik): [`kaggle/evidence/`](kaggle/evidence/).
 | Pengaman | deteksi tebakan cepat | NT10 / GMM / τmin (menunggu data pilot) | — |
 
 **Yang baru dibanding v1:** (1) CRI yang *dipelajari* dari data, bukan ambang tetap; (2) diagnosis bernama, termasuk pada
-jawaban benar; (3) kasus ragu ditandai dan diserahkan ke guru (conformal + selective prediction); (4) siap untuk alasan berbahasa
-Indonesia. Aturan v1 tetap dikembalikan di setiap respons sebagai pembanding dan fallback.
+jawaban benar; (3) kasus ragu ditandai dan diserahkan ke guru (conformal + selective prediction); (4) diuji untuk alasan berbahasa
+Indonesia (sejauh ini dengan terjemahan mesin; tulisan asli siswa menunggu pilot). Aturan v1 tetap dikembalikan di setiap respons sebagai pembanding dan fallback.
 
 ## 3. Data
 | Dataset | Isi | Lisensi | Peran |

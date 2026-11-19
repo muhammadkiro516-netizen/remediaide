@@ -51,7 +51,7 @@ def _pdf(path, title, blocks):
     body = ParagraphStyle("b", parent=ss["BodyText"], fontSize=10, leading=13.5)
     head = ParagraphStyle("h", parent=ss["Heading2"], fontSize=13, spaceAfter=6)
     doc = SimpleDocTemplate(str(path), pagesize=A4, leftMargin=2 * cm, rightMargin=2 * cm, topMargin=1.6 * cm,
-                            bottomMargin=1.6 * cm, title=title, author="Tim RemediAide")
+                            bottomMargin=1.6 * cm, title=title, author="Tim RemediAide", invariant=1)  # reproducible bytes
     story = [Paragraph(title, head)]
     for b in blocks:
         story += [Paragraph(b, body), Spacer(1, 5)]
@@ -176,7 +176,26 @@ def labeling_xlsx(path, inst, dictionary: pd.DataFrame, examples: pd.DataFrame):
         r += 1
     for c, w in zip("ABCDE", [16, 16, 24, 60, 70], strict=True):
         guide.column_dimensions[c].width = w
+    import datetime as dt
+
+    fixed = dt.datetime(2026, 11, 19)  # fixed metadata -> reproducible file
+    wb.properties.created = wb.properties.modified = fixed
+    wb.properties.creator = wb.properties.lastModifiedBy = "Tim RemediAide"
     wb.save(path)
+    _fix_zip_times(path)
+
+
+def _fix_zip_times(path) -> None:
+    """xlsx is a zip; rewrite every entry with a fixed timestamp so the file is byte-reproducible."""
+    import zipfile
+
+    with zipfile.ZipFile(path) as z:
+        entries = [(i, z.read(i.filename)) for i in z.infolist()]
+    with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as z:
+        for info, data in entries:
+            zi = zipfile.ZipInfo(info.filename, date_time=(2026, 11, 19, 0, 0, 0))
+            zi.compress_type = zipfile.ZIP_DEFLATED
+            z.writestr(zi, data)
 
 
 def main():
