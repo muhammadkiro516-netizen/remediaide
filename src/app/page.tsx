@@ -450,7 +450,7 @@ export default function Home() {
           <div className="grid gap-6 md:grid-cols-3">
             {[
               { t: "Lapis 1 · Pelacak Penguasaan", d: "Memprediksi kondisi siswa per konsep dari jawaban, keyakinan, dan riwayat. Kesalahan pengelompokan turun dari 45,1% (aturan tetap) menjadi 34,7% pada uji data Eedi." },
-              { t: "Lapis 2 · Pembaca Alasan", d: "Membaca alasan satu kalimat siswa dan menamai miskonsepsinya — termasuk siswa yang benar tapi nalarnya keliru. Bekerja pada alasan berbahasa Indonesia." },
+              { t: "Lapis 2 · Pembaca Alasan", d: "Membaca alasan satu kalimat siswa dan menamai miskonsepsinya — termasuk sebagian siswa yang benar tapi nalarnya keliru. Diuji pada alasan terjemahan Bahasa Indonesia; uji dengan tulisan asli siswa menunggu pilot." },
               { t: "Lapis 3 · Menandai Kasus Ragu", d: "Himpunan prediksi dengan cakupan 90,0% (target 90%) di uji Eedi. Sekitar 20% kasus paling meragukan diserahkan ke guru di panel “Perlu dicek guru”; salah kelompok sisanya 28,3%. Target awal (turun 25%) belum tercapai, jadi keputusan akhir tetap di guru." },
             ].map(({ t, d }) => (
               <div key={t} className="rounded-2xl border border-violet-200 bg-violet-50 p-6">
