@@ -25,7 +25,9 @@ async function main() {
     }
 
     console.log('✅ Teacher found:', teacher.email, '| role:', teacher.role);
-    const match = await bcrypt.compare('demo123', teacher.passwordHash);
+    const pw = process.env.SEED_PASSWORD;
+    if (!pw) { console.log('ℹ Set SEED_PASSWORD untuk mengecek password (tidak ditulis di kode).'); return; }
+    const match = await bcrypt.compare(pw, teacher.passwordHash);
     console.log('🔑 Password match:', match);
 
   } catch (e: unknown) {
