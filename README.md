@@ -1,105 +1,88 @@
-# RemediAide
+# RemediAide 2.0 — diagnosis miskonsepsi matematika yang menandai kasus ragu untuk guru
 
-Sistem diagnosis kognitif siswa berbasis CRI (Certainty of Response Index) untuk remediasi terdiferensiasi.
+Submisi **CAC Machine Learning Solution Challenge 2026**. Aplikasi web RemediAide v1 (aturan CRI 2×2, LIDM 2026)
+ditambah mesin diagnosis **3 lapis ML + 1 pengaman**, dievaluasi pada test yang dikunci dan dibuka sekali.
 
-## Stack Teknologi
+> **Angka utama (test, 20% siswa Eedi yang dikunci sejak awal; 58.963 kasus, 773 siswa).** Aturan CRI v1 salah
+> mengelompokkan **45,1%** kasus [CI 95% 43,1–46,9]. RemediAide 2.0 salah mengelompokkan **34,7%** [33,0–36,6]:
+> turun **10,3 poin** [9,7–10,9], atau **22,9% relatif** (aproksimasi 21,6–24,2%). Model lalu menyerahkan **20,6%**
+> kasus paling meragukan ke guru. Pada **79,4%** kasus sisanya, salah kelompok **28,3%**, sedangkan aturan v1 pada
+> kasus yang sama **39,2%**.
+> Sumber: [`ml/reports/tables/headline.json`](ml/reports/tables/headline.json).
 
-- **Framework**: Next.js 14+ (App Router)
-- **Language**: TypeScript (strict mode)
-- **Styling**: Tailwind CSS + shadcn/ui
-- **Database**: PostgreSQL + Prisma ORM
-- **Queue & Scheduler**: BullMQ + Redis
-- **Real-time**: Server-Sent Events (SSE)
-- **Testing**: Vitest + fast-check (property-based testing)
+![Aturan v1 vs ML pada siswa test yang sama](ml/reports/figures/E8_v1_vs_ml.png)
 
-## Prerequisites
+| Untuk juri | Isi |
+| --- | --- |
+| [`ml/REPORT.md`](ml/REPORT.md) | laporan teknis (bab dipetakan ke 5 kriteria penilaian) |
+| [`ml/reports/RESULTS.md`](ml/reports/RESULTS.md) | semua hasil E1–E8 dengan CI dan path sumber |
+| [`ml/MODEL_CARD.md`](ml/MODEL_CARD.md) · [`ml/DATA_CARD.md`](ml/DATA_CARD.md) | kartu model dan kartu data |
+| [`docs/cac/LAPORAN_REVIEW.md`](docs/cac/LAPORAN_REVIEW.md) | audit jujur: penyimpangan, yang belum, risiko |
+| [`docs/cac/REVIEW_INDEX.md`](docs/cac/REVIEW_INDEX.md) | daftar tautan semua bukti |
+| [`docs/cac/DECISIONS.md`](docs/cac/DECISIONS.md) | keputusan yang dikunci sebelum hasil dilihat (D-01 s.d. D-24) |
+| https://remediaide.vercel.app | aplikasi web (Mode AI di branch `feat/ml-integration` = `main`) |
 
-- Node.js 20+
-- PostgreSQL 15+
-- Redis 7+
-- npm 9+
+**Yang jujur kami akui sejak awal:** label "kuadran masa depan" adalah proxy, bukan label guru; alasan berbahasa
+Indonesia diuji dengan terjemahan mesin; manfaat defer (turun 18,5%) di bawah target awal 25%; kesenjangan error untuk
+siswa berkemampuan rendah dan pupil premium tetap ada; pilot sekolah (E9/E10) belum dijalankan. Rincian:
+[`ml/REPORT.md` §6](ml/REPORT.md#6-keterbatasan-dan-rencana-lanjut).
 
-## Environment Variables
+---
 
-Copy `.env.example` to `.env.local` and update with your database and Redis connection strings:
+## Cara menjalankan dari nol
 
+**Bagian ML** (Python 3.12, CPU cukup; bagian GPU memakai output kernel Kaggle yang tersimpan):
 ```bash
-DATABASE_URL="postgresql://user:password@localhost:5432/remediaide?schema=public"
-REDIS_URL="redis://localhost:6379"
-NEXTAUTH_SECRET="your-nextauth-secret-here"
-NEXTAUTH_URL="http://localhost:3000"
+cd ml
+make setup            # venv + dependensi terkunci (requirements-lock.txt)
+make data-raw         # unduh Eedi (blob publik resmi) + MAP; cek sha256 di data/manifest.json
+make test             # tes kesetaraan B0 vs engine.ts, leakage, kausalitas CO-KT, kontrak layanan
+make kaggle-outputs   # ambil output GPU tersimpan (atau jalankan ulang kaggle/kernels/*/train.py di Kaggle)
+make all              # data → L1 → L2 → L3 → evaluasi test; ±4 jam di laptop CPU
+make check-repro      # bandingkan tabel hasil dengan versi di repo (toleransi ±0,005)
 ```
+Rincian, termasuk layanan FastAPI dan Docker: [`ml/README.md`](ml/README.md).
 
-## Installation
-
+**Aplikasi web** (Node.js 20, PostgreSQL 15; Redis opsional):
 ```bash
 npm install
+cp .env.example .env.local          # isi DATABASE_URL, DIRECT_URL, AUTH_SECRET
+npx prisma migrate deploy
+SEED_PASSWORD='<password demo>' SEED_SUPERADMIN_PASSWORD='<password superadmin>' npm run prisma:seed
+npm run dev                         # http://localhost:3000
+npm test                            # Vitest
+```
+Mode AI memanggil layanan ML di `ML_SERVICE_URL`; bila kosong atau mati, aplikasi kembali ke aturan v1 (`engine.ts`).
+
+## Struktur repo
+```
+ml/                     # seluruh komponen ML (paket remediaide-ml)
+  src/remediaide_ml/    # data, fitur, l1 (CO-KT, LightGBM), l2 (TF-IDF, mDeBERTa), l3, guard, eval, diagnose
+  scripts/              # satu skrip per langkah pipeline (lihat Makefile)
+  notebooks/            # 01–07, tipis, output tersimpan
+  kaggle/kernels/       # kode kernel GPU; kaggle/evidence/ = log + metrik kernel
+  service/              # FastAPI + Dockerfile (+ hf_space/ untuk Hugging Face Spaces)
+  reports/              # RESULTS.md, tables/, figures/
+  tests/                # pytest
+src/, prisma/, tests/   # aplikasi web Next.js 14 (v1 + integrasi ML)
+docs/cac/               # rencana, keputusan, audit, keamanan, materi pilot
 ```
 
-## Development
+## Data dan lisensi
+| Dataset | Lisensi | Di repo |
+| --- | --- | --- |
+| Eedi NeurIPS 2020 Task 3&4 | CC BY-NC-ND 4.0 | **tidak**; skrip unduh + sha256 (`ml/data/`) |
+| MAP — Charting Student Math Misunderstandings | MIT | lewat paket submisi (asli + terjemahan Indonesia) |
+| Data pilot siswa | UU PDP, persetujuan orang tua | **tidak pernah** |
 
-```bash
-# Start development server
-npm run dev
+Kode ML: MIT (`ml/LICENSE`). Sitasi dataset ada di [`ml/README.md`](ml/README.md#8-riwayat-kontributor-lisensi).
+Keamanan: tidak ada rahasia di riwayat git (pemindaian di [`docs/cac/SECURITY_NOTES.md`](docs/cac/SECURITY_NOTES.md)).
 
-# Open http://localhost:3000
-```
+## Riwayat
+RemediAide v1 (aplikasi web Next.js + aturan CRI 2×2 tanpa ML) diikutkan pada LIDM 2026. Semua komponen ML, data
+olahan, eksperimen, dan hasil di repo ini dibuat baru untuk CAC MLSC 2026. Aturan v1 dipakai apa adanya sebagai
+baseline B0 (27 tes kesetaraan dengan `engine.ts`). Kontributor: Salman (pemilik proyek).
 
-## Database
-
-```bash
-# Generate Prisma Client
-npm run prisma:generate
-
-# Run migrations
-npm run prisma:migrate
-
-# Open Prisma Studio
-npm run prisma:studio
-```
-
-## Testing
-
-```bash
-# Run tests
-npm test
-
-# Run tests in watch mode
-npm run test:watch
-
-# Run tests with coverage
-npm run test:coverage
-```
-
-## Project Structure
-
-```
-src/
-├── app/                 # Next.js App Router pages
-├── components/          # React components
-│   └── ui/             # shadcn/ui components
-├── lib/                # Utility functions and services
-│   └── db/             # Database client
-└── types/              # TypeScript type definitions
-
-prisma/
-└── schema.prisma       # Database schema
-```
-
-## Features (Planned)
-
-- ✅ Task 1: Setup proyek dan infrastruktur dasar (COMPLETED)
-- ⏳ Task 2: Database schema dan migrasi
-- ⏳ Task 3: Autentikasi dan otorisasi berbasis peran
-- ⏳ Task 4: Diagnostic Engine Core
-- ... (see tasks.md for full implementation plan)
-
-## Documentation
-
-- [Requirements](.kiro/specs/remediaide/requirements.md)
-- [Design](.kiro/specs/remediaide/design.md)
-- [Tasks](.kiro/specs/remediaide/tasks.md)
-
-## License
-
-Proprietary
+### Stack aplikasi web
+Next.js 14 (App Router), TypeScript, Tailwind + shadcn/ui, PostgreSQL + Prisma 6, NextAuth v5, BullMQ + Redis
+(opsional), SSE, Vitest + fast-check, Playwright, onnxruntime-web (Lapis 1 di browser), Serwist (PWA).

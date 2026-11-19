@@ -1,0 +1,114 @@
+{
+  "best_val_auc": 0.7817425021314617,
+  "history": [
+    {
+      "epoch": 0,
+      "train_loss": 1.7815660720779782,
+      "val_auc": 0.7446585087339075,
+      "sec": 4.8
+    },
+    {
+      "epoch": 1,
+      "train_loss": 1.632346537851152,
+      "val_auc": 0.7635454784678478,
+      "sec": 4.5
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.5615412777378446,
+      "val_auc": 0.7724481076028578,
+      "sec": 4.6
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.524618875412714,
+      "val_auc": 0.7760372681251028,
+      "sec": 4.4
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.5097126265366871,
+      "val_auc": 0.7783495591184866,
+      "sec": 4.6
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.4911584541911171,
+      "val_auc": 0.7792787813221138,
+      "sec": 4.5
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.480275897752671,
+      "val_auc": 0.780004398532209,
+      "sec": 4.7
+    },
+    {
+      "epoch": 7,
+      "train_loss": 1.4704307715098064,
+      "val_auc": 0.7807546027088815,
+      "sec": 4.5
+    },
+    {
+      "epoch": 8,
+      "train_loss": 1.4593047953787304,
+      "val_auc": 0.7812267623866246,
+      "sec": 4.6
+    },
+    {
+      "epoch": 9,
+      "train_loss": 1.4513902025563377,
+      "val_auc": 0.7812439837594454,
+      "sec": 4.4
+    },
+    {
+      "epoch": 10,
+      "train_loss": 1.4452779520125616,
+      "val_auc": 0.7817425021314617,
+      "sec": 4.6
+    },
+    {
+      "epoch": 11,
+      "train_loss": 1.436041806425367,
+      "val_auc": 0.7806373476201922,
+      "sec": 4.5
+    },
+    {
+      "epoch": 12,
+      "train_loss": 1.427823312225796,
+      "val_auc": 0.78174998335199,
+      "sec": 4.7
+    },
+    {
+      "epoch": 13,
+      "train_loss": 1.4231180860882713,
+      "val_auc": 0.7798838736194443,
+      "sec": 4.4
+    }
+  ],
+  "cfg": {
+    "d_model": 128,
+    "n_layers": 2,
+    "n_heads": 4,
+    "d_ff": 256,
+    "dropout": 0.2,
+    "max_len": 200,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "batch_size": 64,
+    "epochs": 30,
+    "patience": 3,
+    "grad_clip": 1.0,
+    "w_option": 0.5,
+    "w_quadrant": 0.5,
+    "no_conf": false,
+    "no_option": false
+  },
+  "sec": 70.4,
+  "n_windows": {
+    "train": 5361,
+    "early_stop": 591,
+    "calibration": 1540,
+    "test": 1853
+  }
+}

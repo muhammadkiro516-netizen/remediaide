@@ -1,0 +1,102 @@
+{
+  "best_val_auc": 0.7822173220669002,
+  "history": [
+    {
+      "epoch": 0,
+      "train_loss": 1.7899053678626107,
+      "val_auc": 0.742846219053954,
+      "sec": 4.4
+    },
+    {
+      "epoch": 1,
+      "train_loss": 1.6271612786111378,
+      "val_auc": 0.765559530690466,
+      "sec": 4.3
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.5551639270214808,
+      "val_auc": 0.7737717490028819,
+      "sec": 4.6
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.5238368865989504,
+      "val_auc": 0.7774271356006568,
+      "sec": 4.4
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.5054769416650136,
+      "val_auc": 0.7792568313194892,
+      "sec": 4.4
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.4892461782410031,
+      "val_auc": 0.7809682686348034,
+      "sec": 4.3
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.4789527895904722,
+      "val_auc": 0.7813328103785153,
+      "sec": 4.5
+    },
+    {
+      "epoch": 7,
+      "train_loss": 1.4666113271599723,
+      "val_auc": 0.7813218384643257,
+      "sec": 4.4
+    },
+    {
+      "epoch": 8,
+      "train_loss": 1.4569933769248782,
+      "val_auc": 0.7822173220669002,
+      "sec": 4.7
+    },
+    {
+      "epoch": 9,
+      "train_loss": 1.452899308431716,
+      "val_auc": 0.7822401030667857,
+      "sec": 4.4
+    },
+    {
+      "epoch": 10,
+      "train_loss": 1.443121918610164,
+      "val_auc": 0.7818071809972991,
+      "sec": 4.6
+    },
+    {
+      "epoch": 11,
+      "train_loss": 1.4363320029917217,
+      "val_auc": 0.781463887918098,
+      "sec": 4.5
+    }
+  ],
+  "cfg": {
+    "d_model": 128,
+    "n_layers": 2,
+    "n_heads": 4,
+    "d_ff": 256,
+    "dropout": 0.2,
+    "max_len": 200,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "batch_size": 64,
+    "epochs": 30,
+    "patience": 3,
+    "grad_clip": 1.0,
+    "w_option": 0.5,
+    "w_quadrant": 0.5,
+    "no_conf": false,
+    "no_option": false
+  },
+  "sec": 60.4,
+  "n_windows": {
+    "train": 5361,
+    "early_stop": 591,
+    "calibration": 1540,
+    "test": 1853
+  }
+}

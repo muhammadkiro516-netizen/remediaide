@@ -1,0 +1,52 @@
+[{"stream_name":"stdout","time":2.725846163,"data":"Thu Nov 19 00:45:26 2026       \n"}
+,{"stream_name":"stdout","time":2.725902476,"data":"+-----------------------------------------------------------------------------------------+\n"}
+,{"stream_name":"stdout","time":2.725909642,"data":"| NVIDIA-SMI 580.178.04             Driver Version: 580.178.04     CUDA Version: 13.0     |\n"}
+,{"stream_name":"stdout","time":2.7259139709999998,"data":"+-----------------------------------------+------------------------+----------------------+\n"}
+,{"stream_name":"stdout","time":2.7259180240000003,"data":"| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n"}
+,{"stream_name":"stdout","time":2.725921829,"data":"| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n"}
+,{"stream_name":"stdout","time":2.725925579,"data":"|                                         |                        |               MIG M. |\n"}
+,{"stream_name":"stdout","time":2.725929469,"data":"|=========================================+========================+======================|\n"}
+,{"stream_name":"stdout","time":2.7259329660000002,"data":"|   0  Tesla T4                       Off |   00000000:00:04.0 Off |                    0 |\n"}
+,{"stream_name":"stdout","time":2.725936532,"data":"| N/A   43C    P8              9W /   70W |       0MiB /  15360MiB |      0%      Default |\n"}
+,{"stream_name":"stdout","time":2.7259400510000003,"data":"|                                         |                        |                  N/A |\n"}
+,{"stream_name":"stdout","time":2.725944384,"data":"+-----------------------------------------+------------------------+----------------------+\n"}
+,{"stream_name":"stdout","time":2.7259480270000003,"data":"|   1  Tesla T4                       Off |   00000000:00:05.0 Off |                    0 |\n"}
+,{"stream_name":"stdout","time":2.725951611,"data":"| N/A   44C    P8             10W /   70W |       0MiB /  15360MiB |      0%      Default |\n"}
+,{"stream_name":"stdout","time":2.725955295,"data":"|                                         |                        |                  N/A |\n"}
+,{"stream_name":"stdout","time":2.725959747,"data":"+-----------------------------------------+------------------------+----------------------+\n"}
+,{"stream_name":"stdout","time":2.725963962,"data":"\n"}
+,{"stream_name":"stdout","time":2.725967566,"data":"+-----------------------------------------------------------------------------------------+\n"}
+,{"stream_name":"stdout","time":2.725971179,"data":"| Processes:                                                                              |\n"}
+,{"stream_name":"stdout","time":2.7259746700000003,"data":"|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n"}
+,{"stream_name":"stdout","time":2.7259784529999997,"data":"|        ID   ID                                                               Usage      |\n"}
+,{"stream_name":"stdout","time":2.7259825859999998,"data":"|=========================================================================================|\n"}
+,{"stream_name":"stdout","time":2.725987226,"data":"|  No running processes found                                                             |\n"}
+,{"stream_name":"stdout","time":2.725992487,"data":"+-----------------------------------------------------------------------------------------+\n"}
+,{"stream_name":"stdout","time":2.72599658,"data":"\n"}
+,{"stream_name":"stdout","time":3.76842337,"data":"/usr/bin/python3 /kaggle/input/datasets/<KAGGLE_USERNAME>/remediaide-ml-src/scripts/t35_distill.py --teacher /kaggle/input/datasets/<KAGGLE_USERNAME>/remediaide-l2-teacher/teacher --data-dir /kaggle/input/datasets/<KAGGLE_USERNAME>/remediaide-l2-teacher --out /kaggle/working\n"}
+,{"stream_name":"stderr","time":46.480022065,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":62.227048977,"data":"\rLoading weights:   0%|          | 0/199 [00:00\u003c?, ?it/s]\rLoading weights: 100%|██████████| 199/199 [00:00\u003c00:00, 20703.11it/s]\n"}
+,{"stream_name":"stderr","time":62.248987506,"data":"[transformers] \u001b[1mBertForSequenceClassification LOAD REPORT\u001b[0m from: microsoft/Multilingual-MiniLM-L12-H384\n"}
+,{"stream_name":"stderr","time":62.249028845,"data":"Key               | Status  | \n"}
+,{"stream_name":"stderr","time":62.24903526,"data":"------------------+---------+-\n"}
+,{"stream_name":"stderr","time":62.249039718,"data":"classifier.weight | MISSING | \n"}
+,{"stream_name":"stderr","time":62.249043897,"data":"classifier.bias   | MISSING | \n"}
+,{"stream_name":"stderr","time":62.249048712,"data":"\n"}
+,{"stream_name":"stderr","time":62.24905344,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":62.249058136,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stderr","time":172.915433731,"data":"/kaggle/input/datasets/<KAGGLE_USERNAME>/remediaide-ml-src/scripts/t35_distill.py:94: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.\n"}
+,{"stream_name":"stdout","time":172.915465016,"data":"[00:48:17] epoch 0 done, last loss 0.4125 (110s)\n"}
+,{"stream_name":"stderr","time":172.915475594,"data":"Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)\n"}
+,{"stream_name":"stderr","time":172.915486777,"data":"  log(f\"epoch {ep} done, last loss {float(loss):.4f} ({time.time() - t0:.0f}s)\")\n"}
+,{"stream_name":"stdout","time":282.71604712,"data":"[00:50:07] epoch 1 done, last loss 0.4541 (220s)\n"}
+,{"stream_name":"stdout","time":392.563096044,"data":"[00:51:57] epoch 2 done, last loss 0.3403 (330s)\n"}
+,{"stream_name":"stdout","time":424.233989774,"data":"[00:52:28] {\"map3_en_fold0\": 0.8590599455040872, \"map3_id_fold0\": 0.8353542234332425, \"n_train\": 29356, \"n_eval\": 7340, \"train_sec\": 361.6, \"student\": \"microsoft/Multilingual-MiniLM-L12-H384\", \"epochs\": 3, \"device\": \"cuda\"}\n"}
+,{"stream_name":"stderr","time":424.83118702,"data":"\rWriting model shards:   0%|          | 0/1 [00:00\u003c?, ?it/s]\rWriting model shards: 100%|██████████| 1/1 [00:00\u003c00:00,  1.75it/s]\rWriting model shards: 100%|██████████| 1/1 [00:00\u003c00:00,  1.75it/s]\n"}
+,{"stream_name":"stdout","time":429.570848616,"data":"DONE\n"}
+,{"stream_name":"stderr","time":431.791349381,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":431.791378447,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":432.05403179,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":432.054060711,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":432.8757881,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":434.048300428,"data":"[NbConvertApp] Writing 277382 bytes to __results__.html\n"}
+]

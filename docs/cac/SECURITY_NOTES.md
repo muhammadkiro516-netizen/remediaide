@@ -44,6 +44,7 @@ diubah (tanpa mencetak password).
 ## 4. Perlindungan yang sekarang berlaku
 - `.gitignore`: `.env`, `.env.*` (kecuali `.env.example`), `.env*.local`, `credentials.json`, `kaggle.json`, `*.key`,
   `*.pem`, `*.p12`, `.huggingface/`, `**/hf_token*`, plus semua data (`ml/data/raw|interim|processed|pilot`, `*.parquet`).
-- `ml/kaggle/kernels/*/kernel-metadata.json` asli (berisi username Kaggle) tetap di-ignore; salinan tersanitasi
-  (`kernel-metadata.public.json`, username diganti `<KAGGLE_USERNAME>`) di-commit untuk verifikasi juri.
+- `ml/kaggle/kernels/*/kernel-metadata.json` asli (berisi username Kaggle) tetap di-ignore; yang di-commit adalah
+  `kernel-metadata.template.json` (username = `{USER}`). Log dan metrik kernel ada di `ml/kaggle/evidence/`
+  (`scripts/export_kaggle_evidence.py`, username diganti `<KAGGLE_USERNAME>`; tanpa parquet, bobot model, atau ID siswa).
 - Jalankan ulang `cd ml && .venv/bin/python scripts/scan_secrets.py` sebelum setiap push (exit code 1 bila ada temuan asli).

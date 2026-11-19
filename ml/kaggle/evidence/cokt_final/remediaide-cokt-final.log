@@ -1,0 +1,105 @@
+[{"stream_name":"stdout","time":4.617229247,"data":"Wed Nov 18 23:16:38 2026       \n"}
+,{"stream_name":"stdout","time":4.6172714379999995,"data":"+-----------------------------------------------------------------------------------------+\n"}
+,{"stream_name":"stdout","time":4.617275616,"data":"| NVIDIA-SMI 580.178.04             Driver Version: 580.178.04     CUDA Version: 13.0     |\n"}
+,{"stream_name":"stdout","time":4.617278149,"data":"+-----------------------------------------+------------------------+----------------------+\n"}
+,{"stream_name":"stdout","time":4.617280508,"data":"| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n"}
+,{"stream_name":"stdout","time":4.617282808,"data":"| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n"}
+,{"stream_name":"stdout","time":4.61728511,"data":"|                                         |                        |               MIG M. |\n"}
+,{"stream_name":"stdout","time":4.617287492,"data":"|=========================================+========================+======================|\n"}
+,{"stream_name":"stdout","time":4.617289799,"data":"|   0  Tesla T4                       Off |   00000000:00:04.0 Off |                    0 |\n"}
+,{"stream_name":"stdout","time":4.617292101,"data":"| N/A   46C    P8              9W /   70W |       0MiB /  15360MiB |      0%      Default |\n"}
+,{"stream_name":"stdout","time":4.617294382,"data":"|                                         |                        |                  N/A |\n"}
+,{"stream_name":"stdout","time":4.617296747,"data":"+-----------------------------------------+------------------------+----------------------+\n"}
+,{"stream_name":"stdout","time":4.617299043,"data":"|   1  Tesla T4                       Off |   00000000:00:05.0 Off |                    0 |\n"}
+,{"stream_name":"stdout","time":4.617301417,"data":"| N/A   43C    P8              9W /   70W |       0MiB /  15360MiB |      0%      Default |\n"}
+,{"stream_name":"stdout","time":4.617303802,"data":"|                                         |                        |                  N/A |\n"}
+,{"stream_name":"stdout","time":4.617306233,"data":"+-----------------------------------------+------------------------+----------------------+\n"}
+,{"stream_name":"stdout","time":4.617308582,"data":"\n"}
+,{"stream_name":"stdout","time":4.617310789,"data":"+-----------------------------------------------------------------------------------------+\n"}
+,{"stream_name":"stdout","time":4.617313094,"data":"| Processes:                                                                              |\n"}
+,{"stream_name":"stdout","time":4.617315463,"data":"|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n"}
+,{"stream_name":"stdout","time":4.617317795,"data":"|        ID   ID                                                               Usage      |\n"}
+,{"stream_name":"stdout","time":4.617320111,"data":"|=========================================================================================|\n"}
+,{"stream_name":"stdout","time":4.617322412,"data":"|  No running processes found                                                             |\n"}
+,{"stream_name":"stdout","time":4.617325415,"data":"+-----------------------------------------------------------------------------------------+\n"}
+,{"stream_name":"stdout","time":4.6173277630000005,"data":"\n"}
+,{"stream_name":"stdout","time":7.370998751,"data":"/usr/bin/python3 /kaggle/input/datasets/<KAGGLE_USERNAME>/remediaide-ml-src/scripts/train_cokt_final.py --seeds 20261118 1 2 3 4 --data-dir /kaggle/input/datasets/<KAGGLE_USERNAME>/remediaide-processed --out /kaggle/working\n"}
+,{"stream_name":"stdout","time":26.341995604,"data":"[23:17:00] windows: train 5,361, early_stop 591, calibration 1,540, test 1,853; device cuda\n"}
+,{"stream_name":"stdout","time":39.069886515,"data":"[23:17:13] epoch 0: loss 1.7883 val AUC 0.7441 (7s)\n"}
+,{"stream_name":"stdout","time":43.339949052,"data":"[23:17:17] epoch 1: loss 1.6324 val AUC 0.7643 (4s)\n"}
+,{"stream_name":"stdout","time":47.482951917,"data":"[23:17:21] epoch 2: loss 1.5607 val AUC 0.7728 (4s)\n"}
+,{"stream_name":"stdout","time":51.752269751,"data":"[23:17:25] epoch 3: loss 1.5262 val AUC 0.7773 (4s)\n"}
+,{"stream_name":"stdout","time":55.845988772,"data":"[23:17:29] epoch 4: loss 1.5065 val AUC 0.7791 (4s)\n"}
+,{"stream_name":"stdout","time":60.116044311,"data":"[23:17:34] epoch 5: loss 1.4916 val AUC 0.7798 (4s)\n"}
+,{"stream_name":"stdout","time":64.257281514,"data":"[23:17:38] epoch 6: loss 1.4813 val AUC 0.7819 (4s)\n"}
+,{"stream_name":"stdout","time":68.543083958,"data":"[23:17:42] epoch 7: loss 1.4690 val AUC 0.7826 (4s)\n"}
+,{"stream_name":"stdout","time":72.676019137,"data":"[23:17:46] epoch 8: loss 1.4614 val AUC 0.7829 (4s)\n"}
+,{"stream_name":"stdout","time":77.089202776,"data":"[23:17:51] epoch 9: loss 1.4557 val AUC 0.7830 (4s)\n"}
+,{"stream_name":"stdout","time":81.476242436,"data":"[23:17:55] epoch 10: loss 1.4442 val AUC 0.7822 (4s)\n"}
+,{"stream_name":"stdout","time":85.88968865,"data":"[23:18:00] epoch 11: loss 1.4399 val AUC 0.7826 (4s)\n"}
+,{"stream_name":"stdout","time":92.204464983,"data":"[23:18:06] seed 20261118: best early-stop AUC 0.7829 (65.9s)\n"}
+,{"stream_name":"stdout","time":96.65950031,"data":"[23:18:10] epoch 0: loss 1.7899 val AUC 0.7428 (4s)\n"}
+,{"stream_name":"stdout","time":101.003590696,"data":"[23:18:15] epoch 1: loss 1.6272 val AUC 0.7656 (4s)\n"}
+,{"stream_name":"stdout","time":105.594086838,"data":"[23:18:19] epoch 2: loss 1.5552 val AUC 0.7738 (5s)\n"}
+,{"stream_name":"stdout","time":109.994228021,"data":"[23:18:24] epoch 3: loss 1.5238 val AUC 0.7774 (4s)\n"}
+,{"stream_name":"stdout","time":114.432542522,"data":"[23:18:28] epoch 4: loss 1.5055 val AUC 0.7793 (4s)\n"}
+,{"stream_name":"stdout","time":118.720977019,"data":"[23:18:32] epoch 5: loss 1.4892 val AUC 0.7810 (4s)\n"}
+,{"stream_name":"stdout","time":123.177170305,"data":"[23:18:37] epoch 6: loss 1.4790 val AUC 0.7813 (4s)\n"}
+,{"stream_name":"stdout","time":127.61063438,"data":"[23:18:41] epoch 7: loss 1.4666 val AUC 0.7813 (4s)\n"}
+,{"stream_name":"stdout","time":132.266054699,"data":"[23:18:46] epoch 8: loss 1.4570 val AUC 0.7822 (5s)\n"}
+,{"stream_name":"stdout","time":136.686496094,"data":"[23:18:50] epoch 9: loss 1.4529 val AUC 0.7822 (4s)\n"}
+,{"stream_name":"stdout","time":141.252862491,"data":"[23:18:55] epoch 10: loss 1.4431 val AUC 0.7818 (5s)\n"}
+,{"stream_name":"stdout","time":145.730996958,"data":"[23:18:59] epoch 11: loss 1.4363 val AUC 0.7815 (4s)\n"}
+,{"stream_name":"stdout","time":152.637944062,"data":"[23:19:06] seed 1: best early-stop AUC 0.7822 (60.4s)\n"}
+,{"stream_name":"stdout","time":157.094896291,"data":"[23:19:11] epoch 0: loss 1.7841 val AUC 0.7435 (4s)\n"}
+,{"stream_name":"stdout","time":161.650507795,"data":"[23:19:15] epoch 1: loss 1.6253 val AUC 0.7638 (5s)\n"}
+,{"stream_name":"stdout","time":166.254912446,"data":"[23:19:20] epoch 2: loss 1.5560 val AUC 0.7717 (5s)\n"}
+,{"stream_name":"stdout","time":170.733507034,"data":"[23:19:24] epoch 3: loss 1.5273 val AUC 0.7754 (4s)\n"}
+,{"stream_name":"stdout","time":175.45795005,"data":"[23:19:29] epoch 4: loss 1.5053 val AUC 0.7774 (5s)\n"}
+,{"stream_name":"stdout","time":179.903934878,"data":"[23:19:34] epoch 5: loss 1.4924 val AUC 0.7793 (4s)\n"}
+,{"stream_name":"stdout","time":184.43362983,"data":"[23:19:38] epoch 6: loss 1.4788 val AUC 0.7796 (5s)\n"}
+,{"stream_name":"stdout","time":188.888625282,"data":"[23:19:43] epoch 7: loss 1.4701 val AUC 0.7802 (4s)\n"}
+,{"stream_name":"stdout","time":193.625879613,"data":"[23:19:47] epoch 8: loss 1.4610 val AUC 0.7805 (5s)\n"}
+,{"stream_name":"stdout","time":198.049684441,"data":"[23:19:52] epoch 9: loss 1.4549 val AUC 0.7808 (4s)\n"}
+,{"stream_name":"stdout","time":202.588253634,"data":"[23:19:56] epoch 10: loss 1.4456 val AUC 0.7804 (5s)\n"}
+,{"stream_name":"stdout","time":207.020122369,"data":"[23:20:01] epoch 11: loss 1.4346 val AUC 0.7800 (4s)\n"}
+,{"stream_name":"stdout","time":211.781567456,"data":"[23:20:05] epoch 12: loss 1.4305 val AUC 0.7801 (5s)\n"}
+,{"stream_name":"stdout","time":218.517226259,"data":"[23:20:12] seed 2: best early-stop AUC 0.7808 (65.9s)\n"}
+,{"stream_name":"stdout","time":223.142735741,"data":"[23:20:17] epoch 0: loss 1.7950 val AUC 0.7476 (5s)\n"}
+,{"stream_name":"stdout","time":227.581831826,"data":"[23:20:21] epoch 1: loss 1.6298 val AUC 0.7660 (4s)\n"}
+,{"stream_name":"stdout","time":232.270470078,"data":"[23:20:26] epoch 2: loss 1.5607 val AUC 0.7730 (5s)\n"}
+,{"stream_name":"stdout","time":236.739084507,"data":"[23:20:30] epoch 3: loss 1.5296 val AUC 0.7764 (4s)\n"}
+,{"stream_name":"stdout","time":241.492404819,"data":"[23:20:35] epoch 4: loss 1.5086 val AUC 0.7774 (5s)\n"}
+,{"stream_name":"stdout","time":246.040117226,"data":"[23:20:40] epoch 5: loss 1.4945 val AUC 0.7793 (5s)\n"}
+,{"stream_name":"stdout","time":250.679391058,"data":"[23:20:44] epoch 6: loss 1.4820 val AUC 0.7802 (5s)\n"}
+,{"stream_name":"stdout","time":255.096173333,"data":"[23:20:49] epoch 7: loss 1.4707 val AUC 0.7799 (4s)\n"}
+,{"stream_name":"stdout","time":259.658039594,"data":"[23:20:53] epoch 8: loss 1.4618 val AUC 0.7798 (5s)\n"}
+,{"stream_name":"stdout","time":264.021897845,"data":"[23:20:58] epoch 9: loss 1.4535 val AUC 0.7812 (4s)\n"}
+,{"stream_name":"stdout","time":268.718680065,"data":"[23:21:02] epoch 10: loss 1.4467 val AUC 0.7812 (5s)\n"}
+,{"stream_name":"stdout","time":273.246812305,"data":"[23:21:07] epoch 11: loss 1.4391 val AUC 0.7810 (5s)\n"}
+,{"stream_name":"stdout","time":277.822644805,"data":"[23:21:11] epoch 12: loss 1.4322 val AUC 0.7808 (5s)\n"}
+,{"stream_name":"stdout","time":284.01950349,"data":"[23:21:18] seed 3: best early-stop AUC 0.7812 (65.5s)\n"}
+,{"stream_name":"stdout","time":288.825087576,"data":"[23:21:22] epoch 0: loss 1.7816 val AUC 0.7447 (5s)\n"}
+,{"stream_name":"stdout","time":293.343877426,"data":"[23:21:27] epoch 1: loss 1.6323 val AUC 0.7635 (5s)\n"}
+,{"stream_name":"stdout","time":297.938859091,"data":"[23:21:32] epoch 2: loss 1.5615 val AUC 0.7724 (5s)\n"}
+,{"stream_name":"stdout","time":302.339751712,"data":"[23:21:36] epoch 3: loss 1.5246 val AUC 0.7760 (4s)\n"}
+,{"stream_name":"stdout","time":306.899210556,"data":"[23:21:41] epoch 4: loss 1.5097 val AUC 0.7783 (5s)\n"}
+,{"stream_name":"stdout","time":311.368742199,"data":"[23:21:45] epoch 5: loss 1.4912 val AUC 0.7793 (4s)\n"}
+,{"stream_name":"stdout","time":316.121953112,"data":"[23:21:50] epoch 6: loss 1.4803 val AUC 0.7800 (5s)\n"}
+,{"stream_name":"stdout","time":320.660853712,"data":"[23:21:54] epoch 7: loss 1.4704 val AUC 0.7808 (5s)\n"}
+,{"stream_name":"stdout","time":325.244244712,"data":"[23:21:59] epoch 8: loss 1.4593 val AUC 0.7812 (5s)\n"}
+,{"stream_name":"stdout","time":329.680999019,"data":"[23:22:03] epoch 9: loss 1.4514 val AUC 0.7812 (4s)\n"}
+,{"stream_name":"stdout","time":334.254980271,"data":"[23:22:08] epoch 10: loss 1.4453 val AUC 0.7817 (5s)\n"}
+,{"stream_name":"stdout","time":338.719865448,"data":"[23:22:12] epoch 11: loss 1.4360 val AUC 0.7806 (4s)\n"}
+,{"stream_name":"stdout","time":343.433364396,"data":"[23:22:17] epoch 12: loss 1.4278 val AUC 0.7817 (5s)\n"}
+,{"stream_name":"stdout","time":347.874761977,"data":"[23:22:22] epoch 13: loss 1.4231 val AUC 0.7799 (4s)\n"}
+,{"stream_name":"stdout","time":354.414716305,"data":"[23:22:28] seed 4: best early-stop AUC 0.7817 (70.4s)\n"}
+,{"stream_name":"stdout","time":354.414747915,"data":"[23:22:28] DONE\n"}
+,{"stream_name":"stdout","time":358.113877594,"data":"DONE\n"}
+,{"stream_name":"stderr","time":360.39347906,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":360.393505797,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":360.67482416,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":360.674849096,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":361.586573199,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":362.619216358,"data":"[NbConvertApp] Writing 277130 bytes to __results__.html\n"}
+]
