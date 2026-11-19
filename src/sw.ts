@@ -56,6 +56,14 @@ const serwist = new Serwist({
         ],
       }),
     },
+    // RemediAide 2.0 on-device Mode AI (T68): ONNX models + WASM runtime, CacheFirst so they work offline
+    {
+      matcher: /^\/(models\/.*\.(onnx|json)|ort\/.*)$/,
+      handler: new CacheFirst({
+        cacheName: "ml-models",
+        plugins: [new ExpirationPlugin({ maxAgeSeconds: 30 * 24 * 60 * 60, maxEntries: 10 })],
+      }),
+    },
     // Auth routes: ALWAYS NetworkOnly, NEVER cached.
     // Listed BEFORE the generic /api/* rule so it matches first.
     {

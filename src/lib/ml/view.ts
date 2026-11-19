@@ -2,7 +2,7 @@
  * RemediAide 2.0 — shape MlDiagnosis rows for the teacher dashboard "Mode AI" (05_INTEGRATION_SPEC §6).
  * Pure functions (unit-tested): per-student view, the "Perlu dicek guru" queue and AI groups per named misconception.
  */
-import { QUADRANTS, type Quadrant } from './client';
+import { QUADRANTS, type Quadrant } from './types';
 
 export interface MlRow {
   id: string;

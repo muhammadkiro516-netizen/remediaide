@@ -1,0 +1,39 @@
+{
+ "features": [
+  "cur_correct",
+  "cur_cri",
+  "cur_has_conf",
+  "n_prev",
+  "acc_prev",
+  "n_prev_kc",
+  "acc_prev_kc",
+  "ewm_acc_kc",
+  "attempt_no",
+  "conf_mean_prev",
+  "conf_mean_prev_kc",
+  "overconf_prev",
+  "cnt_P_kc",
+  "cnt_L_kc",
+  "cnt_M_kc",
+  "cnt_T_kc",
+  "last_quadrant_kc",
+  "cur_quadrant_b0",
+  "item_diff_oof",
+  "kc_diff_oof",
+  "cur_option_share_oof",
+  "hours_since_prev",
+  "hours_since_prev_kc"
+ ],
+ "defaults": {
+  "item_diff_oof": 0.54,
+  "kc_diff_oof": 0.54,
+  "cur_option_share_oof": 0.0
+ },
+ "classes_b4": [
+  "P",
+  "L",
+  "M",
+  "T"
+ ],
+ "source": "model_*_fold0.txt"
+}

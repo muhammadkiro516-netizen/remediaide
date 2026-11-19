@@ -5,8 +5,9 @@
  */
 import { createHmac } from 'node:crypto';
 
-export const QUADRANTS = ['PAHAM_KONSEP', 'LUCKY_GUESS', 'MISKONSEPSI', 'TIDAK_PAHAM'] as const;
-export type Quadrant = (typeof QUADRANTS)[number];
+import { QUADRANTS, type Quadrant } from './types';
+
+export { QUADRANTS, type Quadrant };
 
 export interface MlItem {
   question_id: string;

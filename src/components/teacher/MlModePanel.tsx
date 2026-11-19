@@ -7,6 +7,7 @@
  */
 import React, { useEffect, useState } from 'react';
 import type { MlStudentView, MlView } from '@/lib/ml/view';
+import type { OfflineRow } from '@/lib/ml/offline';
 
 const QLABEL: Record<string, string> = {
   PAHAM_KONSEP: 'Paham Konsep',
@@ -112,6 +113,57 @@ function StudentCard({ s }: { s: MlStudentView }) {
   );
 }
 
+function OnDevicePanel({ sessionId }: { sessionId: string }) {
+  const [state, setState] = useState<'idle' | 'running' | 'done' | 'error'>('idle');
+  const [rows, setRows] = useState<{ label: string; quadrant: string; probs: Record<string, number>; pRemed: number }[]>([]);
+  async function run() {
+    setState('running');
+    try {
+      const res = await fetch(`/api/sessions/${sessionId}/ml-input`).then((r) => r.json());
+      if (!res.success) throw new Error('data');
+      const { loadOfflineModels, offlineDiagnose } = await import('@/lib/ml/offline');
+      const out: OfflineRow[] = await offlineDiagnose(res.data, await loadOfflineModels());
+      const by = new Map<string, OfflineRow[]>();
+      out.forEach((r) => by.set(r.studentKey, [...(by.get(r.studentKey) ?? []), r]));
+      setRows(Array.from(by.entries()).sort(([a], [b]) => a.localeCompare(b)).map(([label, rs]) => {
+        const probs = Object.fromEntries(Object.keys(QCOLOR).map((q) => [q, rs.reduce((s, r) => s + r.quadrantProbs[q as keyof typeof r.quadrantProbs], 0) / rs.length]));
+        const quadrant = Object.entries(probs).sort((a, b) => b[1] - a[1])[0][0];
+        return { label, quadrant, probs, pRemed: rs.reduce((s, r) => s + r.pNeedsRemediation, 0) / rs.length };
+      }));
+      setState('done');
+    } catch {
+      setState('error');
+    }
+  }
+  return (
+    <div className="rounded-md border border-violet-200 bg-violet-50 px-4 py-3 text-sm text-violet-900">
+      <p>Layanan AI server tidak tersedia. Anda bisa menghitung <strong>Lapis 1 di perangkat ini</strong> (tanpa pembaca alasan,
+        tanpa kalibrasi; model ±29 MB diunduh sekali lalu disimpan).</p>
+      {state !== 'done' && (
+        <button type="button" onClick={run} disabled={state === 'running'}
+          className="mt-2 rounded bg-violet-700 px-3 py-1.5 text-xs font-semibold text-white hover:bg-violet-800 disabled:opacity-50">
+          {state === 'running' ? 'Menghitung…' : 'Hitung di perangkat (L1 saja)'}
+        </button>
+      )}
+      {state === 'error' && <p className="mt-2 text-red-700">Gagal menghitung di perangkat.</p>}
+      {state === 'done' && (
+        <table className="mt-3 w-full text-xs">
+          <tbody>
+            {rows.map((r) => (
+              <tr key={r.label} className="border-t border-violet-100">
+                <td className="py-1 pr-2 font-semibold">{r.label}</td>
+                <td className="py-1 pr-2"><ProbBar probs={r.probs} /></td>
+                <td className="py-1 pr-2">{QLABEL[r.quadrant] ?? r.quadrant}</td>
+                <td className="py-1 text-gray-600">butuh remediasi {Math.round(r.pRemed * 100)}%</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+    </div>
+  );
+}
+
 async function downloadLkpd(sessionId: string, misconception: string) {
   const res = await fetch(`/api/sessions/${sessionId}/lkpd-ml`, {
     method: 'POST',
@@ -137,12 +189,22 @@ export default function MlModePanel({ sessionId }: { sessionId: string }) {
       .catch(() => setError('Gagal memuat Mode AI.'));
   }, [sessionId]);
 
-  if (error) return <div className="rounded-md bg-red-50 px-4 py-3 text-sm text-red-700" role="alert">{error}</div>;
+  if (error) {
+    return (
+      <div className="space-y-3">
+        <div className="rounded-md bg-red-50 px-4 py-3 text-sm text-red-700" role="alert">{error}</div>
+        <OnDevicePanel sessionId={sessionId} />
+      </div>
+    );
+  }
   if (!view) return <div className="text-sm text-gray-500">Memuat Mode AI…</div>;
   if (!view.available) {
     return (
-      <div className="rounded-md bg-blue-50 px-4 py-3 text-sm text-blue-800">
-        Mode AI belum tersedia untuk sesi ini. Hasil aturan v1 tetap berlaku.
+      <div className="space-y-3">
+        <div className="rounded-md bg-blue-50 px-4 py-3 text-sm text-blue-800">
+          Mode AI belum tersedia untuk sesi ini. Hasil aturan v1 tetap berlaku.
+        </div>
+        <OnDevicePanel sessionId={sessionId} />
       </div>
     );
   }

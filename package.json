@@ -17,7 +17,9 @@
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "test:e2e:headed": "playwright test --headed"
+    "test:e2e:headed": "playwright test --headed",
+    "predev": "node scripts/copy-ort-wasm.js",
+    "prebuild": "node scripts/copy-ort-wasm.js"
   },
   "dependencies": {
     "@prisma/client": "^6.10.1",
@@ -35,6 +37,7 @@
     "lucide-react": "^0.511.0",
     "next": "14",
     "next-auth": "5.0.0-beta.25",
+    "onnxruntime-web": "^1.20.1",
     "pdf-lib": "^1.17.1",
     "qrcode": "^1.5.4",
     "react": "18",
