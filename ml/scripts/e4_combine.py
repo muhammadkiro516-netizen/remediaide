@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 
 from remediaide_ml.eval import metrics as M
-from remediaide_ml.paths import RUNS, TABLES
+from remediaide_ml.paths import INTERIM, RUNS, TABLES
 from remediaide_ml.seed import GLOBAL_SEED
 
 CAT3 = ["Correct", "Misconception", "Neither"]
@@ -18,8 +18,6 @@ for tag, name in (("tfidf", "B0 TF-IDF+LR"), ("mdeberta", "M1 mDeBERTa-v3-base")
     parts.append(t)
 a = pd.read_parquet(RUNS / "e4" / "rows_mdeberta.parquet").set_index("row_id")
 b = pd.read_parquet(RUNS / "e4" / "rows_tfidf.parquet").set_index("row_id").loc[a.index]
-from remediaide_ml.paths import INTERIM
-
 y3 = pd.read_parquet(INTERIM / "map.parquet", columns=["row_id", "category3"]).set_index("row_id").loc[a.index, "category3"].to_numpy()
 rng = np.random.default_rng(GLOBAL_SEED)
 n = len(a)

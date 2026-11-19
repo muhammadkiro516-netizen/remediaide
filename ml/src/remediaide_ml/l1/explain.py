@@ -49,7 +49,9 @@ def _fmt(name: str, v) -> str:
         case "cnt_L_kc":
             return f"benar {int(v)}× di topik ini dengan keyakinan rendah"
         case "overconf_prev":
-            return "cenderung terlalu yakin" if v > 0.1 else ("cenderung kurang yakin" if v < -0.1 else "keyakinan sejalan dengan hasil")
+            if v > 0.1:
+                return "cenderung terlalu yakin"
+            return "cenderung kurang yakin" if v < -0.1 else "keyakinan sejalan dengan hasil"
         case "conf_mean_prev_kc":
             return f"rata-rata keyakinan di topik ini {v:.1f} dari 5"
         case "conf_mean_prev":

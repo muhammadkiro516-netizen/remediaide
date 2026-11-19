@@ -191,7 +191,7 @@ def predict(model, seq: dict, idx: np.ndarray, cfg: CoktConfig, dev) -> pd.DataF
     model.eval()
     rows = []
     with torch.no_grad():
-        for b, j, L in _batches(seq, idx, cfg.batch_size * 4, dev, False, np.random.default_rng(0)):
+        for b, j, _L in _batches(seq, idx, cfg.batch_size * 4, dev, False, np.random.default_rng(0)):
             lc, lo, lq = model(b)
             pc = torch.sigmoid(lc).cpu().numpy()
             po = torch.softmax(lo, -1).cpu().numpy()

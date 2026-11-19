@@ -201,27 +201,27 @@ Semua path ML relatif terhadap `ml/`.
   - Isi `reports/RESULTS.md` sesuai format 04, **termasuk kalimat utama**.
   - Selesai jika: RESULTS.md lengkap, setiap angka menunjuk ke tabel sumber, dan gambar final tersedia.
 
-- [ ] **T47 [S] FREEZE Tingkat S** — dep: T46 · tenggat Rab 25 Nov 23:59
+- [x] **T47 [S] FREEZE Tingkat S** — dep: T46 · tenggat Rab 25 Nov 23:59
   - `make all` dari data mentah (bagian GPU memakai output Kaggle yang tersimpan) lalu bandingkan dengan
     RESULTS (toleransi 07 §6). Tag git `freeze-tierS`.
   - Selesai jika: reproduksi lolos dan tag dibuat.
 
 ## P5 — Submisi (Kam 26 – Jum 27 Nov) · spesifikasi: 07_SUBMISSION.md
 
-- [~] **T50 [S] Susun repo submisi** — dep: T47
+- [x] **T50 [S] Susun repo submisi** — dep: T47
   - `submission/remediaide-ml/` sesuai struktur 07 §1 (salin dari `ml/`, bersihkan). Notebook 01–07 dijalankan.
   - Selesai jika: struktur lengkap dan notebook ber-output.
 
-- [~] **T51 [S] README + REPORT + kartu model/data** — dep: T50
+- [x] **T51 [S] README + REPORT + kartu model/data** — dep: T50
   - Tulis sesuai 07 §2–4 dalam Bahasa Indonesia yang jelas. Diagram arsitektur dibuat sebagai PNG dengan matplotlib.
   - `scripts/check_numbers.py` lulus.
   - Selesai jika: keempat dokumen selesai dan pemeriksaan angka lulus.
 
-- [~] **T52 [S] Paket dataset** — dep: T50 · cek **M6**
+- [x] **T52 [S] Paket dataset** — dep: T50 · cek **M6**
   - Sesuai 07 §5 dan jawaban panitia soal format.
   - Selesai jika: `data/README.md` + skrip unduh + checksum ada, dan arsip asli/terjemahan disertakan bila diizinkan.
 
-- [ ] **T53 [S] Audit akhir** — dep: T51, T52
+- [x] **T53 [S] Audit akhir** — dep: T51, T52
   - Checklist 07 §6 lengkap: clone segar, venv segar, reproduksi, pemindaian rahasia, lisensi, paragraf riwayat v1.
   - Selesai jika: semua butir checklist `[x]` dengan bukti di PROGRESS.
 

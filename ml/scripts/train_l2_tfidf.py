@@ -78,8 +78,6 @@ def main():
     rows = np.arange(len(df))
     ci = cluster_bootstrap_ci(lambda r: M.map_at_k(y[r], [top3[i] for i in r]), (rows,), rows, n_boot=1000)
     # E3 view: True_Misconception detection from the target model
-    tm_cols = [i for i, c in enumerate(classes_all) if c.startswith("True_Misconception")]
-    p_tm = oof[:, tm_cols].sum(axis=1)
     is_tm = (df.Category == "True_Misconception").to_numpy()
     top1 = classes_all[oof.argmax(axis=1)]
     pred_tm = np.char.startswith(top1.astype(str), "True_Misconception")

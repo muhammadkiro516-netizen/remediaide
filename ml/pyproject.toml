@@ -68,3 +68,4 @@ select = ["E", "F", "UP", "B", "I"]
 
 [tool.ruff.lint.per-file-ignores]
 "src/remediaide_ml/**/*_card.py" = ["E501"]  # markdown table templates
+"scripts/*.py" = ["E501"]  # CLI scripts: long Indonesian table labels / help strings

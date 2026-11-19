@@ -90,7 +90,7 @@ def matches(x: float, dec: int, idx) -> bool:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--verbose", action="store_true")
-    a = ap.parse_args()
+    ap.parse_args()
     vals = build_index(source_values())
     small = {0, 1, 2, 3, 4, 5}  # counts like "3 lapis", "5 seed", "2 lapis" are structural, not results
     bad = []

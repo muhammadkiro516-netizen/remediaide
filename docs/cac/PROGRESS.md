@@ -15,19 +15,14 @@ angka kunci (dengan path sumbernya), masalah, dan langkah berikutnya.
 - Hari tersisa menuju submit internal (Jum 27 Nov): 9 (hari ke-1)
 - Kuota GPU Kaggle terpakai minggu ini: 1 j 46 m / 30 j (dicek Salman 18 Nov ~22:55, 2 kernel paralel = 2 j kuota per jam)
 
-## Langkah lanjut untuk sesi berikutnya (`/lanjut`) — diperbarui 19 Nov 07:10
-T46 selesai: test Eedi **sudah dibuka** (segel `ml/reports/TEST_OPENED.json`). Jangan jalankan ulang `final_eval.py`
-kecuali bug kode (pakai `--rerun-reason`, tercatat di segel). Tidak ada proses berjalan.
-0. **BERJALAN (19 Nov ±07:25): reproduksi T47** — `scratchpad/repro.sh` (PID 25491, folder repro2): clone segar → venv dari
-   `requirements-lock.txt` → salin data mentah + output Kaggle → `make test` → `make all` → `make check-repro`.
-   Log: `/private/tmp/claude-501/-Users-salmonella-Downloads-remediaide-main/7d6cbfb3-3e97-4e56-89d6-e1261a24f4b2/scratchpad/repro.log`
-   (perkiraan 4–5 jam: terjemahan ±45 m, LightGBM ±2 j 10 m). Selesai jika log berisi `REPRO_DONE` dan check-repro 0 gagal.
-   Jika scratchpad terhapus (reboot), jalankan ulang skrip yang sama (isinya: lihat commit T47 / langkah di atas).
-1. **T47 freeze** (tenggat Rab 25 Nov 23:59): `make all` dari data mentah (GPU = output Kaggle tersimpan), bandingkan
-   dengan RESULTS (toleransi 07 §6), tag `freeze-tierS`. Periksa dulu target Makefile mencakup skrip baru
-   (export_l1/l2, l3_production, cokt_oof_export, l2_eval, e4_combine, final_eval).
-2. Lalu P5: T50 (susun repo submisi), T51 (README + REPORT + kartu model/data), T52 (paket dataset, cek M6), T53 audit.
-3. P6 web setelah submisi aman.
+## Langkah lanjut — diperbarui 19 Nov 11:30
+Semua task teknis Tingkat S + P6 + Tingkat A (kecuali T25, dicatat) selesai. Tersisa hanya tindakan Salman:
+1. `git push origin main cac/ml feat/ml-integration --tags` (commit + tag `freeze-tierS`).
+2. M15 (Jum 27 Nov): kirim link repo + demo lewat formulir panitia; simpan bukti. Cek rulebook: repo publik atau dibagikan.
+3. Keamanan: cabut token GitHub yang pernah ditempel di chat; reset password Neon (lalu perbarui `DIRECT_URL` di Vercel);
+   ganti password akun demo/superadmin seed sebelum link dibagikan.
+4. Opsional (final): hosting layanan ML penuh (Hugging Face Spaces Docker, `RA_L2_MODEL=student`) → isi `ML_SERVICE_URL` di Vercel.
+Paket cadangan: `submission/remediaide-ml.zip` (17,7 MB, diuji: ekstrak + 82 tes lulus).
 
 ## Blocker (butuh Salman)
 - ~~M1b login Kaggle~~ beres (19 Nov pagi; Kaggle CLI bisa dipakai lagi).
@@ -55,6 +50,22 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 ±1,4 juta baris × SHAP/Optuna; (5) jadwal 9 hari sangat padat, sehingga freeze 25 Nov harus dipatuhi.
 
 ## Log
+
+### 2026-11-19 11:30 — T50–T53 paket submisi + audit akhir — selesai
+- `ml/scripts/build_submission.py` → `submission/remediaide-ml/` (217 file, 35,6 MB) + zip 17,7 MB; zip diekstrak dan diuji
+  (82 tes lulus, 7 di-skip tanpa model besar); tidak ada token/password/path lokal; tidak ada file > 20 MB.
+- Checklist 07 §6: reproduksi ✓ (T47), notebook 01–07 berisi output ✓, `check_numbers.py` 0 tanpa sumber ✓, sitasi + lisensi ✓,
+  paragraf riwayat v1 ✓, ukuran wajar ✓, zip diuji ✓. Terbuka: M6 (format dataset ke panitia) — default: skrip unduh Eedi + MAP asli.
+
+### 2026-11-19 11:20 — T47 FREEZE Tingkat S — selesai
+- Clone segar + venv segar (dari `requirements-lock.txt`) + data mentah tersalin + output Kaggle tersimpan → `make test`
+  (82 lulus, 2 di-skip tanpa artefak biner) → `make all` (07:05–11:14: terjemahan, LightGBM + Optuna, TF-IDF, L3, evaluasi
+  test) → `make check-repro`: **0 file di luar toleransi; semua tabel hasil `make all` identik** dengan repo
+  (laporan `scratchpad/repro2/ml/runs/check_repro.json`). Tidak ikut `make all`: QA terjemahan (manual), kamus miskonsepsi,
+  tabel dev_b1, dan hasil Tingkat A. Bug yang ditemukan di clone segar: skip `test_bundle` (diperbaiki, f543218).
+- Tag `freeze-tierS` → commit yang direproduksi (f543218). Lint ruff bersih; 89 tes ML + 586 tes web lulus.
+- Hosting: https://remediaide.vercel.app (branch `main`, Neon Postgres, migrasi + seed diterapkan). Repo:
+  https://github.com/muhammadkiro516-netizen/remediaide.
 
 ### 2026-11-19 07:40 — P5 draf + P6 (branch `feat/ml-integration`, worktree `.worktrees/web`)
 - **T63:** `ml/service/app.py` (FastAPI `/health`, `/v1/diagnose`), Dockerfile, `ml/tests/test_service.py`. Alasan SHAP kini

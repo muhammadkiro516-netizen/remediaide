@@ -34,8 +34,8 @@ Claude Code mengerjakan semua hal lainnya. Kerjakan item ini, centang, lalu keti
   format pengumpulan dataset (link, unggah, batas ukuran) dan apakah ada laporan wajib.
 - [ ] **M7. (Untuk P6)** pasang Docker Desktop untuk Mac, atau izinkan Claude Code memasang PostgreSQL via Homebrew.
 - [ ] **M8. (Cadangan GPU)** akun Google untuk Colab, jika kuota Kaggle habis.
-- [ ] **M9. (Untuk deploy)** akun penyedia hosting layanan ML yang dipilih Claude Code di T69, dan akses Vercel project yang ada.
-- [ ] **M10. GitHub:** buat repo kosong `remediaide-ml` (privat) atau izinkan Claude Code memakai `gh`
+- [x] **M9. (Untuk deploy)** akun penyedia hosting layanan ML yang dipilih Claude Code di T69, dan akses Vercel project yang ada.
+- [x] **M10. GitHub:** buat repo kosong `remediaide-ml` (privat) atau izinkan Claude Code memakai `gh`
   (`gh auth login`).
 
 ## Saat izin pilot keluar
