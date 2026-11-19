@@ -17,7 +17,7 @@
  *    - 1 Kelas: "Kelas X-B" dengan 3 siswa
  *    (untuk tes tenant isolation — data tidak boleh muncul di Sekolah A)
  *
- * Password seragam: demo123
+ * Password seragam: SEED_PASSWORD (default lokal demo123; superadmin SEED_SUPERADMIN_PASSWORD)
  *
  * Jalankan dengan:
  *   npm run prisma:seed
@@ -28,8 +28,15 @@ import bcrypt from 'bcryptjs';
 
 const prisma = new PrismaClient();
 
-const PASSWORD = 'demo123';
-const SUPERADMIN_PASSWORD = 'remedi123';
+// Passwords come from the environment (SEED_PASSWORD, SEED_SUPERADMIN_PASSWORD). The defaults below are public
+// (this repository is public) and must only be used for local development. See docs/cac/SECURITY_NOTES.md.
+const PASSWORD = process.env.SEED_PASSWORD || 'demo123';
+const SUPERADMIN_PASSWORD = process.env.SEED_SUPERADMIN_PASSWORD || 'remedi123';
+if (!process.env.SEED_PASSWORD || !process.env.SEED_SUPERADMIN_PASSWORD) {
+  console.warn('⚠ SEED_PASSWORD / SEED_SUPERADMIN_PASSWORD kosong: memakai password demo publik (hanya untuk lokal).');
+}
+const SHOWN_PW = (process.env.SEED_PASSWORD ? '(env)' : 'demo123').padEnd(9);
+const SHOWN_SA = (process.env.SEED_SUPERADMIN_PASSWORD ? '(env)' : 'remedi123').padEnd(9);
 const HASH_ROUNDS = 12;
 
 // ─── Stable seed IDs ──────────────────────────────────────────────────────────
@@ -439,11 +446,11 @@ async function main() {
 ╠══════════════════════════════════════════════════════════════╣
 ║  Role        Email                      Password   Sekolah   ║
 ╠══════════════════════════════════════════════════════════════╣
-║  SUPERADMIN  superadmin@remediaide.app  remedi123  Internal  ║
-║  TEACHER     demo@remediaide.app        demo123    SMAN 1    ║
-║  TEACHER     guru@remediaide.app        demo123    SMAN 1    ║
-║  PRINCIPAL   kepsek@remediaide.app      demo123    SMAN 1    ║
-║  TEACHER     guru2@remediaide.app       demo123    SMAN 2    ║
+║  SUPERADMIN  superadmin@remediaide.app  ${SHOWN_SA}  Internal  ║
+║  TEACHER     demo@remediaide.app        ${SHOWN_PW}  SMAN 1    ║
+║  TEACHER     guru@remediaide.app        ${SHOWN_PW}  SMAN 1    ║
+║  PRINCIPAL   kepsek@remediaide.app      ${SHOWN_PW}  SMAN 1    ║
+║  TEACHER     guru2@remediaide.app       ${SHOWN_PW}  SMAN 2    ║
 ╠══════════════════════════════════════════════════════════════╣
 ║  PIN Sesi ACTIVE : 123456                                    ║
 ║  PIN Sesi LOCKED : 999999                                    ║
