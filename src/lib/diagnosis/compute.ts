@@ -13,6 +13,7 @@ import { classifyPerItem, aggregateMajorityVoting } from '@/lib/diagnostic/engin
 import { sseManager } from '@/lib/sse/manager';
 import { buildHeatmapState } from '@/lib/sse/heatmap-builder';
 import type { ResponseInput, DiagnosisResult } from '@/lib/diagnostic/engine';
+import { runMlDiagnosis } from '@/lib/ml/pipeline';
 
 // ─── Pedagogical prescriptions per cognitive status ───────────────────────────
 
@@ -161,6 +162,9 @@ export async function computeConceptDiagnosis(sessionId: string): Promise<void> 
 
   // ── 6. Generate remedial groups ───────────────────────────────────────────
   await generateRemedialGroups(sessionId, schoolId);
+
+  // ── 6b. RemediAide 2.0: ML diagnosis (optional; never fails the v1 pipeline) ─
+  await runMlDiagnosis(sessionId, schoolId);
 
   // ── 7. Broadcast final heatmap state via SSE ──────────────────────────────
   try {
