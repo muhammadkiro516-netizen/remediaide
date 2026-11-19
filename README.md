@@ -98,7 +98,9 @@ Keamanan: tidak ada rahasia di riwayat git (pemindaian di [`docs/cac/SECURITY_NO
 ## Riwayat
 RemediAide v1 (aplikasi web Next.js + aturan CRI 2×2 tanpa ML) diikutkan pada LIDM 2026. Semua komponen ML, data
 olahan, eksperimen, dan hasil di repo ini dibuat baru untuk CAC MLSC 2026. Aturan v1 dipakai apa adanya sebagai
-baseline B0 (27 tes kesetaraan dengan `engine.ts`). Kontributor: Salman (pemilik proyek).
+baseline B0 (27 tes kesetaraan dengan `engine.ts`).
+
+**Tim:** Salman [nama lengkap] (ketua), Luna [nama lengkap] (anggota), Farel [nama lengkap] (anggota).
 
 ### Stack aplikasi web
 Next.js 14 (App Router), TypeScript, Tailwind + shadcn/ui, PostgreSQL + Prisma 6, NextAuth v5, BullMQ + Redis

@@ -10,14 +10,17 @@ setup:            ## create venv + install (T01)
 	$(PY) -m pip freeze > requirements-lock.txt
 	$(MAKE) fix-libomp
 
-# macOS without Homebrew: lib_lightgbm.dylib needs @rpath/libomp.dylib. torch wheels ship one, so we add
-# an rpath to torch/lib and ad-hoc re-sign. No-op on Linux / when lightgbm already imports.
+# macOS without Homebrew: lib_lightgbm.dylib needs @rpath/libomp.dylib. torch and scikit-learn wheels ship one, so we
+# add rpaths to torch/lib and sklearn/.dylibs (works without the [dl] extra) and ad-hoc re-sign. No-op on Linux / when
+# lightgbm already imports.
 LGBM_LIB = $(wildcard .venv/lib/python3.*/site-packages/lightgbm/lib/lib_lightgbm.dylib)
 fix-libomp:
 	@if $(PY) -c "import lightgbm" 2>/dev/null; then echo "lightgbm OK"; \
 	elif [ -n "$(LGBM_LIB)" ]; then \
-	  install_name_tool -add_rpath "@loader_path/../../torch/lib" $(LGBM_LIB) && codesign -f -s - $(LGBM_LIB) && \
-	  $(PY) -c "import lightgbm; print('lightgbm OK (libomp from torch)')"; \
+	  install_name_tool -add_rpath "@loader_path/../../torch/lib" $(LGBM_LIB) ; \
+	  install_name_tool -add_rpath "@loader_path/../../sklearn/.dylibs" $(LGBM_LIB) ; \
+	  codesign -f -s - $(LGBM_LIB) && \
+	  $(PY) -c "import lightgbm; print('lightgbm OK (libomp from torch or scikit-learn wheel)')"; \
 	else echo "lightgbm import failed; install libomp (brew install libomp)"; exit 1; fi
 
 env:              ## hardware + auth report (T02)

@@ -204,7 +204,7 @@ def load_bundle(models_dir: Path = MODELS, with_l2: bool = True, l2_lang: str = 
     explainer = LgbmL1(models_dir)
     try:
         l1, version = CoktL1(models_dir, explainer), "rmd2-cokt5"
-    except (FileNotFoundError, OSError):
+    except (FileNotFoundError, OSError, ImportError):  # no weights, or torch not installed (no [dl] extra)
         l1, version = explainer, "rmd2-lgbm-fallback"
     l2, l2_name = None, None
     if with_l2:
