@@ -233,6 +233,8 @@ kuadran) dan DeLong (AUC), dengan koreksi Holm; semua perbandingan CO-KT vs B0, 
   dan konsisten dengan pemilihan di CV (D-18).
 - **Catatan jujur:** B1a (selalu condong ke "Paham") punya salah kelompok 0,429, lebih baik dari B0, padahal macro-F1-nya
   hanya 0,182. Karena itu salah kelompok tidak pernah dilaporkan tanpa macro-F1.
+- **Per kuadran tidak semuanya membaik:** recall Miskonsepsi CO-KT di test 0,368 vs aturan v1 0,400; keunggulan berasal
+  dari kelas Paham dan Tidak paham (tabel di §4.2, `reports/tables/E1_recall_per_class_test.csv`).
 - **CV ↔ test konsisten:** salah kelompok CO-KT 0,347 di CV (`reports/tables/L1_cv_summary.csv`) dan 0,347 di test.
 - **Pembanding literatur (framing a):** AKT 0,8033 dan simpleKT 0,8035 pada split pyKT [7]. Protokol kami berbeda
   (split per siswa dengan test terkunci; CO-KT juga melatih dua kepala lain), jadi angka tidak setara langsung. pyKT
@@ -248,6 +250,32 @@ kuadran) dan DeLong (AUC), dengan koreksi Holm; semua perbandingan CO-KT vs B0, 
 
 Sumber: `reports/tables/E1_b0_test.csv`. Lebih dari seperempat siswa yang dinyatakan "Paham" oleh aturan v1 belum
 tuntas pada tiga soal berikutnya, sehingga tidak mendapat remediasi.
+
+Recall per kuadran (test, dihitung dari confusion matrix yang sudah ada tanpa inferensi baru;
+`reports/tables/E1_recall_per_class_test.csv`, `E1_correct_by_class_test.csv`):
+
+| Kuadran masa depan (test) | n | Aturan v1 (B0) | CO-KT | Tambahan benar CO-KT − B0 |
+| --- | --- | --- | --- | --- |
+| Paham | 33.682 | 0,713 | **0,886** | +5.815 |
+| Tebakan beruntung | 3.701 | **0,141** | 0,050 | −337 |
+| Miskonsepsi | 15.440 | **0,400** | 0,368 | −494 |
+| Tidak paham | 6.140 | 0,274 | **0,452** | +1.094 |
+
+Terus terang: **recall Miskonsepsi CO-KT di test 0,368, lebih rendah dari aturan v1 0,400**, dan recall *Tebakan beruntung*
+juga lebih rendah (0,050 vs 0,141). Turunnya salah kelompok terutama berasal dari kelas *Paham* (+5.815 kasus benar,
+95,7% dari total tambahan) dan *Tidak paham* (+1.094, 18,0%); kelas *Miskonsepsi* (−494) dan *Tebakan beruntung* (−337)
+justru memburuk. Confusion matrix test untuk B1b dan LightGBM tidak tersimpan, dan menghitungnya berarti membuka test
+lagi; karena itu keempat model dibandingkan di CV (D-26, pasca-segel; `E1_recall_per_class_cv.csv`):
+
+| Recall per kuadran (CV, baris E1 yang sama; pasca-segel, D-26) | Aturan v1 (B0) | B1b | LightGBM | CO-KT |
+| --- | --- | --- | --- | --- |
+| Paham | 0,707 | 0,882 | 0,861 | 0,858 |
+| Tebakan beruntung | 0,171 | 0,026 | 0,091 | 0,091 |
+| Miskonsepsi | 0,423 [0,413–0,432] | 0,238 | 0,410 | 0,445 [0,426–0,462] |
+| Tidak paham | 0,302 | 0,385 | 0,449 | 0,478 |
+
+Di CV, recall Miskonsepsi CO-KT justru lebih tinggi dari aturan v1. Kesenjangan di test tidak terlihat di CV; ini dicatat
+sebagai temuan (perbedaan kohort test, dan sedikit optimisme CV CO-KT karena early stopping, §6), bukan dijelaskan habis.
 
 ![Matriks kebingungan aturan v1 (test)](reports/figures/E1_confusion_b0.png)
 

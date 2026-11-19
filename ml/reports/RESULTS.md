@@ -65,6 +65,25 @@ Sumber: `tables/data_card_eedi.md`, `tables/data_card_map.md`, `tables/E0_eda_nu
 | "Miskonsepsi" menurut B0 yang tuntas berikutnya | 0,507 [0,495–0,519] | 0,524 [0,504–0,544] |
 | Error biner `butuh_remediasi` | — | 0,367 [0,359–0,376] |
 
+- **Recall per kuadran (test; `tables/E1_recall_per_class_test.csv`, `tables/E1_correct_by_class_test.csv`):**
+
+| Kuadran masa depan (test) | n | Aturan v1 (B0) | CO-KT | Tambahan benar CO-KT − B0 |
+| --- | --- | --- | --- | --- |
+| Paham | 33.682 | 0,713 | **0,886** | +5.815 |
+| Tebakan beruntung | 3.701 | **0,141** | 0,050 | −337 |
+| Miskonsepsi | 15.440 | **0,400** | 0,368 | −494 |
+| Tidak paham | 6.140 | 0,274 | **0,452** | +1.094 |
+
+  Recall Miskonsepsi CO-KT 0,368 < aturan v1 0,400. Penurunan salah kelompok terutama berasal dari kelas Paham (+5.815
+  kasus benar) dan Tidak paham (+1.094). Versi CV untuk keempat model (D-26, pasca-segel; `tables/E1_recall_per_class_cv.csv`):
+
+| Recall per kuadran (CV, baris E1 yang sama; pasca-segel, D-26) | Aturan v1 (B0) | B1b | LightGBM | CO-KT |
+| --- | --- | --- | --- | --- |
+| Paham | 0,707 | 0,882 | 0,861 | 0,858 |
+| Tebakan beruntung | 0,171 | 0,026 | 0,091 | 0,091 |
+| Miskonsepsi | 0,423 [0,413–0,432] | 0,238 | 0,410 | 0,445 [0,426–0,462] |
+| Tidak paham | 0,302 | 0,385 | 0,449 | 0,478 |
+
 - **Interpretasi:** hampir satu dari dua kasus dikelompokkan berbeda dari kondisi siswa tiga soal berikutnya. Lebih dari
   seperempat siswa yang dinyatakan "Paham" ternyata belum tuntas, sehingga tidak mendapat remediasi.
 - **Keterbatasan:** label proxy (bukan label guru). Sebagian "Miskonsepsi → tuntas" adalah pembelajaran setelah umpan

@@ -22,6 +22,19 @@ ditambah mesin diagnosis **3 lapis ML + 1 pengaman**, dievaluasi pada test yang 
 | [`docs/cac/DECISIONS.md`](docs/cac/DECISIONS.md) | keputusan yang dikunci sebelum hasil dilihat (D-01 s.d. D-24) |
 | https://remediaide.vercel.app | aplikasi web (Mode AI di branch `feat/ml-integration` = `main`) |
 
+**Tidak semua kuadran membaik.** Recall per kuadran di test (dari confusion matrix tersimpan;
+[`ml/reports/tables/E1_recall_per_class_test.csv`](ml/reports/tables/E1_recall_per_class_test.csv)):
+
+| Kuadran masa depan (test) | n | Aturan v1 (B0) | CO-KT | Tambahan benar CO-KT − B0 |
+| --- | --- | --- | --- | --- |
+| Paham | 33.682 | 0,713 | **0,886** | +5.815 |
+| Tebakan beruntung | 3.701 | **0,141** | 0,050 | −337 |
+| Miskonsepsi | 15.440 | **0,400** | 0,368 | −494 |
+| Tidak paham | 6.140 | 0,274 | **0,452** | +1.094 |
+
+Recall Miskonsepsi CO-KT (0,368) lebih rendah dari aturan v1 (0,400); turunnya salah kelompok terutama berasal dari kelas
+Paham dan Tidak paham. B1b dan LightGBM dibandingkan per kuadran di CV ([`ml/REPORT.md` §4.2](ml/REPORT.md#42-e1--aturan-v1-salah-mengelompokkan-hampir-separuh-kasus-test)).
+
 **Yang jujur kami akui sejak awal:** label "kuadran masa depan" adalah proxy, bukan label guru; alasan berbahasa
 Indonesia diuji dengan terjemahan mesin; manfaat defer (turun 18,5%) di bawah target awal 25%; kesenjangan error untuk
 siswa berkemampuan rendah dan pupil premium tetap ada; pilot sekolah (E9/E10) belum dijalankan. Rincian:
