@@ -1,0 +1,698 @@
+{
+  "name": "Instrumen pilot RemediAide-ID (15 soal MAP)",
+  "version": "1.0",
+  "source": "MAP (MIT), terjemahan manual",
+  "key_question_rule": "D-25: 5 soal dengan entropi label miskonsepsi tertinggi di MAP",
+  "items": [
+    {
+      "order": 1,
+      "map_question_id": 31772,
+      "stem_id": "Berapa bagian dari bangun segitiga di bawah ini yang TIDAK diarsir? Tuliskan dalam bentuk pecahan paling sederhana.",
+      "stem_en": "What fraction of the shape is not shaded? Give your answer in its simplest form. [Image: A triangle split into 9 equal smaller triangles. 6 of them are shaded.]",
+      "stem_auto_id": "Bagian mana dari bentuk ini yang tidak dibayangi? Berikan jawabanmu dengan cara yang paling sederhana. Segitiga terbagi menjadi 9 segitiga yang lebih kecil. 6 of them are shaded.]",
+      "options": [
+        {
+          "key": "A",
+          "text_id": "1/3",
+          "text_en": "\\( \\frac{1}{3} \\)",
+          "auto_id": "\\( \\frac{1}{3} \\)",
+          "is_correct": true,
+          "n_map": 2348
+        },
+        {
+          "key": "B",
+          "text_id": "3/6",
+          "text_en": "\\( \\frac{3}{6} \\)",
+          "auto_id": "\\( \\frac{3}{6} \\)",
+          "is_correct": false,
+          "n_map": 412
+        },
+        {
+          "key": "C",
+          "text_id": "3/8",
+          "text_en": "\\( \\frac{3}{8} \\)",
+          "auto_id": "\\( \\frac{3}{8} \\)",
+          "is_correct": false,
+          "n_map": 118
+        },
+        {
+          "key": "D",
+          "text_id": "3/9",
+          "text_en": "\\( \\frac{3}{9} \\)",
+          "auto_id": "\\( \\frac{3}{9} \\)",
+          "is_correct": false,
+          "n_map": 1979
+        }
+      ],
+      "correct_key": "A",
+      "require_explanation": false,
+      "figure": "map-31772.svg",
+      "teacher_check": "Gambar digambar ulang: segitiga dibagi 9 segitiga kecil sama besar, 6 diarsir. Letak arsiran asli tidak diketahui; cek apakah gambar jelas.",
+      "needs_teacher_check": true
+    },
+    {
+      "order": 2,
+      "map_question_id": 31774,
+      "stem_id": "Hitunglah 1/2 ÷ 6.",
+      "stem_en": "Calculate \\( \\frac{1}{2} \\div 6 \\)",
+      "stem_auto_id": "Hitung \\( \\frac{1}{2} \\div 6 \\)",
+      "options": [
+        {
+          "key": "A",
+          "text_id": "1/12",
+          "text_en": "\\( \\frac{1}{12} \\)",
+          "auto_id": "\\( \\frac{1}{12} \\)",
+          "is_correct": true,
+          "n_map": 1918
+        },
+        {
+          "key": "B",
+          "text_id": "1/3",
+          "text_en": "\\( \\frac{1}{3} \\)",
+          "auto_id": "\\( \\frac{1}{3} \\)",
+          "is_correct": false,
+          "n_map": 251
+        },
+        {
+          "key": "C",
+          "text_id": "3",
+          "text_en": "\\( 3 \\)",
+          "auto_id": "\\( 3 \\)",
+          "is_correct": false,
+          "n_map": 659
+        },
+        {
+          "key": "D",
+          "text_id": "6/2",
+          "text_en": "\\( \\frac{6}{2} \\)",
+          "auto_id": "\\( \\frac{6}{2} \\)",
+          "is_correct": false,
+          "n_map": 287
+        }
+      ],
+      "correct_key": "A",
+      "require_explanation": true,
+      "figure": null,
+      "teacher_check": "",
+      "needs_teacher_check": false
+    },
+    {
+      "order": 3,
+      "map_question_id": 31777,
+      "stem_id": "Sebuah kotak berisi 120 keping. Setiap keping berwarna merah atau biru. Sebanyak 3/5 dari keping itu berwarna merah. Berapa banyak keping merah?",
+      "stem_en": "A box contains \\( 120 \\) counters. The counters are red or blue. \\( \\frac{3}{5} \\) of the counters are red. How many red counters are there?",
+      "stem_auto_id": "Sebuah kotak berisi counter \\( 120 \\). counter merah atau biru. \\( \\frac{3}{5} \\) dari counter merah. Berapa banyak counter merah yang ada?",
+      "options": [
+        {
+          "key": "A",
+          "text_id": "24",
+          "text_en": "\\( 24 \\)",
+          "auto_id": "\\( 24 \\)",
+          "is_correct": false,
+          "n_map": 255
+        },
+        {
+          "key": "B",
+          "text_id": "48",
+          "text_en": "\\( 48 \\)",
+          "auto_id": "\\( 48 \\)",
+          "is_correct": false,
+          "n_map": 406
+        },
+        {
+          "key": "C",
+          "text_id": "60",
+          "text_en": "\\( 60 \\)",
+          "auto_id": "\\( 60 \\)",
+          "is_correct": false,
+          "n_map": 350
+        },
+        {
+          "key": "D",
+          "text_id": "72",
+          "text_en": "\\( 72 \\)",
+          "auto_id": "\\( 72 \\)",
+          "is_correct": true,
+          "n_map": 1798
+        }
+      ],
+      "correct_key": "D",
+      "require_explanation": true,
+      "figure": null,
+      "teacher_check": "'counters' diterjemahkan 'keping'.",
+      "needs_teacher_check": true
+    },
+    {
+      "order": 4,
+      "map_question_id": 31778,
+      "stem_id": "A/10 = 9/15. Berapa nilai A?",
+      "stem_en": "\\( \\frac{A}{10}=\\frac{9}{15} \\) What is the value of \\( A \\) ?",
+      "stem_auto_id": "\\( \\frac{A}{10}=\\frac{9}{15} \\) Berapa nilai \\( A \\)?",
+      "options": [
+        {
+          "key": "A",
+          "text_id": "3",
+          "text_en": "\\( 3 \\)",
+          "auto_id": "\\( 3 \\)",
+          "is_correct": false,
+          "n_map": 627
+        },
+        {
+          "key": "B",
+          "text_id": "4",
+          "text_en": "\\( 4 \\)",
+          "auto_id": "\\( 4 \\)",
+          "is_correct": false,
+          "n_map": 1108
+        },
+        {
+          "key": "C",
+          "text_id": "6",
+          "text_en": "\\( 6 \\)",
+          "auto_id": "\\( 6 \\)",
+          "is_correct": true,
+          "n_map": 1755
+        },
+        {
+          "key": "D",
+          "text_id": "9",
+          "text_en": "\\( 9 \\)",
+          "auto_id": "\\( 9 \\)",
+          "is_correct": false,
+          "n_map": 150
+        }
+      ],
+      "correct_key": "C",
+      "require_explanation": false,
+      "figure": null,
+      "teacher_check": "",
+      "needs_teacher_check": false
+    },
+    {
+      "order": 5,
+      "map_question_id": 32829,
+      "stem_id": "2y = 24. Berapa nilai y?",
+      "stem_en": "\\( 2 y=24 \\) What is the value of \\( y \\) ?",
+      "stem_auto_id": "\\( 2 y=24 \\) Berapa nilai \\( y \\)?",
+      "options": [
+        {
+          "key": "A",
+          "text_id": "4",
+          "text_en": "\\( 4 \\)",
+          "auto_id": "\\( 4 \\)",
+          "is_correct": false,
+          "n_map": 248
+        },
+        {
+          "key": "B",
+          "text_id": "12",
+          "text_en": "\\( 12 \\)",
+          "auto_id": "\\( 12 \\)",
+          "is_correct": true,
+          "n_map": 1716
+        },
+        {
+          "key": "C",
+          "text_id": "22",
+          "text_en": "\\( 22 \\)",
+          "auto_id": "\\( 22 \\)",
+          "is_correct": false,
+          "n_map": 148
+        },
+        {
+          "key": "D",
+          "text_id": "48",
+          "text_en": "\\( 48 \\)",
+          "auto_id": "\\( 48 \\)",
+          "is_correct": false,
+          "n_map": 44
+        }
+      ],
+      "correct_key": "B",
+      "require_explanation": true,
+      "figure": null,
+      "teacher_check": "",
+      "needs_teacher_check": false
+    },
+    {
+      "order": 6,
+      "map_question_id": 32833,
+      "stem_id": "Hitunglah 2/3 × 5.",
+      "stem_en": "Calculate \\( \\frac{2}{3} \\times 5 \\)",
+      "stem_auto_id": "Hitung \\( \\frac{2}{3} \\times 5 \\)",
+      "options": [
+        {
+          "key": "A",
+          "text_id": "2/15",
+          "text_en": "\\( \\frac{2}{15} \\)",
+          "auto_id": "\\( \\frac{2}{15} \\)",
+          "is_correct": false,
+          "n_map": 520
+        },
+        {
+          "key": "B",
+          "text_id": "3 1/3",
+          "text_en": "\\( 3 \\frac{1}{3} \\)",
+          "auto_id": "\\( 3 \\frac{1}{3} \\)",
+          "is_correct": true,
+          "n_map": 1601
+        },
+        {
+          "key": "C",
+          "text_id": "5 2/3",
+          "text_en": "\\( 5 \\frac{2}{3} \\)",
+          "auto_id": "\\( 5 \\frac{2}{3} \\)",
+          "is_correct": false,
+          "n_map": 78
+        },
+        {
+          "key": "D",
+          "text_id": "10/15",
+          "text_en": "\\( \\frac{10}{15} \\)",
+          "auto_id": "\\( \\frac{10}{15} \\)",
+          "is_correct": false,
+          "n_map": 906
+        }
+      ],
+      "correct_key": "B",
+      "require_explanation": false,
+      "figure": null,
+      "teacher_check": "Pecahan campuran ditulis '3 1/3'; cek apakah siswa terbiasa dengan penulisan ini.",
+      "needs_teacher_check": true
+    },
+    {
+      "order": 7,
+      "map_question_id": 32835,
+      "stem_id": "Bilangan manakah yang paling besar?",
+      "stem_en": "Which number is the greatest?",
+      "stem_auto_id": "Nomor mana yang terbesar?",
+      "options": [
+        {
+          "key": "A",
+          "text_id": "6",
+          "text_en": "\\( 6 \\)",
+          "auto_id": "\\( 6 \\)",
+          "is_correct": false,
+          "n_map": 478
+        },
+        {
+          "key": "B",
+          "text_id": "6,0001",
+          "text_en": "\\( 6.0001 \\)",
+          "auto_id": "\\( 6.0001 \\)",
+          "is_correct": false,
+          "n_map": 64
+        },
+        {
+          "key": "C",
+          "text_id": "6,079",
+          "text_en": "\\( 6.079 \\)",
+          "auto_id": "\\( 6.079 \\)",
+          "is_correct": false,
+          "n_map": 116
+        },
+        {
+          "key": "D",
+          "text_id": "6,2",
+          "text_en": "\\( 6.2 \\)",
+          "auto_id": "\\( 6.2 \\)",
+          "is_correct": true,
+          "n_map": 1674
+        }
+      ],
+      "correct_key": "D",
+      "require_explanation": false,
+      "figure": null,
+      "teacher_check": "Tanda desimal diubah ke koma (Indonesia). Miskonsepsi 'lebih banyak angka = lebih besar' tetap teruji.",
+      "needs_teacher_check": true
+    },
+    {
+      "order": 8,
+      "map_question_id": 33471,
+      "stem_id": "Sebuah kantong berisi 24 bola berwarna kuning dan hijau. Sebanyak 3/8 dari bola itu berwarna kuning. Berapa banyak bola hijau?",
+      "stem_en": "A bag contains \\( 24 \\) yellow and green balls. \\( \\frac{3}{8} \\) of the balls are yellow. How many of the balls are green?",
+      "stem_auto_id": "Tas berisi \\( 24 \\) kuning dan bola hijau. \\( \\frac{3}{8} \\) bola kuning. Berapa banyak bola hijau?",
+      "options": [
+        {
+          "key": "A",
+          "text_id": "3",
+          "text_en": "\\( 3 \\)",
+          "auto_id": "\\( 3 \\)",
+          "is_correct": false,
+          "n_map": 40
+        },
+        {
+          "key": "B",
+          "text_id": "8",
+          "text_en": "\\( 8 \\)",
+          "auto_id": "\\( 8 \\)",
+          "is_correct": false,
+          "n_map": 56
+        },
+        {
+          "key": "C",
+          "text_id": "9",
+          "text_en": "\\( 9 \\)",
+          "auto_id": "\\( 9 \\)",
+          "is_correct": false,
+          "n_map": 572
+        },
+        {
+          "key": "D",
+          "text_id": "15",
+          "text_en": "\\( 15 \\)",
+          "auto_id": "\\( 15 \\)",
+          "is_correct": true,
+          "n_map": 874
+        }
+      ],
+      "correct_key": "D",
+      "require_explanation": false,
+      "figure": null,
+      "teacher_check": "",
+      "needs_teacher_check": false
+    },
+    {
+      "order": 9,
+      "map_question_id": 33472,
+      "stem_id": "1/3 + 2/5 = ...",
+      "stem_en": "\\( \\frac{1}{3}+\\frac{2}{5}= \\)",
+      "stem_auto_id": "\\( \\frac{1}{3}+\\frac{2}{5}= \\)",
+      "options": [
+        {
+          "key": "A",
+          "text_id": "3/15",
+          "text_en": "\\( \\frac{3}{15} \\)",
+          "auto_id": "\\( \\frac{3}{15} \\)",
+          "is_correct": false,
+          "n_map": 565
+        },
+        {
+          "key": "B",
+          "text_id": "3/8",
+          "text_en": "\\( \\frac{3}{8} \\)",
+          "auto_id": "\\( \\frac{3}{8} \\)",
+          "is_correct": false,
+          "n_map": 468
+        },
+        {
+          "key": "C",
+          "text_id": "11/15",
+          "text_en": "\\( \\frac{11}{15} \\)",
+          "auto_id": "\\( \\frac{11}{15} \\)",
+          "is_correct": true,
+          "n_map": 1651
+        },
+        {
+          "key": "D",
+          "text_id": "11/30",
+          "text_en": "\\( \\frac{11}{30} \\)",
+          "auto_id": "\\( \\frac{11}{30} \\)",
+          "is_correct": false,
+          "n_map": 116
+        }
+      ],
+      "correct_key": "C",
+      "require_explanation": true,
+      "figure": null,
+      "teacher_check": "",
+      "needs_teacher_check": false
+    },
+    {
+      "order": 10,
+      "map_question_id": 33474,
+      "stem_id": "Sari punya 2/3 bagian dari sebuah kue utuh di kulkas. Rudi memakan 1/3 dari potongan kue itu. Berapa bagian dari kue utuh yang dimakan Rudi? Pilih kalimat matematika yang tepat untuk menyelesaikan soal ini.",
+      "stem_en": "Sally has \\( \\frac{2}{3} \\) of a whole cake in the fridge. Robert eats \\( \\frac{1}{3} \\) of this piece. What fraction of the whole cake has Robert eaten? Choose the number sentence that would solve the word problem.",
+      "stem_auto_id": "Sally memiliki \\( \\frac{2}{3} \\) seluruh kue di lemari es. Robert makan \\( \\frac{1}{3} \\) bagian ini. Bagian mana dari kue yang dimakan Robert? Pilih nomor kalimat yang akan memecahkan masalah kata.",
+      "options": [
+        {
+          "key": "A",
+          "text_id": "1/3 × 2/3",
+          "text_en": "\\( \\frac{1}{3} \\times \\frac{2}{3} \\)",
+          "auto_id": "\\( \\frac{1}{3} \\times \\frac{2}{3} \\)",
+          "is_correct": true,
+          "n_map": 630
+        },
+        {
+          "key": "B",
+          "text_id": "1/3 + 2/3",
+          "text_en": "\\( \\frac{1}{3}+\\frac{2}{3} \\)",
+          "auto_id": "\\( \\frac{1}{3}+\\frac{2}{3} \\)",
+          "is_correct": false,
+          "n_map": 49
+        },
+        {
+          "key": "C",
+          "text_id": "2/3 ÷ 1/3",
+          "text_en": "\\( \\frac{2}{3} \\div \\frac{1}{3} \\)",
+          "auto_id": "\\( \\frac{2}{3} \\div \\frac{1}{3} \\)",
+          "is_correct": false,
+          "n_map": 147
+        },
+        {
+          "key": "D",
+          "text_id": "2/3 − 1/3",
+          "text_en": "\\( \\frac{2}{3}-\\frac{1}{3} \\)",
+          "auto_id": "\\( \\frac{2}{3}-\\frac{1}{3} \\)",
+          "is_correct": false,
+          "n_map": 940
+        }
+      ],
+      "correct_key": "A",
+      "require_explanation": false,
+      "figure": null,
+      "teacher_check": "Nama Sally/Robert diganti Sari/Rudi.",
+      "needs_teacher_check": true
+    },
+    {
+      "order": 11,
+      "map_question_id": 76870,
+      "stem_id": "Gambar di bawah ini adalah bagian dari sebuah segi banyak beraturan. Berapa banyak sisi segi banyak itu?",
+      "stem_en": "This is part of a regular polygon. How many sides does it have? [Image: A diagram showing an obtuse angle labelled 144 degrees]",
+      "stem_auto_id": "Ini adalah bagian dari poligon biasa. Berapa banyak sisi yang ia miliki? [Image: Diagram menampilkan sudut obtuse berlabel 144 derajat]",
+      "options": [
+        {
+          "key": "A",
+          "text_id": "5",
+          "text_en": "\\( 5 \\)",
+          "auto_id": "\\( 5 \\)",
+          "is_correct": false,
+          "n_map": 140
+        },
+        {
+          "key": "B",
+          "text_id": "6",
+          "text_en": "\\( 6 \\)",
+          "auto_id": "\\( 6 \\)",
+          "is_correct": false,
+          "n_map": 135
+        },
+        {
+          "key": "C",
+          "text_id": "10",
+          "text_en": "\\( 10 \\)",
+          "auto_id": "\\( 10 \\)",
+          "is_correct": true,
+          "n_map": 508
+        },
+        {
+          "key": "D",
+          "text_id": "Informasi tidak cukup",
+          "text_en": "Not enough information",
+          "auto_id": "Informasi tidak cukup",
+          "is_correct": false,
+          "n_map": 403
+        }
+      ],
+      "correct_key": "C",
+      "require_explanation": true,
+      "figure": "map-76870.svg",
+      "teacher_check": "Gambar digambar ulang: dua sisi bertemu pada sudut dalam 144°. Cek apakah sudut terbaca sebagai sudut dalam.",
+      "needs_teacher_check": true
+    },
+    {
+      "order": 12,
+      "map_question_id": 89443,
+      "stem_id": "Bilangan berapa yang tepat untuk mengisi kotak?  (−8) − (−5) = □",
+      "stem_en": "What number belongs in the box? \\( (-8)-(-5)= \\square\\)",
+      "stem_auto_id": "Nomor berapa yang termasuk dalam kotak? \\( (-8)-(-5)= \\square\\)",
+      "options": [
+        {
+          "key": "A",
+          "text_id": "−13",
+          "text_en": "\\( -13 \\)",
+          "auto_id": "\\( -13 \\)",
+          "is_correct": false,
+          "n_map": 798
+        },
+        {
+          "key": "B",
+          "text_id": "−3",
+          "text_en": "\\( -3 \\)",
+          "auto_id": "\\( -3 \\)",
+          "is_correct": true,
+          "n_map": 1394
+        },
+        {
+          "key": "C",
+          "text_id": "3",
+          "text_en": "\\( 3 \\)",
+          "auto_id": "\\( 3 \\)",
+          "is_correct": false,
+          "n_map": 466
+        },
+        {
+          "key": "D",
+          "text_id": "13",
+          "text_en": "\\( 13 \\)",
+          "auto_id": "\\( 13 \\)",
+          "is_correct": false,
+          "n_map": 396
+        }
+      ],
+      "correct_key": "B",
+      "require_explanation": false,
+      "figure": null,
+      "teacher_check": "",
+      "needs_teacher_check": false
+    },
+    {
+      "order": 13,
+      "map_question_id": 91695,
+      "stem_id": "Titik-titik disusun membentuk pola seperti gambar. Pola 1 terdiri atas 6 titik, Pola 2 terdiri atas 10 titik, Pola 3 terdiri atas 14 titik, dan Pola 4 terdiri atas 18 titik. Berapa banyak titik pada Pola 6?",
+      "stem_en": "Dots have been arranged in these patterns: [Image: Pattern 1 consists of 6 dots, Pattern 2 consists of 10 dots, Pattern 3 consists of 14 dots and Pattern 4 consists of 18 dots] How many dots would there be in Pattern \\( 6 \\) ?",
+      "stem_auto_id": "Titik-titik telah disusun dalam pola ini: [Image: Pola 1 terdiri dari 6 titik, Pola 2 terdiri dari 10 titik, Pola 3 terdiri dari 14 titik dan Pola 4 terdiri dari 18 titik] Berapa banyak titik akan ada dalam Pola \\( 6 \\) ?",
+      "options": [
+        {
+          "key": "A",
+          "text_id": "20",
+          "text_en": "\\( 20 \\)",
+          "auto_id": "\\( 20 \\)",
+          "is_correct": false,
+          "n_map": 102
+        },
+        {
+          "key": "B",
+          "text_id": "22",
+          "text_en": "\\( 22 \\)",
+          "auto_id": "\\( 22 \\)",
+          "is_correct": false,
+          "n_map": 718
+        },
+        {
+          "key": "C",
+          "text_id": "26",
+          "text_en": "\\( 26 \\)",
+          "auto_id": "\\( 26 \\)",
+          "is_correct": true,
+          "n_map": 1547
+        },
+        {
+          "key": "D",
+          "text_id": "36",
+          "text_en": "\\( 36 \\)",
+          "auto_id": "\\( 36 \\)",
+          "is_correct": false,
+          "n_map": 243
+        }
+      ],
+      "correct_key": "C",
+      "require_explanation": false,
+      "figure": "map-91695.svg",
+      "teacher_check": "Gambar digambar ulang (dua baris titik). Susunan titik asli tidak diketahui; jumlah titik sesuai soal.",
+      "needs_teacher_check": true
+    },
+    {
+      "order": 14,
+      "map_question_id": 104665,
+      "stem_id": "Tiga orang membutuhkan total 192 jam untuk membangun sebuah tembok. Berapa lama waktu yang dibutuhkan jika 12 orang membangun tembok yang sama?",
+      "stem_en": "It takes \\( 3 \\) people a total of \\( 192 \\) hours to build a wall. How long would it take if \\( 12 \\) people built the same wall?",
+      "stem_auto_id": "Dibutuhkan \\( 3 \\) orang total \\( 192 \\) jam untuk membangun dinding. Berapa lama waktu yang dibutuhkan jika \\( 12 \\) orang membangun dinding yang sama?",
+      "options": [
+        {
+          "key": "A",
+          "text_id": "48 jam",
+          "text_en": "\\( 48 \\) hours",
+          "auto_id": "\\( 48 \\) hours",
+          "is_correct": true,
+          "n_map": 497
+        },
+        {
+          "key": "B",
+          "text_id": "64 jam",
+          "text_en": "\\( 64 \\) hours",
+          "auto_id": "\\( 64 \\) hours",
+          "is_correct": false,
+          "n_map": 62
+        },
+        {
+          "key": "C",
+          "text_id": "192 jam",
+          "text_en": "\\( 192 \\) hours",
+          "auto_id": "\\( 192 \\) hours",
+          "is_correct": false,
+          "n_map": 9
+        },
+        {
+          "key": "D",
+          "text_id": "768 jam",
+          "text_en": "\\( 768 \\) hours",
+          "auto_id": "\\( 768 \\) hours",
+          "is_correct": false,
+          "n_map": 105
+        }
+      ],
+      "correct_key": "A",
+      "require_explanation": false,
+      "figure": null,
+      "teacher_check": "",
+      "needs_teacher_check": false
+    },
+    {
+      "order": 15,
+      "map_question_id": 109465,
+      "stem_id": "Peluang terjadinya suatu kejadian adalah 0,9. Pernyataan manakah yang paling tepat menggambarkan kemungkinan kejadian itu?",
+      "stem_en": "The probability of an event occurring is \\( 0.9 \\). Which of the following most accurately describes the likelihood of the event occurring?",
+      "stem_auto_id": "Kemungkinan dari sebuah peristiwa yang terjadi adalah \\( 0.9 \\). Mana yang paling akurat menggambarkan kemungkinan terjadinya peristiwa ini?",
+      "options": [
+        {
+          "key": "A",
+          "text_id": "Kemungkinan besar terjadi",
+          "text_en": "Likely",
+          "auto_id": "Sepertinya",
+          "is_correct": true,
+          "n_map": 553
+        },
+        {
+          "key": "B",
+          "text_id": "Kemungkinan kecil terjadi",
+          "text_en": "Unlikely",
+          "auto_id": "Tidak mungkin",
+          "is_correct": false,
+          "n_map": 416
+        },
+        {
+          "key": "C",
+          "text_id": "Mustahil terjadi",
+          "text_en": "Impossible",
+          "auto_id": "Mustahil",
+          "is_correct": false,
+          "n_map": 18
+        },
+        {
+          "key": "D",
+          "text_id": "Pasti terjadi",
+          "text_en": "Certain",
+          "auto_id": "Tentu",
+          "is_correct": false,
+          "n_map": 64
+        }
+      ],
+      "correct_key": "A",
+      "require_explanation": false,
+      "figure": null,
+      "teacher_check": "Tanda desimal diubah ke koma.",
+      "needs_teacher_check": true
+    }
+  ]
+}

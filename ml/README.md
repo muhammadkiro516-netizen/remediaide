@@ -25,7 +25,7 @@ Bukti kernel GPU Kaggle (log + metrik): [`kaggle/evidence/`](kaggle/evidence/).
   adalah aturan tetap dengan tiga titik buta:
   1. **Jebakan jawaban benar** — siswa yang benar dengan nalar keliru otomatis "Paham".
   2. **Miskonsepsi tanpa nama** — aturan tidak menyebut miskonsepsi yang mana.
-  3. **Tidak tahu kapan dirinya salah** — tidak ada ketidakpastian, sehingga tidak bisa menyerahkan kasus sulit ke guru.
+  3. **Tanpa ukuran ketidakpastian** — aturan tidak membedakan kasus jelas dari kasus ragu, sehingga tidak bisa menyerahkan kasus sulit ke guru.
 - Kami mengukur titik buta itu: di test Eedi, 27,8% siswa yang dinyatakan "Paham" oleh aturan v1 ternyata belum tuntas
   pada tiga soal berikutnya di konsep yang sama ([`E1_b0_test.csv`](reports/tables/E1_b0_test.csv)).
 - **SDG 4.1** (hasil belajar matematika, utama), **SDG 10.2** (analisis fairness), **SDG 4.c** (waktu guru).
