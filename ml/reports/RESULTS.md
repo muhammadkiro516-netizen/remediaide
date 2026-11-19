@@ -221,6 +221,34 @@ Tingkat B — menunggu pilot.
 ### E10 — Dampak belajar
 Tingkat B — menunggu pilot.
 
+### Mitigasi miskonsepsi (pasca-segel, CV, belum diuji di test; D-26)
+`scripts/postseal_cv.py`. OOF CV CO-KT; aturan dipasang di 20% siswa kalibrasi, dinilai di 80% siswa evaluasi (2.443 siswa,
+171.835 kasus). Angka utama dan model produksi tidak berubah.
+
+(a) **Antrean defer 20%** (`reports/tables/E5_postseal_defer_misconception_cv.json`). Dari 46.035 kasus *Miskonsepsi* masa
+depan, CO-KT melewatkan 55,7%. **24,8% dari kasus yang terlewat itu tertangkap antrean defer**, jadi 58,1% kasus Miskonsepsi
+masa depan diprediksi benar atau diserahkan ke guru, dibanding recall aturan v1 0,420 pada kasus yang sama. Kasus yang
+diserahkan baru benar-benar tertangkap bila guru menilainya benar; akurasi guru belum diukur (E9).
+
+(b) **Mode prioritas miskonsepsi** (`reports/tables/E8_misconception_priority_cv.csv`, kurva di
+`E8_misconception_priority_grid_cv.csv`). Prediksi = argmax(p · w) dengan bobot w_M untuk kelas Miskonsepsi. Aturan yang
+dikunci sebelum dihitung: w_M terkecil di {1,0; 1,1; …; 3,0} yang membuat recall Miskonsepsi di siswa kalibrasi ≥ recall
+aturan v1. **Hasilnya w_M = 1,0**, karena di CV recall CO-KT sudah lebih tinggi dari aturan v1. Mode ini karena itu identik
+dengan model produksi:
+
+| Siswa evaluasi CV | Recall Miskonsepsi | Macro-F1 | Salah kelompok |
+| --- | --- | --- | --- |
+| Aturan v1 (B0) | 0,420 [0,410–0,431] | 0,413 [0,404–0,422] | 0,454 [0,443–0,465] |
+| CO-KT, mode prioritas (w_M = 1,0) = produksi | 0,443 [0,423–0,463] | 0,482 [0,470–0,494] | 0,351 [0,341–0,362] |
+| Selisih terhadap B0 | +0,023 [+0,011; +0,034] | +0,069 [+0,063; +0,074] | −0,103 [−0,106; −0,099] |
+
+Kurva deskriptif di siswa evaluasi (bukan hasil aturan, tidak dipakai untuk memilih): w_M = 1,5 memberi recall
+Miskonsepsi 0,612, macro-F1 0,484, dan salah kelompok 0,362; w_M = 2,0 memberi 0,713, 0,471, dan 0,383. Semua titik ini
+masih di bawah salah kelompok aturan v1. Jadi menaikkan bobot Miskonsepsi adalah **opsi produk** yang menukar sedikit
+salah kelompok dengan jauh lebih banyak miskonsepsi tertangkap. Pilihan w_M untuk produk harus dikunci lewat entri DECISIONS
+baru dan diuji di data baru (misalnya pilot), bukan di test ini. Pelajaran jujurnya: aturan D-26 disusun untuk menutup
+kesenjangan yang terlihat di test, tetapi kesenjangan itu tidak ada di CV, sehingga aturan tersebut tidak mengubah apa pun.
+
 ### Pembingkaian Lapis 2: kenapa TF-IDF menang di bahasa Inggris (CV MAP)
 `scripts/story_evidence.py --only l2gap`; sumber `tables/L2_split_gap_cv.csv`, `tables/L2_overlap_cv.csv`.
 
