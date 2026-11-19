@@ -1,4 +1,5 @@
 """T63: FastAPI service contract (skipped when production artefacts are not exported)."""
+import importlib.util
 import time
 
 import pytest
@@ -23,7 +24,8 @@ def client(monkeypatch, l2="1", lang="en"):
 def test_health_and_schema(monkeypatch):
     c = client(monkeypatch)
     h = c.get("/health").json()
-    assert h["status"] == "ok" and h["loaded"]["l1"] == "CoktL1"
+    expected_l1 = "CoktL1" if importlib.util.find_spec("torch") else "LgbmL1"  # LightGBM fallback without [dl]
+    assert h["status"] == "ok" and h["loaded"]["l1"] == expected_l1
     r = c.post("/v1/diagnose", json=payload(2, 3))
     assert r.status_code == 200
     s = r.json()["students"][0]
