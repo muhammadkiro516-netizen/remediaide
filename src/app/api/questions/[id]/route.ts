@@ -135,3 +135,60 @@ export async function DELETE(_req: NextRequest, { params }: RouteParams) {
     );
   }
 }
+
+// ─── PATCH /api/questions/:id — RemediAide 2.0 ML settings ───────────────────
+// Body: { requireExplanation?: boolean, mapQuestionId?: number | null }. Does not touch variants.
+export async function PATCH(request: NextRequest, { params }: RouteParams) {
+  try {
+    const session = await requireTeacherSession();
+    const { id } = await params;
+    const question = await prisma.question.findFirst({ where: { id, schoolId: session.schoolId } });
+    if (!question) {
+      return NextResponse.json(
+        { success: false, error: { code: "NOT_FOUND", message: "Soal tidak ditemukan." } },
+        { status: 404 }
+      );
+    }
+    const body = (await request.json().catch(() => null)) as
+      | { requireExplanation?: unknown; mapQuestionId?: unknown }
+      | null;
+    const data: { requireExplanation?: boolean; mapQuestionId?: number | null } = {};
+    if (body && "requireExplanation" in body) {
+      if (typeof body.requireExplanation !== "boolean") {
+        return NextResponse.json(
+          { success: false, error: { code: "VALIDATION_ERROR", message: "requireExplanation harus boolean." } },
+          { status: 422 }
+        );
+      }
+      data.requireExplanation = body.requireExplanation;
+    }
+    if (body && "mapQuestionId" in body) {
+      const v = body.mapQuestionId;
+      if (v !== null && (typeof v !== "number" || !Number.isInteger(v) || v <= 0)) {
+        return NextResponse.json(
+          { success: false, error: { code: "VALIDATION_ERROR", message: "mapQuestionId harus bilangan bulat positif atau null." } },
+          { status: 422 }
+        );
+      }
+      data.mapQuestionId = v as number | null;
+    }
+    if (Object.keys(data).length === 0) {
+      return NextResponse.json(
+        { success: false, error: { code: "VALIDATION_ERROR", message: "Tidak ada field yang diubah." } },
+        { status: 422 }
+      );
+    }
+    const updated = await prisma.question.update({ where: { id }, data });
+    return NextResponse.json({
+      success: true,
+      data: { id: updated.id, requireExplanation: updated.requireExplanation, mapQuestionId: updated.mapQuestionId },
+    });
+  } catch (err) {
+    if (err instanceof NextResponse) return err;
+    console.error("[PATCH /api/questions/:id]", err);
+    return NextResponse.json(
+      { success: false, error: { code: "INTERNAL_ERROR", message: "Gagal memperbarui soal." } },
+      { status: 500 }
+    );
+  }
+}

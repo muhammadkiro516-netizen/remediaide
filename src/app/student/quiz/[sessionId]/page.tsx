@@ -37,6 +37,7 @@ interface QuizItem {
   renderedText: string;
   renderedOptions: RenderedOption[];  // mapped from options in API response
   tauMinSeconds: number;
+  requireExplanation: boolean;  // RemediAide 2.0: ask for a one-sentence reason
 }
 
 interface QuizData {
@@ -104,6 +105,7 @@ export default function StudentQuizPage() {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [criValue, setCriValue] = useState(0);
   const [criTouched, setCriTouched] = useState(false);
+  const [explanation, setExplanation] = useState("");
   const [startedAt, setStartedAt] = useState<number>(Date.now());
   const [animating, setAnimating] = useState(false);
 
@@ -164,6 +166,7 @@ export default function StudentQuizPage() {
             renderedText: string;
             options: RenderedOption[];
             tauMinSeconds: number;
+            requireExplanation?: boolean;
           }>)
             .filter((item) => item.variantId !== null && item.options.length > 0)
             .map((item) => ({
@@ -171,6 +174,7 @@ export default function StudentQuizPage() {
               renderedText: item.renderedText,
               renderedOptions: item.options,
               tauMinSeconds: item.tauMinSeconds,
+              requireExplanation: item.requireExplanation === true,
             })),
         };
         setQuiz(quizData);
@@ -205,6 +209,7 @@ export default function StudentQuizPage() {
     setSelectedOption(null);
     setCriValue(0);
     setCriTouched(false);
+    setExplanation("");
     setSubmitError(null);
     setRetryCount(0);
     setRetryCountdown(0);
@@ -276,6 +281,7 @@ export default function StudentQuizPage() {
           chosenOptionKey: selectedOption,
           criValue,
           responseTimeMs,
+          ...(item.requireExplanation && explanation.trim() ? { explanation: explanation.trim() } : {}),
         }),
       });
 
@@ -336,6 +342,7 @@ export default function StudentQuizPage() {
     selectedOption,
     criTouched,
     criValue,
+    explanation,
     currentIndex,
     isSubmitting,
     retryCount,
@@ -517,6 +524,27 @@ export default function StudentQuizPage() {
             disabled={isSubmitting}
           />
         </div>
+
+        {/* RemediAide 2.0: optional one-sentence explanation on key questions */}
+        {item.requireExplanation && (
+          <div className="mb-6 rounded-2xl bg-white p-5 shadow-sm border border-slate-100">
+            <label htmlFor="explanation" className="mb-1 block text-sm font-semibold text-slate-700">
+              Tulis alasanmu dalam satu kalimat
+            </label>
+            <p className="mb-3 text-xs text-slate-400">Boleh dikosongkan. Maksimal 280 karakter.</p>
+            <textarea
+              id="explanation"
+              value={explanation}
+              onChange={(e) => setExplanation(e.target.value.slice(0, 280))}
+              maxLength={280}
+              rows={2}
+              disabled={isSubmitting}
+              className="w-full rounded-xl border border-slate-200 p-3 text-base text-slate-800 focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+              placeholder="Contoh: karena 6,2 punya nilai persepuluhan lebih besar"
+            />
+            <p className="mt-1 text-right text-xs text-slate-400" aria-live="polite">{explanation.length}/280</p>
+          </div>
+        )}
 
         {/* Instruction when not all filled */}
         {(!selectedOption || !criTouched) && (

@@ -28,6 +28,7 @@ import {
 import { sseManager } from '@/lib/sse/manager';
 import { buildHeatmapState } from '@/lib/sse/heatmap-builder';
 import { enqueueRunDiagnosis } from '@/workers/run-diagnosis';
+import { sanitizeExplanation } from '@/lib/ml/explanation';
 
 // ─── Request body type ────────────────────────────────────────────────────────
 
@@ -37,6 +38,7 @@ interface SubmitResponseBody {
   chosenOptionKey: string;
   criValue: number;          // 0–5 integer
   responseTimeMs: number;    // time taken in milliseconds
+  explanation?: string;      // optional one-sentence reason (RemediAide 2.0), max 280 chars
 }
 
 // ─── Deterministic hash (same as quiz route) ──────────────────────────────────
@@ -126,6 +128,14 @@ export async function POST(request: NextRequest) {
           message: 'criValue harus integer antara 0 dan 5.',
         },
       },
+      { status: 422 }
+    );
+  }
+
+  const explanationCheck = sanitizeExplanation(body.explanation);
+  if (!explanationCheck.ok) {
+    return NextResponse.json(
+      { success: false, error: { code: 'VALIDATION_ERROR', message: explanationCheck.message } },
       { status: 422 }
     );
   }
@@ -342,6 +352,7 @@ export async function POST(request: NextRequest) {
       integrityIndex,
       isBelowThreshold: diagnosisResult.isBelowThreshold,
       perItemStatus: toPrismaPerItemStatus(diagnosisResult.status),
+      explanation: explanationCheck.value,
     },
     select: { id: true },
   });

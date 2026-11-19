@@ -45,6 +45,7 @@ interface Question {
   templateText: string;
   itemOrder: number;
   createdAt: string;
+  requireExplanation?: boolean;
   _count?: { variants: number };
 }
 
@@ -576,6 +577,25 @@ function QuestionListItem({
 }) {
   const [showVariants, setShowVariants] = useState(false);
   const [deleteConfirm, setDeleteConfirm] = useState(false);
+  const [askReason, setAskReason] = useState(question.requireExplanation === true);
+  const [savingReason, setSavingReason] = useState(false);
+
+  // RemediAide 2.0: ask students for a one-sentence reason on this question (feeds Layer 2)
+  async function toggleReason() {
+    const next = !askReason;
+    setSavingReason(true);
+    try {
+      const res = await fetch(`/api/questions/${question.id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ requireExplanation: next }),
+      });
+      const result = await res.json().catch(() => null);
+      if (result?.success) setAskReason(next);
+    } finally {
+      setSavingReason(false);
+    }
+  }
 
   async function handleDelete() {
     if (!deleteConfirm) {
@@ -616,6 +636,19 @@ function QuestionListItem({
         </div>
 
         <div className="flex gap-2 flex-shrink-0">
+          <button
+            type="button"
+            onClick={toggleReason}
+            disabled={savingReason}
+            aria-pressed={askReason}
+            title="Siswa diminta menulis alasan satu kalimat (dibaca oleh Lapis 2 RemediAide 2.0)"
+            className={cn(
+              "px-3 py-1.5 text-xs font-medium rounded min-h-[36px] transition-colors",
+              askReason ? "bg-emerald-600 text-white hover:bg-emerald-700" : "text-emerald-700 hover:bg-emerald-50"
+            )}
+          >
+            {askReason ? "Alasan: diminta" : "Minta alasan"}
+          </button>
           <button
             type="button"
             onClick={() => setShowVariants((v) => !v)}

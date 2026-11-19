@@ -98,6 +98,7 @@ export async function GET(
               id: true,
               templateText: true,
               itemOrder: true,
+              requireExplanation: true,
               variants: {
                 select: {
                   id: true,
@@ -158,6 +159,7 @@ export async function GET(
         renderedText: question.templateText,
         options: [],
         tauMinSeconds: 1,
+        requireExplanation: question.requireExplanation,
       };
     }
 
@@ -208,6 +210,7 @@ export async function GET(
       options,
       tauMinSeconds: chosenVariant.tauMinSeconds,
       calibrationStatus: chosenVariant.calibrationStatus,
+      requireExplanation: question.requireExplanation,
     };
   });
 
