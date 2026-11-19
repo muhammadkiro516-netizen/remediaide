@@ -88,6 +88,7 @@ l3:               ## T40-T45 + production artefacts
 	$(PY) scripts/l3_eval.py --l1-oof runs/20261118-2202_cokt_kaggle/oof_b_ens5.parquet --l1-calib temperature \
 	  --l2-oof runs/$(RA_RUN_L2_TFIDF)/oof_target.parquet --tag final_cv
 	$(PY) scripts/e6_e8.py --oof runs/20261118-2202_cokt_kaggle/oof_b_ens5.parquet --calib temperature --tag final_cv
+	$(PY) scripts/gap_fill.py   # audit gap-fill (CV only): B0 framing (a), LAC biner L1, akurasi opsi CO-KT, Gender 0/3
 	$(PY) scripts/l3_production.py --cokt-final $(COKT_FINAL) --l2-oof runs/$(RA_RUN_L2_TFIDF)/oof_target.parquet \
 	  --l2-enc $(MDEB)
 	$(PY) scripts/export_l1.py --lgbm $(LGBM_RUN) --cokt-final $(COKT_FINAL)

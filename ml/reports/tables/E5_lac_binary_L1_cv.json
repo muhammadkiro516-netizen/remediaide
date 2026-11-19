@@ -1,0 +1,22 @@
+{
+  "source": "runs/20261118-2202_cokt_kaggle/oof_b_ens5.parquet",
+  "alpha": 0.1,
+  "target_coverage": 0.9,
+  "calibrator": "temperature on [1-p, p] (calibration users)",
+  "temperature": 0.9480559393920718,
+  "n_cal_rows": 192082,
+  "n_eval_rows": 720649,
+  "n_cal_users": 787,
+  "n_eval_users": 3147,
+  "lac_qhat": 0.6896882617009918,
+  "coverage": 0.901058629096828,
+  "avg_set_size": 1.437432092461101,
+  "singleton_share": 0.562567907538899,
+  "both_classes_share": 0.43743209246110104,
+  "coverage_class0_no_remediation": 0.8982051169766704,
+  "coverage_class1_needs_remediation": 0.9039932221900094,
+  "singleton_accuracy": 0.8241254618735416,
+  "ece_before": 0.018417155014906216,
+  "ece_after": 0.014278654845268548,
+  "note": "CV only (CO-KT CV OOF runs/20261118-2202_cokt_kaggle, 5 seeds, same file as l3_eval final_cv); test not used. Empty sets are filled with argmax (conformal.LAC)."
+}

@@ -192,6 +192,17 @@ Tingkat B — menunggu pilot.
 ### E10 — Dampak belajar
 Tingkat B — menunggu pilot.
 
+### Pelengkap audit (D-24, CV saja; dihitung 19 Nov setelah test dibuka)
+Empat butir spesifikasi yang terlewat, dihitung oleh `scripts/gap_fill.py` dari OOF CV yang sudah ada. Tidak ada model,
+ambang, atau angka di atas yang berubah, dan angka ini tidak dipakai untuk keputusan apa pun.
+
+| Butir | Hasil (CV) | Sumber |
+| --- | --- | --- |
+| B0 framing (a), skor ordinal kuadran terakhir di KC (03 §1) | AUC 0,5972 [0,5931–0,6019] pada 415.300 baris (37,49% baris CV punya kuadran sebelumnya); di baris yang sama B1b 0,7579, LightGBM 0,7998 (DeLong p < 1e-300) | `tables/E1_b0_framing_a_cv.csv` |
+| LAC biner L1 butuh remediasi, α = 0,10 (03 §3) | cakupan 0,9011, ukuran himpunan 1,4374; 43,74% baris mendapat kedua kelas (tidak informatif) | `tables/E5_lac_binary_L1_cv.json` |
+| Akurasi kepala opsi CO-KT (T24) | top-1 0,5652 [0,5582–0,5721] vs opsi terbanyak per soal 0,5436 [0,5365–0,5506], acak 0,25; pengecoh pada jawaban salah 0,4879 vs 0,4675 | `tables/L1_cokt_option_cv.csv` |
+| Gender kode 0 (tidak disebut, 1.199 siswa evaluasi) vs 1 dan 2 (04 E6) | semua selisih salah kelompok/AUC/defer CI memuat 0; ECE kode 0 lebih rendah dari laki-laki (−0,0101 [−0,0160; −0,0042]). Kode 3: 5 siswa → tidak dilaporkan | `tables/E6_fairness_gender_codes_cv.csv`, `tables/E6_gender_counts.json` |
+
 ## 4. Model terpilih per lapis
 | Lapis | Model produksi | Keputusan | Hiperparameter | Artefak |
 | --- | --- | --- | --- | --- |
