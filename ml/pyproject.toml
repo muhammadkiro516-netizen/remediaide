@@ -26,6 +26,10 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+pilot = [  # materi pilot (PDF, xlsx); tidak dibutuhkan pipeline utama
+  "openpyxl==3.1.5",
+  "reportlab==4.2.5",
+]
 dl = [
   "torch>=2.2",
   "transformers>=4.44",
@@ -67,5 +71,6 @@ target-version = "py311"
 select = ["E", "F", "UP", "B", "I"]
 
 [tool.ruff.lint.per-file-ignores]
+"src/remediaide_ml/pilot/instrument.py" = ["E501"]  # SVG markup + Indonesian question text
 "src/remediaide_ml/**/*_card.py" = ["E501"]  # markdown table templates
 "scripts/*.py" = ["E501"]  # CLI scripts: long Indonesian table labels / help strings

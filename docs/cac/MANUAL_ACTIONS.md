@@ -42,6 +42,27 @@ Claude Code mengerjakan semua hal lainnya. Kerjakan item ini, centang, lalu keti
      Hasil yang benar: `Password diganti: 4 akun demo, 1 akun superadmin.` Simpan password baru di password manager.
 - [ ] **M1b. Login ulang Kaggle** (token OAuth kedaluwarsa): `~/Downloads/remediaide-main/ml/.venv/bin/kaggle auth login --force`.
 
+- [ ] **M17. Hosting layanan ML di Hugging Face Spaces** (semua file sudah disiapkan; butuh akun HF Salman).
+  Ukuran unggahan 393,3 MB (L2 = student ONNX; mDeBERTa 1,1 GB tidak ikut). Disarankan **Space privat**: bobot Lapis 1
+  dilatih dari Eedi (CC BY-NC-ND), jadi jangan dipakai komersial.
+  1. huggingface.co → New Space → nama `remediaide-ml`, SDK **Docker** (Blank), hardware **CPU basic**, visibilitas **Private**.
+  2. Settings → Access Tokens → buat token **Write** (untuk unggah) dan token **Read** (untuk Vercel). Jangan tempel di chat.
+  3. Di Terminal:
+     ```bash
+     cd ~/Downloads/remediaide-main/ml && .venv/bin/python scripts/build_hf_space.py
+     cd ../submission/hf_space && git init -b main && git lfs install && git add . && git commit -m "RemediAide ML service"
+     git remote add origin https://huggingface.co/spaces/<USERNAME_HF>/remediaide-ml
+     git push -u origin main      # username = akun HF, password = token Write
+     ```
+     (Butuh `git lfs`: `brew install git-lfs` bila belum ada.) Tunggu build ±10–15 menit sampai status *Running*.
+  4. Cek: `curl -H "Authorization: Bearer <token Read>" https://<USERNAME_HF>-remediaide-ml.hf.space/health` → `"status":"ok"`.
+  5. Vercel → Settings → Environment Variables: `ML_SERVICE_URL=https://<USERNAME_HF>-remediaide-ml.hf.space`,
+     `ML_SERVICE_TOKEN=<token Read>`, `ML_TIMEOUT_MS=15000` (Space gratis bisa tidur; panggilan pertama lambat),
+     `RESEARCH_EXPORT_SALT` sudah ada. Lalu *Redeploy*.
+  6. Ketik `M17 sudah selesai` agar Claude Code menguji end-to-end di produksi.
+- [ ] **M18. Lisensi kode aplikasi web:** README lama menulis "Proprietary"; kode ML sudah MIT. Putuskan lisensi kode web
+  (misalnya MIT) bila rulebook meminta kode terbuka.
+
 ## Minggu ini
 - [ ] **M6. Panitia:** simpan bukti izin pemakaian konsep RemediAide. Minta rulebook revisi terbaru dan tanyakan
   format pengumpulan dataset (link, unggah, batas ukuran) dan apakah ada laporan wajib.
