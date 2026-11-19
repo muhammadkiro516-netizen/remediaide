@@ -1,4 +1,3 @@
-Loaded Prisma config from prisma.config.ts.
 
 -- AlterTable
 ALTER TABLE "questions" ADD COLUMN     "map_question_id" INTEGER,
