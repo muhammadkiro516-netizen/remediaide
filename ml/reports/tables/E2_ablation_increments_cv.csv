@@ -1,0 +1,8 @@
+tahap,macro_f1,kenaikan_macro_f1,kenaikan_auc_bin,perubahan_salah_kelompok
+S0_cur_correct,0.1781,,,
+S1_keyakinan,0.2913,0.1131,0.0208,-0.0192
+S2_riwayat_benar,0.4002,0.109,0.1259,-0.0396
+S3_riwayat_keyakinan,0.4398,0.0395,-0.0011,-0.0103
+S4_kesulitan,0.462,0.0222,0.0204,-0.0162
+S5_opsi,0.4629,0.0009,0.0006,-0.0003
+S6_waktu,0.4647,0.0018,0.0028,-0.0018

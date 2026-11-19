@@ -1,0 +1,7 @@
+komponen,perangkat,menit,sumber
+"mDeBERTa-v3-base, target, 5 fold",GPU Kaggle,166.5,metrics_target.json
+"mDeBERTa-v3-base, category3, 5 fold",GPU Kaggle,166.3,metrics_category3.json
+"CO-KT CV full, 5 seed x 5 fold",GPU Kaggle,37.1,metrics_full.json
+"CO-KT CV no_conf, 3 seed x 5 fold",GPU Kaggle,21.4,metrics_no_conf.json
+"CO-KT CV no_option, 3 seed x 5 fold",GPU Kaggle,19.6,metrics_no_option.json
+"CO-KT produksi, 5 seed",GPU Kaggle,5.5,report_seed*.json

@@ -1,0 +1,39 @@
+# Protocol constants and facts quoted in judge-facing docs that are not computed results (value  # reason).
+20261118   # global seed (D-01)
+0.1        # conformal alpha (D-09)
+0.3        # EWM alpha (features/history.py)
+0.25       # D-09 min relative reduction 25%
+30         # D-09 max defer 30%
+200        # CO-KT window length / pilot target 200 explanations (06_PILOT)
+128        # CO-KT d_model
+192        # mDeBERTa max_len
+16         # mDeBERTa batch size
+2e-5       # mDeBERTa learning rate
+10         # TF-IDF C
+23         # LightGBM feature count (ALL_B)
+50         # Optuna trials
+25         # LightGBM models in test ensemble (5 seeds x 5 folds)
+70         # final CO-KT: 70% train users
+20         # 20% calibration users / 20% test users
+80         # 80% CV users
+32         # class size used in E8 (32 students)
+15         # 15 questions per session (E8) / MAP questions
+40         # latency test: 40 students
+600        # latency test: 600 responses
+27         # 27 B0 parity tests (tests/test_cri_rule.py)
+0.5        # loss weights 1 : 0.5 : 0.5
+17         # PISA 2025: 17% Level 2+ (01_CONTEXT, OECD)
+65         # PISA OECD 65% / MAP 65 targets
+59.45      # Rapor Pendidikan 2025 SD
+70.81      # Rapor Pendidikan 2025 SMP
+67.14      # Rapor Pendidikan 2025 SMA
+60.22      # Rapor Pendidikan 2025 SMK
+86         # 86% schools without fixed internet (Komdigi)
+57.4       # BERT recall literature (arXiv 2606.23205)
+0.8033     # AKT AUC literature (arXiv 2302.06881)
+0.8035     # simpleKT AUC literature
+34         # 34 minor translation errors (translation_card.md)
+46         # 46 good translations (translation_card.md)
+657        # Eedi zip 656,787,242 bytes (data/manifest.json)
+6          # 06_PILOT / CRI 0-5 scale bound
+100        # QA sample size / confidence scale max
