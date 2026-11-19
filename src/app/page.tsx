@@ -80,11 +80,16 @@ const portals = [
   },
 ];
 
+// Every number has a source (docs/cac/01_CONTEXT.md §D; RemediAide 2.0 results in ml/reports/RESULTS.md).
 const pisaStats = [
-  { value: "66", unit: "poin", label: "Di bawah rata-rata OECD", sub: "Skor Matematika PISA 2022", color: "text-red-600" },
-  { value: "18%", unit: "", label: "Siswa mencapai level profisiensi", sub: "Literasi Sains Minimum", color: "text-orange-600" },
-  { value: "3×", unit: "lebih", label: "Berbahaya dari 'tidak tahu'", sub: "Siswa Yakin Tapi Salah (Miskonsepsi)", color: "text-red-700" },
-  { value: "68%", unit: "", label: "Belum terdiagnosis miskonsepsinya", sub: "Tanpa alat diagnosis CRI", color: "text-amber-600" },
+  { value: "17%", unit: "", label: "Siswa mencapai minimal Level 2 matematika", sub: "PISA 2025 (rata-rata OECD 65%)", color: "text-red-600",
+    href: "https://www.oecd.org/en/publications/pisa-2025-results-volume-i-country-notes_2d4ff9ea-en/indonesia_9c880f8a-en.html", source: "OECD" },
+  { value: "67,14%", unit: "", label: "Siswa SMA mencapai kompetensi minimum numerasi", sub: "Rapor Pendidikan 2025", color: "text-orange-600",
+    href: "https://www.gebrak.id/?p=18182", source: "Rapor Pendidikan 2025" },
+  { value: "45,1%", unit: "", label: "Kasus salah dikelompokkan aturan CRI tetap", sub: "Uji RemediAide 2.0 pada data Eedi (test)", color: "text-red-700",
+    href: "/metodologi", source: "hasil uji RemediAide 2.0" },
+  { value: "27,8%", unit: "", label: "Siswa \"Paham\" versi aturan CRI yang ternyata belum tuntas", sub: "Uji RemediAide 2.0 pada data Eedi (test)", color: "text-amber-600",
+    href: "/metodologi", source: "hasil uji RemediAide 2.0" },
 ];
 
 const criQuadrants = [
@@ -265,7 +270,7 @@ export default function Home() {
           {/* Badge */}
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-sm font-medium text-blue-700">
             <Award className="h-4 w-4" />
-            Kompetisi LIDM ITDP 2026 · Inovasi Teknologi Pendidikan
+            RemediAide v1 · LIDM 2026 → v2 · CAC MLSC 2026
           </div>
 
           {/* Headline */}
@@ -366,20 +371,27 @@ export default function Home() {
             <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-red-600">Urgensi Berdasarkan Data</p>
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">Mengapa Indonesia Membutuhkan RemediAide?</h2>
             <p className="mx-auto mt-3 max-w-2xl text-slate-600">
-              Krisis kompetensi sains dan matematika Indonesia terungkap jelas dalam data PISA 2022.
+              Hasil belajar matematika Indonesia stagnan: PISA 2025 sama dengan 2022.
               Akar masalahnya bukan sekadar kurangnya latihan soal — tetapi <strong>miskonsepsi yang tidak terdeteksi</strong>.
             </p>
           </div>
 
           {/* PISA Stats */}
           <div className="mb-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {pisaStats.map(({ value, unit, label, sub, color }) => (
+            {pisaStats.map(({ value, unit, label, sub, color, href, source }) => (
               <div key={sub} className="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center">
                 <div className={`text-4xl font-extrabold ${color}`}>
                   {value}<span className="text-2xl">{unit}</span>
                 </div>
                 <p className="mt-2 text-sm font-semibold text-slate-800">{label}</p>
                 <p className="mt-1 text-xs text-slate-500">{sub}</p>
+                {href.startsWith("http") ? (
+                  <a href={href} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-xs text-blue-600 underline">
+                    Sumber: {source}
+                  </a>
+                ) : (
+                  <Link href={href} className="mt-2 inline-block text-xs text-blue-600 underline">Sumber: {source}</Link>
+                )}
               </div>
             ))}
           </div>
@@ -420,6 +432,37 @@ export default function Home() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
+          3b. MESIN AI 3 LAPIS (RemediAide 2.0)
+      ══════════════════════════════════════════ */}
+      <section id="mesin-ai" className="bg-white px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-10 text-center">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-violet-600">RemediAide 2.0</p>
+            <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">Mesin AI 3 Lapis</h2>
+            <p className="mx-auto mt-3 max-w-2xl text-slate-600">
+              Bukan sekadar siapa yang salah, tapi kenapa salah, seberapa yakin mesinnya, dan apa yang dilakukan guru besok pagi.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              { t: "Lapis 1 · Pelacak Penguasaan", d: "Memprediksi kondisi siswa per konsep dari jawaban, keyakinan, dan riwayat. Kesalahan pengelompokan turun dari 45,1% (aturan tetap) menjadi 34,7% pada uji data Eedi." },
+              { t: "Lapis 2 · Pembaca Alasan", d: "Membaca alasan satu kalimat siswa dan menamai miskonsepsinya — termasuk siswa yang benar tapi nalarnya keliru. Bekerja pada alasan berbahasa Indonesia." },
+              { t: "Lapis 3 · Tahu Batas Diri", d: "Probabilitas terkalibrasi dan himpunan prediksi 90%. Kasus yang meragukan diserahkan ke guru di panel “Perlu dicek guru”." },
+            ].map(({ t, d }) => (
+              <div key={t} className="rounded-2xl border border-violet-200 bg-violet-50 p-6">
+                <h3 className="mb-2 font-bold text-slate-900">{t}</h3>
+                <p className="text-sm leading-relaxed text-slate-700">{d}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 text-center text-sm text-slate-600">
+            Aturan CRI v1 tetap dipakai sebagai pembanding dan cadangan bila mesin AI tidak tersedia.{" "}
+            <Link href="/metodologi" className="font-semibold text-violet-700 underline">Baca metodologi</Link>
+          </p>
         </div>
       </section>
 
@@ -686,7 +729,7 @@ export default function Home() {
               </p>
               <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700">
                 <Award className="h-3 w-3" />
-                Kompetisi LIDM ITDP 2026
+                RemediAide v1 · LIDM 2026 → v2 · CAC MLSC 2026
               </div>
             </div>
 
@@ -704,17 +747,14 @@ export default function Home() {
               <div>
                 <p className="mb-3 font-semibold text-slate-900">Legal & Privasi</p>
                 <ul className="space-y-2 text-slate-600">
-                  <li><a href="#" className="hover:text-blue-600">Kebijakan Privasi (UU PDP)</a></li>
-                  <li><a href="#" className="hover:text-blue-600">Syarat & Ketentuan</a></li>
-                  <li><a href="#" className="hover:text-blue-600">Keamanan Data</a></li>
+                  <li><Link href="/metodologi#privasi" className="hover:text-blue-600">Privasi & Data (UU PDP)</Link></li>
                 </ul>
               </div>
               <div>
                 <p className="mb-3 font-semibold text-slate-900">Kontak & Kemitraan</p>
                 <ul className="space-y-2 text-slate-600">
                   <li><a href="mailto:tim@remediaide.id" className="hover:text-blue-600">tim@remediaide.id</a></li>
-                  <li><a href="#" className="hover:text-blue-600">Kemitraan Sekolah B2B</a></li>
-                  <li><a href="#" className="hover:text-blue-600">Dokumentasi API</a></li>
+                  <li><Link href="/metodologi" className="hover:text-blue-600">Metodologi Mesin AI</Link></li>
                 </ul>
               </div>
             </div>
