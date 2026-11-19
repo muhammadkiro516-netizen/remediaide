@@ -197,6 +197,14 @@ export default function ResultsClient({
           >
             ⬇ Ekspor CSV
           </a>
+          <a
+            href={`/api/sessions/${sessionId}/export/research`}
+            download
+            title="CSV anonim untuk riset pilot; hanya jika persetujuan orang tua/wali sudah dicatat. Unduh sebelum Auto-Wipe."
+            className="min-h-[48px] px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 font-semibold text-sm hover:bg-gray-50 transition-colors flex items-center"
+          >
+            ⬇ Ekspor Riset
+          </a>
           <AutoWipeDialog
             sessionId={sessionId}
             onWipeComplete={(count) => {
