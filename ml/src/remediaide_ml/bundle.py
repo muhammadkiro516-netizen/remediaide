@@ -8,6 +8,7 @@ TF-IDF+LR for English input and as fallback when the encoder is not available.
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 
 import joblib
@@ -145,6 +146,38 @@ class MdebertaL2:
         return _l2_outputs(np.concatenate(out), self.classes, df, self.candidates, self.T)
 
 
+class StudentOnnxL2:
+    """Light Layer 2 for small hosts (Tingkat A, D-23): MiniLM student, ONNX int8, onnxruntime CPU. Not calibrated and
+    no validated hidden-misconception threshold, so the hidden flag is disabled (threshold > 1) when this model is used."""
+
+    def __init__(self, models_dir: Path = MODELS, lang: str = "id"):
+        import onnxruntime as ort
+        from transformers import AutoTokenizer
+
+        from remediaide_ml.data.map import build_candidates
+        from remediaide_ml.paths import INTERIM
+
+        d = models_dir / "l2_student_v1"
+        self.tok = AutoTokenizer.from_pretrained(d)
+        self.sess = ort.InferenceSession(str(d / "model_int8.onnx"), providers=["CPUExecutionProvider"])
+        self.classes = np.array(json.loads((d / "classes.json").read_text()))
+        cpath = models_dir / "l2_candidates_v1.json"
+        self.candidates = json.loads(cpath.read_text()) if cpath.exists() else build_candidates(pd.read_parquet(INTERIM / "map.parquet"))
+        self.lang = lang
+
+    def predict(self, rows: pd.DataFrame) -> dict[str, np.ndarray]:
+        from remediaide_ml.l2.tfidf import build_text
+
+        df = _l2_frame(rows)
+        texts = build_text(df, self.lang).tolist()
+        out = []
+        for i in range(0, len(texts), 32):
+            e = self.tok(texts[i:i + 32], truncation=True, max_length=192, padding=True, return_tensors="np")
+            out.append(self.sess.run(["logits"], {"input_ids": e["input_ids"].astype(np.int64),
+                                                  "attention_mask": e["attention_mask"].astype(np.int64)})[0])
+        return _l2_outputs(np.concatenate(out), self.classes, df, self.candidates, 1.0)
+
+
 class TfidfL2:
     """Production L2 (D-19): TF-IDF+LR trained on all MAP rows, candidate-masked, temperature-calibrated."""
 
@@ -173,12 +206,17 @@ def load_bundle(models_dir: Path = MODELS, with_l2: bool = True, l2_lang: str = 
         l1, version = explainer, "rmd2-lgbm-fallback"
     l2, l2_name = None, None
     if with_l2:
-        want = conf.get("l2_by_lang", {}).get(l2_lang, "tfidf")
-        if want == "mdeberta" and (models_dir / "l2_mdeberta_v1").exists():
+        want = os.environ.get("RA_L2_MODEL") or conf.get("l2_by_lang", {}).get(l2_lang, "tfidf")
+        if want == "student" and (models_dir / "l2_student_v1" / "model_int8.onnx").exists():
+            l2, l2_name = StudentOnnxL2(models_dir, l2_lang), "student"
+        elif want in ("mdeberta", "student") and (models_dir / "l2_mdeberta_v1").exists():
             l2, l2_name = MdebertaL2(models_dir, conf["l2_mdeberta"]["temperature"], l2_lang), "mdeberta"
         elif (models_dir / "l2_tfidf_v1.joblib").exists():
             l2, l2_name = TfidfL2(models_dir, l2_lang), "tfidf"  # fallback (also for Indonesian input)
-    hidden = conf[f"l2_{l2_name}"]["hidden_threshold"] if l2_name else conf["hidden_threshold"]
+    if l2_name == "student":
+        hidden = 1.01  # no validated threshold for the student -> flag disabled (documented in models/README.md)
+    else:
+        hidden = conf[f"l2_{l2_name}"]["hidden_threshold"] if l2_name else conf["hidden_threshold"]
     mdict = {}
     p = models_dir / "misconception_dictionary.json"
     if p.exists():
