@@ -17,10 +17,9 @@ from pathlib import Path
 
 import pandas as pd
 
-from remediaide_ml.paths import ML_ROOT, REPO_ROOT, REPORTS, TABLES, run_dir
+from remediaide_ml.paths import ML_ROOT, PILOT_DOCS, REPORTS, TABLES, run_dir
 from remediaide_ml.pilot import analysis as A
 
-PILOT_DOCS = REPO_ROOT / "docs" / "cac" / "pilot"
 PILOT_DATA = ML_ROOT / "data" / "pilot"
 BANNER = "SINTETIS — uji kode saja, BUKAN hasil pilot. Jangan dikutip di laporan."
 

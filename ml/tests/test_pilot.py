@@ -6,10 +6,10 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from remediaide_ml.paths import REPO_ROOT
+from remediaide_ml.paths import PILOT_DOCS
 from remediaide_ml.pilot import analysis as A
 
-PILOT = REPO_ROOT / "docs" / "cac" / "pilot"
+PILOT = PILOT_DOCS
 
 
 @pytest.fixture(scope="module")
