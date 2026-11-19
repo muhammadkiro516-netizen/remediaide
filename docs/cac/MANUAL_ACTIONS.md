@@ -27,6 +27,19 @@ Claude Code mengerjakan semua hal lainnya. Kerjakan item ini, centang, lalu keti
   2 guru matematika sebagai pelabel (±2 jam total per guru).
 
 ## Mendesak (19 Nov)
+- [ ] **M16. KEAMANAN — kerjakan paling dulu** (rinci: `docs/cac/SECURITY_NOTES.md`). Repo GitHub **publik**.
+  1. **Cabut token GitHub** yang pernah ditempel di chat: github.com → Settings → Developer settings →
+     Personal access tokens → pilih token itu → *Delete*. Untuk push berikutnya buat token baru (jangan tempel di chat).
+  2. **Reset password Neon**: console.neon.tech → project → Branches → `main` → Roles → *Reset password*. Salin connection
+     string baru → Vercel → project remediaide → Settings → Environment Variables → ganti `DATABASE_URL` (pooled) dan
+     `DIRECT_URL` (direct) → Deployments → *Redeploy*.
+  3. **Ganti password akun seed di produksi** (password lama `demo123`/`remedi123` terlihat publik di `prisma/seed.ts`):
+     ```bash
+     cd ~/Downloads/remediaide-main/.worktrees/web
+     DATABASE_URL="<connection string Neon BARU>" SEED_PASSWORD="<min 12 karakter>" \
+     SEED_SUPERADMIN_PASSWORD="<min 12 karakter, beda>" npx tsx scripts/rotate-seed-passwords.ts
+     ```
+     Hasil yang benar: `Password diganti: 4 akun demo, 1 akun superadmin.` Simpan password baru di password manager.
 - [ ] **M1b. Login ulang Kaggle** (token OAuth kedaluwarsa): `~/Downloads/remediaide-main/ml/.venv/bin/kaggle auth login --force`.
 
 ## Minggu ini

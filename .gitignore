@@ -25,9 +25,17 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
+# local env files + credentials (never commit secrets; scan: ml/scripts/scan_secrets.py)
 .env*.local
 .env
+.env.*
+!.env.example
+credentials.json
+kaggle.json
+*.key
+*.p12
+.huggingface/
+**/hf_token*
 
 # vercel
 .vercel
