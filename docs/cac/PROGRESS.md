@@ -51,6 +51,19 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 
 ## Log
 
+### 2026-11-20 00:30 — Tugas penguatan juri (Bagian A–E) + /verifikasi — selesai
+- **A keamanan:** `ml/scripts/scan_secrets.py` (98 commit, 0 rahasia asli), `docs/cac/SECURITY_NOTES.md`, `.gitignore`
+  diperketat, password seed dari env + `scripts/rotate-seed-passwords.ts`; M16 (cabut token, reset Neon, ganti password).
+- **B cerita juri:** `reports/tables/headline.json` (angka test yang ada, tanpa membuka test), gambar
+  `figures/E8_v1_vs_ml.png`, bukti pembingkaian L2 (`L2_split_gap_cv.csv`, `L2_overlap_cv.csv`), analisis error CV
+  (`EA_*`), klaim "tahu batas diri" dilunakkan di dokumen dan web.
+- **C dokumen:** REPORT ditulis ulang per 5 kriteria, README root + `ml/README.md` ringkas, kartu model/data lengkap,
+  bukti kernel Kaggle di `ml/kaggle/evidence/`.
+- **D pilot:** T70/T71 selesai (instrumen 15 soal, D-25, PDF, xlsx, panduan sesi, tes kering 4/4 lulus, tombol persetujuan
+  riset), skrip analisis pilot + tes sintetis, paket HF Space (393,3 MB) + M17.
+- **E audit:** `docs/cac/AUDIT_2026-11-20.md` — semua tes lulus (ML 95, web 593, leakage 10, paritas 27, build OK),
+  0 angka tanpa sumber, 3 klaim dilunakkan, ketidaksesuaian proposal vs kode v1 ditulis di REPORT, PDF/xlsx deterministik.
+
 ### 2026-11-19 16:58 — Pelengkap audit D-24 + LAPORAN_REVIEW v2 — selesai
 - `docs/cac/LAPORAN_REVIEW.md` (audit untuk juri) ditulis, lalu empat kekurangan yang diungkapnya ditutup **hanya dengan CV**
   (test tidak dibuka lagi): `ml/scripts/gap_fill.py` (juga di `make l3`), log `ml/runs/logs/gap_fill.log`.
