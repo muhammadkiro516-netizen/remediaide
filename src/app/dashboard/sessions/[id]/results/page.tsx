@@ -29,6 +29,7 @@ export default async function ResultsPage({ params }: PageProps) {
     select: {
       id: true,
       state: true,
+      researchConsent: true,
       test: {
         select: {
           topic: true,
@@ -73,6 +74,7 @@ export default async function ResultsPage({ params }: PageProps) {
       sessionId={id}
       topic={sessionPin.test.topic}
       sessionState={sessionPin.state as 'LOCKED' | 'ACTIVE' | 'CLOSED'}
+      researchConsent={sessionPin.researchConsent}
       questions={sessionPin.test.questions}
       initialDiagnoses={diagnoses.map((d) => ({
         anonymousLabel: d.student.anonymousLabel,

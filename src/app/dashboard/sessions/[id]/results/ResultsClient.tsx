@@ -16,6 +16,7 @@ import PDFDownloadPanel from '@/components/teacher/PDFDownloadPanel';
 import AutoWipeDialog from '@/components/teacher/AutoWipeDialog';
 import { ExitTicketSummaryBadge } from '@/components/teacher/ExitTicketSummaryBadge';
 import MlModePanel from '@/components/teacher/MlModePanel';
+import { ResearchConsentToggle } from '@/components/teacher/ResearchConsentToggle';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -53,6 +54,7 @@ interface ResultsClientProps {
   sessionId: string;
   topic: string;
   sessionState: 'LOCKED' | 'ACTIVE' | 'CLOSED';
+  researchConsent?: boolean;
   questions: QuestionInfo[];
   initialDiagnoses: DiagnosisRow[];
   initialGroups: RemedialGroupData[];
@@ -85,6 +87,7 @@ export default function ResultsClient({
   sessionId,
   topic,
   sessionState,
+  researchConsent = false,
   questions,
   initialDiagnoses,
   initialGroups,
@@ -205,6 +208,7 @@ export default function ResultsClient({
           >
             ⬇ Ekspor Riset
           </a>
+          <ResearchConsentToggle sessionId={sessionId} initialConsent={researchConsent} />
           <AutoWipeDialog
             sessionId={sessionId}
             onWipeComplete={(count) => {

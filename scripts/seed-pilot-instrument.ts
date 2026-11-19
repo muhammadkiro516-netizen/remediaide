@@ -13,22 +13,9 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { PrismaClient } from '@prisma/client';
-
-interface Option { key: string; text_id: string; is_correct: boolean }
-interface Item { order: number; map_question_id: number; stem_id: string; options: Option[]; correct_key: string;
-  require_explanation: boolean; figure: string | null; needs_teacher_check: boolean }
+import { tauMinSeconds, type PilotItem as Item } from '../src/lib/pilot/instrument';
 
 const prisma = new PrismaClient();
-
-function countWords(text: string): number {
-  const n = text.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').trim();
-  return n ? n.split(' ').length : 0;
-}
-
-export function tauMinSeconds(item: Item): number {
-  const words = countWords(`${item.stem_id} ${item.options.map((o) => o.text_id).join(' ')}`);
-  return Math.max(1, Math.ceil(words / 2.5));
-}
 
 async function main() {
   const inst = JSON.parse(readFileSync(resolve(process.cwd(), 'docs/cac/pilot/instrument_map_id.json'), 'utf8')) as { items: Item[] };
