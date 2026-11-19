@@ -100,7 +100,7 @@ RemediAide v1 (aplikasi web Next.js + aturan CRI 2×2 tanpa ML) diikutkan pada L
 olahan, eksperimen, dan hasil di repo ini dibuat baru untuk CAC MLSC 2026. Aturan v1 dipakai apa adanya sebagai
 baseline B0 (27 tes kesetaraan dengan `engine.ts`).
 
-**Tim:** Salman [nama lengkap] (ketua), Luna [nama lengkap] (anggota), Farel [nama lengkap] (anggota).
+**Tim:** Muhammad Salman Al Farisi (ketua), Lubna Maryam (anggota), Muhammad Farel Rizky (anggota).
 
 ### Stack aplikasi web
 Next.js 14 (App Router), TypeScript, Tailwind + shadcn/ui, PostgreSQL + Prisma 6, NextAuth v5, BullMQ + Redis
