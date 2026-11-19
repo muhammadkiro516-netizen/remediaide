@@ -13,7 +13,7 @@ mentah di Lampiran D. Istilah: **CV** = validasi silang pada 80% siswa Eedi; **t
 ```
 ........................................................................ [ 75%]
 .......................                                                  [100%]
-95 passed in 5.24s
+95 passed in 5.99s
 ```
 
 **Tes leakage (`ml/tests/test_features_leakage.py`) + kausalitas CO-KT (`ml/tests/test_cokt.py`)**
@@ -28,26 +28,43 @@ tests/test_features_leakage.py::test_vector_quadrant_equals_b0_scalar PASSED
 tests/test_cokt.py::test_sequences_windows_and_padding PASSED
 tests/test_cokt.py::test_next_correct_is_causal PASSED
 tests/test_cokt.py::test_training_smoke_loss_and_outputs PASSED
-============================== 10 passed in 1.52s ==============================
+============================== 10 passed in 1.53s ==============================
 ```
 
 **`npm test`** (di worktree `feat/ml-integration` = `main`)
 ```
  Test Files  48 passed (48)
       Tests  593 passed (593)
-   Duration  1.38s (transform 993ms, setup 0ms, import 2.12s, tests 4.00s, environment 1.67s)
+   Duration  1.37s (transform 847ms, setup 0ms, import 2.03s, tests 3.87s, environment 1.87s)
 ```
 
 **`git status`**
 ```
 checkout utama, branch cac/ml:
-(bersih, tidak ada perubahan)
+M README.md
+ M docs/cac/MANUAL_ACTIONS.md
+ M ml/README.md
 worktree .worktrees/web, branch feat/ml-integration:
 (bersih, tidak ada perubahan)
 ```
 
 **`git log --oneline -40`** (branch `main`)
 ```
+8bfcbfd merge cac/ml (REVIEW_INDEX v4)
+d3a21f2 7: REVIEW_INDEX v4 — SHA f9ed9b4 + tautan baris ke semua bagian yang berubah
+f9ed9b4 merge cac/ml (LAPORAN_REVIEW v4)
+3ca049f 7: LAPORAN_REVIEW v4 — perbaikan review eksternal (D-26)
+6d685f1 6: check-login.ts membaca SEED_PASSWORD, tanpa password literal
+52004d2 merge cac/ml (butir 4-6)
+21fd0d3 6: TESTING_GUIDE + prisma/README tanpa password literal (rujuk SEED_PASSWORD / SEED_SUPERADMIN_PASSWORD)
+73497a5 5: README — daftar tim (Salman ketua, Luna, Farel; nama lengkap menunggu, M19)
+6177dfc 4: tes bundle/layanan di-skip atau memakai cadangan LightGBM tanpa torch; fix-libomp juga memakai libomp dari wheel scikit-learn
+918e0d4 3: /metodologi — pembanding baseline B1b dan recall Miskonsepsi yang lebih rendah
+484f850 3: kalimat utama + pembanding baseline (B1b 0,401 → CO-KT 0,347, −5,3 poin [4,8–5,9]; aturan v1 lebih buruk dari B1a)
+fcfb7c4 merge cac/ml (butir 1-3)
+5b8a422 2: mitigasi miskonsepsi (pasca-segel, CV) — antrean defer menangkap 24,8% miskonsepsi yang terlewat; mode prioritas (aturan D-26 memilih w_M = 1,0) + kurva trade-off
+9359a4f 1: recall per kuadran di REPORT §4.1/§4.2, RESULTS E1, README (Miskonsepsi CO-KT 0,368 < aturan v1 0,400)
+7f0a544 D-26: analisis pasca-segel (CV) — recall per kuadran (test dari confusion tersimpan + CV), defer vs miskonsepsi, mode prioritas miskonsepsi
 4a7252b merge cac/ml (paket submisi v3)
 55d69cf E: paket submisi memuat bukti Kaggle + materi pilot; tes pilot jalan di dalam paket
 8422899 merge cac/ml (REVIEW_INDEX)
@@ -73,21 +90,6 @@ db20072 A: password seed dari env + skrip rotasi password akun seed produksi
 04f3078 merge cac/ml (A: keamanan)
 6153b04 docs: LAPORAN_REVIEW v2 — tambah bagian pelengkap audit D-24
 05623c4 merge cac/ml (LAPORAN_REVIEW v2)
-ad4bdfe merge cac/ml (D-24 pelengkap audit)
-a2f668e D-24: pelengkap audit (CV saja) — B0 framing (a), LAC biner L1, akurasi opsi CO-KT, Gender 0/3; lisensi manifest
-318000f merge cac/ml (LAPORAN_REVIEW)
-b2578f9 docs: LAPORAN_REVIEW.md — laporan audit menyeluruh untuk juri
-4096790 merge cac/ml (T47 freeze, T50-T53, lint)
-6d39a77 T50-T53: paket submisi final + audit akhir; M9/M10 selesai (Vercel + GitHub)
-ee74b97 T47: freeze Tingkat S — reproduksi clone segar lolos (0 di luar toleransi); lint ruff bersih
-87c8b92 chore: sw.js hasil build, abaikan test-results/
-8c734f8 merge main (riwayat GitHub)
-f135e48 T68: peringatan 'jawaban terlalu cepat' (aturan v1 INVALID) di Mode AI perangkat
-fc5b2ea merge: gabungkan riwayat GitHub (Initial commit dari Vercel, isi identik dengan snapshot v1)
-d7389c0 docs: README root menunjuk ke RemediAide 2.0 (ml/); lock tanpa path lokal
-777c2d2 merge cac/ml (Tingkat A, dokumen submisi)
-680caa8 P6: tes e2e Playwright Mode AI (login guru -> Mode AI -> antrean -> umpan balik; 3 lulus), /metodologi publik, nomor soal di Mode AI
-b300498 T63/T35: layanan ML bisa memakai L2 student ONNX int8 (RA_L2_MODEL=student) untuk hosting kecil; latensi 40x15 diukur
 ```
 
 ## 0b. Perubahan versi 3 (19–20 Nov 2026): penguatan untuk juri, tanpa membuka test
@@ -124,7 +126,7 @@ Test tidak dibuka lagi. Semua analisis baru berlabel "pasca-segel, CV" (D-26, di
 | 2 Mitigasi | antrean defer 20% menangkap 0.2478 dari kasus Miskonsepsi yang terlewat (CV); mode prioritas miskonsepsi: aturan D-26 memilih w_M = 1,0 (tidak berubah dari produksi) karena di CV recall CO-KT sudah ≥ aturan v1; kurva trade-off hanya deskriptif | `E5_postseal_defer_misconception_cv.json`, `E8_misconception_priority_cv.csv`, `E8_misconception_priority_grid_cv.csv` |
 | 3 Kalimat utama | + pembanding B1b (0,401 → 0,347; selisih dengan CI dari `L1_test_pairwise.csv`) dan fakta aturan v1 lebih buruk dari B1a (tanpa uji berpasangan) di README, `ml/README.md`, REPORT, RESULTS, `/metodologi` | `headline.json` |
 | 4 Tes tanpa torch | `test_bundle`/`test_service` skip atau memakai cadangan LightGBM; `load_bundle` menangkap ImportError; `fix-libomp` memakai libomp dari wheel scikit-learn. Venv tanpa `[dl]`: 90 lulus, 3 skip | `ml/tests/test_bundle.py`, `ml/Makefile` |
-| 5 Tim | README: Salman (ketua), Luna, Farel; nama lengkap masih `[nama lengkap]` (M19) | `README.md`, `docs/cac/MANUAL_ACTIONS.md` |
+| 5 Tim | README: Muhammad Salman Al Farisi (ketua), Lubna Maryam, Muhammad Farel Rizky (M19 selesai) | `README.md`, `docs/cac/MANUAL_ACTIONS.md` |
 | 6 Password literal | dihapus dari `docs/TESTING_GUIDE.md`, `prisma/README.md`, `scripts/check-login.ts` | — |
 
 **Recall per kuadran, test (dari confusion matrix tersimpan):**
@@ -196,7 +198,7 @@ Test tidak dibuka lagi. Semua analisis baru berlabel "pasca-segel, CV" (D-26, di
 tidak terlihat di CV; aturan D-26 yang dirancang untuk menutupnya karena itu tidak mengubah apa pun (w_M = 1,0). Pilihan
 bobot untuk produk harus diuji di data baru (pilot), bukan di test ini.
 
-**Masih kurang (v4):** nama lengkap tim (M19); E9/E10; hosting layanan ML (M17); CI relatif kalimat utama hanya aproksimasi;
+**Masih kurang (v4):** E9/E10; hosting layanan ML (M17); CI relatif kalimat utama hanya aproksimasi;
 default password demo masih ada di `prisma/seed.ts` dan spec e2e untuk pengembangan lokal (produksi harus diganti, M16).
 
 
