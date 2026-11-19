@@ -128,7 +128,7 @@ Semua path ML relatif terhadap `ml/`.
     menghasilkan 3 alasan Bahasa Indonesia dari SHAP. Evaluasi akurasi prediksi opsi.
   - Selesai jika: `models/l1_*` ada, `reports/tables/L1_cv_summary.csv` ada, notebook 03/04 bersih.
 
-- [ ] **T25 [A] Baseline pyKT resmi** — dep: T23
+- [ ] **T25 [A] Baseline pyKT resmi** — dep: T23 · **TIDAK DIJALANKAN (19 Nov, rencana):** pyKT memakai preprocessing + split sekuens sendiri untuk Eedi (nips_task34); menyamakannya dengan split per siswa + test terkunci kita butuh menulis ulang pipeline data pyKT, dan test Eedi sudah dibuka di T46 sehingga baseline baru hanya boleh dilaporkan di CV. Pembanding literatur (AKT 0,8033, simpleKT 0,8035; arXiv 2302.06881) dikutip di REPORT §4.2 dengan catatan protokol berbeda.
   - Di Kaggle, `pip install pykt-toolkit`, lalu jalankan DKT/AKT/simpleKT pada split yang sama (framing a).
     Jika instalasi bermasalah lebih dari 1 jam, hentikan dan catat.
   - Selesai jika: tabel pembanding resmi, atau catatan gagal beserta alasannya.
