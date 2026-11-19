@@ -190,7 +190,7 @@ const steps = [
     num: "02",
     icon: Target,
     title: "Siswa Jawab + Metacognitive Slider CRI",
-    desc: "Siswa masuk dengan PIN Sesi (tanpa akun). Setiap jawaban disertai Metacognitive Slider CRI 0–5 untuk mengukur tingkat keyakinan secara akurat.",
+    desc: "Siswa masuk dengan PIN Sesi (tanpa akun). Setiap jawaban disertai Metacognitive Slider CRI 0–5 untuk mencatat keyakinan siswa (laporan diri, bukan ukuran pasti).",
     color: "bg-indigo-600",
   },
   {
@@ -284,7 +284,7 @@ export default function Home() {
 
           {/* Sub-headline */}
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
-            Membantu guru mengidentifikasi miskonsepsi siswa secara presisi menggunakan metode{" "}
+            Membantu guru menemukan siswa yang perlu remediasi dan miskonsepsinya, berawal dari metode{" "}
             <strong className="text-slate-800">Certainty of Response Index (CRI)</strong> dalam kerangka{" "}
             <strong className="text-slate-800">Kurikulum Merdeka</strong> — bukan sekadar kuis benar/salah.
           </p>
@@ -417,7 +417,7 @@ export default function Home() {
               <p className="text-sm leading-relaxed text-slate-700">
                 Certainty of Response Index mengukur <strong>tingkat keyakinan</strong> siswa pada setiap jawaban
                 menggunakan skala 0–5. Kombinasi benar/salah dengan tingkat keyakinan menghasilkan
-                4 kategori diagnostik yang presisi dan berbasis riset pedagogis.
+                4 kategori diagnostik berbasis riset pedagogis. Uji RemediAide 2.0 menunjukkan aturan tetap ini salah mengelompokkan 45,1% kasus, karena itu v2 menambahkan mesin ML.
               </p>
             </div>
             <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-6">
@@ -451,7 +451,7 @@ export default function Home() {
             {[
               { t: "Lapis 1 · Pelacak Penguasaan", d: "Memprediksi kondisi siswa per konsep dari jawaban, keyakinan, dan riwayat. Kesalahan pengelompokan turun dari 45,1% (aturan tetap) menjadi 34,7% pada uji data Eedi." },
               { t: "Lapis 2 · Pembaca Alasan", d: "Membaca alasan satu kalimat siswa dan menamai miskonsepsinya — termasuk siswa yang benar tapi nalarnya keliru. Bekerja pada alasan berbahasa Indonesia." },
-              { t: "Lapis 3 · Tahu Batas Diri", d: "Probabilitas terkalibrasi dan himpunan prediksi 90%. Kasus yang meragukan diserahkan ke guru di panel “Perlu dicek guru”." },
+              { t: "Lapis 3 · Menandai Kasus Ragu", d: "Himpunan prediksi dengan cakupan 90,0% (target 90%) di uji Eedi. Sekitar 20% kasus paling meragukan diserahkan ke guru di panel “Perlu dicek guru”; salah kelompok sisanya 28,3%. Target awal (turun 25%) belum tercapai, jadi keputusan akhir tetap di guru." },
             ].map(({ t, d }) => (
               <div key={t} className="rounded-2xl border border-violet-200 bg-violet-50 p-6">
                 <h3 className="mb-2 font-bold text-slate-900">{t}</h3>
@@ -473,7 +473,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
             <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-blue-400">Dapur Algoritma</p>
-            <h2 className="text-3xl font-bold sm:text-4xl">Presisi Ilmiah di Balik Setiap Diagnosis</h2>
+            <h2 className="text-3xl font-bold sm:text-4xl">Cara Kerja di Balik Setiap Diagnosis</h2>
             <p className="mx-auto mt-3 max-w-2xl text-slate-400">
               RemediAide bukan sekadar kuis benar/salah. Ini adalah <strong className="text-white">mesin diagnostik kognitif</strong> berbasis
               riset pedagogis dan rekayasa perangkat lunak yang terukur.
@@ -725,7 +725,7 @@ export default function Home() {
               </div>
               <p className="text-sm leading-relaxed text-slate-600">
                 Inovasi Digital Pendidikan untuk Indonesia.
-                Sistem diagnosis kognitif berbasis CRI untuk remediasi pembelajaran yang presisi dan berkeadilan.
+                Sistem diagnosis kognitif berbasis CRI untuk membantu guru merencanakan remediasi. Hasil AI bukan nilai rapor.
               </p>
               <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700">
                 <Award className="h-3 w-3" />
