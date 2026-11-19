@@ -1,7 +1,7 @@
 # LAPORAN REVIEW — RemediAide 2.0 (CAC MLSC 2026)
 
 Disusun 19 Nov 2026 oleh Claude Code untuk ditinjau pihak luar (juri ML yang skeptis). Laporan ini **tidak mengubah kode
-atau hasil apa pun**; semua angka disalin dari file di `ml/reports/` (path disebut di setiap tabel). Angka di tabel
+atau hasil apa pun** (versi 2: ditambah §7 "Pelengkap audit D-24" — empat butir spesifikasi yang terlewat, dihitung dari OOF CV saja dengan skrip baru `ml/scripts/gap_fill.py`, tanpa mengubah model/angka lama); semua angka disalin dari file di `ml/reports/` (path disebut di setiap tabel). Angka di tabel
 ditampilkan 4 desimal (nilai < 1e-4 dalam notasi ilmiah); nilai presisi penuh ada di file sumber dan sebagian disalin
 mentah di Lampiran D. Istilah: **CV** = validasi silang pada 80% siswa Eedi; **test** = 20% siswa Eedi yang dikunci
 (D-04). MAP tidak punya fold test terkunci (D-06), sehingga semua angka Lapis 2 adalah CV.
@@ -13,7 +13,7 @@ mentah di Lampiran D. Istilah: **CV** = validasi silang pada 80% siswa Eedi; **t
 ```
 ........................................................................ [ 80%]
 .................                                                        [100%]
-89 passed in 6.02s
+89 passed in 5.29s
 ```
 
 **Tes leakage (`ml/tests/test_features_leakage.py`) + kausalitas CO-KT (`ml/tests/test_cokt.py`)**
@@ -28,26 +28,30 @@ tests/test_features_leakage.py::test_vector_quadrant_equals_b0_scalar PASSED
 tests/test_cokt.py::test_sequences_windows_and_padding PASSED
 tests/test_cokt.py::test_next_correct_is_causal PASSED
 tests/test_cokt.py::test_training_smoke_loss_and_outputs PASSED
-============================== 10 passed in 1.50s ==============================
+============================== 10 passed in 1.52s ==============================
 ```
 
 **`npm test`** (di worktree `feat/ml-integration` = `main`)
 ```
  Test Files  45 passed (45)
       Tests  586 passed (586)
-   Duration  1.31s (transform 856ms, setup 0ms, import 1.90s, tests 3.65s, environment 1.40s)
+   Duration  1.65s (transform 1.44s, setup 0ms, import 2.61s, tests 4.59s, environment 1.37s)
 ```
 
 **`git status`**
 ```
 checkout utama, branch cac/ml:
-(bersih, tidak ada perubahan)
+M docs/cac/LAPORAN_REVIEW.md
 worktree .worktrees/web, branch feat/ml-integration:
 (bersih, tidak ada perubahan)
 ```
 
 **`git log --oneline -40`** (branch `main`)
 ```
+ad4bdfe merge cac/ml (D-24 pelengkap audit)
+a2f668e D-24: pelengkap audit (CV saja) — B0 framing (a), LAC biner L1, akurasi opsi CO-KT, Gender 0/3; lisensi manifest
+318000f merge cac/ml (LAPORAN_REVIEW)
+b2578f9 docs: LAPORAN_REVIEW.md — laporan audit menyeluruh untuk juri
 4096790 merge cac/ml (T47 freeze, T50-T53, lint)
 6d39a77 T50-T53: paket submisi final + audit akhir; M9/M10 selesai (Vercel + GitHub)
 ee74b97 T47: freeze Tingkat S — reproduksi clone segar lolos (0 di luar toleransi); lint ruff bersih
@@ -84,10 +88,6 @@ ae0e50e T63: layanan FastAPI /health + /v1/diagnose, Dockerfile, tes kontrak; al
 f543218 T47: test_bundle di-skip bila artefak biner belum diekspor (ditemukan di clone segar)
 f34f702 progress: reproduksi T47 berjalan
 90dc466 T47: make all (data/l1/l2/l3/final), kaggle-outputs, data-raw, check_repro; run id kanonik
-9aa9c49 T46: test Eedi dibuka sekali, RESULTS.md final Tingkat S
-3888665 T46: final_eval.py (dikunci sebelum test dibuka; dry-run lolos)
-785db32 T40: kalibrator L1 produksi
-99d4ea1 T31-T45: L2 CV, E3/E4 final, D-19..D-21, L3 produksi, bundle diagnose() dengan artefak nyata, E6/E8 final_cv
 ```
 
 ## 1. Ringkasan
@@ -135,10 +135,10 @@ tetapi kriteria "Selesai jika" atau spesifikasinya tidak terpenuhi sepenuhnya.
 | T15 | Split + evaluasi | [x] | `eedi_splits.parquet`, `map_splits.parquet` | — |
 | T16 | EDA | [x] | `notebooks/01_eda.ipynb`, `figures/E0_*` | — |
 | T20 | B0 + E1 (CV) | [x] | `E1_b0_cv.csv` | — |
-| T21 | B1 | [x] | `L1_b0_b1_cv.csv` | ⚠ B0 framing (a) (skor ordinal, 03 §1) tidak pernah dihitung |
+| T21 | B1 | [x] | `L1_b0_b1_cv.csv` | B0 framing (a) (skor ordinal, 03 §1) **baru dihitung 19 Nov setelah test dibuka** (D-24, CV saja): `E1_b0_framing_a_cv.csv` |
 | T22 | LightGBM + Optuna + E2 | [x] | `L1_lgbm_cv.csv`, `E2_ablation_cv.csv`, `figures/E2_ablation.png`, `L1_shap_beeswarm.png` | — |
 | T23 | CO-KT | [x] | `L1_cokt_cv.csv`, `E2_cokt_ablation_cv.csv` | ⚠ early stopping CV memakai fold yang dinilai (optimistis) |
-| T24 | Konsolidasi L1 | [x] | `models/l1_*`, `L1_cv_summary.csv`, notebook 03/04 | ⚠ "evaluasi akurasi prediksi opsi" hanya di `metrics_full.json` (opt_acc rata-rata 0,5592), tidak ada tabel di `reports/` |
+| T24 | Konsolidasi L1 | [x] | `models/l1_*`, `L1_cv_summary.csv`, notebook 03/04 | akurasi prediksi opsi: tabel `L1_cokt_option_cv.csv` ditambahkan (D-24, CV ensemble 5 seed); sebelumnya hanya di `metrics_full.json` (opt_acc rata-rata per seed 0,5592) |
 | T25 | pyKT resmi [A] | [ ] | — | tidak dijalankan; alasan di TASKS |
 | T30 | TF-IDF | [x] | `L2_b0_tfidf_cv.csv` | C terpilih di tepi grid (10 dan 0,3) |
 | T31 | mDeBERTa | [x] | `L2_cv.csv` | ⚠ model yang disimpan = fold 0, bukan "fold terbaik" |
@@ -148,11 +148,11 @@ tetapi kriteria "Selesai jika" atau spesifikasinya tidak terpenuhi sepenuhnya.
 | T35 | Distilasi + E7 [A] | [x] | `E7_efficiency.csv` | — |
 | T36 | Retrieval [A] | [x] | `T36_retrieval.csv` | hasil negatif |
 | T40 | Kalibrasi | [x] | `E5_l3_final_cv.json`, `figures/E5_reliability_*` | — |
-| T41 | Conformal | [x] | `models/l3_conformal_v1.json` | ⚠ APS L2 cakupan 0,9504 (bukan ≈0,90); LAC biner L1 (03 §3) tidak dihitung |
+| T41 | Conformal | [x] | `models/l3_conformal_v1.json` | ⚠ APS L2 cakupan 0,9504 (bukan ≈0,90); LAC biner L1 (03 §3) ditambahkan (D-24, CV saja): `E5_lac_binary_L1_cv.json` |
 | T42 | Selective + titik operasi | [x] | `figures/E5_coverage_risk.png`, D-21 | titik D-09 tidak tercapai → fallback 20% |
 | T43 | Fusi + hidden | [x] | `ml/src/remediaide_ml/l3/fusion.py`, `diagnose.py`, `tests/test_bundle.py` | stacking hanya kerangka (butuh label guru) |
 | T44 | Pengaman | [x] | `guard/rapid_guess.py`, `tests/test_guard.py` | hanya data simulasi; tidak dilaporkan sebagai hasil |
-| T45 | E6 + E8 | [x] | `E6_fairness_final_cv.csv`, `E8_impact_final_cv.csv` | — |
+| T45 | E6 + E8 | [x] | `E6_fairness_final_cv.csv`, `E8_impact_final_cv.csv` | Gender kode 0 ditambahkan (D-24, CV saja): `E6_fairness_gender_codes_cv.csv` |
 | T46 | Buka test + RESULTS | [x] | `TEST_OPENED.json`, `RESULTS.md` | ⚠ E2/E3/E4 hanya CV (model ablation tidak disimpan; MAP tanpa test) |
 | T47 | Freeze | [x] | tag `freeze-tierS`, `scratchpad/repro2/ml/runs/check_repro.json` | Tingkat A tidak termasuk `make all` |
 | T50 | Repo submisi | [x] | `submission/remediaide-ml/` | repo GitHub yang dipakai = proyek penuh `remediaide`, bukan repo terpisah `remediaide-ml` |
@@ -177,17 +177,17 @@ tetapi kriteria "Selesai jika" atau spesifikasinya tidak terpenuhi sepenuhnya.
 ## 3. Penyimpangan dari rencana
 | # | Spesifikasi | Yang terjadi | Alasan | Dicatat di DECISIONS? |
 | --- | --- | --- | --- | --- |
-| 1 | 02 §2: MAP via `kaggle competitions download` | mirror HF `kaggle-map/data` rev `1996686…` | M1/M2 belum siap saat T11 | Tidak sebagai entri; dicatat di `LICENSE_NOTE.md` dan manifest. `manifest.json` masih menulis "Kaggle page to be confirmed after M2" (basi; M2 sudah dikonfirmasi MIT) |
+| 1 | 02 §2: MAP via `kaggle competitions download` | mirror HF `kaggle-map/data` rev `1996686…` | M1/M2 belum siap saat T11 | Tidak sebagai entri; dicatat di `LICENSE_NOTE.md` dan manifest. Teks basi "Kaggle page to be confirmed after M2" di `manifest.json` **sudah diperbaiki** (19 Nov, hanya kolom `license`; sha256 tidak berubah) |
 | 2 | 02 §1: gambar Eedi boleh untuk demo | tidak dipakai sama sekali | paper melarang di luar kompetisi | Ya, D-17 |
 | 3 | 02 §2: konflik prefiks | 18 baris dipertahankan + ditandai | tidak mengubah label benchmark | Ya, D-16 |
 | 4 | 02 §6: calibration split MAP "per grup (soal)" | `calibration_groups(row_id)` = per baris | 15 soal terlalu sedikit untuk 20% per soal | **Tidak** |
 | 5 | 03 §0: dataset Kaggle `remediaide-eedi-raw` + `competition_sources` MAP | hanya `remediaide-processed`, `remediaide-ml-src`, `remediaide-l2-teacher` (privat) | data olahan cukup; MAP dari HF | Tidak (D-11 hanya mewajibkan privat) |
-| 6 | 03 §1: B0 framing (a) skor ordinal | tidak dihitung | terlewat | **Tidak** (kekurangan) |
+| 6 | 03 §1: B0 framing (a) skor ordinal | terlewat; **dihitung belakangan** (CV saja, setelah test dibuka) | terlewat | Ya, D-24 |
 | 7 | 03 §1: B1b (b) `cur_correct, cur_cri` | + `cur_has_conf` | konsisten dengan framing (b) | Tidak |
 | 8 | 03 §1: early stopping CO-KT pada AUC validasi | di CV = fold yang dinilai; produksi = 10% siswa terpisah | desain awal; ditemukan saat T24 | Diungkap di RESULTS §5 dan REPORT §6; bukan entri DECISIONS |
 | 9 | 03 §2: L2 untuk input Indonesia | TF-IDF (EN) vs mDeBERTa (ID) dipilih dengan aturan baru | produk berbahasa Indonesia | Ya, D-19 (dikunci sebelum E4 mDeBERTa), D-21(b) |
 | 10 | 03 §2: model L2 "fold terbaik" | fold 0 | E4 memakai fold 0; tidak ada pemilihan fold | Tidak |
-| 11 | 03 §3: LAC biner L1 | tidak dihitung | terlewat | **Tidak** |
+| 11 | 03 §3: LAC biner L1 | terlewat; **dihitung belakangan** (CV saja; tidak ada angka test) | terlewat | Ya, D-24 |
 | 12 | 03 §3: kalibrasi NN = temperature | CO-KT memakai `TemperatureProb` (log-prob) | CO-KT ensemble mengeluarkan probabilitas | Disebut di `l3_eval.py`; bukan entri |
 | 13 | 03 §3: ambang `hidden_misconception` "validasi" | F1-max grid pada baris kalibrasi | aturan tidak dirinci di spesifikasi | Ya, D-20 |
 | 14 | D-09 titik operasi | tidak tercapai di model produksi → 20% | aturan fallback D-09 | Ya, D-21(a); catatan: OOF CV `l3_eval` menemukan 30% memenuhi, `e6_e8` tidak |
@@ -200,11 +200,11 @@ tetapi kriteria "Selesai jika" atau spesifikasinya tidak terpenuhi sepenuhnya.
 | 21 | T47: tenggat freeze 25 Nov | freeze 19 Nov | lebih cepat | — |
 | 22 | 04: CI 95% bootstrap **1000** ulangan | CI AUC memakai **200** ulangan (kolom `ci_note` di `L1_test.csv`, `L1_lgbm_cv.csv`, `L1_b0_b1_cv.csv`); CI salah kelompok/macro-F1 1000 | biaya komputasi AUC per ulangan | **Tidak** |
 | 23 | 04: resampling MAP per klaster QuestionId×siswa | per baris (MAP@3, E3, E4) dan per QuestionId (category3) | MAP tidak punya ID siswa | Disebut di `metrics.json` L2 (`ci_note`), bukan entri |
-| 24 | 04 E6: Gender kode 0/3 dilaporkan bila n ≥ 200 | tidak dilaporkan | terlewat | **Tidak** |
+| 24 | 04 E6: Gender kode 0/3 dilaporkan bila n ≥ 200 | kode 0 **dihitung belakangan** (CV saja); kode 3 n < 200 → hanya jumlah | terlewat | Ya, D-24 |
 
-**Entri DECISIONS baru sejak rencana awal (D-16 … D-23):** D-16 konflik prefiks MAP; D-17 gambar Eedi tidak dipakai;
+**Entri DECISIONS baru sejak rencana awal (D-16 … D-24):** D-16 konflik prefiks MAP; D-17 gambar Eedi tidak dipakai;
 D-18 CO-KT ens5 dipilih (vs LightGBM ens5); D-19 aturan pemilihan L2 + input Indonesia; D-20 ambang hidden
-misconception; D-21 penerapan D-09 + D-19(ii); D-22 protokol T36; D-23 protokol T35. Isi lengkap di Lampiran B.
+misconception; D-21 penerapan D-09 + D-19(ii); D-22 protokol T36; D-23 protokol T35; D-24 pelengkap audit (CV saja, setelah test dibuka). Isi lengkap di Lampiran B.
 
 
 ## 4. Data
@@ -644,7 +644,7 @@ Kurva coverage–risk test: `E5_coverage_risk_L1_test.csv`, `figures/E5_coverage
 
 *Sumber: `ml/reports/tables/E6_fairness.csv`*
 
-Versi CV: `E6_fairness_final_cv.csv`. Kode 0/3 Gender tidak dilaporkan terpisah (04 E6 meminta jika n ≥ 200; tidak dicek).
+Versi CV: `E6_fairness_final_cv.csv`. Gender kode 0 (n ≥ 200) dilaporkan terpisah di bagian "Pelengkap audit D-24" di bawah (CV saja); kode 3 n < 200.
 
 ### E7 — Efisiensi (Tingkat A, selesai; CV MAP fold 0)
 | model | ukuran_MB | map3_EN | map3_ID | latensi_p50_ms | latensi_p95_ms |
@@ -724,6 +724,94 @@ Versi CV: `E8_impact_final_cv.csv`.
 
 *Sumber: `ml/reports/tables/T36_retrieval.csv`*
 
+### Pelengkap audit D-24 (ditambahkan 19 Nov setelah laporan versi 1; **CV saja**, test tidak dibuka lagi)
+Empat butir spesifikasi yang terlewat, dihitung oleh `ml/scripts/gap_fill.py` (juga dipanggil `make l3`) dari file OOF CV yang
+sudah ada. Tidak ada model, ambang, atau angka lama yang berubah. Karena dihitung **setelah** test dibuka, angka ini tidak
+dipakai untuk keputusan apa pun (D-24). Log: `ml/runs/logs/gap_fill.log`.
+
+**(1) B0 framing (a), 03 §1** — skor = kuadran B0 terakhir siswa di KC yang sama sebelum t (ordinal P=3, L=2, T=1, M=0; dan
+biner {P, L} = 1), target = IsCorrect di t. Baris tanpa kuadran sebelumnya di KC tidak punya skor B0, jadi pembanding dihitung
+pada subset yang sama; varian semua baris (nilai kosong = 1,5) disertakan. DeLong berpasangan vs B0 ordinal.
+| model | metrik | nilai | ci_lo | ci_hi | n_baris | n_siswa | delong_vs_b0_ord_p | catatan |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| B0 (a) skor ordinal P=3,L=2,T=1,M=0 | auc | 0.5972 | 0.5931 | 0.6019 | 415300 | 3414 | — | CV 5 fold, baris dengan kuadran B0 sebelumnya di KC yang sama; CI bootstrap klaster siswa 1000x |
+| B0 (a) biner {P,L}=1 | auc | 0.5921 | 0.5881 | 0.5963 | 415300 | 3414 | 1.781e-71 | CV 5 fold, baris dengan kuadran B0 sebelumnya di KC yang sama; CI bootstrap klaster siswa 1000x |
+| B1b (a) LR | auc | 0.7579 | 0.7544 | 0.7615 | 415300 | 3414 | 0.0000 | CV 5 fold, baris dengan kuadran B0 sebelumnya di KC yang sama; CI bootstrap klaster siswa 1000x |
+| B2 LightGBM (a) | auc | 0.7998 | 0.7955 | 0.8042 | 415300 | 3414 | 0.0000 | CV 5 fold, baris dengan kuadran B0 sebelumnya di KC yang sama; CI bootstrap klaster siswa 1000x |
+| B0 (a) skor ordinal, semua baris (tanpa kuadran sebelumnya = 1,5) | auc | 0.5629 | 0.5597 | 0.5664 | 1107657 | 3934 | — | CV 5 fold, semua baris; CI bootstrap klaster siswa 1000x |
+| cakupan skor B0 (a) | porsi baris dengan kuadran sebelumnya | 0.3749 | — | — | 1107657 | 3934 | — | baris CV framing (a) |
+
+*Sumber: `ml/reports/tables/E1_b0_framing_a_cv.csv`*
+
+**(2) LAC biner L1 (butuh remediasi), 03 §3** — OOF CV CO-KT 5 seed, siswa kalibrasi 20% yang sama dengan `l3_eval`/`e6_e8`, temperature pada [1−p, p], α = 0,10.
+
+| kunci | nilai |
+| --- | --- |
+| source | runs/20261118-2202_cokt_kaggle/oof_b_ens5.parquet |
+| alpha | 0.1000 |
+| target_coverage | 0.9000 |
+| calibrator | temperature on [1-p, p] (calibration users) |
+| temperature | 0.9481 |
+| n_cal_rows | 192082 |
+| n_eval_rows | 720649 |
+| n_cal_users | 787 |
+| n_eval_users | 3147 |
+| lac_qhat | 0.6897 |
+| coverage | 0.9011 |
+| avg_set_size | 1.4374 |
+| singleton_share | 0.5626 |
+| both_classes_share | 0.4374 |
+| coverage_class0_no_remediation | 0.8982 |
+| coverage_class1_needs_remediation | 0.9040 |
+| singleton_accuracy | 0.8241 |
+| ece_before | 0.0184 |
+| ece_after | 0.0143 |
+| note | CV only (CO-KT CV OOF runs/20261118-2202_cokt_kaggle, 5 seeds, same file as l3_eval final_cv); test not used. Empty sets are filled with argmax (conformal.LAC). |
+
+*Sumber: `ml/reports/tables/E5_lac_binary_L1_cv.json`*
+
+Catatan: cakupan 0.9011 untuk target 0,90; 0.4374 baris mendapat himpunan berisi kedua kelas (= "tidak tahu"), jadi LAC biner jujur tetapi sering tidak informatif.
+
+**(3) Akurasi kepala opsi CO-KT (T24)** — ensemble 5 seed OOF CV, dibandingkan acak dan opsi terbanyak per soal dari fold latih (OOF). Baris "pengecoh" = hanya jawaban salah, argmax di antara 3 opsi salah.
+
+| model | metrik | nilai | ci_lo | ci_hi | n_baris | n_siswa | catatan |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| CO-KT kepala opsi berikutnya | akurasi top-1 opsi | 0.5652 | 0.5582 | 0.5721 | 1100165 | 3934 | CV 5 fold, ensemble 5 seed CO-KT (OOF CV); CI bootstrap klaster siswa 1000x |
+| CO-KT kepala opsi berikutnya | akurasi top-2 opsi | 0.7682 | 0.7637 | 0.7727 | 1100165 | 3934 | CV 5 fold, ensemble 5 seed CO-KT (OOF CV); CI bootstrap klaster siswa 1000x |
+| acuan: opsi terbanyak per soal (fold latih) | akurasi top-1 opsi | 0.5436 | 0.5365 | 0.5505 | 1100165 | 3934 | OOF per fold; soal tak dikenal -> kunci jawaban |
+| acuan: acak seragam | akurasi top-1 opsi (harapan) | 0.2500 | 0.2500 | 0.2500 | 1100165 | 3934 | 1/4 |
+| CO-KT kepala opsi berikutnya | akurasi pengecoh (baris jawaban salah, argmax di 3 opsi salah) | 0.4879 | 0.4843 | 0.4915 | 511238 | 3884 | CV 5 fold, ensemble 5 seed CO-KT (OOF CV); CI bootstrap klaster siswa 1000x |
+| acuan: pengecoh terbanyak per soal (fold latih) | akurasi pengecoh (baris jawaban salah) | 0.4675 | 0.4640 | 0.4711 | 511238 | 3884 | OOF per fold |
+| acuan: acak di 3 pengecoh | akurasi pengecoh (harapan) | 0.3333 | 0.3333 | 0.3333 | 511238 | 3884 | 1/3 |
+| CO-KT kepala opsi berikutnya | log loss opsi | 1.0054 | — | — | 1100165 | 3934 | CV 5 fold, ensemble 5 seed CO-KT (OOF CV); CI bootstrap klaster siswa 1000x |
+
+*Sumber: `ml/reports/tables/L1_cokt_option_cv.csv`*
+
+**(4) Gender kode 0 (tidak disebut), 04 E6** — pipeline identik dengan `e6_e8.py --tag final_cv` (skrip memeriksa bahwa nilai Gender 1 vs 2 tereproduksi persis sebelum menghitung). Kode 3: 5 siswa evaluasi CV (< 200) → tidak dilaporkan.
+
+| atribut | kelompok_a | kelompok_b | metrik | nilai_a | nilai_b | selisih_a_minus_b | ci_lo | ci_hi | ci_memuat_0 | n_siswa_a | n_siswa_b |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Gender | tidak disebut (0) | perempuan (1) | AUC butuh_remediasi | 0.8017 | 0.7986 | 0.0031 | -0.0080 | 0.0137 | True | 1199 | 969 |
+| Gender | tidak disebut (0) | perempuan (1) | ECE | 0.0166 | 0.0223 | -0.0057 | -0.0114 | 0.0003 | True | 1199 | 969 |
+| Gender | tidak disebut (0) | perempuan (1) | salah kelompok | 0.3364 | 0.3594 | -0.0229 | -0.0464 | 0.0009 | True | 1199 | 969 |
+| Gender | tidak disebut (0) | perempuan (1) | tingkat defer | 0.1949 | 0.2170 | -0.0222 | -0.0539 | 0.0087 | True | 1199 | 969 |
+| Gender | tidak disebut (0) | laki-laki (2) | AUC butuh_remediasi | 0.8017 | 0.8013 | 0.0004 | -0.0112 | 0.0118 | True | 1199 | 974 |
+| Gender | tidak disebut (0) | laki-laki (2) | ECE | 0.0166 | 0.0267 | -0.0101 | -0.0160 | -0.0042 | False | 1199 | 974 |
+| Gender | tidak disebut (0) | laki-laki (2) | salah kelompok | 0.3364 | 0.3371 | -0.0007 | -0.0267 | 0.0251 | True | 1199 | 974 |
+| Gender | tidak disebut (0) | laki-laki (2) | tingkat defer | 0.1949 | 0.1890 | 0.0059 | -0.0270 | 0.0379 | True | 1199 | 974 |
+
+*Sumber: `ml/reports/tables/E6_fairness_gender_codes_cv.csv`*
+
+| kunci | nilai |
+| --- | --- |
+| cv_users | {"0": 1488, "1": 1230, "2": 1210, "3": 6} |
+| test_users | {"0": 386, "1": 294, "2": 303, "3": 1} |
+| cv_eval_users_e6 | {"0": 1199, "1": 969, "2": 974, "3": 5} |
+| rule | 04 E6: codes 0/3 reported separately if n >= 200 (CV evaluation users). Code 3 below threshold -> count only. |
+| test_note | Test users counted from metadata only; no test predictions read (test opened once at T46). |
+
+*Sumber: `ml/reports/tables/E6_gender_counts.json`*
+
 ### E9, E10 — **belum dijalankan** (Tingkat B, butuh pilot sekolah).
 
 
@@ -755,6 +843,7 @@ tanpa refit); defer = 1 − max p ≥ 0,5254 (ambang dari siswa kalibrasi model 
 - **L1 (CV OOF):** ECE 0.0050 → 0.0037; cakupan 0.8903; ukuran 1.8667.
 - **L2 TF-IDF (CV):** ECE 0.0254 → 0.0096 (T = 1.2019); APS cakupan
   0.9504 (over-coverage vs 0,90), ukuran 1.8965.
+- **L1 LAC biner (CV, D-24):** cakupan 0.9011, ukuran himpunan 1.4374, singleton 0.5626 (`E5_lac_binary_L1_cv.json`; tidak ada angka test).
 - **Fairness:** tabel lengkap di §7 E6 (`E6_fairness.csv`). Semua selisih salah kelompok (Gender, PremiumPupil, kuartil) CI
   tidak memuat 0 di test. Aturan v1 juga timpang pada kelompok yang sama (baris "B0 aturan v1, pembanding").
 
@@ -816,8 +905,8 @@ tanpa refit); defer = 1 − max p ≥ 0,5254 (ambang dari siswa kalibrasi model 
 | 1 | Cabut token GitHub, reset password Neon (perbarui `DIRECT_URL`), ganti password akun seed demo/superadmin | 15 menit | Salman |
 | 2 | Cek rulebook: repo publik atau dibagikan; tanya panitia format dataset (M6) | 30 menit | Salman |
 | 3 | Kirim formulir panitia (M15/T54) + simpan bukti | 15 menit | Salman (Jum 27 Nov) |
-| 4 | Perbaiki catatan lisensi basi di `ml/data/manifest.json` | 5 menit | Claude Code |
-| 5 | Lengkapi kekurangan kecil: B0 framing (a), LAC biner, tabel akurasi opsi CO-KT, Gender kode 0/3 | 1–2 jam | Claude Code (hanya CV/pembacaan ulang; test tidak dibuka lagi) |
+| 4 | ~~Perbaiki catatan lisensi basi di `ml/data/manifest.json`~~ **selesai 19 Nov** | — | Claude Code |
+| 5 | ~~Lengkapi kekurangan kecil: B0 framing (a), LAC biner, tabel akurasi opsi CO-KT, Gender kode 0/3~~ **selesai 19 Nov** (D-24, §7 "Pelengkap audit"; CV saja) | — | Claude Code |
 | 6 | Hosting layanan ML (HF Spaces Docker, `RA_L2_MODEL=student`) + isi `ML_SERVICE_URL` | 2–3 jam | Claude Code + akun Salman |
 | 7 | Bahan final T80–T84 (naskah demo, slide, tanya jawab) | 1 hari | setelah 30 Nov |
 | 8 | Pilot T70–T75 (E9/E10) | minggu | butuh izin sekolah + persetujuan orang tua |
@@ -1024,6 +1113,17 @@ Tingkat B — menunggu pilot.
 ###### E10 — Dampak belajar
 Tingkat B — menunggu pilot.
 
+###### Pelengkap audit (D-24, CV saja; dihitung 19 Nov setelah test dibuka)
+Empat butir spesifikasi yang terlewat, dihitung oleh `scripts/gap_fill.py` dari OOF CV yang sudah ada. Tidak ada model,
+ambang, atau angka di atas yang berubah, dan angka ini tidak dipakai untuk keputusan apa pun.
+
+| Butir | Hasil (CV) | Sumber |
+| --- | --- | --- |
+| B0 framing (a), skor ordinal kuadran terakhir di KC (03 §1) | AUC 0,5972 [0,5931–0,6019] pada 415.300 baris (37,49% baris CV punya kuadran sebelumnya); di baris yang sama B1b 0,7579, LightGBM 0,7998 (DeLong p < 1e-300) | `tables/E1_b0_framing_a_cv.csv` |
+| LAC biner L1 butuh remediasi, α = 0,10 (03 §3) | cakupan 0,9011, ukuran himpunan 1,4374; 43,74% baris mendapat kedua kelas (tidak informatif) | `tables/E5_lac_binary_L1_cv.json` |
+| Akurasi kepala opsi CO-KT (T24) | top-1 0,5652 [0,5582–0,5721] vs opsi terbanyak per soal 0,5436 [0,5365–0,5506], acak 0,25; pengecoh pada jawaban salah 0,4879 vs 0,4675 | `tables/L1_cokt_option_cv.csv` |
+| Gender kode 0 (tidak disebut, 1.199 siswa evaluasi) vs 1 dan 2 (04 E6) | semua selisih salah kelompok/AUC/defer CI memuat 0; ECE kode 0 lebih rendah dari laki-laki (−0,0101 [−0,0160; −0,0042]). Kode 3: 5 siswa → tidak dilaporkan | `tables/E6_fairness_gender_codes_cv.csv`, `tables/E6_gender_counts.json` |
+
 ##### 4. Model terpilih per lapis
 | Lapis | Model produksi | Keputusan | Hiperparameter | Artefak |
 | --- | --- | --- | --- | --- |
@@ -1082,6 +1182,7 @@ Keputusan di bawah ini dikunci sebelum melihat hasil. Perubahan hanya boleh lewa
 | D-21 | 2026-11-19 | **Penerapan D-09 dan D-19 (ii) (bukan revisi).** (a) Titik operasi defer produksi dihitung pada siswa kalibrasi model CO-KT produksi (1.540 jendela, 630 siswa dengan label kuadran; tidak dipakai untuk training maupun early stopping): tidak ada titik grid yang menurunkan salah kelompok ≥ 25% dalam 30% → **fallback 20%**, ambang ragu 0,525. (Catatan: pada OOF CV, `l3_eval` final_cv menemukan 30% memenuhi aturan, sedangkan `e6_e8` final_cv tidak; nilainya di sekitar batas 25%. Yang dipakai adalah nilai dari model produksi.) (b) E4 (fold 0 validasi, input Indonesia terjemahan mesin): MAP@3 mDeBERTa 0,895 vs TF-IDF 0,766, selisih +0,129 [+0,121; +0,136], CI tidak memuat 0 → **L2 untuk input Indonesia = mDeBERTa-v3-base** (model fold 0); input Inggris tetap TF-IDF; TF-IDF juga fallback bila encoder tidak tersedia. | Sumber `ml/reports/tables/L3_production_params.json`, `ml/reports/tables/E4_crosslingual.csv` |
 | D-22 | 2026-11-19 | **Protokol T36 (Tingkat A, dikunci sebelum dijalankan).** Retrieval zero-shot untuk soal baru: intfloat/multilingual-e5-base (MIT), `query: <alasan>` vs `passage: <deskripsi miskonsepsi>` dari `map_misconception_dictionary.csv`, kandidat = label miskonsepsi soal itu saja (2–4). Baris evaluasi = semua baris kategori *_Misconception (tidak ada pelatihan, jadi setiap soal adalah "soal baru"). Metrik: MAP@3 dan akurasi top-1; pembanding: acak (nilai harapan eksak) dan "label terbanyak di soal itu" (acuan atas yang butuh data berlabel soal tersebut). Bahasa: EN↔EN dan ID (terjemahan mesin)↔ID. CI: bootstrap klaster soal (15), 1000×. Tidak memakai Eedi test. | Hasil dilaporkan apa adanya walau kalah dari pembanding |
 | D-23 | 2026-11-19 | **Protokol T35 (Tingkat A, dikunci sebelum dijalankan).** Student `microsoft/Multilingual-MiniLM-L12-H384` (MIT, tokenizer xlm-roberta-base) dilatih pada baris MAP fold_random ≠ 0 (teks Inggris) dengan loss 0,5·CE(label) + 0,5·KL(teacher, T = 2); teacher = logit OOF mDeBERTa (masking kandidat), 3 epoch, lr 5e-5, batch 32, max_len 192, seed 20261118, GPU Kaggle. Evaluasi fold 0 (baris yang sama dengan E4): MAP@3 EN dan ID (terjemahan mesin), dibandingkan dengan teacher fold 0 di `E4_crosslingual.csv`. Ekspor ONNX + kuantisasi dinamis int8 (onnxruntime). E7: ukuran (MB), latensi p50/p95 per alasan di CPU laptop (batch 1, 200 alasan), dan selisih MAP@3 FP32 vs int8. Tidak ada pemilihan model berdasarkan hasil ini. | Untuk mode offline (T68); dilaporkan apa adanya |
+| D-24 | 2026-11-19 | **Pelengkap audit (bukan revisi), dihitung setelah test dibuka di T46, hanya CV.** Empat butir spesifikasi yang terlewat dihitung dengan `ml/scripts/gap_fill.py` dari file OOF CV yang sudah ada, tanpa melatih, memilih, atau mengkalibrasi ulang model produksi: (1) B0 framing (a) 03 §1, skor = kuadran B0 terakhir siswa di KC yang sama sebelum t (ordinal P=3, L=2, T=1, M=0, dan biner {P, L}); baris tanpa kuadran sebelumnya tidak punya skor B0 → dilaporkan pada subset yang punya skor + varian semua baris (nilai kosong = 1,5); (2) LAC biner L1 03 §3 dengan siswa kalibrasi dan temperature yang sama seperti `e6_e8 --calib temperature`; (3) akurasi kepala opsi CO-KT (T24) dengan pembanding acak dan opsi terbanyak per soal dari fold latih; (4) Gender kode 0 (04 E6, n ≥ 200 di siswa evaluasi CV); kode 3 di bawah ambang → hanya dihitung jumlahnya. Untuk test hanya jumlah siswa per kode dari metadata; tidak ada prediksi test yang dibaca. Hasil tidak mengubah angka utama, model, atau ambang mana pun. | Menutup kekurangan yang diungkap di `LAPORAN_REVIEW.md` §3/§14; test tetap dibuka sekali |
 
 ##### Catatan verifikasi data (diisi Claude Code saat T10–T13)
 - [x] Nama dan kolom file Eedi sesuai 02_DATA_SPEC? **Ya.** Path di zip: `data/train_data/…`, `data/metadata/…`. Kolom answer_metadata: `AnswerId, DateAnswered, Confidence, GroupId, QuizId, SchemeOfWorkId` (kunci join AnswerId; tidak ada kolom UserId). 1.382.727 baris, 4.918 siswa, 948 soal, 57 KC terdalam. Tidak ada duplikat, tidak ada IsCorrect yang tidak konsisten, tidak ada percobaan ulang (attempt_no selalu 1). Confidence hanya {0,25,50,75,100} → CRI {0,1,3,4,5}.
@@ -1089,9 +1190,9 @@ Keputusan di bawah ini dikunci sebelum melihat hasil. Perubahan hanya boleh lewa
 - [x] Kolom MAP sesuai? **Ya**, persis `row_id, QuestionId, QuestionText, MC_Answer, StudentExplanation, Category, Misconception` (36.696 baris, 15 soal, 65 target, 35 label). Lisensi: **MIT** menurut kartu HF `kaggle-map/data` dan diskusi HF #2 (lihat `ml/data/raw/map/LICENSE_NOTE.md`). Tab Data Kaggle dicek Salman (M2): MIT, teks disalin ke LICENSE_NOTE.md.
 - [x] Persentase confidence kosong di Eedi T3&4: **74,95% baris** (median per siswa 90,53%; 12,89% siswa tanpa confidence sama sekali). Sumber: `ml/reports/tables/data_card_eedi.md`.
 
-### C. File di `ml/reports/tables/` (50) dan `ml/reports/figures/` (22)
+### C. File di `ml/reports/tables/` (55) dan `ml/reports/figures/` (22)
 
-**tables:** `.gitkeep`, `E0_eda_numbers.json`, `E0_self_calibration.csv`, `E1_b0_cv.csv`, `E1_b0_cv_confusion.csv`, `E1_b0_test.csv`, `E1_cokt_test_per_class.csv`, `E1_confusion_cokt_test.csv`, `E1_confusion_test.csv`, `E2_ablation_cv.csv`, `E2_ablation_increments_cv.csv`, `E2_cokt_ablation_cv.csv`, `E3_queue_cv.csv`, `E3_true_misconception.csv`, `E4_crosslingual.csv`, `E4_crosslingual_mdeberta.csv`, `E4_crosslingual_tfidf.csv`, `E5_coverage_risk_L1_dev_b1.csv`, `E5_coverage_risk_L1_final_cv.csv`, `E5_coverage_risk_L1_test.csv`, `E5_l3_dev_b1.json`, `E5_l3_final_cv.json`, `E5_test.json`, `E6_fairness.csv`, `E6_fairness_dev_b1.csv`, `E6_fairness_final_cv.csv`, `E7_efficiency.csv`, `E7_latency_service_cpu.json`, `E8_impact.csv`, `E8_impact_dev_b1.csv`, `E8_impact_final_cv.csv`, `L1_b0_b1_cv.csv`, `L1_cokt_cv.csv`, `L1_cv_summary.csv`, `L1_lgbm_cv.csv`, `L1_model_selection.csv`, `L1_test.csv`, `L1_test_pairwise.csv`, `L2_b0_tfidf_cv.csv`, `L2_cv.csv`, `L3_production_params.json`, `T36_retrieval.csv`, `T36_retrieval_per_question.csv`, `T68_onnx_parity.json`, `compute_summary.csv`, `data_card_eedi.md`, `data_card_map.md`, `map_misconception_dictionary.csv`, `robustness_temporal_test.csv`, `translation_qa.csv`
+**tables:** `.gitkeep`, `E0_eda_numbers.json`, `E0_self_calibration.csv`, `E1_b0_cv.csv`, `E1_b0_cv_confusion.csv`, `E1_b0_framing_a_cv.csv`, `E1_b0_test.csv`, `E1_cokt_test_per_class.csv`, `E1_confusion_cokt_test.csv`, `E1_confusion_test.csv`, `E2_ablation_cv.csv`, `E2_ablation_increments_cv.csv`, `E2_cokt_ablation_cv.csv`, `E3_queue_cv.csv`, `E3_true_misconception.csv`, `E4_crosslingual.csv`, `E4_crosslingual_mdeberta.csv`, `E4_crosslingual_tfidf.csv`, `E5_coverage_risk_L1_dev_b1.csv`, `E5_coverage_risk_L1_final_cv.csv`, `E5_coverage_risk_L1_test.csv`, `E5_l3_dev_b1.json`, `E5_l3_final_cv.json`, `E5_lac_binary_L1_cv.json`, `E5_test.json`, `E6_fairness.csv`, `E6_fairness_dev_b1.csv`, `E6_fairness_final_cv.csv`, `E6_fairness_gender_codes_cv.csv`, `E6_gender_counts.json`, `E7_efficiency.csv`, `E7_latency_service_cpu.json`, `E8_impact.csv`, `E8_impact_dev_b1.csv`, `E8_impact_final_cv.csv`, `L1_b0_b1_cv.csv`, `L1_cokt_cv.csv`, `L1_cokt_option_cv.csv`, `L1_cv_summary.csv`, `L1_lgbm_cv.csv`, `L1_model_selection.csv`, `L1_test.csv`, `L1_test_pairwise.csv`, `L2_b0_tfidf_cv.csv`, `L2_cv.csv`, `L3_production_params.json`, `T36_retrieval.csv`, `T36_retrieval_per_question.csv`, `T68_onnx_parity.json`, `compute_summary.csv`, `data_card_eedi.md`, `data_card_map.md`, `map_misconception_dictionary.csv`, `robustness_temporal_test.csv`, `translation_qa.csv`
 
 **figures:** `.gitkeep`, `E0_confidence_distribution.png`, `E0_map_categories.png`, `E0_map_explanation_length.png`, `E0_missingness.png`, `E0_self_calibration.png`, `E0_sequence_length.png`, `E1_confusion_b0.png`, `E1_confusion_b0_cv.png`, `E1_confusion_cokt.png`, `E2_ablation.png`, `E3_pr_curve.png`, `E5_coverage_risk.png`, `E5_coverage_risk_dev_b1.png`, `E5_coverage_risk_final_cv.png`, `E5_reliability_L1.png`, `E5_reliability_L1_dev_b1.png`, `E5_reliability_L1_final_cv.png`, `E5_reliability_L2_dev_b1.png`, `E5_reliability_L2_final_cv.png`, `L1_shap_beeswarm.png`, `arsitektur.png`
 
