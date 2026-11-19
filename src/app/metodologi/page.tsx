@@ -5,6 +5,8 @@ export const metadata = { title: "Metodologi Mesin AI — RemediAide 2.0" };
 // All numbers below come from ml/reports/RESULTS.md (Eedi test set, opened once; MAP numbers are cross-validation).
 const rows = [
   ["Salah kelompok (uji Eedi): aturan CRI v1 → RemediAide 2.0", "45,1% → 34,7% (selisih −10,3 poin, CI −10,9 s.d. −9,7)"],
+  ["Baseline regresi logistik sederhana (B1b) → RemediAide 2.0", "40,1% → 34,7% (selisih −5,3 poin, CI −5,9 s.d. −4,8)"],
+  ["Recall Miskonsepsi per kasus (uji Eedi): aturan v1 → RemediAide 2.0", "40,0% → 36,8% (lebih rendah; keunggulan berasal dari kelas Paham dan Tidak paham)"],
   ["Kasus diserahkan ke guru (aturan v1 tidak pernah menyerahkan)", "20,6% → sisa salah kelompok 28,3% (aturan v1 pada kasus yang sama: 39,2%)"],
   ["Target awal: defer menurunkan salah kelompok ≥ 25%", "tidak tercapai (turun 18,5%); dipakai cadangan 20% sesuai aturan yang dikunci"],
   ["Cakupan himpunan prediksi, target 90% (aturan v1: tidak ada)", "90,0%; rata-rata 1,90 dari 4 kuadran"],
