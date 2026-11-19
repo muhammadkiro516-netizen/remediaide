@@ -6,11 +6,15 @@
  *
  * Yang DIHAPUS oleh executeAutoWipe():
  *  - Seluruh baris Response terkait sessionId (jawaban, waktu berpikir,
- *    CRI mentah, integrity index, perItemStatus)
+ *    CRI mentah, integrity index, perItemStatus, dan teks alasan siswa
+ *    `explanation` — kolom di tabel yang sama, jadi ikut terhapus)
  *
  * Yang DIPERTAHANKAN setelah wipe:
  *  - Student.anonymousLabel (identitas anonim persisten)
  *  - ConceptDiagnosis (ringkasan status akhir non-granular untuk pelaporan)
+ *  - MlDiagnosis (ringkasan ML non-granular; TIDAK menyimpan teks alasan siswa —
+ *    `reasons` hanya kalimat buatan sistem). Ekspor riset wajib dilakukan
+ *    SEBELUM auto-wipe, karena teks alasan hilang setelahnya.
  *  - RemedialGroup (kelompok & preskripsi untuk laporan akreditasi)
  *  - AutoWipeLog (metadata event — TIDAK menyimpan data yang dihapus)
  *

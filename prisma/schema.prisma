@@ -29,6 +29,7 @@ model School {
   tests                 Test[]
   exitTicketTokens      ExitTicketToken[]
   exitTicketSubmissions ExitTicketSubmission[]
+
   @@map("schools")
 }
 
@@ -44,6 +45,7 @@ model Teacher {
   classes      Class[]
   tests        Test[]
   autoWipeLogs AutoWipeLog[]
+
   @@map("teachers")
 }
 
@@ -59,6 +61,7 @@ model Class {
   teacher      Teacher   @relation(fields: [teacherId], references: [id])
   students     Student[]
   tests        Test[]
+
   @@map("classes")
 }
 
@@ -72,6 +75,8 @@ model Student {
   school         School             @relation(fields: [schoolId], references: [id])
   responses      Response[]
   diagnoses      ConceptDiagnosis[]
+  mlDiagnoses    MlDiagnosis[]
+
   @@map("students")
 }
 
@@ -88,6 +93,7 @@ model Test {
   teacher         Teacher      @relation(fields: [teacherId], references: [id])
   questions       Question[]
   sessions        SessionPin[]
+
   @@map("tests")
 }
 
@@ -100,10 +106,15 @@ model Question {
   variableDefinitions Json               @map("variable_definitions")
   constraints         Json
   itemOrder           Int                @map("item_order")
+  // ML integration (RemediAide 2.0): ask for a one-sentence explanation; MAP question id for the pilot instrument
+  requireExplanation  Boolean            @default(false) @map("require_explanation")
+  mapQuestionId       Int?               @map("map_question_id")
   createdAt           DateTime           @default(now()) @map("created_at")
   test                Test               @relation(fields: [testId], references: [id])
   variants            ItemVariant[]
   diagnoses           ConceptDiagnosis[]
+  mlDiagnoses         MlDiagnosis[]
+
   @@map("questions")
 }
 
@@ -121,6 +132,7 @@ model ItemVariant {
   createdAt         DateTime          @default(now()) @map("created_at")
   question          Question          @relation(fields: [questionId], references: [id])
   responses         Response[]
+
   @@map("item_variants")
 }
 
@@ -133,6 +145,8 @@ model SessionPin {
   startedAt          DateTime?          @map("started_at")
   closedAt           DateTime?          @map("closed_at")
   pinFallbackEnabled Boolean            @default(false) @map("pin_fallback_enabled")
+  // research export allowed only when true (parent consent collected; UU PDP Pasal 25)
+  researchConsent    Boolean            @default(false) @map("research_consent")
   createdAt          DateTime           @default(now()) @map("created_at")
   test               Test               @relation(fields: [testId], references: [id])
   responses          Response[]
@@ -140,6 +154,8 @@ model SessionPin {
   remedialGroups     RemedialGroup[]
   autoWipeLog        AutoWipeLog?
   exitTicketTokens   ExitTicketToken[]
+  mlDiagnoses        MlDiagnosis[]
+
   @@map("session_pins")
 }
 
@@ -155,10 +171,13 @@ model Response {
   integrityIndex   Decimal       @map("integrity_index") @db.Decimal(4, 3)
   isBelowThreshold Boolean       @default(false) @map("is_below_threshold")
   perItemStatus    PerItemStatus @map("per_item_status")
+  // optional one-sentence explanation (max 280 chars, validated in the API); wiped with the row by auto-wipe
+  explanation      String?       @map("explanation")
   submittedAt      DateTime      @default(now()) @map("submitted_at")
   session          SessionPin    @relation(fields: [sessionPinId], references: [id])
   student          Student       @relation(fields: [studentId], references: [id])
   itemVariant      ItemVariant   @relation(fields: [itemVariantId], references: [id])
+
   @@unique([sessionPinId, studentId, itemVariantId])
   @@map("responses")
 }
@@ -178,20 +197,22 @@ model ConceptDiagnosis {
   session            SessionPin  @relation(fields: [sessionPinId], references: [id])
   student            Student     @relation(fields: [studentId], references: [id])
   question           Question    @relation(fields: [questionId], references: [id])
+
   @@unique([sessionPinId, studentId, questionId])
   @@map("concept_diagnoses")
 }
 
 model RemedialGroup {
-  id                String            @id @default(uuid())
-  sessionPinId      String            @map("session_pin_id")
-  schoolId          String            @map("school_id")
-  cognitiveStatus   FinalStatus       @map("cognitive_status")
-  memberLabels      Json              @map("member_labels")
-  prescription      String
-  createdAt         DateTime          @default(now()) @map("created_at")
-  session           SessionPin        @relation(fields: [sessionPinId], references: [id])
-  exitTicketTokens  ExitTicketToken[]
+  id               String            @id @default(uuid())
+  sessionPinId     String            @map("session_pin_id")
+  schoolId         String            @map("school_id")
+  cognitiveStatus  FinalStatus       @map("cognitive_status")
+  memberLabels     Json              @map("member_labels")
+  prescription     String
+  createdAt        DateTime          @default(now()) @map("created_at")
+  session          SessionPin        @relation(fields: [sessionPinId], references: [id])
+  exitTicketTokens ExitTicketToken[]
+
   @@map("remedial_groups")
 }
 
@@ -203,6 +224,7 @@ model CalibrationConfig {
   minResponsesForValidated   Int      @default(100) @map("min_responses_for_validated")
   maxStdDevForValidated      Decimal  @default(0.15) @map("max_std_dev_for_validated") @db.Decimal(4, 3)
   updatedAt                  DateTime @updatedAt @map("updated_at")
+
   @@map("calibration_configs")
 }
 
@@ -217,6 +239,7 @@ model AutoWipeLog {
   executedAt     DateTime   @default(now()) @map("executed_at")
   session        SessionPin @relation(fields: [sessionPinId], references: [id])
   confirmedBy    Teacher    @relation(fields: [confirmedById], references: [id])
+
   @@map("auto_wipe_logs")
 }
 
@@ -268,34 +291,82 @@ enum ExitTicketStatus {
 }
 
 model ExitTicketToken {
-  id              String               @id @default(uuid())
-  token           String               @unique
-  sessionPinId    String               @map("session_pin_id")
-  remedialGroupId String?              @map("remedial_group_id")
-  schoolId        String               @map("school_id")
-  status          ExitTicketStatus     @default(UNUSED)
-  createdAt       DateTime             @default(now()) @map("created_at")
-  usedAt          DateTime?            @map("used_at")
+  id              String           @id @default(uuid())
+  token           String           @unique
+  sessionPinId    String           @map("session_pin_id")
+  remedialGroupId String?          @map("remedial_group_id")
+  schoolId        String           @map("school_id")
+  status          ExitTicketStatus @default(UNUSED)
+  createdAt       DateTime         @default(now()) @map("created_at")
+  usedAt          DateTime?        @map("used_at")
 
-  session         SessionPin           @relation(fields: [sessionPinId], references: [id])
-  remedialGroup   RemedialGroup?       @relation(fields: [remedialGroupId], references: [id])
-  school          School               @relation(fields: [schoolId], references: [id])
-  submission      ExitTicketSubmission?
+  session       SessionPin            @relation(fields: [sessionPinId], references: [id])
+  remedialGroup RemedialGroup?        @relation(fields: [remedialGroupId], references: [id])
+  school        School                @relation(fields: [schoolId], references: [id])
+  submission    ExitTicketSubmission?
 
   @@index([sessionPinId])
   @@map("exit_ticket_tokens")
 }
 
 model ExitTicketSubmission {
-  id                String          @id @default(uuid())
-  exitTicketTokenId String          @unique @map("exit_ticket_token_id")
-  reflectionText    String          @map("reflection_text") @db.VarChar(1000)
-  confidenceScore   Int             @map("confidence_score")
-  submittedAt       DateTime        @default(now()) @map("submitted_at")
-  schoolId          String          @map("school_id")
+  id                String   @id @default(uuid())
+  exitTicketTokenId String   @unique @map("exit_ticket_token_id")
+  reflectionText    String   @map("reflection_text") @db.VarChar(1000)
+  confidenceScore   Int      @map("confidence_score")
+  submittedAt       DateTime @default(now()) @map("submitted_at")
+  schoolId          String   @map("school_id")
 
-  exitTicketToken   ExitTicketToken @relation(fields: [exitTicketTokenId], references: [id])
-  school            School          @relation(fields: [schoolId], references: [id])
+  exitTicketToken ExitTicketToken @relation(fields: [exitTicketTokenId], references: [id])
+  school          School          @relation(fields: [schoolId], references: [id])
 
   @@map("exit_ticket_submissions")
+}
+
+// ============================================================================
+// ML integration (RemediAide 2.0, docs/cac/05_INTEGRATION_SPEC.md §2)
+// ============================================================================
+
+// One row per (session, student, question); questionId = null is the per-student summary.
+// Like ConceptDiagnosis this is a non-granular summary kept for reports: it never stores student explanation text
+// (`reasons` holds system-generated sentences only).
+model MlDiagnosis {
+  id                  String       @id @default(uuid())
+  sessionPinId        String       @map("session_pin_id")
+  studentId           String       @map("student_id")
+  questionId          String?      @map("question_id")
+  schoolId            String       @map("school_id")
+  quadrantProbs       Json         @map("quadrant_probs")
+  quadrant            String
+  masteryProb         Float        @map("mastery_prob")
+  misconceptionLabel  String?      @map("misconception_label")
+  misconceptionProb   Float?       @map("misconception_prob")
+  hiddenMisconception Boolean      @default(false) @map("hidden_misconception")
+  predictionSet       Json         @map("prediction_set")
+  deferred            Boolean      @default(false)
+  reasons             Json
+  ruleStatus          String       @map("rule_status")
+  modelVersion        String       @map("model_version")
+  createdAt           DateTime     @default(now()) @map("created_at")
+  session             SessionPin   @relation(fields: [sessionPinId], references: [id])
+  student             Student      @relation(fields: [studentId], references: [id])
+  question            Question?    @relation(fields: [questionId], references: [id])
+  feedback            MlFeedback[]
+
+  @@unique([sessionPinId, studentId, questionId])
+  @@map("ml_diagnoses")
+}
+
+// Teacher corrections = new gold labels for Layer 3 stacking (pilot).
+model MlFeedback {
+  id            String      @id @default(uuid())
+  mlDiagnosisId String      @map("ml_diagnosis_id")
+  schoolId      String      @map("school_id")
+  teacherId     String      @map("teacher_id")
+  action        String // ACCEPT | CHANGE_QUADRANT | CHANGE_MISCONCEPTION | NOT_SURE
+  newValue      String?     @map("new_value")
+  createdAt     DateTime    @default(now()) @map("created_at")
+  diagnosis     MlDiagnosis @relation(fields: [mlDiagnosisId], references: [id])
+
+  @@map("ml_feedback")
 }

@@ -37,7 +37,7 @@ yarn-error.log*
 next-env.d.ts
 
 # prisma
-prisma/migrations/
+# prisma/migrations/ is committed since RemediAide 2.0 (init + ml_integration, generated with prisma migrate diff)
 
 # macOS / zip artifacts
 __MACOSX/
