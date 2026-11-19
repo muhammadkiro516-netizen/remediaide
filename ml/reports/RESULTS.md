@@ -5,6 +5,10 @@
 > turun **10,3 poin** [9,7–10,9], atau **22,9% relatif** (aproksimasi 21,6–24,2%). Model lalu menyerahkan **20,6%**
 > kasus paling meragukan ke guru. Pada **79,4%** kasus sisanya, salah kelompok **28,3%**, sedangkan aturan v1 pada
 > kasus yang sama **39,2%**.
+> Terhadap baseline sederhana terkuat (regresi logistik B1b, **40,1%** [38,0–42,2]), RemediAide 2.0 tetap lebih baik
+> **5,3 poin** [4,8–5,9]. Aturan v1 (45,1%) bahkan lebih buruk dari baseline B1a yang hanya memakai kesulitan soal
+> (**42,9%** [40,3–45,8]; tanpa uji berpasangan, CI tumpang tindih), walaupun B1a hampir selalu menebak *Paham*
+> (macro-F1 0,182 vs aturan v1 0,392).
 > Sumber: `tables/headline.json` (diturunkan dari `tables/E8_impact.csv` dan `tables/L1_test.csv`; CI relatif adalah
 > aproksimasi CI selisih absolut dibagi titik B0, bukan bootstrap rasio). Gambar: `figures/E8_v1_vs_ml.png`.
 
@@ -64,6 +68,25 @@ Sumber: `tables/data_card_eedi.md`, `tables/data_card_map.md`, `tables/E0_eda_nu
 | "Paham" menurut B0 yang belum tuntas berikutnya | 0,282 [0,270–0,294] | **0,278 [0,257–0,300]** |
 | "Miskonsepsi" menurut B0 yang tuntas berikutnya | 0,507 [0,495–0,519] | 0,524 [0,504–0,544] |
 | Error biner `butuh_remediasi` | — | 0,367 [0,359–0,376] |
+
+- **Recall per kuadran (test; `tables/E1_recall_per_class_test.csv`, `tables/E1_correct_by_class_test.csv`):**
+
+| Kuadran masa depan (test) | n | Aturan v1 (B0) | CO-KT | Tambahan benar CO-KT − B0 |
+| --- | --- | --- | --- | --- |
+| Paham | 33.682 | 0,713 | **0,886** | +5.815 |
+| Tebakan beruntung | 3.701 | **0,141** | 0,050 | −337 |
+| Miskonsepsi | 15.440 | **0,400** | 0,368 | −494 |
+| Tidak paham | 6.140 | 0,274 | **0,452** | +1.094 |
+
+  Recall Miskonsepsi CO-KT 0,368 < aturan v1 0,400. Penurunan salah kelompok terutama berasal dari kelas Paham (+5.815
+  kasus benar) dan Tidak paham (+1.094). Versi CV untuk keempat model (D-26, pasca-segel; `tables/E1_recall_per_class_cv.csv`):
+
+| Recall per kuadran (CV, baris E1 yang sama; pasca-segel, D-26) | Aturan v1 (B0) | B1b | LightGBM | CO-KT |
+| --- | --- | --- | --- | --- |
+| Paham | 0,707 | 0,882 | 0,861 | 0,858 |
+| Tebakan beruntung | 0,171 | 0,026 | 0,091 | 0,091 |
+| Miskonsepsi | 0,423 [0,413–0,432] | 0,238 | 0,410 | 0,445 [0,426–0,462] |
+| Tidak paham | 0,302 | 0,385 | 0,449 | 0,478 |
 
 - **Interpretasi:** hampir satu dari dua kasus dikelompokkan berbeda dari kondisi siswa tiga soal berikutnya. Lebih dari
   seperempat siswa yang dinyatakan "Paham" ternyata belum tuntas, sehingga tidak mendapat remediasi.
@@ -201,6 +224,34 @@ Tingkat B — menunggu pilot.
 
 ### E10 — Dampak belajar
 Tingkat B — menunggu pilot.
+
+### Mitigasi miskonsepsi (pasca-segel, CV, belum diuji di test; D-26)
+`scripts/postseal_cv.py`. OOF CV CO-KT; aturan dipasang di 20% siswa kalibrasi, dinilai di 80% siswa evaluasi (2.443 siswa,
+171.835 kasus). Angka utama dan model produksi tidak berubah.
+
+(a) **Antrean defer 20%** (`reports/tables/E5_postseal_defer_misconception_cv.json`). Dari 46.035 kasus *Miskonsepsi* masa
+depan, CO-KT melewatkan 55,7%. **24,8% dari kasus yang terlewat itu tertangkap antrean defer**, jadi 58,1% kasus Miskonsepsi
+masa depan diprediksi benar atau diserahkan ke guru, dibanding recall aturan v1 0,420 pada kasus yang sama. Kasus yang
+diserahkan baru benar-benar tertangkap bila guru menilainya benar; akurasi guru belum diukur (E9).
+
+(b) **Mode prioritas miskonsepsi** (`reports/tables/E8_misconception_priority_cv.csv`, kurva di
+`E8_misconception_priority_grid_cv.csv`). Prediksi = argmax(p · w) dengan bobot w_M untuk kelas Miskonsepsi. Aturan yang
+dikunci sebelum dihitung: w_M terkecil di {1,0; 1,1; …; 3,0} yang membuat recall Miskonsepsi di siswa kalibrasi ≥ recall
+aturan v1. **Hasilnya w_M = 1,0**, karena di CV recall CO-KT sudah lebih tinggi dari aturan v1. Mode ini karena itu identik
+dengan model produksi:
+
+| Siswa evaluasi CV | Recall Miskonsepsi | Macro-F1 | Salah kelompok |
+| --- | --- | --- | --- |
+| Aturan v1 (B0) | 0,420 [0,410–0,431] | 0,413 [0,404–0,422] | 0,454 [0,443–0,465] |
+| CO-KT, mode prioritas (w_M = 1,0) = produksi | 0,443 [0,423–0,463] | 0,482 [0,470–0,494] | 0,351 [0,341–0,362] |
+| Selisih terhadap B0 | +0,023 [+0,011; +0,034] | +0,069 [+0,063; +0,074] | −0,103 [−0,106; −0,099] |
+
+Kurva deskriptif di siswa evaluasi (bukan hasil aturan, tidak dipakai untuk memilih): w_M = 1,5 memberi recall
+Miskonsepsi 0,612, macro-F1 0,484, dan salah kelompok 0,362; w_M = 2,0 memberi 0,713, 0,471, dan 0,383. Semua titik ini
+masih di bawah salah kelompok aturan v1. Jadi menaikkan bobot Miskonsepsi adalah **opsi produk** yang menukar sedikit
+salah kelompok dengan jauh lebih banyak miskonsepsi tertangkap. Pilihan w_M untuk produk harus dikunci lewat entri DECISIONS
+baru dan diuji di data baru (misalnya pilot), bukan di test ini. Pelajaran jujurnya: aturan D-26 disusun untuk menutup
+kesenjangan yang terlihat di test, tetapi kesenjangan itu tidak ada di CV, sehingga aturan tersebut tidak mengubah apa pun.
 
 ### Pembingkaian Lapis 2: kenapa TF-IDF menang di bahasa Inggris (CV MAP)
 `scripts/story_evidence.py --only l2gap`; sumber `tables/L2_split_gap_cv.csv`, `tables/L2_overlap_cv.csv`.

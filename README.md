@@ -8,6 +8,10 @@ ditambah mesin diagnosis **3 lapis ML + 1 pengaman**, dievaluasi pada test yang 
 > turun **10,3 poin** [9,7–10,9], atau **22,9% relatif** (aproksimasi 21,6–24,2%). Model lalu menyerahkan **20,6%**
 > kasus paling meragukan ke guru. Pada **79,4%** kasus sisanya, salah kelompok **28,3%**, sedangkan aturan v1 pada
 > kasus yang sama **39,2%**.
+> Terhadap baseline sederhana terkuat (regresi logistik B1b, **40,1%** [38,0–42,2]), RemediAide 2.0 tetap lebih baik
+> **5,3 poin** [4,8–5,9]. Aturan v1 (45,1%) bahkan lebih buruk dari baseline B1a yang hanya memakai kesulitan soal
+> (**42,9%** [40,3–45,8]; tanpa uji berpasangan, CI tumpang tindih), walaupun B1a hampir selalu menebak *Paham*
+> (macro-F1 0,182 vs aturan v1 0,392).
 > Sumber: [`ml/reports/tables/headline.json`](ml/reports/tables/headline.json).
 
 ![Aturan v1 vs ML pada siswa test yang sama](ml/reports/figures/E8_v1_vs_ml.png)
@@ -21,6 +25,19 @@ ditambah mesin diagnosis **3 lapis ML + 1 pengaman**, dievaluasi pada test yang 
 | [`docs/cac/REVIEW_INDEX.md`](docs/cac/REVIEW_INDEX.md) | daftar tautan semua bukti |
 | [`docs/cac/DECISIONS.md`](docs/cac/DECISIONS.md) | keputusan yang dikunci sebelum hasil dilihat (D-01 s.d. D-24) |
 | https://remediaide.vercel.app | aplikasi web (Mode AI di branch `feat/ml-integration` = `main`) |
+
+**Tidak semua kuadran membaik.** Recall per kuadran di test (dari confusion matrix tersimpan;
+[`ml/reports/tables/E1_recall_per_class_test.csv`](ml/reports/tables/E1_recall_per_class_test.csv)):
+
+| Kuadran masa depan (test) | n | Aturan v1 (B0) | CO-KT | Tambahan benar CO-KT − B0 |
+| --- | --- | --- | --- | --- |
+| Paham | 33.682 | 0,713 | **0,886** | +5.815 |
+| Tebakan beruntung | 3.701 | **0,141** | 0,050 | −337 |
+| Miskonsepsi | 15.440 | **0,400** | 0,368 | −494 |
+| Tidak paham | 6.140 | 0,274 | **0,452** | +1.094 |
+
+Recall Miskonsepsi CO-KT (0,368) lebih rendah dari aturan v1 (0,400); turunnya salah kelompok terutama berasal dari kelas
+Paham dan Tidak paham. B1b dan LightGBM dibandingkan per kuadran di CV ([`ml/REPORT.md` §4.2](ml/REPORT.md#42-e1--aturan-v1-salah-mengelompokkan-hampir-separuh-kasus-test)).
 
 **Yang jujur kami akui sejak awal:** label "kuadran masa depan" adalah proxy, bukan label guru; alasan berbahasa
 Indonesia diuji dengan terjemahan mesin; manfaat defer (turun 18,5%) di bawah target awal 25%; kesenjangan error untuk

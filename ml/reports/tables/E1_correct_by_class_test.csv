@@ -1,0 +1,5 @@
+kuadran_masa_depan,benar_b0,benar_cokt,tambahan_benar_cokt_minus_b0,porsi_dari_total_tambahan,catatan
+Paham,24015,29830,5815,0.9567291872326423,"test; dihitung dari confusion matrix tersimpan (D-26), tanpa inferensi baru"
+Tebakan beruntung,522,185,-337,-0.055445870352089505,"test; dihitung dari confusion matrix tersimpan (D-26), tanpa inferensi baru"
+Miskonsepsi,6180,5686,-494,-0.08127673576834485,"test; dihitung dari confusion matrix tersimpan (D-26), tanpa inferensi baru"
+Tidak paham,1682,2776,1094,0.17999341888779205,"test; dihitung dari confusion matrix tersimpan (D-26), tanpa inferensi baru"

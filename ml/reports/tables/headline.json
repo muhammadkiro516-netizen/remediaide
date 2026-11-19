@@ -42,5 +42,30 @@
   "kept_rel_reduction_vs_ml_all": 0.18514226520154609,
   "errors_caught_by_defer": 0.3526798789417163,
   "teacher_reviews_per_class_32x15": 98.7,
-  "kept_ci_note": "E8_impact.csv tidak memuat CI untuk salah kelompok kasus yang tidak diserahkan"
+  "kept_ci_note": "E8_impact.csv tidak memuat CI untuk salah kelompok kasus yang tidak diserahkan",
+  "b1b_misgroup": 0.40064107999932164,
+  "b1b_misgroup_ci": [
+    0.37957125738843683,
+    0.4219688150517209
+  ],
+  "cokt_minus_b1b": -0.053202856028356726,
+  "cokt_minus_b1b_ci": [
+    -0.05860471615661095,
+    -0.04794698355064453
+  ],
+  "cokt_minus_b1b_points": -5.320285602835673,
+  "cokt_minus_b1b_points_ci": [
+    -5.860471615661095,
+    -4.794698355064453
+  ],
+  "cokt_minus_b1b_p_mcnemar_holm": 8.211089075407793e-204,
+  "b1a_misgroup": 0.42876040907009483,
+  "b1a_misgroup_ci": [
+    0.40252555228823056,
+    0.4577131479371643
+  ],
+  "b0_minus_b1a": 0.021759408442582617,
+  "b1a_macro_f1": 0.18177991256948564,
+  "b0_macro_f1": 0.39165256016375977,
+  "b0_vs_b1a_note": "tidak ada uji berpasangan B0 vs B1a di L1_test_pairwise.csv; CI masing-masing tumpang tindih"
 }
