@@ -112,6 +112,21 @@ function StudentCard({ s }: { s: MlStudentView }) {
   );
 }
 
+async function downloadLkpd(sessionId: string, misconception: string) {
+  const res = await fetch(`/api/sessions/${sessionId}/lkpd-ml`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ misconception }),
+  });
+  if (!res.ok) return;
+  const url = URL.createObjectURL(await res.blob());
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `LKPD-AI-${misconception.slice(0, 30)}.pdf`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
 export default function MlModePanel({ sessionId }: { sessionId: string }) {
   const [view, setView] = useState<MlView | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -150,6 +165,13 @@ export default function MlModePanel({ sessionId }: { sessionId: string }) {
               <div key={g.misconception} className="rounded-lg border border-red-200 bg-red-50 p-3">
                 <div className="text-sm font-semibold text-red-900">{g.misconception}</div>
                 <div className="mt-1 text-xs text-red-800">{g.members.join(', ')}</div>
+                <button
+                  type="button"
+                  onClick={() => downloadLkpd(sessionId, g.misconception)}
+                  className="mt-2 rounded border border-red-300 bg-white px-2 py-1 text-xs font-semibold text-red-800 hover:bg-red-100"
+                >
+                  ⬇ Unduh LKPD
+                </button>
               </div>
             ))}
           </div>

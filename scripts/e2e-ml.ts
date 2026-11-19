@@ -13,8 +13,8 @@ async function ensureResponses() {
   const students = await prisma.student.findMany({ where: { classId: pin.test.classId } });
   const keys = ['A', 'B', 'C', 'D'];
   let n = 0;
-  for (const [i, st] of students.entries()) {
-    for (const [j, q] of pin.test.questions.entries()) {
+  for (const [i, st] of Array.from(students.entries())) {
+    for (const [j, q] of Array.from(pin.test.questions.entries())) {
       const v = q.variants[0];
       if (!v) continue;
       const correct = (i + j) % 3 !== 0;
