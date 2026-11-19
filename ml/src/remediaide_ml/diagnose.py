@@ -98,7 +98,9 @@ def diagnose(payload: dict[str, Any], bundle: Bundle) -> dict[str, Any]:
     f["kc_diff_oof"] = bundle.kc_diff_default
     f["cur_option_share_oof"] = 0.0
     p1 = bundle.l1.predict_quadrant(f)
-    reasons = bundle.l1.explain(f)
+    # reasons explain each student's latest state (last answered row); SHAP on every row is too slow on CPU
+    last = f.groupby("UserId", sort=False).tail(1).index
+    reasons = dict(zip(last, bundle.l1.explain(f.loc[last]), strict=True))
 
     # L2 where possible
     p2 = np.full((len(f), 3), np.nan)
@@ -142,12 +144,11 @@ def diagnose(payload: dict[str, Any], bundle: Bundle) -> dict[str, Any]:
                           "rapid_guess": rule == "INVALID"})
         gi = g.index.to_numpy()
         mean_p = fused[gi].mean(0)
-        top = max(range(len(gi)), key=lambda k: max(reasons[gi[k]], key=lambda x: x["impact"])["impact"] if reasons[gi[k]] else 0)
         deferred = bool((doubt[gi] >= bundle.defer_threshold).any() or hidden[gi].any())
         students.append({"student_key": sk, "per_question": per_q,
                          "summary": {"quadrant": QUAD_STATUS[QUAD[int(mean_p.argmax())]],
                                      "mastery_prob": round(float(mean_p[:2].sum()), 4), "deferred": deferred,
                                      "rule_status": compute_dominant_status(rule_statuses),
-                                     "reasons": reasons[gi[top]][:3]}})
+                                     "reasons": reasons[gi[-1]][:3]}})
     return {"model_version": bundle.model_version, "students": students,
             "latency_ms": int(round((time.perf_counter() - t0) * 1000))}

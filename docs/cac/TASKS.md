@@ -235,7 +235,7 @@ Semua path ML relatif terhadap `ml/`.
 - [ ] **T60 [S] Jalankan aplikasi lokal** — dep: T04 · mungkin butuh **M7**
 - [ ] **T61 [S] Migrasi Prisma `ml_integration`** — dep: T60
 - [ ] **T62 [S] Input alasan di portal siswa** — dep: T61
-- [ ] **T63 [S] Layanan FastAPI `ml/service/` + Dockerfile + tes** — dep: T43
+- [x] **T63 [S] Layanan FastAPI `ml/service/` + Dockerfile + tes** — dep: T43
 - [ ] **T64 [S] Panggilan ML di compute.ts + fallback + tes** — dep: T61, T63
 - [ ] **T65 [S] Mode AI, antrean guru, umpan balik guru** — dep: T64
 - [ ] **T66 [S] Ekspor riset berbasis persetujuan** — dep: T61

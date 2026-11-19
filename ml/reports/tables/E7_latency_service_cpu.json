@@ -1,0 +1,18 @@
+{
+ "tanpa_L2": {
+  "median_s": 0.59,
+  "n_responses": 600,
+  "n_explanations": 600
+ },
+ "L2_tfidf_en": {
+  "median_s": 0.47,
+  "n_responses": 600,
+  "n_explanations": 600
+ },
+ "L2_mdeberta_id": {
+  "median_s": 8.25,
+  "n_responses": 600,
+  "n_explanations": 600
+ },
+ "device": "MacBook Air Apple Silicon CPU, bersamaan dengan job reproduksi T47 (beban CPU tinggi)"
+}
