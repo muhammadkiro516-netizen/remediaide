@@ -18,6 +18,11 @@ angka kunci (dengan path sumbernya), masalah, dan langkah berikutnya.
 ## Langkah lanjut untuk sesi berikutnya (`/lanjut`) — diperbarui 19 Nov 07:10
 T46 selesai: test Eedi **sudah dibuka** (segel `ml/reports/TEST_OPENED.json`). Jangan jalankan ulang `final_eval.py`
 kecuali bug kode (pakai `--rerun-reason`, tercatat di segel). Tidak ada proses berjalan.
+0. **BERJALAN (19 Nov ±07:25): reproduksi T47** — `scratchpad/repro.sh` (PID 25362): clone segar → venv dari
+   `requirements-lock.txt` → salin data mentah + output Kaggle → `make test` → `make all` → `make check-repro`.
+   Log: `/private/tmp/claude-501/-Users-salmonella-Downloads-remediaide-main/7d6cbfb3-3e97-4e56-89d6-e1261a24f4b2/scratchpad/repro.log`
+   (perkiraan 4–5 jam: terjemahan ±45 m, LightGBM ±2 j 10 m). Selesai jika log berisi `REPRO_DONE` dan check-repro 0 gagal.
+   Jika scratchpad terhapus (reboot), jalankan ulang skrip yang sama (isinya: lihat commit T47 / langkah di atas).
 1. **T47 freeze** (tenggat Rab 25 Nov 23:59): `make all` dari data mentah (GPU = output Kaggle tersimpan), bandingkan
    dengan RESULTS (toleransi 07 §6), tag `freeze-tierS`. Periksa dulu target Makefile mencakup skrip baru
    (export_l1/l2, l3_production, cokt_oof_export, l2_eval, e4_combine, final_eval).
