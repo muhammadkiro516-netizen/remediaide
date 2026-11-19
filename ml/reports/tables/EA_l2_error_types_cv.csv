@@ -1,0 +1,6 @@
+jenis_kesalahan,porsi_di_semua_kesalahan,n
+5 Correct ↔ Neither,0.509404924760602,2979
+3 miskonsepsi dibaca Neither/Correct,0.21135430916552667,1236
+4 Neither/Correct dibaca miskonsepsi,0.2110123119015048,1234
+1 jebakan jawaban benar terlewat,0.043091655266757865,252
+2 nama miskonsepsi tertukar,0.025136798905608757,147

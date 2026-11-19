@@ -30,6 +30,14 @@ Checksum file mentah: `data/manifest.json`.
 - **Fitur dan label** hanya memakai masa lalu siswa. Encoding target out-of-fold. Split per siswa (Eedi) dan per soal
   (MAP). Diuji di `tests/test_features_leakage.py`.
 
+## 2b. Split dan ukuran
+- **Eedi (D-04):** 20% siswa test terkunci, sisanya GroupKFold(5) per siswa. Tidak ada siswa di dua split
+  (`tests/test_features_leakage.py`). Baris berlabel framing (b) dan baris E1 per fold: `docs/cac/LAPORAN_REVIEW.md` §4.
+- **Eedi, kode Gender per split (siswa)** (`reports/tables/E6_gender_counts.json`): CV 0: 1.488, 1: 1.230, 2: 1.210,
+  3: 6; test 0: 386, 1: 294, 2: 303, 3: 1.
+- **MAP (D-06):** StratifiedKFold(5) pada target dan GroupKFold per soal (3 soal per fold). Pada split acak, 8,83% baris
+  validasi punya alasan yang persis sama dengan baris latih untuk soal yang sama (`reports/tables/L2_overlap_cv.csv`).
+
 ## 3. Bias dan kualitas yang diketahui
 - **Data Inggris:** Eedi berasal dari sekolah di Inggris, dan MAP dari siswa AS. Kurikulum, bahasa, dan konteks
   berbeda dari Indonesia.
@@ -40,11 +48,15 @@ Checksum file mentah: `data/manifest.json`.
 - **Atribut sensitif:** Gender (0 tidak disebut, 1 perempuan, 2 laki-laki, 3 lainnya) dan PremiumPupil (berhak makan
   gratis / pupil premium karena kurang mampu; arXiv:2007.12061 §2.3). Keduanya hanya dipakai untuk analisis fairness
   (E6) dan **tidak pernah** sebagai fitur (D-13).
-- **Label proxy:** kuadran masa depan bukan label guru.
+- **Label proxy:** kuadran masa depan bukan label guru. Sebagian perubahan "Miskonsepsi → tuntas" bisa berasal dari
+  pembelajaran setelah umpan balik Eedi.
+- **Ketimpangan kelompok:** siswa pupil premium dan berkemampuan rendah punya error lebih tinggi, baik untuk aturan v1
+  maupun model (E6). PremiumPupil kosong untuk 57,0% siswa dan merupakan ukuran sosial-ekonomi Inggris.
 
 ## 4. Privasi
 - Data Eedi dan MAP sudah dianonimkan oleh penerbitnya. Kami tidak mencoba identifikasi ulang.
 - Gambar soal Eedi tidak dipakai sama sekali (D-17). Gambar itu hanya boleh dipakai untuk kompetisi asli.
+- Materi pilot (formulir persetujuan, lembar info guru, panduan sesi) ada di `docs/cac/pilot/`.
 - Data pilot siswa Indonesia, bila ada:
   - anonim;
   - butuh persetujuan orang tua (UU PDP Pasal 25);

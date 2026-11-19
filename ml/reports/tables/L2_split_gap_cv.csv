@@ -1,0 +1,7 @@
+model,split,metric,value,ci_lo,ci_hi,n,ci_unit,sumber_prediksi
+B0 TF-IDF+LR,"acak (5-fold, soal yang sama ada di latih)",macro-F1 category3,0.8396196088186739,0.8254562276432326,0.8538722767536208,36696,soal (15 klaster),"OOF target, argmax → kategori (dihitung di sini)"
+M1 mDeBERTa-v3-base,"acak (5-fold, soal yang sama ada di latih)",macro-F1 category3,0.8435228004568393,0.8270275865911612,0.8561233434166663,36696,soal (15 klaster),"OOF target, argmax → kategori (dihitung di sini)"
+M1 mDeBERTa-v3-base,"per soal (5-fold, soal validasi tidak pernah dilihat)",macro-F1 category3,0.6374931538366836,0.5838678277976769,0.684910892042141,36696,soal (15 klaster),disalin dari L2_cv.csv
+B0 TF-IDF+LR,"per soal (5-fold, soal validasi tidak pernah dilihat)",macro-F1 category3,0.6111698422028987,0.5421694563506536,0.6740347556268672,36696,soal (15 klaster),disalin dari L2_cv.csv
+B0 TF-IDF+LR,selisih per soal − acak,macro-F1 category3,-0.2284497666157752,,,36696,,baris di atas
+M1 mDeBERTa-v3-base,selisih per soal − acak,macro-F1 category3,-0.20602964662015566,,,36696,,baris di atas

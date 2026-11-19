@@ -1,0 +1,15 @@
+{
+  "source": "runs/20261118-2202_cokt_kaggle/oof_b_ens5.parquet (CV OOF, baris E1)",
+  "n_rows": 217480,
+  "n_kc_min_1000_rows": 32,
+  "n_kc_cokt_better_than_b0": 32,
+  "kc_diff_min": -0.15246636771300448,
+  "kc_diff_max": -0.057905009759271264,
+  "kc_misgroup_cokt_min": 0.2342773078337624,
+  "kc_misgroup_cokt_max": 0.431026474686484,
+  "misgroup_cokt": 0.34703880816626814,
+  "misgroup_b0": 0.450087364355343,
+  "share_future_M_predicted_P": 0.4905872149380134,
+  "share_future_L_predicted_L": 0.09108108108108108,
+  "corr_kc_misgroup_vs_share_future_M": 0.566991763409435
+}

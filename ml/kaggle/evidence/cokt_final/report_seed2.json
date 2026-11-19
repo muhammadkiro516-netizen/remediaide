@@ -1,0 +1,108 @@
+{
+  "best_val_auc": 0.7808152096600757,
+  "history": [
+    {
+      "epoch": 0,
+      "train_loss": 1.7840580997012911,
+      "val_auc": 0.7434759266632596,
+      "sec": 4.4
+    },
+    {
+      "epoch": 1,
+      "train_loss": 1.6253243613810766,
+      "val_auc": 0.7637639319595496,
+      "sec": 4.6
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.5559938620953333,
+      "val_auc": 0.7716630186607241,
+      "sec": 4.6
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.5273193915685017,
+      "val_auc": 0.7754137445835594,
+      "sec": 4.5
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.505256217150461,
+      "val_auc": 0.7774139319775111,
+      "sec": 4.7
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.4924440071696328,
+      "val_auc": 0.7793476699005193,
+      "sec": 4.4
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.4787881388550712,
+      "val_auc": 0.7796349381603327,
+      "sec": 4.5
+    },
+    {
+      "epoch": 7,
+      "train_loss": 1.4700864383152552,
+      "val_auc": 0.7802147051075017,
+      "sec": 4.5
+    },
+    {
+      "epoch": 8,
+      "train_loss": 1.4609576818488894,
+      "val_auc": 0.7804616620017064,
+      "sec": 4.7
+    },
+    {
+      "epoch": 9,
+      "train_loss": 1.4549499594029927,
+      "val_auc": 0.7808152096600757,
+      "sec": 4.4
+    },
+    {
+      "epoch": 10,
+      "train_loss": 1.4455719547612327,
+      "val_auc": 0.7804016769653824,
+      "sec": 4.5
+    },
+    {
+      "epoch": 11,
+      "train_loss": 1.4345549799147106,
+      "val_auc": 0.780042278648486,
+      "sec": 4.4
+    },
+    {
+      "epoch": 12,
+      "train_loss": 1.4304754109609694,
+      "val_auc": 0.7801320140041759,
+      "sec": 4.8
+    }
+  ],
+  "cfg": {
+    "d_model": 128,
+    "n_layers": 2,
+    "n_heads": 4,
+    "d_ff": 256,
+    "dropout": 0.2,
+    "max_len": 200,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "batch_size": 64,
+    "epochs": 30,
+    "patience": 3,
+    "grad_clip": 1.0,
+    "w_option": 0.5,
+    "w_quadrant": 0.5,
+    "no_conf": false,
+    "no_option": false
+  },
+  "sec": 65.9,
+  "n_windows": {
+    "train": 5361,
+    "early_stop": 591,
+    "calibration": 1540,
+    "test": 1853
+  }
+}

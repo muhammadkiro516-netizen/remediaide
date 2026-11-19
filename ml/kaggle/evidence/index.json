@@ -1,0 +1,125 @@
+{
+  "cokt": {
+    "run_dir": "runs/20261118-2202_cokt_kaggle",
+    "kernel_code": "kaggle/kernels/cokt/train.py",
+    "kernel_metadata_template": "kaggle/kernels/cokt/kernel-metadata.template.json",
+    "files": {
+      "eval.json": {
+        "source": "runs/20261118-2202_cokt_kaggle/eval.json",
+        "bytes": 1014,
+        "sha256_original": "8ffb114ca29c9a55f5d4807c8c10727ebfe456473ba2c0b50a40a56a0a5f58a7"
+      },
+      "metrics_full.json": {
+        "source": "runs/20261118-2202_cokt_kaggle/kaggle_output/metrics_full.json",
+        "bytes": 63021,
+        "sha256_original": "6bf456f6af06dba85d064d95e5e2d0d2505b3a29425c90846620e5c7a8d3432c"
+      },
+      "metrics_no_conf.json": {
+        "source": "runs/20261118-2202_cokt_kaggle/kaggle_output/metrics_no_conf.json",
+        "bytes": 36684,
+        "sha256_original": "d5efb4d5ca50f51bf8611ac07283ec4ae23b25b636d0a21d803159a2a48676de"
+      },
+      "metrics_no_option.json": {
+        "source": "runs/20261118-2202_cokt_kaggle/kaggle_output/metrics_no_option.json",
+        "bytes": 34495,
+        "sha256_original": "20d99b3d76b2a05c3e859af23bbc83e62de5de4c095ec179cdeba2e82da46939"
+      },
+      "remediaide-cokt.log": {
+        "source": "runs/20261118-2202_cokt_kaggle/kaggle_output/remediaide-cokt.log",
+        "bytes": 94927,
+        "sha256_original": "298358fd8361db6c01430d4c2fa27a7a8fe53dbdcc667112b8d1572599fadadd"
+      }
+    }
+  },
+  "cokt_final": {
+    "run_dir": "runs/20261119-0620_cokt_final_kaggle",
+    "kernel_code": "kaggle/kernels/cokt_final/train.py",
+    "kernel_metadata_template": "kaggle/kernels/cokt_final/kernel-metadata.template.json",
+    "files": {
+      "remediaide-cokt-final.log": {
+        "source": "runs/20261119-0620_cokt_final_kaggle/kaggle_output/remediaide-cokt-final.log",
+        "bytes": 12446,
+        "sha256_original": "674b29c4a35c976d45eb457189acaa6f9d315ef54afa878b52ae7e28bad933b4"
+      },
+      "report_seed20261118.json": {
+        "source": "runs/20261119-0620_cokt_final_kaggle/kaggle_output/report_seed20261118.json",
+        "bytes": 2021,
+        "sha256_original": "d9d4ebc3987f2f47c3a58ba27d543e7e0b10dacdc05e4c7cfde698e86f5dbeaf"
+      },
+      "report_seed1.json": {
+        "source": "runs/20261119-0620_cokt_final_kaggle/kaggle_output/report_seed1.json",
+        "bytes": 2021,
+        "sha256_original": "585f52dd743a508297513d7677655063d22056ce367791744e1d39508db04bb1"
+      },
+      "report_seed2.json": {
+        "source": "runs/20261119-0620_cokt_final_kaggle/kaggle_output/report_seed2.json",
+        "bytes": 2150,
+        "sha256_original": "e9aafd186252314ecfbe7f3f355f553c002a3fad9139015ee63bebfa5fba70ba"
+      },
+      "report_seed3.json": {
+        "source": "runs/20261119-0620_cokt_final_kaggle/kaggle_output/report_seed3.json",
+        "bytes": 2150,
+        "sha256_original": "ea12aa0f5f36bb534f38c671c2fa44f817fa0b9a5a25887ab12c1f4742983d18"
+      },
+      "report_seed4.json": {
+        "source": "runs/20261119-0620_cokt_final_kaggle/kaggle_output/report_seed4.json",
+        "bytes": 2270,
+        "sha256_original": "fd3a92b06f8c70cab6dcebd4038c8c49914cbd831eec37e41a261eb9ae223110"
+      }
+    }
+  },
+  "l2_mdeberta": {
+    "run_dir": "runs/20261118-2202_l2_mdeberta_kaggle",
+    "kernel_code": "kaggle/kernels/l2_mdeberta/train.py",
+    "kernel_metadata_template": "kaggle/kernels/l2_mdeberta/kernel-metadata.template.json",
+    "files": {
+      "eval.json": {
+        "source": "runs/20261118-2202_l2_mdeberta_kaggle/eval.json",
+        "bytes": 951,
+        "sha256_original": "8aa484f725d4669680a86c534794e68622d1bd1ec3bbd8a0e4c4fb9cc35f8a04"
+      },
+      "metrics_target.json": {
+        "source": "runs/20261118-2202_l2_mdeberta_kaggle/kaggle_output/metrics_target.json",
+        "bytes": 38125,
+        "sha256_original": "4ffc81eafbb395fd051cab0305e28422d4761ac5c0750b843ce873af6430d1d9"
+      },
+      "metrics_category3.json": {
+        "source": "runs/20261118-2202_l2_mdeberta_kaggle/kaggle_output/metrics_category3.json",
+        "bytes": 38127,
+        "sha256_original": "8226160441cace79dc15c2f1d1cb85b17462a93b968df56895f0978d411ae338"
+      },
+      "remediaide-l2-mdeberta.log": {
+        "source": "runs/20261118-2202_l2_mdeberta_kaggle/kaggle_output/remediaide-l2-mdeberta.log",
+        "bytes": 155793,
+        "sha256_original": "c66e3358c6f9124ef6e39acb6b800cdab33db72e5e577063c5f695cafe33f191"
+      }
+    }
+  },
+  "l2_distill": {
+    "run_dir": "runs/20261119-0745_l2_distill_kaggle",
+    "kernel_code": "kaggle/kernels/l2_distill/train.py",
+    "kernel_metadata_template": "kaggle/kernels/l2_distill/kernel-metadata.template.json",
+    "files": {
+      "metrics_distill.json": {
+        "source": "runs/20261119-0745_l2_distill_kaggle/kaggle_output/metrics_distill.json",
+        "bytes": 230,
+        "sha256_original": "a9aa6828cbef9f4f520e0e09bdb2ad600640081cd401ac3e523b2713fd9ef2ea"
+      },
+      "remediaide-l2-distill.log": {
+        "source": "runs/20261119-0745_l2_distill_kaggle/kaggle_output/remediaide-l2-distill.log",
+        "bytes": 7475,
+        "sha256_original": "688c3a4c45c62eec7b27748fbcb0b8de8a867b81792d3fc3419ce158d52e79f4"
+      },
+      "config.json": {
+        "source": "runs/20261119-0745_l2_distill_kaggle/kaggle_output/student_model/config.json",
+        "bytes": 3465,
+        "sha256_original": "8d05deea7cf0053179040d3a440d25e5d36da28cdf1bb07eb938a32a70d89579"
+      },
+      "classes.json": {
+        "source": "runs/20261119-0745_l2_distill_kaggle/kaggle_output/student_model/classes.json",
+        "bytes": 2256,
+        "sha256_original": "3b66b6fe25d6b1bd465d489c9d85ff543b19b3ab6b57fefbb1b24dc17f27cc7b"
+      }
+    }
+  }
+}

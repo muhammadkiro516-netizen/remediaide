@@ -1,0 +1,10 @@
+{
+  "map3_en_fold0": 0.8590599455040872,
+  "map3_id_fold0": 0.8353542234332425,
+  "n_train": 29356,
+  "n_eval": 7340,
+  "train_sec": 361.6,
+  "student": "microsoft/Multilingual-MiniLM-L12-H384",
+  "epochs": 3,
+  "device": "cuda"
+}

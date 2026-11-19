@@ -1,15 +1,17 @@
-# RemediAide 2.0 — diagnosis miskonsepsi matematika yang tahu kapan harus bertanya ke guru
+# RemediAide 2.0 — diagnosis miskonsepsi matematika yang menandai kasus ragu untuk guru
 
-> Bukan sekadar siapa yang salah, tapi **kenapa** salah, **seberapa yakin** mesinnya, dan **apa yang dilakukan guru
-> besok pagi**.
+> **Angka utama (test, 20% siswa Eedi yang dikunci sejak awal; 58.963 kasus, 773 siswa).** Aturan CRI v1 salah
+> mengelompokkan **45,1%** kasus [CI 95% 43,1–46,9]. RemediAide 2.0 salah mengelompokkan **34,7%** [33,0–36,6]:
+> turun **10,3 poin** [9,7–10,9], atau **22,9% relatif** (aproksimasi 21,6–24,2%). Model lalu menyerahkan **20,6%**
+> kasus paling meragukan ke guru. Pada **79,4%** kasus sisanya, salah kelompok **28,3%**, sedangkan aturan v1 pada
+> kasus yang sama **39,2%**.
+> Sumber: [`reports/tables/headline.json`](reports/tables/headline.json), rincian di [`reports/RESULTS.md`](reports/RESULTS.md).
 
-**Angka utama (test, 20% siswa Eedi yang dikunci sejak awal):** aturan CRI v1 salah mengelompokkan **45,1%** kasus
-siswa–soal. RemediAide 2.0 menurunkannya menjadi **34,7%** (selisih −10,3 poin [−10,9; −9,7]), dan **20,6%** kasus
-paling meragukan diserahkan ke guru; pada kasus yang tidak diserahkan, salah kelompok tinggal **28,3%**.
-Sumber: [`reports/tables/E8_impact.csv`](reports/tables/E8_impact.csv), rincian di [`reports/RESULTS.md`](reports/RESULTS.md).
+![Aturan v1 vs ML](reports/figures/E8_v1_vs_ml.png)
 
-Submisi CAC Machine Learning Solution Challenge 2026. Laporan teknis lengkap: [`REPORT.md`](REPORT.md).
-Kartu model: [`MODEL_CARD.md`](MODEL_CARD.md). Kartu data: [`DATA_CARD.md`](DATA_CARD.md).
+Submisi CAC Machine Learning Solution Challenge 2026. Laporan teknis: [`REPORT.md`](REPORT.md). Kartu model:
+[`MODEL_CARD.md`](MODEL_CARD.md). Kartu data: [`DATA_CARD.md`](DATA_CARD.md). Hasil: [`reports/RESULTS.md`](reports/RESULTS.md).
+Bukti kernel GPU Kaggle (log + metrik): [`kaggle/evidence/`](kaggle/evidence/).
 
 ---
 
@@ -40,7 +42,7 @@ Kartu model: [`MODEL_CARD.md`](MODEL_CARD.md). Kartu data: [`DATA_CARD.md`](DATA
 | Pengaman | deteksi tebakan cepat | NT10 / GMM / τmin (menunggu data pilot) | — |
 
 **Yang baru dibanding v1:** (1) CRI yang *dipelajari* dari data, bukan ambang tetap; (2) diagnosis bernama, termasuk pada
-jawaban benar; (3) model yang tahu batasnya (conformal + selective prediction); (4) siap untuk alasan berbahasa
+jawaban benar; (3) kasus ragu ditandai dan diserahkan ke guru (conformal + selective prediction); (4) siap untuk alasan berbahasa
 Indonesia. Aturan v1 tetap dikembalikan di setiap respons sebagai pembanding dan fallback.
 
 ## 3. Data
@@ -57,19 +59,19 @@ Indonesia. Aturan v1 tetap dikembalikan di setiap respons sebagai pembanding dan
 - Detail: [`DATA_CARD.md`](DATA_CARD.md), [`data/README.md`](data/README.md), notebook `01_eda` dan `02_preprocessing_features`.
 
 ## 4. Hasil utama
-Semua angka dengan CI 95% bootstrap per siswa; test dibuka sekali (segel [`reports/TEST_OPENED.json`](reports/TEST_OPENED.json)).
+Semua angka dengan CI 95% bootstrap per siswa dan selalu di samping baselinenya; test dibuka sekali (segel [`reports/TEST_OPENED.json`](reports/TEST_OPENED.json)).
 
 | Pertanyaan | Hasil | Sumber |
 | --- | --- | --- |
-| E1: seberapa sering aturan v1 salah? (test) | salah kelompok 0,451 [0,431–0,469] | `E1_b0_test.csv` |
+| E1: seberapa sering aturan v1 salah? (test) | salah kelompok 0,451 [0,431–0,469]; 27,8% "Paham" belum tuntas berikutnya | `E1_b0_test.csv` |
 | L1: RemediAide 2.0 vs aturan v1 (test) | salah kelompok 0,347 vs 0,451; macro-F1 0,445 vs 0,392; AUC butuh remediasi 0,801 vs 0,631 | `L1_test.csv` |
 | L1: CO-KT vs LightGBM (test) | salah kelompok −0,014 [−0,018; −0,011]; AUC next-correct 0,796 vs 0,795 | `L1_test_pairwise.csv` |
-| E2: sinyal apa yang penting? (CV) | tanpa keyakinan, macro-F1 CO-KT turun 0,158 [0,146–0,171]; tanpa opsi hanya 0,002 | `E2_cokt_ablation_cv.csv` |
-| E3: jebakan jawaban benar (CV MAP) | aturan v1 recall 0; L2 recall 0,375 [0,329–0,422], presisi 0,821 | `E3_true_misconception.csv` |
+| E2: sinyal apa yang penting? (CV) | macro-F1 CO-KT penuh 0,480; tanpa keyakinan turun 0,158 [0,146–0,171]; tanpa opsi hanya 0,002 | `E2_cokt_ablation_cv.csv` |
+| E3: jebakan jawaban benar (CV MAP) | aturan v1 recall 0; TF-IDF recall 0,375 [0,329–0,422], presisi 0,821; mDeBERTa 0,323 | `E3_true_misconception.csv` |
 | E4: alasan berbahasa Indonesia (CV MAP) | MAP@3 mDeBERTa 0,911 → 0,895 (−0,016); TF-IDF 0,916 → 0,766 (−0,150) | `E4_crosslingual.csv` |
-| E5: conformal menepati janji? (test) | cakupan 0,900 untuk target 90%; ukuran himpunan 1,90 | `E5_test.json` |
-| E6: adil? (test) | **tidak ada klaim adil**: salah kelompok lebih tinggi untuk siswa pupil premium (+0,121) dan kemampuan rendah (+0,314) | `E6_fairness.csv` |
-| E8: dampak bagi guru (test) | defer 20,6% (±99 kasus per kelas 32×15); sisa salah kelompok 0,283 | `E8_impact.csv` |
+| E5: ketidakpastian (test) | cakupan conformal 0,900 untuk target 90% (aturan v1: tidak ada himpunan); ukuran himpunan 1,90; defer menurunkan salah kelompok 18,5%, **di bawah target 25%** (fallback 20%, D-21) | `E5_test.json` |
+| E6: adil? (test) | **tidak ada klaim adil**: selisih salah kelompok pupil premium +0,121 (aturan v1 +0,095), kemampuan rendah +0,314 (aturan v1 +0,307) | `E6_fairness.csv` |
+| E8: dampak bagi guru (test) | defer 20,6% (±99 kasus per kelas 32×15); sisa salah kelompok 0,283 vs aturan v1 0,392 pada kasus yang sama | `E8_impact.csv` |
 
 ## 5. Cara menjalankan dari nol
 ```bash
@@ -78,19 +80,20 @@ make setup            # venv Python 3.12 + dependensi (lihat requirements-lock.t
 make data-raw         # unduh Eedi (blob publik) + MAP (butuh Kaggle CLI + menerima aturan kompetisi)
 make test             # tes: kesetaraan B0 vs engine.ts, leakage, kontrak layanan, dll.
 make kaggle-outputs   # output GPU tersimpan (CO-KT, mDeBERTa); atau jalankan ulang kernel di kaggle/kernels/
-make all              # data → L1 → L2 → L3 → evaluasi test; beberapa jam di laptop CPU (lihat REPORT §3)
+make all              # data → L1 → L2 → L3 → evaluasi test; ±4 jam di laptop CPU (lihat REPORT §3)
 make check-repro      # bandingkan tabel hasil dengan versi di repo (toleransi ±0,005)
 ```
 - Bagian GPU (CO-KT 37,1 menit untuk CV penuh + 5,5 menit model produksi; mDeBERTa 166,5 + 166,3 menit;
   [`compute_summary.csv`](reports/tables/compute_summary.csv)) dijalankan di GPU Kaggle dengan `kaggle/kernels/*/train.py`; kodenya sama dengan `scripts/train_cokt*.py` dan `src/remediaide_ml/l2/encoder.py`.
 - Layanan: `uvicorn service.app:app` → `GET /health`, `POST /v1/diagnose` (kontrak di `REPORT.md` §5).
+- Hugging Face Spaces (Docker): `service/hf_space/` (README Space + Dockerfile); langkah deploy di `docs/cac/MANUAL_ACTIONS.md` M17.
 
 ## 6. Struktur repo
 ```
 src/remediaide_ml/   data/ features/ l1/ l2/ l3/ guard/ eval/ diagnose.py bundle.py cri_rule.py (B0 = aturan v1)
 scripts/             satu skrip per langkah pipeline (lihat Makefile)
 notebooks/           01–07, tipis, memanggil modul, output tersimpan
-kaggle/kernels/      kernel GPU (CO-KT CV, CO-KT produksi, mDeBERTa)
+kaggle/kernels/      kernel GPU (CO-KT CV, CO-KT produksi, mDeBERTa, distilasi); kaggle/evidence/ = log + metrik
 service/             FastAPI + Dockerfile
 reports/             RESULTS.md, tables/, figures/
 models/              artefak produksi (biner besar diunduh, lihat models/README.md)

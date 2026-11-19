@@ -1,0 +1,828 @@
+[{"stream_name":"stdout","time":5.193039979,"data":"Wed Nov 18 15:02:48 2026       \n"}
+,{"stream_name":"stdout","time":5.193085343,"data":"+-----------------------------------------------------------------------------------------+\n"}
+,{"stream_name":"stdout","time":5.19309129,"data":"| NVIDIA-SMI 580.178.04             Driver Version: 580.178.04     CUDA Version: 13.0     |\n"}
+,{"stream_name":"stdout","time":5.193095302,"data":"+-----------------------------------------+------------------------+----------------------+\n"}
+,{"stream_name":"stdout","time":5.193099052,"data":"| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n"}
+,{"stream_name":"stdout","time":5.193103076,"data":"| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n"}
+,{"stream_name":"stdout","time":5.193113193,"data":"|                                         |                        |               MIG M. |\n"}
+,{"stream_name":"stdout","time":5.193116073,"data":"|=========================================+========================+======================|\n"}
+,{"stream_name":"stdout","time":5.19311862,"data":"|   0  Tesla T4                       Off |   00000000:00:04.0 Off |                    0 |\n"}
+,{"stream_name":"stdout","time":5.19312118,"data":"| N/A   60C    P8             12W /   70W |       0MiB /  15360MiB |      0%      Default |\n"}
+,{"stream_name":"stdout","time":5.193123665,"data":"|                                         |                        |                  N/A |\n"}
+,{"stream_name":"stdout","time":5.193126231,"data":"+-----------------------------------------+------------------------+----------------------+\n"}
+,{"stream_name":"stdout","time":5.193128715,"data":"|   1  Tesla T4                       Off |   00000000:00:05.0 Off |                    0 |\n"}
+,{"stream_name":"stdout","time":5.193131216,"data":"| N/A   59C    P8             10W /   70W |       0MiB /  15360MiB |      0%      Default |\n"}
+,{"stream_name":"stdout","time":5.193133692,"data":"|                                         |                        |                  N/A |\n"}
+,{"stream_name":"stdout","time":5.19313625,"data":"+-----------------------------------------+------------------------+----------------------+\n"}
+,{"stream_name":"stdout","time":5.193138768,"data":"\n"}
+,{"stream_name":"stdout","time":5.193141116,"data":"+-----------------------------------------------------------------------------------------+\n"}
+,{"stream_name":"stdout","time":5.193143746,"data":"| Processes:                                                                              |\n"}
+,{"stream_name":"stdout","time":5.193160883,"data":"|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n"}
+,{"stream_name":"stdout","time":5.193165106,"data":"|        ID   ID                                                               Usage      |\n"}
+,{"stream_name":"stdout","time":5.193169492,"data":"|=========================================================================================|\n"}
+,{"stream_name":"stdout","time":5.193173624,"data":"|  No running processes found                                                             |\n"}
+,{"stream_name":"stdout","time":5.193178988,"data":"+-----------------------------------------------------------------------------------------+\n"}
+,{"stream_name":"stdout","time":5.193182804,"data":"\n"}
+,{"stream_name":"stdout","time":7.681786897,"data":"/usr/bin/python3 /kaggle/input/datasets/<KAGGLE_USERNAME>/remediaide-ml-src/scripts/train_cokt.py --variant full --seeds 20261118 1 2 3 4 --data-dir /kaggle/input/datasets/<KAGGLE_USERNAME>/remediaide-processed --out /kaggle/working\n"}
+,{"stream_name":"stdout","time":27.391775176,"data":"[15:03:10] variant full: 1,107,657 rows, 7,492 windows, device cuda\n"}
+,{"stream_name":"stdout","time":41.517567074,"data":"[15:03:24] epoch 0: loss 1.7814 val AUC 0.7601 (8s)\n"}
+,{"stream_name":"stdout","time":47.560745729,"data":"[15:03:30] epoch 1: loss 1.6261 val AUC 0.7779 (6s)\n"}
+,{"stream_name":"stdout","time":53.838593537,"data":"[15:03:37] epoch 2: loss 1.5594 val AUC 0.7847 (6s)\n"}
+,{"stream_name":"stdout","time":59.972019604,"data":"[15:03:43] epoch 3: loss 1.5307 val AUC 0.7882 (6s)\n"}
+,{"stream_name":"stdout","time":66.128163185,"data":"[15:03:49] epoch 4: loss 1.5112 val AUC 0.7903 (6s)\n"}
+,{"stream_name":"stdout","time":72.466990623,"data":"[15:03:55] epoch 5: loss 1.4970 val AUC 0.7912 (6s)\n"}
+,{"stream_name":"stdout","time":78.715549686,"data":"[15:04:02] epoch 6: loss 1.4886 val AUC 0.7930 (6s)\n"}
+,{"stream_name":"stdout","time":84.979969994,"data":"[15:04:08] epoch 7: loss 1.4790 val AUC 0.7932 (6s)\n"}
+,{"stream_name":"stdout","time":91.185731304,"data":"[15:04:14] epoch 8: loss 1.4689 val AUC 0.7937 (6s)\n"}
+,{"stream_name":"stdout","time":97.640210544,"data":"[15:04:20] epoch 9: loss 1.4622 val AUC 0.7938 (6s)\n"}
+,{"stream_name":"stdout","time":103.96610858,"data":"[15:04:27] epoch 10: loss 1.4571 val AUC 0.7942 (6s)\n"}
+,{"stream_name":"stdout","time":110.209326682,"data":"[15:04:33] epoch 11: loss 1.4502 val AUC 0.7939 (6s)\n"}
+,{"stream_name":"stdout","time":116.588857597,"data":"[15:04:39] epoch 12: loss 1.4429 val AUC 0.7937 (6s)\n"}
+,{"stream_name":"stdout","time":122.891696998,"data":"[15:04:46] epoch 13: loss 1.4355 val AUC 0.7937 (6s)\n"}
+,{"stream_name":"stdout","time":125.133094059,"data":"[15:04:48] seed 20261118 fold 0: AUC 0.7942 optAcc 0.5645 quadF1 0.46855304491227506 (97.7s)\n"}
+,{"stream_name":"stdout","time":131.246645661,"data":"[15:04:54] epoch 0: loss 1.7741 val AUC 0.7520 (6s)\n"}
+,{"stream_name":"stdout","time":137.598060248,"data":"[15:05:00] epoch 1: loss 1.6171 val AUC 0.7716 (6s)\n"}
+,{"stream_name":"stdout","time":143.828167143,"data":"[15:05:07] epoch 2: loss 1.5519 val AUC 0.7779 (6s)\n"}
+,{"stream_name":"stdout","time":149.990634279,"data":"[15:05:13] epoch 3: loss 1.5229 val AUC 0.7809 (6s)\n"}
+,{"stream_name":"stdout","time":156.343765899,"data":"[15:05:19] epoch 4: loss 1.5032 val AUC 0.7831 (6s)\n"}
+,{"stream_name":"stdout","time":162.546783335,"data":"[15:05:25] epoch 5: loss 1.4915 val AUC 0.7845 (6s)\n"}
+,{"stream_name":"stdout","time":168.767570846,"data":"[15:05:32] epoch 6: loss 1.4796 val AUC 0.7849 (6s)\n"}
+,{"stream_name":"stdout","time":175.189232567,"data":"[15:05:38] epoch 7: loss 1.4707 val AUC 0.7857 (6s)\n"}
+,{"stream_name":"stdout","time":181.432998834,"data":"[15:05:44] epoch 8: loss 1.4647 val AUC 0.7863 (6s)\n"}
+,{"stream_name":"stdout","time":187.678892177,"data":"[15:05:51] epoch 9: loss 1.4529 val AUC 0.7869 (6s)\n"}
+,{"stream_name":"stdout","time":193.890632502,"data":"[15:05:57] epoch 10: loss 1.4486 val AUC 0.7853 (6s)\n"}
+,{"stream_name":"stdout","time":200.235842333,"data":"[15:06:03] epoch 11: loss 1.4417 val AUC 0.7865 (6s)\n"}
+,{"stream_name":"stdout","time":206.415893238,"data":"[15:06:09] epoch 12: loss 1.4359 val AUC 0.7866 (6s)\n"}
+,{"stream_name":"stdout","time":208.635136067,"data":"[15:06:11] seed 20261118 fold 1: AUC 0.7869 optAcc 0.5611 quadF1 0.47082599126970265 (83.5s)\n"}
+,{"stream_name":"stdout","time":215.020088723,"data":"[15:06:18] epoch 0: loss 1.7859 val AUC 0.7493 (6s)\n"}
+,{"stream_name":"stdout","time":221.195091915,"data":"[15:06:24] epoch 1: loss 1.6286 val AUC 0.7674 (6s)\n"}
+,{"stream_name":"stdout","time":227.38811416,"data":"[15:06:30] epoch 2: loss 1.5625 val AUC 0.7758 (6s)\n"}
+,{"stream_name":"stdout","time":233.784335593,"data":"[15:06:37] epoch 3: loss 1.5278 val AUC 0.7796 (6s)\n"}
+,{"stream_name":"stdout","time":239.989507836,"data":"[15:06:43] epoch 4: loss 1.5110 val AUC 0.7816 (6s)\n"}
+,{"stream_name":"stdout","time":246.179238877,"data":"[15:06:49] epoch 5: loss 1.5011 val AUC 0.7826 (6s)\n"}
+,{"stream_name":"stdout","time":252.581812612,"data":"[15:06:55] epoch 6: loss 1.4861 val AUC 0.7845 (6s)\n"}
+,{"stream_name":"stdout","time":258.766926927,"data":"[15:07:02] epoch 7: loss 1.4743 val AUC 0.7847 (6s)\n"}
+,{"stream_name":"stdout","time":264.975110975,"data":"[15:07:08] epoch 8: loss 1.4684 val AUC 0.7856 (6s)\n"}
+,{"stream_name":"stdout","time":271.345433753,"data":"[15:07:14] epoch 9: loss 1.4608 val AUC 0.7857 (6s)\n"}
+,{"stream_name":"stdout","time":277.537994192,"data":"[15:07:20] epoch 10: loss 1.4535 val AUC 0.7858 (6s)\n"}
+,{"stream_name":"stdout","time":283.792727473,"data":"[15:07:27] epoch 11: loss 1.4464 val AUC 0.7859 (6s)\n"}
+,{"stream_name":"stdout","time":290.143078955,"data":"[15:07:33] epoch 12: loss 1.4421 val AUC 0.7851 (6s)\n"}
+,{"stream_name":"stdout","time":296.317386043,"data":"[15:07:39] epoch 13: loss 1.4322 val AUC 0.7858 (6s)\n"}
+,{"stream_name":"stdout","time":302.535731917,"data":"[15:07:45] epoch 14: loss 1.4295 val AUC 0.7855 (6s)\n"}
+,{"stream_name":"stdout","time":304.964872704,"data":"[15:07:48] seed 20261118 fold 2: AUC 0.7859 optAcc 0.5607 quadF1 0.45308296999438724 (96.3s)\n"}
+,{"stream_name":"stdout","time":311.118421312,"data":"[15:07:54] epoch 0: loss 1.7781 val AUC 0.7514 (6s)\n"}
+,{"stream_name":"stdout","time":317.262902338,"data":"[15:08:00] epoch 1: loss 1.6247 val AUC 0.7718 (6s)\n"}
+,{"stream_name":"stdout","time":323.611491942,"data":"[15:08:06] epoch 2: loss 1.5559 val AUC 0.7783 (6s)\n"}
+,{"stream_name":"stdout","time":329.781650132,"data":"[15:08:13] epoch 3: loss 1.5244 val AUC 0.7828 (6s)\n"}
+,{"stream_name":"stdout","time":335.984197049,"data":"[15:08:19] epoch 4: loss 1.5068 val AUC 0.7848 (6s)\n"}
+,{"stream_name":"stdout","time":342.459856819,"data":"[15:08:25] epoch 5: loss 1.4916 val AUC 0.7861 (6s)\n"}
+,{"stream_name":"stdout","time":348.773143678,"data":"[15:08:32] epoch 6: loss 1.4817 val AUC 0.7870 (6s)\n"}
+,{"stream_name":"stdout","time":354.98295066,"data":"[15:08:38] epoch 7: loss 1.4735 val AUC 0.7876 (6s)\n"}
+,{"stream_name":"stdout","time":361.124691841,"data":"[15:08:44] epoch 8: loss 1.4653 val AUC 0.7874 (6s)\n"}
+,{"stream_name":"stdout","time":367.452689457,"data":"[15:08:50] epoch 9: loss 1.4568 val AUC 0.7880 (6s)\n"}
+,{"stream_name":"stdout","time":373.623972206,"data":"[15:08:56] epoch 10: loss 1.4522 val AUC 0.7876 (6s)\n"}
+,{"stream_name":"stdout","time":379.819366169,"data":"[15:09:03] epoch 11: loss 1.4427 val AUC 0.7876 (6s)\n"}
+,{"stream_name":"stdout","time":386.174111899,"data":"[15:09:09] epoch 12: loss 1.4364 val AUC 0.7876 (6s)\n"}
+,{"stream_name":"stdout","time":388.404003665,"data":"[15:09:11] seed 20261118 fold 3: AUC 0.7880 optAcc 0.5605 quadF1 0.46167149403724117 (83.4s)\n"}
+,{"stream_name":"stdout","time":394.597100793,"data":"[15:09:17] epoch 0: loss 1.7730 val AUC 0.7428 (6s)\n"}
+,{"stream_name":"stdout","time":400.978613574,"data":"[15:09:24] epoch 1: loss 1.6115 val AUC 0.7626 (6s)\n"}
+,{"stream_name":"stdout","time":407.120900711,"data":"[15:09:30] epoch 2: loss 1.5459 val AUC 0.7696 (6s)\n"}
+,{"stream_name":"stdout","time":413.343221378,"data":"[15:09:36] epoch 3: loss 1.5162 val AUC 0.7730 (6s)\n"}
+,{"stream_name":"stdout","time":419.490195779,"data":"[15:09:42] epoch 4: loss 1.4975 val AUC 0.7750 (6s)\n"}
+,{"stream_name":"stdout","time":425.850550397,"data":"[15:09:49] epoch 5: loss 1.4839 val AUC 0.7768 (6s)\n"}
+,{"stream_name":"stdout","time":432.012898548,"data":"[15:09:55] epoch 6: loss 1.4723 val AUC 0.7782 (6s)\n"}
+,{"stream_name":"stdout","time":438.2093558,"data":"[15:10:01] epoch 7: loss 1.4634 val AUC 0.7781 (6s)\n"}
+,{"stream_name":"stdout","time":444.54308333,"data":"[15:10:07] epoch 8: loss 1.4570 val AUC 0.7791 (6s)\n"}
+,{"stream_name":"stdout","time":450.714091962,"data":"[15:10:14] epoch 9: loss 1.4473 val AUC 0.7790 (6s)\n"}
+,{"stream_name":"stdout","time":456.846895253,"data":"[15:10:20] epoch 10: loss 1.4423 val AUC 0.7791 (6s)\n"}
+,{"stream_name":"stdout","time":462.997165068,"data":"[15:10:26] epoch 11: loss 1.4344 val AUC 0.7795 (6s)\n"}
+,{"stream_name":"stdout","time":469.302078129,"data":"[15:10:32] epoch 12: loss 1.4271 val AUC 0.7792 (6s)\n"}
+,{"stream_name":"stdout","time":475.442587684,"data":"[15:10:38] epoch 13: loss 1.4214 val AUC 0.7789 (6s)\n"}
+,{"stream_name":"stdout","time":481.585620834,"data":"[15:10:44] epoch 14: loss 1.4148 val AUC 0.7785 (6s)\n"}
+,{"stream_name":"stdout","time":483.994744581,"data":"[15:10:47] seed 20261118 fold 4: AUC 0.7795 optAcc 0.5503 quadF1 0.47404248197375437 (95.6s)\n"}
+,{"stream_name":"stdout","time":490.715589299,"data":"[15:10:54] epoch 0: loss 1.7850 val AUC 0.7604 (6s)\n"}
+,{"stream_name":"stdout","time":496.881382333,"data":"[15:11:00] epoch 1: loss 1.6195 val AUC 0.7790 (6s)\n"}
+,{"stream_name":"stdout","time":503.286195633,"data":"[15:11:06] epoch 2: loss 1.5542 val AUC 0.7859 (6s)\n"}
+,{"stream_name":"stdout","time":509.416019017,"data":"[15:11:12] epoch 3: loss 1.5243 val AUC 0.7897 (6s)\n"}
+,{"stream_name":"stdout","time":515.613846463,"data":"[15:11:18] epoch 4: loss 1.5090 val AUC 0.7907 (6s)\n"}
+,{"stream_name":"stdout","time":521.733531874,"data":"[15:11:25] epoch 5: loss 1.4952 val AUC 0.7919 (6s)\n"}
+,{"stream_name":"stdout","time":528.06222484,"data":"[15:11:31] epoch 6: loss 1.4841 val AUC 0.7927 (6s)\n"}
+,{"stream_name":"stdout","time":534.29464709,"data":"[15:11:37] epoch 7: loss 1.4749 val AUC 0.7930 (6s)\n"}
+,{"stream_name":"stdout","time":540.425113354,"data":"[15:11:43] epoch 8: loss 1.4658 val AUC 0.7937 (6s)\n"}
+,{"stream_name":"stdout","time":546.810347137,"data":"[15:11:50] epoch 9: loss 1.4598 val AUC 0.7944 (6s)\n"}
+,{"stream_name":"stdout","time":552.989944709,"data":"[15:11:56] epoch 10: loss 1.4519 val AUC 0.7938 (6s)\n"}
+,{"stream_name":"stdout","time":559.140489926,"data":"[15:12:02] epoch 11: loss 1.4436 val AUC 0.7943 (6s)\n"}
+,{"stream_name":"stdout","time":565.27717314,"data":"[15:12:08] epoch 12: loss 1.4388 val AUC 0.7945 (6s)\n"}
+,{"stream_name":"stdout","time":567.667458693,"data":"[15:12:10] seed 1 fold 0: AUC 0.7944 optAcc 0.5652 quadF1 0.47715624787501143 (83.1s)\n"}
+,{"stream_name":"stdout","time":573.881035671,"data":"[15:12:17] epoch 0: loss 1.7747 val AUC 0.7509 (6s)\n"}
+,{"stream_name":"stdout","time":580.05494531,"data":"[15:12:23] epoch 1: loss 1.6125 val AUC 0.7721 (6s)\n"}
+,{"stream_name":"stdout","time":586.515883169,"data":"[15:12:29] epoch 2: loss 1.5473 val AUC 0.7789 (6s)\n"}
+,{"stream_name":"stdout","time":592.815300024,"data":"[15:12:36] epoch 3: loss 1.5222 val AUC 0.7822 (6s)\n"}
+,{"stream_name":"stdout","time":599.0373864,"data":"[15:12:42] epoch 4: loss 1.5030 val AUC 0.7840 (6s)\n"}
+,{"stream_name":"stdout","time":605.501830262,"data":"[15:12:48] epoch 5: loss 1.4910 val AUC 0.7850 (6s)\n"}
+,{"stream_name":"stdout","time":611.752769399,"data":"[15:12:55] epoch 6: loss 1.4810 val AUC 0.7850 (6s)\n"}
+,{"stream_name":"stdout","time":617.974184756,"data":"[15:13:01] epoch 7: loss 1.4705 val AUC 0.7862 (6s)\n"}
+,{"stream_name":"stdout","time":624.171474122,"data":"[15:13:07] epoch 8: loss 1.4589 val AUC 0.7864 (6s)\n"}
+,{"stream_name":"stdout","time":630.553015535,"data":"[15:13:13] epoch 9: loss 1.4557 val AUC 0.7861 (6s)\n"}
+,{"stream_name":"stdout","time":636.76118021,"data":"[15:13:20] epoch 10: loss 1.4474 val AUC 0.7864 (6s)\n"}
+,{"stream_name":"stdout","time":642.966387515,"data":"[15:13:26] epoch 11: loss 1.4389 val AUC 0.7873 (6s)\n"}
+,{"stream_name":"stdout","time":649.3625228,"data":"[15:13:32] epoch 12: loss 1.4328 val AUC 0.7868 (6s)\n"}
+,{"stream_name":"stdout","time":655.596352036,"data":"[15:13:38] epoch 13: loss 1.4255 val AUC 0.7868 (6s)\n"}
+,{"stream_name":"stdout","time":661.742909796,"data":"[15:13:45] epoch 14: loss 1.4187 val AUC 0.7863 (6s)\n"}
+,{"stream_name":"stdout","time":664.160173044,"data":"[15:13:47] seed 1 fold 1: AUC 0.7873 optAcc 0.5617 quadF1 0.4687391369092697 (96.5s)\n"}
+,{"stream_name":"stdout","time":670.382103045,"data":"[15:13:53] epoch 0: loss 1.7864 val AUC 0.7488 (6s)\n"}
+,{"stream_name":"stdout","time":676.588052471,"data":"[15:13:59] epoch 1: loss 1.6176 val AUC 0.7702 (6s)\n"}
+,{"stream_name":"stdout","time":683.035837573,"data":"[15:14:06] epoch 2: loss 1.5534 val AUC 0.7773 (6s)\n"}
+,{"stream_name":"stdout","time":689.276710305,"data":"[15:14:12] epoch 3: loss 1.5225 val AUC 0.7812 (6s)\n"}
+,{"stream_name":"stdout","time":695.506721923,"data":"[15:14:18] epoch 4: loss 1.5066 val AUC 0.7829 (6s)\n"}
+,{"stream_name":"stdout","time":701.908054014,"data":"[15:14:25] epoch 5: loss 1.4988 val AUC 0.7840 (6s)\n"}
+,{"stream_name":"stdout","time":708.12112582,"data":"[15:14:31] epoch 6: loss 1.4835 val AUC 0.7848 (6s)\n"}
+,{"stream_name":"stdout","time":714.355086427,"data":"[15:14:37] epoch 7: loss 1.4733 val AUC 0.7853 (6s)\n"}
+,{"stream_name":"stdout","time":720.73911404,"data":"[15:14:44] epoch 8: loss 1.4691 val AUC 0.7855 (6s)\n"}
+,{"stream_name":"stdout","time":726.983113964,"data":"[15:14:50] epoch 9: loss 1.4573 val AUC 0.7857 (6s)\n"}
+,{"stream_name":"stdout","time":733.216192259,"data":"[15:14:56] epoch 10: loss 1.4535 val AUC 0.7862 (6s)\n"}
+,{"stream_name":"stdout","time":739.572565279,"data":"[15:15:02] epoch 11: loss 1.4475 val AUC 0.7856 (6s)\n"}
+,{"stream_name":"stdout","time":745.845453848,"data":"[15:15:09] epoch 12: loss 1.4360 val AUC 0.7856 (6s)\n"}
+,{"stream_name":"stdout","time":752.093476063,"data":"[15:15:15] epoch 13: loss 1.4346 val AUC 0.7858 (6s)\n"}
+,{"stream_name":"stdout","time":754.535967524,"data":"[15:15:17] seed 1 fold 2: AUC 0.7862 optAcc 0.5596 quadF1 0.45653476401425913 (90.4s)\n"}
+,{"stream_name":"stdout","time":760.696661918,"data":"[15:15:24] epoch 0: loss 1.7817 val AUC 0.7505 (6s)\n"}
+,{"stream_name":"stdout","time":766.829365095,"data":"[15:15:30] epoch 1: loss 1.6146 val AUC 0.7734 (6s)\n"}
+,{"stream_name":"stdout","time":773.013651866,"data":"[15:15:36] epoch 2: loss 1.5495 val AUC 0.7800 (6s)\n"}
+,{"stream_name":"stdout","time":779.379621588,"data":"[15:15:42] epoch 3: loss 1.5209 val AUC 0.7831 (6s)\n"}
+,{"stream_name":"stdout","time":785.590565969,"data":"[15:15:48] epoch 4: loss 1.5043 val AUC 0.7855 (6s)\n"}
+,{"stream_name":"stdout","time":791.726952366,"data":"[15:15:55] epoch 5: loss 1.4913 val AUC 0.7863 (6s)\n"}
+,{"stream_name":"stdout","time":798.106565326,"data":"[15:16:01] epoch 6: loss 1.4795 val AUC 0.7873 (6s)\n"}
+,{"stream_name":"stdout","time":804.248052849,"data":"[15:16:07] epoch 7: loss 1.4716 val AUC 0.7876 (6s)\n"}
+,{"stream_name":"stdout","time":810.447659471,"data":"[15:16:13] epoch 8: loss 1.4654 val AUC 0.7876 (6s)\n"}
+,{"stream_name":"stdout","time":816.737114153,"data":"[15:16:20] epoch 9: loss 1.4556 val AUC 0.7883 (6s)\n"}
+,{"stream_name":"stdout","time":822.919682687,"data":"[15:16:26] epoch 10: loss 1.4470 val AUC 0.7876 (6s)\n"}
+,{"stream_name":"stdout","time":829.088223876,"data":"[15:16:32] epoch 11: loss 1.4397 val AUC 0.7881 (6s)\n"}
+,{"stream_name":"stdout","time":835.212939829,"data":"[15:16:38] epoch 12: loss 1.4336 val AUC 0.7882 (6s)\n"}
+,{"stream_name":"stdout","time":837.588658013,"data":"[15:16:40] seed 1 fold 3: AUC 0.7883 optAcc 0.5626 quadF1 0.45036527230674656 (83.1s)\n"}
+,{"stream_name":"stdout","time":843.784291843,"data":"[15:16:47] epoch 0: loss 1.7690 val AUC 0.7420 (6s)\n"}
+,{"stream_name":"stdout","time":849.936746509,"data":"[15:16:53] epoch 1: loss 1.6047 val AUC 0.7632 (6s)\n"}
+,{"stream_name":"stdout","time":856.271904336,"data":"[15:16:59] epoch 2: loss 1.5410 val AUC 0.7706 (6s)\n"}
+,{"stream_name":"stdout","time":862.500497055,"data":"[15:17:05] epoch 3: loss 1.5104 val AUC 0.7740 (6s)\n"}
+,{"stream_name":"stdout","time":868.704712132,"data":"[15:17:12] epoch 4: loss 1.4964 val AUC 0.7755 (6s)\n"}
+,{"stream_name":"stdout","time":875.112377362,"data":"[15:17:18] epoch 5: loss 1.4825 val AUC 0.7768 (6s)\n"}
+,{"stream_name":"stdout","time":881.327471709,"data":"[15:17:24] epoch 6: loss 1.4693 val AUC 0.7772 (6s)\n"}
+,{"stream_name":"stdout","time":887.540896502,"data":"[15:17:30] epoch 7: loss 1.4630 val AUC 0.7783 (6s)\n"}
+,{"stream_name":"stdout","time":893.696895716,"data":"[15:17:37] epoch 8: loss 1.4526 val AUC 0.7780 (6s)\n"}
+,{"stream_name":"stdout","time":900.061222373,"data":"[15:17:43] epoch 9: loss 1.4453 val AUC 0.7790 (6s)\n"}
+,{"stream_name":"stdout","time":906.248716501,"data":"[15:17:49] epoch 10: loss 1.4391 val AUC 0.7791 (6s)\n"}
+,{"stream_name":"stdout","time":912.426691871,"data":"[15:17:55] epoch 11: loss 1.4323 val AUC 0.7790 (6s)\n"}
+,{"stream_name":"stdout","time":918.775548119,"data":"[15:18:02] epoch 12: loss 1.4257 val AUC 0.7784 (6s)\n"}
+,{"stream_name":"stdout","time":920.968584065,"data":"[15:18:04] seed 1 fold 4: AUC 0.7790 optAcc 0.5482 quadF1 0.4672823302416963 (83.4s)\n"}
+,{"stream_name":"stdout","time":927.753591414,"data":"[15:18:11] epoch 0: loss 1.7741 val AUC 0.7592 (6s)\n"}
+,{"stream_name":"stdout","time":933.887129508,"data":"[15:18:17] epoch 1: loss 1.6179 val AUC 0.7778 (6s)\n"}
+,{"stream_name":"stdout","time":940.20843591,"data":"[15:18:23] epoch 2: loss 1.5558 val AUC 0.7843 (6s)\n"}
+,{"stream_name":"stdout","time":946.386623351,"data":"[15:18:29] epoch 3: loss 1.5268 val AUC 0.7878 (6s)\n"}
+,{"stream_name":"stdout","time":952.602736414,"data":"[15:18:35] epoch 4: loss 1.5093 val AUC 0.7900 (6s)\n"}
+,{"stream_name":"stdout","time":958.955221113,"data":"[15:18:42] epoch 5: loss 1.4977 val AUC 0.7908 (6s)\n"}
+,{"stream_name":"stdout","time":965.159224659,"data":"[15:18:48] epoch 6: loss 1.4861 val AUC 0.7921 (6s)\n"}
+,{"stream_name":"stdout","time":971.316614586,"data":"[15:18:54] epoch 7: loss 1.4772 val AUC 0.7927 (6s)\n"}
+,{"stream_name":"stdout","time":977.484578036,"data":"[15:19:00] epoch 8: loss 1.4677 val AUC 0.7925 (6s)\n"}
+,{"stream_name":"stdout","time":983.810706296,"data":"[15:19:07] epoch 9: loss 1.4622 val AUC 0.7934 (6s)\n"}
+,{"stream_name":"stdout","time":989.896176034,"data":"[15:19:13] epoch 10: loss 1.4536 val AUC 0.7934 (6s)\n"}
+,{"stream_name":"stdout","time":996.02389948,"data":"[15:19:19] epoch 11: loss 1.4478 val AUC 0.7934 (6s)\n"}
+,{"stream_name":"stdout","time":1002.344373415,"data":"[15:19:25] epoch 12: loss 1.4381 val AUC 0.7927 (6s)\n"}
+,{"stream_name":"stdout","time":1004.499121636,"data":"[15:19:27] seed 2 fold 0: AUC 0.7934 optAcc 0.5641 quadF1 0.47005519618081604 (82.9s)\n"}
+,{"stream_name":"stdout","time":1010.684116958,"data":"[15:19:34] epoch 0: loss 1.7769 val AUC 0.7480 (6s)\n"}
+,{"stream_name":"stdout","time":1016.816712914,"data":"[15:19:40] epoch 1: loss 1.6142 val AUC 0.7692 (6s)\n"}
+,{"stream_name":"stdout","time":1023.235538181,"data":"[15:19:46] epoch 2: loss 1.5505 val AUC 0.7780 (6s)\n"}
+,{"stream_name":"stdout","time":1029.403236756,"data":"[15:19:52] epoch 3: loss 1.5210 val AUC 0.7813 (6s)\n"}
+,{"stream_name":"stdout","time":1035.598931993,"data":"[15:19:58] epoch 4: loss 1.5025 val AUC 0.7832 (6s)\n"}
+,{"stream_name":"stdout","time":1041.944495249,"data":"[15:20:05] epoch 5: loss 1.4888 val AUC 0.7842 (6s)\n"}
+,{"stream_name":"stdout","time":1048.152453936,"data":"[15:20:11] epoch 6: loss 1.4799 val AUC 0.7849 (6s)\n"}
+,{"stream_name":"stdout","time":1054.437210808,"data":"[15:20:17] epoch 7: loss 1.4703 val AUC 0.7860 (6s)\n"}
+,{"stream_name":"stdout","time":1060.817430287,"data":"[15:20:24] epoch 8: loss 1.4626 val AUC 0.7854 (6s)\n"}
+,{"stream_name":"stdout","time":1067.005259937,"data":"[15:20:30] epoch 9: loss 1.4563 val AUC 0.7865 (6s)\n"}
+,{"stream_name":"stdout","time":1073.267430319,"data":"[15:20:36] epoch 10: loss 1.4460 val AUC 0.7868 (6s)\n"}
+,{"stream_name":"stdout","time":1079.623141496,"data":"[15:20:42] epoch 11: loss 1.4386 val AUC 0.7868 (6s)\n"}
+,{"stream_name":"stdout","time":1085.788054822,"data":"[15:20:49] epoch 12: loss 1.4350 val AUC 0.7865 (6s)\n"}
+,{"stream_name":"stdout","time":1091.985660261,"data":"[15:20:55] epoch 13: loss 1.4273 val AUC 0.7866 (6s)\n"}
+,{"stream_name":"stdout","time":1094.186915797,"data":"[15:20:57] seed 2 fold 1: AUC 0.7868 optAcc 0.5618 quadF1 0.47008163336123904 (89.7s)\n"}
+,{"stream_name":"stdout","time":1100.513404663,"data":"[15:21:03] epoch 0: loss 1.7714 val AUC 0.7485 (6s)\n"}
+,{"stream_name":"stdout","time":1106.763075012,"data":"[15:21:10] epoch 1: loss 1.6148 val AUC 0.7684 (6s)\n"}
+,{"stream_name":"stdout","time":1113.178313309,"data":"[15:21:16] epoch 2: loss 1.5535 val AUC 0.7755 (6s)\n"}
+,{"stream_name":"stdout","time":1119.434070281,"data":"[15:21:22] epoch 3: loss 1.5249 val AUC 0.7791 (6s)\n"}
+,{"stream_name":"stdout","time":1125.652646865,"data":"[15:21:28] epoch 4: loss 1.5080 val AUC 0.7818 (6s)\n"}
+,{"stream_name":"stdout","time":1131.856680241,"data":"[15:21:35] epoch 5: loss 1.4918 val AUC 0.7830 (6s)\n"}
+,{"stream_name":"stdout","time":1138.254455015,"data":"[15:21:41] epoch 6: loss 1.4853 val AUC 0.7836 (6s)\n"}
+,{"stream_name":"stdout","time":1144.477579786,"data":"[15:21:47] epoch 7: loss 1.4755 val AUC 0.7846 (6s)\n"}
+,{"stream_name":"stdout","time":1150.795829308,"data":"[15:21:54] epoch 8: loss 1.4704 val AUC 0.7855 (6s)\n"}
+,{"stream_name":"stdout","time":1156.996735508,"data":"[15:22:00] epoch 9: loss 1.4592 val AUC 0.7857 (6s)\n"}
+,{"stream_name":"stdout","time":1163.206078363,"data":"[15:22:06] epoch 10: loss 1.4504 val AUC 0.7861 (6s)\n"}
+,{"stream_name":"stdout","time":1169.577613101,"data":"[15:22:12] epoch 11: loss 1.4468 val AUC 0.7861 (6s)\n"}
+,{"stream_name":"stdout","time":1175.789824943,"data":"[15:22:19] epoch 12: loss 1.4400 val AUC 0.7857 (6s)\n"}
+,{"stream_name":"stdout","time":1181.947207673,"data":"[15:22:25] epoch 13: loss 1.4354 val AUC 0.7858 (6s)\n"}
+,{"stream_name":"stdout","time":1184.358070002,"data":"[15:22:27] seed 2 fold 2: AUC 0.7861 optAcc 0.5595 quadF1 0.4653054290415373 (90.2s)\n"}
+,{"stream_name":"stdout","time":1190.503176019,"data":"[15:22:33] epoch 0: loss 1.7737 val AUC 0.7514 (6s)\n"}
+,{"stream_name":"stdout","time":1196.69978555,"data":"[15:22:40] epoch 1: loss 1.6138 val AUC 0.7712 (6s)\n"}
+,{"stream_name":"stdout","time":1202.876257036,"data":"[15:22:46] epoch 2: loss 1.5498 val AUC 0.7789 (6s)\n"}
+,{"stream_name":"stdout","time":1209.196478461,"data":"[15:22:52] epoch 3: loss 1.5207 val AUC 0.7825 (6s)\n"}
+,{"stream_name":"stdout","time":1215.359374486,"data":"[15:22:58] epoch 4: loss 1.5042 val AUC 0.7843 (6s)\n"}
+,{"stream_name":"stdout","time":1221.494222122,"data":"[15:23:04] epoch 5: loss 1.4900 val AUC 0.7858 (6s)\n"}
+,{"stream_name":"stdout","time":1227.848038387,"data":"[15:23:11] epoch 6: loss 1.4794 val AUC 0.7873 (6s)\n"}
+,{"stream_name":"stdout","time":1233.978132883,"data":"[15:23:17] epoch 7: loss 1.4715 val AUC 0.7873 (6s)\n"}
+,{"stream_name":"stdout","time":1240.107366579,"data":"[15:23:23] epoch 8: loss 1.4630 val AUC 0.7879 (6s)\n"}
+,{"stream_name":"stdout","time":1246.214296868,"data":"[15:23:29] epoch 9: loss 1.4564 val AUC 0.7878 (6s)\n"}
+,{"stream_name":"stdout","time":1252.502259407,"data":"[15:23:35] epoch 10: loss 1.4488 val AUC 0.7878 (6s)\n"}
+,{"stream_name":"stdout","time":1258.634990721,"data":"[15:23:41] epoch 11: loss 1.4411 val AUC 0.7881 (6s)\n"}
+,{"stream_name":"stdout","time":1264.702151494,"data":"[15:23:48] epoch 12: loss 1.4335 val AUC 0.7875 (6s)\n"}
+,{"stream_name":"stdout","time":1271.003122269,"data":"[15:23:54] epoch 13: loss 1.4278 val AUC 0.7875 (6s)\n"}
+,{"stream_name":"stdout","time":1277.164041364,"data":"[15:24:00] epoch 14: loss 1.4225 val AUC 0.7864 (6s)\n"}
+,{"stream_name":"stdout","time":1279.336053455,"data":"[15:24:02] seed 2 fold 3: AUC 0.7881 optAcc 0.5604 quadF1 0.45464171159198086 (95.0s)\n"}
+,{"stream_name":"stdout","time":1285.666380422,"data":"[15:24:08] epoch 0: loss 1.7654 val AUC 0.7422 (6s)\n"}
+,{"stream_name":"stdout","time":1291.86543819,"data":"[15:24:15] epoch 1: loss 1.6056 val AUC 0.7615 (6s)\n"}
+,{"stream_name":"stdout","time":1298.019726389,"data":"[15:24:21] epoch 2: loss 1.5406 val AUC 0.7691 (6s)\n"}
+,{"stream_name":"stdout","time":1304.205685274,"data":"[15:24:27] epoch 3: loss 1.5127 val AUC 0.7735 (6s)\n"}
+,{"stream_name":"stdout","time":1310.558663934,"data":"[15:24:33] epoch 4: loss 1.4972 val AUC 0.7756 (6s)\n"}
+,{"stream_name":"stdout","time":1316.760085239,"data":"[15:24:40] epoch 5: loss 1.4812 val AUC 0.7758 (6s)\n"}
+,{"stream_name":"stdout","time":1322.990166704,"data":"[15:24:46] epoch 6: loss 1.4725 val AUC 0.7771 (6s)\n"}
+,{"stream_name":"stdout","time":1329.327827533,"data":"[15:24:52] epoch 7: loss 1.4624 val AUC 0.7780 (6s)\n"}
+,{"stream_name":"stdout","time":1335.501896856,"data":"[15:24:58] epoch 8: loss 1.4535 val AUC 0.7781 (6s)\n"}
+,{"stream_name":"stdout","time":1341.642495056,"data":"[15:25:04] epoch 9: loss 1.4474 val AUC 0.7780 (6s)\n"}
+,{"stream_name":"stdout","time":1348.047980723,"data":"[15:25:11] epoch 10: loss 1.4382 val AUC 0.7787 (6s)\n"}
+,{"stream_name":"stdout","time":1354.238180118,"data":"[15:25:17] epoch 11: loss 1.4333 val AUC 0.7779 (6s)\n"}
+,{"stream_name":"stdout","time":1360.378598243,"data":"[15:25:23] epoch 12: loss 1.4256 val AUC 0.7785 (6s)\n"}
+,{"stream_name":"stdout","time":1366.550789401,"data":"[15:25:29] epoch 13: loss 1.4194 val AUC 0.7782 (6s)\n"}
+,{"stream_name":"stdout","time":1368.910148469,"data":"[15:25:32] seed 2 fold 4: AUC 0.7787 optAcc 0.5496 quadF1 0.4741688967430906 (89.6s)\n"}
+,{"stream_name":"stdout","time":1375.615124753,"data":"[15:25:38] epoch 0: loss 1.7914 val AUC 0.7598 (6s)\n"}
+,{"stream_name":"stdout","time":1381.720487878,"data":"[15:25:45] epoch 1: loss 1.6256 val AUC 0.7784 (6s)\n"}
+,{"stream_name":"stdout","time":1388.01454705,"data":"[15:25:51] epoch 2: loss 1.5590 val AUC 0.7848 (6s)\n"}
+,{"stream_name":"stdout","time":1394.191367418,"data":"[15:25:57] epoch 3: loss 1.5305 val AUC 0.7875 (6s)\n"}
+,{"stream_name":"stdout","time":1400.426938803,"data":"[15:26:03] epoch 4: loss 1.5100 val AUC 0.7905 (6s)\n"}
+,{"stream_name":"stdout","time":1406.597857363,"data":"[15:26:09] epoch 5: loss 1.4992 val AUC 0.7916 (6s)\n"}
+,{"stream_name":"stdout","time":1412.936181133,"data":"[15:26:16] epoch 6: loss 1.4868 val AUC 0.7923 (6s)\n"}
+,{"stream_name":"stdout","time":1419.07535457,"data":"[15:26:22] epoch 7: loss 1.4786 val AUC 0.7929 (6s)\n"}
+,{"stream_name":"stdout","time":1425.240893266,"data":"[15:26:28] epoch 8: loss 1.4689 val AUC 0.7930 (6s)\n"}
+,{"stream_name":"stdout","time":1431.57260551,"data":"[15:26:34] epoch 9: loss 1.4611 val AUC 0.7931 (6s)\n"}
+,{"stream_name":"stdout","time":1437.753314653,"data":"[15:26:41] epoch 10: loss 1.4542 val AUC 0.7936 (6s)\n"}
+,{"stream_name":"stdout","time":1443.91628691,"data":"[15:26:47] epoch 11: loss 1.4481 val AUC 0.7936 (6s)\n"}
+,{"stream_name":"stdout","time":1450.064409905,"data":"[15:26:53] epoch 12: loss 1.4403 val AUC 0.7935 (6s)\n"}
+,{"stream_name":"stdout","time":1456.323769088,"data":"[15:26:59] epoch 13: loss 1.4337 val AUC 0.7937 (6s)\n"}
+,{"stream_name":"stdout","time":1458.490804666,"data":"[15:27:01] seed 3 fold 0: AUC 0.7936 optAcc 0.5635 quadF1 0.46772223136396107 (89.0s)\n"}
+,{"stream_name":"stdout","time":1464.694781024,"data":"[15:27:08] epoch 0: loss 1.7755 val AUC 0.7526 (6s)\n"}
+,{"stream_name":"stdout","time":1470.992857691,"data":"[15:27:14] epoch 1: loss 1.6161 val AUC 0.7721 (6s)\n"}
+,{"stream_name":"stdout","time":1477.186492131,"data":"[15:27:20] epoch 2: loss 1.5581 val AUC 0.7788 (6s)\n"}
+,{"stream_name":"stdout","time":1483.36479575,"data":"[15:27:26] epoch 3: loss 1.5236 val AUC 0.7818 (6s)\n"}
+,{"stream_name":"stdout","time":1489.701735315,"data":"[15:27:33] epoch 4: loss 1.5069 val AUC 0.7839 (6s)\n"}
+,{"stream_name":"stdout","time":1495.877973339,"data":"[15:27:39] epoch 5: loss 1.4940 val AUC 0.7852 (6s)\n"}
+,{"stream_name":"stdout","time":1502.122444809,"data":"[15:27:45] epoch 6: loss 1.4832 val AUC 0.7859 (6s)\n"}
+,{"stream_name":"stdout","time":1508.223058982,"data":"[15:27:51] epoch 7: loss 1.4739 val AUC 0.7860 (6s)\n"}
+,{"stream_name":"stdout","time":1514.583709393,"data":"[15:27:57] epoch 8: loss 1.4639 val AUC 0.7865 (6s)\n"}
+,{"stream_name":"stdout","time":1520.757339048,"data":"[15:28:04] epoch 9: loss 1.4557 val AUC 0.7867 (6s)\n"}
+,{"stream_name":"stdout","time":1526.921614803,"data":"[15:28:10] epoch 10: loss 1.4473 val AUC 0.7866 (6s)\n"}
+,{"stream_name":"stdout","time":1533.272557958,"data":"[15:28:16] epoch 11: loss 1.4421 val AUC 0.7866 (6s)\n"}
+,{"stream_name":"stdout","time":1539.412466547,"data":"[15:28:22] epoch 12: loss 1.4346 val AUC 0.7865 (6s)\n"}
+,{"stream_name":"stdout","time":1541.54254356,"data":"[15:28:24] seed 3 fold 1: AUC 0.7867 optAcc 0.5613 quadF1 0.4705433178699036 (83.1s)\n"}
+,{"stream_name":"stdout","time":1547.903711617,"data":"[15:28:31] epoch 0: loss 1.7866 val AUC 0.7515 (6s)\n"}
+,{"stream_name":"stdout","time":1554.133512953,"data":"[15:28:37] epoch 1: loss 1.6228 val AUC 0.7704 (6s)\n"}
+,{"stream_name":"stdout","time":1560.35385567,"data":"[15:28:43] epoch 2: loss 1.5524 val AUC 0.7759 (6s)\n"}
+,{"stream_name":"stdout","time":1566.778847777,"data":"[15:28:50] epoch 3: loss 1.5268 val AUC 0.7802 (6s)\n"}
+,{"stream_name":"stdout","time":1573.025862259,"data":"[15:28:56] epoch 4: loss 1.5058 val AUC 0.7821 (6s)\n"}
+,{"stream_name":"stdout","time":1579.278062646,"data":"[15:29:02] epoch 5: loss 1.4986 val AUC 0.7837 (6s)\n"}
+,{"stream_name":"stdout","time":1585.711572305,"data":"[15:29:09] epoch 6: loss 1.4850 val AUC 0.7842 (6s)\n"}
+,{"stream_name":"stdout","time":1592.035480586,"data":"[15:29:15] epoch 7: loss 1.4793 val AUC 0.7838 (6s)\n"}
+,{"stream_name":"stdout","time":1598.260772179,"data":"[15:29:21] epoch 8: loss 1.4701 val AUC 0.7848 (6s)\n"}
+,{"stream_name":"stdout","time":1604.642692313,"data":"[15:29:27] epoch 9: loss 1.4589 val AUC 0.7849 (6s)\n"}
+,{"stream_name":"stdout","time":1610.80846761,"data":"[15:29:34] epoch 10: loss 1.4537 val AUC 0.7859 (6s)\n"}
+,{"stream_name":"stdout","time":1616.985422326,"data":"[15:29:40] epoch 11: loss 1.4435 val AUC 0.7856 (6s)\n"}
+,{"stream_name":"stdout","time":1623.323383646,"data":"[15:29:46] epoch 12: loss 1.4370 val AUC 0.7856 (6s)\n"}
+,{"stream_name":"stdout","time":1629.537931238,"data":"[15:29:52] epoch 13: loss 1.4327 val AUC 0.7855 (6s)\n"}
+,{"stream_name":"stdout","time":1631.726493732,"data":"[15:29:55] seed 3 fold 2: AUC 0.7859 optAcc 0.5596 quadF1 0.4761305753080046 (90.2s)\n"}
+,{"stream_name":"stdout","time":1638.006524158,"data":"[15:30:01] epoch 0: loss 1.7826 val AUC 0.7530 (6s)\n"}
+,{"stream_name":"stdout","time":1644.169936601,"data":"[15:30:07] epoch 1: loss 1.6213 val AUC 0.7717 (6s)\n"}
+,{"stream_name":"stdout","time":1650.344492325,"data":"[15:30:13] epoch 2: loss 1.5551 val AUC 0.7796 (6s)\n"}
+,{"stream_name":"stdout","time":1656.647762923,"data":"[15:30:19] epoch 3: loss 1.5243 val AUC 0.7831 (6s)\n"}
+,{"stream_name":"stdout","time":1662.819794358,"data":"[15:30:26] epoch 4: loss 1.5092 val AUC 0.7851 (6s)\n"}
+,{"stream_name":"stdout","time":1668.957343361,"data":"[15:30:32] epoch 5: loss 1.4922 val AUC 0.7862 (6s)\n"}
+,{"stream_name":"stdout","time":1675.073706151,"data":"[15:30:38] epoch 6: loss 1.4850 val AUC 0.7871 (6s)\n"}
+,{"stream_name":"stdout","time":1681.383411127,"data":"[15:30:44] epoch 7: loss 1.4722 val AUC 0.7875 (6s)\n"}
+,{"stream_name":"stdout","time":1687.557758944,"data":"[15:30:50] epoch 8: loss 1.4643 val AUC 0.7881 (6s)\n"}
+,{"stream_name":"stdout","time":1693.637039246,"data":"[15:30:56] epoch 9: loss 1.4575 val AUC 0.7878 (6s)\n"}
+,{"stream_name":"stdout","time":1699.96238224,"data":"[15:31:03] epoch 10: loss 1.4504 val AUC 0.7872 (6s)\n"}
+,{"stream_name":"stdout","time":1706.104486283,"data":"[15:31:09] epoch 11: loss 1.4422 val AUC 0.7880 (6s)\n"}
+,{"stream_name":"stdout","time":1708.267399017,"data":"[15:31:11] seed 3 fold 3: AUC 0.7881 optAcc 0.5617 quadF1 0.4319408392582657 (76.5s)\n"}
+,{"stream_name":"stdout","time":1714.634952251,"data":"[15:31:17] epoch 0: loss 1.7759 val AUC 0.7437 (6s)\n"}
+,{"stream_name":"stdout","time":1720.723200036,"data":"[15:31:24] epoch 1: loss 1.6132 val AUC 0.7626 (6s)\n"}
+,{"stream_name":"stdout","time":1726.864937017,"data":"[15:31:30] epoch 2: loss 1.5485 val AUC 0.7698 (6s)\n"}
+,{"stream_name":"stdout","time":1733.097856693,"data":"[15:31:36] epoch 3: loss 1.5182 val AUC 0.7731 (6s)\n"}
+,{"stream_name":"stdout","time":1739.415934699,"data":"[15:31:42] epoch 4: loss 1.4980 val AUC 0.7759 (6s)\n"}
+,{"stream_name":"stdout","time":1745.618175574,"data":"[15:31:48] epoch 5: loss 1.4847 val AUC 0.7766 (6s)\n"}
+,{"stream_name":"stdout","time":1751.763528565,"data":"[15:31:55] epoch 6: loss 1.4745 val AUC 0.7777 (6s)\n"}
+,{"stream_name":"stdout","time":1758.124007361,"data":"[15:32:01] epoch 7: loss 1.4642 val AUC 0.7784 (6s)\n"}
+,{"stream_name":"stdout","time":1764.346796897,"data":"[15:32:07] epoch 8: loss 1.4562 val AUC 0.7787 (6s)\n"}
+,{"stream_name":"stdout","time":1770.508466898,"data":"[15:32:13] epoch 9: loss 1.4492 val AUC 0.7791 (6s)\n"}
+,{"stream_name":"stdout","time":1776.835925097,"data":"[15:32:20] epoch 10: loss 1.4407 val AUC 0.7789 (6s)\n"}
+,{"stream_name":"stdout","time":1783.025551032,"data":"[15:32:26] epoch 11: loss 1.4351 val AUC 0.7796 (6s)\n"}
+,{"stream_name":"stdout","time":1789.157533462,"data":"[15:32:32] epoch 12: loss 1.4275 val AUC 0.7795 (6s)\n"}
+,{"stream_name":"stdout","time":1795.321982482,"data":"[15:32:38] epoch 13: loss 1.4192 val AUC 0.7783 (6s)\n"}
+,{"stream_name":"stdout","time":1801.634052847,"data":"[15:32:44] epoch 14: loss 1.4149 val AUC 0.7781 (6s)\n"}
+,{"stream_name":"stdout","time":1803.84497324,"data":"[15:32:47] seed 3 fold 4: AUC 0.7796 optAcc 0.5499 quadF1 0.4678276991904901 (95.6s)\n"}
+,{"stream_name":"stdout","time":1810.50775187,"data":"[15:32:53] epoch 0: loss 1.7861 val AUC 0.7592 (6s)\n"}
+,{"stream_name":"stdout","time":1816.813695665,"data":"[15:33:00] epoch 1: loss 1.6239 val AUC 0.7782 (6s)\n"}
+,{"stream_name":"stdout","time":1823.063461717,"data":"[15:33:06] epoch 2: loss 1.5599 val AUC 0.7851 (6s)\n"}
+,{"stream_name":"stdout","time":1829.265589628,"data":"[15:33:12] epoch 3: loss 1.5331 val AUC 0.7879 (6s)\n"}
+,{"stream_name":"stdout","time":1835.428715222,"data":"[15:33:18] epoch 4: loss 1.5117 val AUC 0.7897 (6s)\n"}
+,{"stream_name":"stdout","time":1841.767565536,"data":"[15:33:25] epoch 5: loss 1.4970 val AUC 0.7916 (6s)\n"}
+,{"stream_name":"stdout","time":1847.949589602,"data":"[15:33:31] epoch 6: loss 1.4865 val AUC 0.7918 (6s)\n"}
+,{"stream_name":"stdout","time":1854.120794713,"data":"[15:33:37] epoch 7: loss 1.4771 val AUC 0.7918 (6s)\n"}
+,{"stream_name":"stdout","time":1860.494145309,"data":"[15:33:43] epoch 8: loss 1.4691 val AUC 0.7925 (6s)\n"}
+,{"stream_name":"stdout","time":1866.674557938,"data":"[15:33:50] epoch 9: loss 1.4616 val AUC 0.7925 (6s)\n"}
+,{"stream_name":"stdout","time":1872.837410692,"data":"[15:33:56] epoch 10: loss 1.4536 val AUC 0.7932 (6s)\n"}
+,{"stream_name":"stdout","time":1878.957931788,"data":"[15:34:02] epoch 11: loss 1.4457 val AUC 0.7935 (6s)\n"}
+,{"stream_name":"stdout","time":1885.239762455,"data":"[15:34:08] epoch 12: loss 1.4372 val AUC 0.7931 (6s)\n"}
+,{"stream_name":"stdout","time":1891.402257667,"data":"[15:34:14] epoch 13: loss 1.4297 val AUC 0.7934 (6s)\n"}
+,{"stream_name":"stdout","time":1897.525457544,"data":"[15:34:20] epoch 14: loss 1.4265 val AUC 0.7927 (6s)\n"}
+,{"stream_name":"stdout","time":1899.835119094,"data":"[15:34:23] seed 4 fold 0: AUC 0.7935 optAcc 0.5632 quadF1 0.46270995838015855 (95.4s)\n"}
+,{"stream_name":"stdout","time":1905.9976352,"data":"[15:34:29] epoch 0: loss 1.7835 val AUC 0.7523 (6s)\n"}
+,{"stream_name":"stdout","time":1912.204773099,"data":"[15:34:35] epoch 1: loss 1.6184 val AUC 0.7714 (6s)\n"}
+,{"stream_name":"stdout","time":1918.33810879,"data":"[15:34:41] epoch 2: loss 1.5540 val AUC 0.7777 (6s)\n"}
+,{"stream_name":"stdout","time":1924.648887049,"data":"[15:34:47] epoch 3: loss 1.5244 val AUC 0.7815 (6s)\n"}
+,{"stream_name":"stdout","time":1930.865022515,"data":"[15:34:54] epoch 4: loss 1.5065 val AUC 0.7835 (6s)\n"}
+,{"stream_name":"stdout","time":1937.043150367,"data":"[15:35:00] epoch 5: loss 1.4922 val AUC 0.7846 (6s)\n"}
+,{"stream_name":"stdout","time":1943.3989521,"data":"[15:35:06] epoch 6: loss 1.4796 val AUC 0.7854 (6s)\n"}
+,{"stream_name":"stdout","time":1949.553656238,"data":"[15:35:12] epoch 7: loss 1.4731 val AUC 0.7851 (6s)\n"}
+,{"stream_name":"stdout","time":1955.724328485,"data":"[15:35:19] epoch 8: loss 1.4616 val AUC 0.7858 (6s)\n"}
+,{"stream_name":"stdout","time":1962.086947713,"data":"[15:35:25] epoch 9: loss 1.4528 val AUC 0.7866 (6s)\n"}
+,{"stream_name":"stdout","time":1968.268245521,"data":"[15:35:31] epoch 10: loss 1.4465 val AUC 0.7858 (6s)\n"}
+,{"stream_name":"stdout","time":1974.404386266,"data":"[15:35:37] epoch 11: loss 1.4403 val AUC 0.7868 (6s)\n"}
+,{"stream_name":"stdout","time":1980.761465325,"data":"[15:35:44] epoch 12: loss 1.4334 val AUC 0.7854 (6s)\n"}
+,{"stream_name":"stdout","time":1986.931130335,"data":"[15:35:50] epoch 13: loss 1.4267 val AUC 0.7867 (6s)\n"}
+,{"stream_name":"stdout","time":1993.164390962,"data":"[15:35:56] epoch 14: loss 1.4199 val AUC 0.7860 (6s)\n"}
+,{"stream_name":"stdout","time":1995.33914039,"data":"[15:35:58] seed 4 fold 1: AUC 0.7868 optAcc 0.5603 quadF1 0.46965857632334207 (95.5s)\n"}
+,{"stream_name":"stdout","time":2001.625915003,"data":"[15:36:04] epoch 0: loss 1.7844 val AUC 0.7502 (6s)\n"}
+,{"stream_name":"stdout","time":2007.801909168,"data":"[15:36:11] epoch 1: loss 1.6253 val AUC 0.7698 (6s)\n"}
+,{"stream_name":"stdout","time":2014.030227696,"data":"[15:36:17] epoch 2: loss 1.5596 val AUC 0.7768 (6s)\n"}
+,{"stream_name":"stdout","time":2020.383883362,"data":"[15:36:23] epoch 3: loss 1.5258 val AUC 0.7791 (6s)\n"}
+,{"stream_name":"stdout","time":2026.625602716,"data":"[15:36:29] epoch 4: loss 1.5100 val AUC 0.7825 (6s)\n"}
+,{"stream_name":"stdout","time":2033.040394399,"data":"[15:36:36] epoch 5: loss 1.4930 val AUC 0.7837 (6s)\n"}
+,{"stream_name":"stdout","time":2039.274470275,"data":"[15:36:42] epoch 6: loss 1.4847 val AUC 0.7834 (6s)\n"}
+,{"stream_name":"stdout","time":2045.487687156,"data":"[15:36:48] epoch 7: loss 1.4771 val AUC 0.7852 (6s)\n"}
+,{"stream_name":"stdout","time":2051.852134226,"data":"[15:36:55] epoch 8: loss 1.4648 val AUC 0.7859 (6s)\n"}
+,{"stream_name":"stdout","time":2058.089003168,"data":"[15:37:01] epoch 9: loss 1.4580 val AUC 0.7857 (6s)\n"}
+,{"stream_name":"stdout","time":2064.286959593,"data":"[15:37:07] epoch 10: loss 1.4512 val AUC 0.7865 (6s)\n"}
+,{"stream_name":"stdout","time":2070.641035312,"data":"[15:37:13] epoch 11: loss 1.4444 val AUC 0.7864 (6s)\n"}
+,{"stream_name":"stdout","time":2076.851880726,"data":"[15:37:20] epoch 12: loss 1.4369 val AUC 0.7858 (6s)\n"}
+,{"stream_name":"stdout","time":2083.031489378,"data":"[15:37:26] epoch 13: loss 1.4336 val AUC 0.7852 (6s)\n"}
+,{"stream_name":"stdout","time":2085.429955745,"data":"[15:37:28] seed 4 fold 2: AUC 0.7865 optAcc 0.5591 quadF1 0.4622175608854113 (90.1s)\n"}
+,{"stream_name":"stdout","time":2091.624430256,"data":"[15:37:34] epoch 0: loss 1.7788 val AUC 0.7520 (6s)\n"}
+,{"stream_name":"stdout","time":2097.771903642,"data":"[15:37:41] epoch 1: loss 1.6188 val AUC 0.7718 (6s)\n"}
+,{"stream_name":"stdout","time":2103.946993167,"data":"[15:37:47] epoch 2: loss 1.5549 val AUC 0.7792 (6s)\n"}
+,{"stream_name":"stdout","time":2110.26804827,"data":"[15:37:53] epoch 3: loss 1.5248 val AUC 0.7829 (6s)\n"}
+,{"stream_name":"stdout","time":2116.491590909,"data":"[15:37:59] epoch 4: loss 1.5064 val AUC 0.7851 (6s)\n"}
+,{"stream_name":"stdout","time":2122.661773996,"data":"[15:38:05] epoch 5: loss 1.4937 val AUC 0.7853 (6s)\n"}
+,{"stream_name":"stdout","time":2129.035366654,"data":"[15:38:12] epoch 6: loss 1.4805 val AUC 0.7871 (6s)\n"}
+,{"stream_name":"stdout","time":2135.194807267,"data":"[15:38:18] epoch 7: loss 1.4741 val AUC 0.7872 (6s)\n"}
+,{"stream_name":"stdout","time":2141.313625487,"data":"[15:38:24] epoch 8: loss 1.4632 val AUC 0.7882 (6s)\n"}
+,{"stream_name":"stdout","time":2147.475407344,"data":"[15:38:30] epoch 9: loss 1.4563 val AUC 0.7877 (6s)\n"}
+,{"stream_name":"stdout","time":2153.813609418,"data":"[15:38:37] epoch 10: loss 1.4488 val AUC 0.7873 (6s)\n"}
+,{"stream_name":"stdout","time":2160.003660569,"data":"[15:38:43] epoch 11: loss 1.4403 val AUC 0.7883 (6s)\n"}
+,{"stream_name":"stdout","time":2162.241986114,"data":"[15:38:45] seed 4 fold 3: AUC 0.7882 optAcc 0.5610 quadF1 0.4398250476940566 (76.8s)\n"}
+,{"stream_name":"stdout","time":2168.528663467,"data":"[15:38:51] epoch 0: loss 1.7708 val AUC 0.7431 (6s)\n"}
+,{"stream_name":"stdout","time":2174.655482067,"data":"[15:38:57] epoch 1: loss 1.6094 val AUC 0.7632 (6s)\n"}
+,{"stream_name":"stdout","time":2180.800635834,"data":"[15:39:04] epoch 2: loss 1.5461 val AUC 0.7708 (6s)\n"}
+,{"stream_name":"stdout","time":2187.084943388,"data":"[15:39:10] epoch 3: loss 1.5137 val AUC 0.7735 (6s)\n"}
+,{"stream_name":"stdout","time":2193.275660577,"data":"[15:39:16] epoch 4: loss 1.4947 val AUC 0.7754 (6s)\n"}
+,{"stream_name":"stdout","time":2199.442968703,"data":"[15:39:22] epoch 5: loss 1.4839 val AUC 0.7767 (6s)\n"}
+,{"stream_name":"stdout","time":2205.610543639,"data":"[15:39:28] epoch 6: loss 1.4703 val AUC 0.7779 (6s)\n"}
+,{"stream_name":"stdout","time":2211.907878379,"data":"[15:39:35] epoch 7: loss 1.4628 val AUC 0.7777 (6s)\n"}
+,{"stream_name":"stdout","time":2218.09280988,"data":"[15:39:41] epoch 8: loss 1.4534 val AUC 0.7791 (6s)\n"}
+,{"stream_name":"stdout","time":2224.316799144,"data":"[15:39:47] epoch 9: loss 1.4476 val AUC 0.7793 (6s)\n"}
+,{"stream_name":"stdout","time":2230.670331412,"data":"[15:39:53] epoch 10: loss 1.4367 val AUC 0.7793 (6s)\n"}
+,{"stream_name":"stdout","time":2236.852804853,"data":"[15:40:00] epoch 11: loss 1.4314 val AUC 0.7794 (6s)\n"}
+,{"stream_name":"stdout","time":2243.089943286,"data":"[15:40:06] epoch 12: loss 1.4224 val AUC 0.7788 (6s)\n"}
+,{"stream_name":"stdout","time":2249.445443197,"data":"[15:40:12] epoch 13: loss 1.4187 val AUC 0.7780 (6s)\n"}
+,{"stream_name":"stdout","time":2255.652753405,"data":"[15:40:18] epoch 14: loss 1.4123 val AUC 0.7787 (6s)\n"}
+,{"stream_name":"stdout","time":2257.833380567,"data":"[15:40:21] seed 4 fold 4: AUC 0.7794 optAcc 0.5496 quadF1 0.4702218574780508 (95.6s)\n"}
+,{"stream_name":"stdout","time":2258.389524319,"data":"[15:40:21] DONE\n"}
+,{"stream_name":"stdout","time":2261.799512065,"data":"/usr/bin/python3 /kaggle/input/datasets/<KAGGLE_USERNAME>/remediaide-ml-src/scripts/train_cokt.py --variant no_conf --seeds 20261118 1 2 --data-dir /kaggle/input/datasets/<KAGGLE_USERNAME>/remediaide-processed --out /kaggle/working\n"}
+,{"stream_name":"stdout","time":2265.757304963,"data":"[15:40:29] variant no_conf: 1,107,657 rows, 7,492 windows, device cuda\n"}
+,{"stream_name":"stdout","time":2273.836428057,"data":"[15:40:37] epoch 0: loss 1.8195 val AUC 0.7601 (7s)\n"}
+,{"stream_name":"stdout","time":2279.969434167,"data":"[15:40:43] epoch 1: loss 1.6753 val AUC 0.7779 (6s)\n"}
+,{"stream_name":"stdout","time":2286.335973014,"data":"[15:40:49] epoch 2: loss 1.6125 val AUC 0.7845 (6s)\n"}
+,{"stream_name":"stdout","time":2292.630808646,"data":"[15:40:55] epoch 3: loss 1.5849 val AUC 0.7884 (6s)\n"}
+,{"stream_name":"stdout","time":2298.909767373,"data":"[15:41:02] epoch 4: loss 1.5722 val AUC 0.7898 (6s)\n"}
+,{"stream_name":"stdout","time":2305.419003875,"data":"[15:41:08] epoch 5: loss 1.5568 val AUC 0.7896 (7s)\n"}
+,{"stream_name":"stdout","time":2311.724186584,"data":"[15:41:15] epoch 6: loss 1.5487 val AUC 0.7923 (6s)\n"}
+,{"stream_name":"stdout","time":2317.941837418,"data":"[15:41:21] epoch 7: loss 1.5392 val AUC 0.7915 (6s)\n"}
+,{"stream_name":"stdout","time":2324.147182073,"data":"[15:41:27] epoch 8: loss 1.5312 val AUC 0.7928 (6s)\n"}
+,{"stream_name":"stdout","time":2330.477565878,"data":"[15:41:33] epoch 9: loss 1.5273 val AUC 0.7932 (6s)\n"}
+,{"stream_name":"stdout","time":2336.702831639,"data":"[15:41:40] epoch 10: loss 1.5196 val AUC 0.7930 (6s)\n"}
+,{"stream_name":"stdout","time":2342.916964464,"data":"[15:41:46] epoch 11: loss 1.5119 val AUC 0.7931 (6s)\n"}
+,{"stream_name":"stdout","time":2349.199177125,"data":"[15:41:52] epoch 12: loss 1.5047 val AUC 0.7925 (6s)\n"}
+,{"stream_name":"stdout","time":2351.382805765,"data":"[15:41:54] seed 20261118 fold 0: AUC 0.7932 optAcc 0.5648 quadF1 0.3341934358225347 (85.6s)\n"}
+,{"stream_name":"stdout","time":2357.512871683,"data":"[15:42:00] epoch 0: loss 1.8105 val AUC 0.7536 (6s)\n"}
+,{"stream_name":"stdout","time":2363.719874738,"data":"[15:42:07] epoch 1: loss 1.6666 val AUC 0.7715 (6s)\n"}
+,{"stream_name":"stdout","time":2370.013391405,"data":"[15:42:13] epoch 2: loss 1.6062 val AUC 0.7780 (6s)\n"}
+,{"stream_name":"stdout","time":2376.199664927,"data":"[15:42:19] epoch 3: loss 1.5796 val AUC 0.7805 (6s)\n"}
+,{"stream_name":"stdout","time":2382.448542746,"data":"[15:42:25] epoch 4: loss 1.5611 val AUC 0.7827 (6s)\n"}
+,{"stream_name":"stdout","time":2388.858872284,"data":"[15:42:32] epoch 5: loss 1.5500 val AUC 0.7838 (6s)\n"}
+,{"stream_name":"stdout","time":2395.1055812,"data":"[15:42:38] epoch 6: loss 1.5421 val AUC 0.7846 (6s)\n"}
+,{"stream_name":"stdout","time":2401.274112452,"data":"[15:42:44] epoch 7: loss 1.5316 val AUC 0.7855 (6s)\n"}
+,{"stream_name":"stdout","time":2407.575687264,"data":"[15:42:50] epoch 8: loss 1.5241 val AUC 0.7861 (6s)\n"}
+,{"stream_name":"stdout","time":2413.756901008,"data":"[15:42:57] epoch 9: loss 1.5144 val AUC 0.7863 (6s)\n"}
+,{"stream_name":"stdout","time":2419.977874989,"data":"[15:43:03] epoch 10: loss 1.5099 val AUC 0.7859 (6s)\n"}
+,{"stream_name":"stdout","time":2426.312177127,"data":"[15:43:09] epoch 11: loss 1.5041 val AUC 0.7857 (6s)\n"}
+,{"stream_name":"stdout","time":2432.544913065,"data":"[15:43:15] epoch 12: loss 1.4959 val AUC 0.7856 (6s)\n"}
+,{"stream_name":"stdout","time":2434.766052252,"data":"[15:43:18] seed 20261118 fold 1: AUC 0.7863 optAcc 0.5613 quadF1 0.32695548661239277 (83.4s)\n"}
+,{"stream_name":"stdout","time":2440.960802404,"data":"[15:43:24] epoch 0: loss 1.8207 val AUC 0.7507 (6s)\n"}
+,{"stream_name":"stdout","time":2447.326141106,"data":"[15:43:30] epoch 1: loss 1.6773 val AUC 0.7683 (6s)\n"}
+,{"stream_name":"stdout","time":2453.589572889,"data":"[15:43:36] epoch 2: loss 1.6178 val AUC 0.7757 (6s)\n"}
+,{"stream_name":"stdout","time":2459.804594966,"data":"[15:43:43] epoch 3: loss 1.5868 val AUC 0.7788 (6s)\n"}
+,{"stream_name":"stdout","time":2466.181470458,"data":"[15:43:49] epoch 4: loss 1.5687 val AUC 0.7814 (6s)\n"}
+,{"stream_name":"stdout","time":2472.448945748,"data":"[15:43:55] epoch 5: loss 1.5613 val AUC 0.7828 (6s)\n"}
+,{"stream_name":"stdout","time":2478.633497214,"data":"[15:44:01] epoch 6: loss 1.5459 val AUC 0.7844 (6s)\n"}
+,{"stream_name":"stdout","time":2485.048788721,"data":"[15:44:08] epoch 7: loss 1.5344 val AUC 0.7846 (6s)\n"}
+,{"stream_name":"stdout","time":2491.271600303,"data":"[15:44:14] epoch 8: loss 1.5310 val AUC 0.7853 (6s)\n"}
+,{"stream_name":"stdout","time":2497.460377991,"data":"[15:44:20] epoch 9: loss 1.5240 val AUC 0.7858 (6s)\n"}
+,{"stream_name":"stdout","time":2503.877971603,"data":"[15:44:27] epoch 10: loss 1.5147 val AUC 0.7855 (6s)\n"}
+,{"stream_name":"stdout","time":2510.090044566,"data":"[15:44:33] epoch 11: loss 1.5094 val AUC 0.7858 (6s)\n"}
+,{"stream_name":"stdout","time":2516.275586877,"data":"[15:44:39] epoch 12: loss 1.5036 val AUC 0.7850 (6s)\n"}
+,{"stream_name":"stdout","time":2518.700817906,"data":"[15:44:42] seed 20261118 fold 2: AUC 0.7858 optAcc 0.5601 quadF1 0.3217757147486837 (83.9s)\n"}
+,{"stream_name":"stdout","time":2524.864746894,"data":"[15:44:48] epoch 0: loss 1.8162 val AUC 0.7518 (6s)\n"}
+,{"stream_name":"stdout","time":2530.974866313,"data":"[15:44:54] epoch 1: loss 1.6727 val AUC 0.7708 (6s)\n"}
+,{"stream_name":"stdout","time":2537.336413507,"data":"[15:45:00] epoch 2: loss 1.6124 val AUC 0.7781 (6s)\n"}
+,{"stream_name":"stdout","time":2543.590349837,"data":"[15:45:06] epoch 3: loss 1.5830 val AUC 0.7826 (6s)\n"}
+,{"stream_name":"stdout","time":2549.77160978,"data":"[15:45:13] epoch 4: loss 1.5673 val AUC 0.7843 (6s)\n"}
+,{"stream_name":"stdout","time":2556.146336538,"data":"[15:45:19] epoch 5: loss 1.5535 val AUC 0.7852 (6s)\n"}
+,{"stream_name":"stdout","time":2562.364629303,"data":"[15:45:25] epoch 6: loss 1.5457 val AUC 0.7866 (6s)\n"}
+,{"stream_name":"stdout","time":2568.520619854,"data":"[15:45:31] epoch 7: loss 1.5378 val AUC 0.7872 (6s)\n"}
+,{"stream_name":"stdout","time":2574.626153678,"data":"[15:45:37] epoch 8: loss 1.5270 val AUC 0.7872 (6s)\n"}
+,{"stream_name":"stdout","time":2580.944689906,"data":"[15:45:44] epoch 9: loss 1.5209 val AUC 0.7877 (6s)\n"}
+,{"stream_name":"stdout","time":2587.122549939,"data":"[15:45:50] epoch 10: loss 1.5152 val AUC 0.7874 (6s)\n"}
+,{"stream_name":"stdout","time":2593.287490207,"data":"[15:45:56] epoch 11: loss 1.5064 val AUC 0.7877 (6s)\n"}
+,{"stream_name":"stdout","time":2599.589938474,"data":"[15:46:02] epoch 12: loss 1.5010 val AUC 0.7875 (6s)\n"}
+,{"stream_name":"stdout","time":2601.775344767,"data":"[15:46:05] seed 20261118 fold 3: AUC 0.7877 optAcc 0.5617 quadF1 0.337422171879911 (83.1s)\n"}
+,{"stream_name":"stdout","time":2607.990858325,"data":"[15:46:11] epoch 0: loss 1.8075 val AUC 0.7442 (6s)\n"}
+,{"stream_name":"stdout","time":2614.305163622,"data":"[15:46:17] epoch 1: loss 1.6589 val AUC 0.7626 (6s)\n"}
+,{"stream_name":"stdout","time":2620.547898975,"data":"[15:46:23] epoch 2: loss 1.5984 val AUC 0.7691 (6s)\n"}
+,{"stream_name":"stdout","time":2626.681424265,"data":"[15:46:30] epoch 3: loss 1.5700 val AUC 0.7725 (6s)\n"}
+,{"stream_name":"stdout","time":2632.870831601,"data":"[15:46:36] epoch 4: loss 1.5554 val AUC 0.7745 (6s)\n"}
+,{"stream_name":"stdout","time":2639.200963102,"data":"[15:46:42] epoch 5: loss 1.5422 val AUC 0.7764 (6s)\n"}
+,{"stream_name":"stdout","time":2645.417467629,"data":"[15:46:48] epoch 6: loss 1.5290 val AUC 0.7774 (6s)\n"}
+,{"stream_name":"stdout","time":2651.592758107,"data":"[15:46:54] epoch 7: loss 1.5233 val AUC 0.7773 (6s)\n"}
+,{"stream_name":"stdout","time":2657.928870099,"data":"[15:47:01] epoch 8: loss 1.5175 val AUC 0.7781 (6s)\n"}
+,{"stream_name":"stdout","time":2664.098328542,"data":"[15:47:07] epoch 9: loss 1.5081 val AUC 0.7778 (6s)\n"}
+,{"stream_name":"stdout","time":2670.26385021,"data":"[15:47:13] epoch 10: loss 1.5024 val AUC 0.7791 (6s)\n"}
+,{"stream_name":"stdout","time":2676.614446964,"data":"[15:47:19] epoch 11: loss 1.4949 val AUC 0.7785 (6s)\n"}
+,{"stream_name":"stdout","time":2682.793652715,"data":"[15:47:26] epoch 12: loss 1.4897 val AUC 0.7781 (6s)\n"}
+,{"stream_name":"stdout","time":2688.9293564,"data":"[15:47:32] epoch 13: loss 1.4813 val AUC 0.7781 (6s)\n"}
+,{"stream_name":"stdout","time":2691.107355429,"data":"[15:47:34] seed 20261118 fold 4: AUC 0.7791 optAcc 0.5511 quadF1 0.31529134431736366 (89.3s)\n"}
+,{"stream_name":"stdout","time":2697.978301865,"data":"[15:47:41] epoch 0: loss 1.8181 val AUC 0.7612 (6s)\n"}
+,{"stream_name":"stdout","time":2704.096003673,"data":"[15:47:47] epoch 1: loss 1.6677 val AUC 0.7792 (6s)\n"}
+,{"stream_name":"stdout","time":2710.251535584,"data":"[15:47:53] epoch 2: loss 1.6079 val AUC 0.7859 (6s)\n"}
+,{"stream_name":"stdout","time":2716.633988642,"data":"[15:47:59] epoch 3: loss 1.5820 val AUC 0.7890 (6s)\n"}
+,{"stream_name":"stdout","time":2722.840671438,"data":"[15:48:06] epoch 4: loss 1.5685 val AUC 0.7905 (6s)\n"}
+,{"stream_name":"stdout","time":2728.983132627,"data":"[15:48:12] epoch 5: loss 1.5553 val AUC 0.7916 (6s)\n"}
+,{"stream_name":"stdout","time":2735.179099705,"data":"[15:48:18] epoch 6: loss 1.5459 val AUC 0.7924 (6s)\n"}
+,{"stream_name":"stdout","time":2741.482907307,"data":"[15:48:24] epoch 7: loss 1.5373 val AUC 0.7926 (6s)\n"}
+,{"stream_name":"stdout","time":2747.654127268,"data":"[15:48:30] epoch 8: loss 1.5286 val AUC 0.7929 (6s)\n"}
+,{"stream_name":"stdout","time":2753.863207477,"data":"[15:48:37] epoch 9: loss 1.5241 val AUC 0.7941 (6s)\n"}
+,{"stream_name":"stdout","time":2760.200252198,"data":"[15:48:43] epoch 10: loss 1.5163 val AUC 0.7933 (6s)\n"}
+,{"stream_name":"stdout","time":2766.360697214,"data":"[15:48:49] epoch 11: loss 1.5072 val AUC 0.7932 (6s)\n"}
+,{"stream_name":"stdout","time":2772.49337288,"data":"[15:48:55] epoch 12: loss 1.5019 val AUC 0.7937 (6s)\n"}
+,{"stream_name":"stdout","time":2774.66237646,"data":"[15:48:57] seed 1 fold 0: AUC 0.7941 optAcc 0.5647 quadF1 0.32524328376708955 (83.0s)\n"}
+,{"stream_name":"stdout","time":2780.984664411,"data":"[15:49:04] epoch 0: loss 1.8091 val AUC 0.7521 (6s)\n"}
+,{"stream_name":"stdout","time":2787.212367975,"data":"[15:49:10] epoch 1: loss 1.6602 val AUC 0.7726 (6s)\n"}
+,{"stream_name":"stdout","time":2793.392051727,"data":"[15:49:16] epoch 2: loss 1.6002 val AUC 0.7789 (6s)\n"}
+,{"stream_name":"stdout","time":2799.780764824,"data":"[15:49:23] epoch 3: loss 1.5769 val AUC 0.7822 (6s)\n"}
+,{"stream_name":"stdout","time":2806.073093207,"data":"[15:49:29] epoch 4: loss 1.5627 val AUC 0.7838 (6s)\n"}
+,{"stream_name":"stdout","time":2812.338350575,"data":"[15:49:35] epoch 5: loss 1.5494 val AUC 0.7850 (6s)\n"}
+,{"stream_name":"stdout","time":2818.759143627,"data":"[15:49:42] epoch 6: loss 1.5398 val AUC 0.7841 (6s)\n"}
+,{"stream_name":"stdout","time":2824.981513144,"data":"[15:49:48] epoch 7: loss 1.5317 val AUC 0.7860 (6s)\n"}
+,{"stream_name":"stdout","time":2831.167829194,"data":"[15:49:54] epoch 8: loss 1.5197 val AUC 0.7861 (6s)\n"}
+,{"stream_name":"stdout","time":2837.537496857,"data":"[15:50:00] epoch 9: loss 1.5161 val AUC 0.7868 (6s)\n"}
+,{"stream_name":"stdout","time":2843.738070294,"data":"[15:50:07] epoch 10: loss 1.5079 val AUC 0.7864 (6s)\n"}
+,{"stream_name":"stdout","time":2849.969004158,"data":"[15:50:13] epoch 11: loss 1.5009 val AUC 0.7864 (6s)\n"}
+,{"stream_name":"stdout","time":2856.077098775,"data":"[15:50:19] epoch 12: loss 1.4960 val AUC 0.7860 (6s)\n"}
+,{"stream_name":"stdout","time":2858.356518598,"data":"[15:50:21] seed 1 fold 1: AUC 0.7868 optAcc 0.5599 quadF1 0.315139360439793 (83.7s)\n"}
+,{"stream_name":"stdout","time":2864.557997692,"data":"[15:50:27] epoch 0: loss 1.8235 val AUC 0.7504 (6s)\n"}
+,{"stream_name":"stdout","time":2870.743835732,"data":"[15:50:34] epoch 1: loss 1.6704 val AUC 0.7703 (6s)\n"}
+,{"stream_name":"stdout","time":2877.129967111,"data":"[15:50:40] epoch 2: loss 1.6074 val AUC 0.7774 (6s)\n"}
+,{"stream_name":"stdout","time":2883.420202701,"data":"[15:50:46] epoch 3: loss 1.5780 val AUC 0.7811 (6s)\n"}
+,{"stream_name":"stdout","time":2889.597662046,"data":"[15:50:52] epoch 4: loss 1.5657 val AUC 0.7828 (6s)\n"}
+,{"stream_name":"stdout","time":2896.028105469,"data":"[15:50:59] epoch 5: loss 1.5588 val AUC 0.7838 (6s)\n"}
+,{"stream_name":"stdout","time":2902.323135421,"data":"[15:51:05] epoch 6: loss 1.5479 val AUC 0.7846 (6s)\n"}
+,{"stream_name":"stdout","time":2908.555375873,"data":"[15:51:11] epoch 7: loss 1.5358 val AUC 0.7851 (6s)\n"}
+,{"stream_name":"stdout","time":2914.958738849,"data":"[15:51:18] epoch 8: loss 1.5316 val AUC 0.7855 (6s)\n"}
+,{"stream_name":"stdout","time":2921.166259642,"data":"[15:51:24] epoch 9: loss 1.5188 val AUC 0.7855 (6s)\n"}
+,{"stream_name":"stdout","time":2927.358572919,"data":"[15:51:30] epoch 10: loss 1.5188 val AUC 0.7853 (6s)\n"}
+,{"stream_name":"stdout","time":2933.726222273,"data":"[15:51:37] epoch 11: loss 1.5107 val AUC 0.7855 (6s)\n"}
+,{"stream_name":"stdout","time":2936.02005716,"data":"[15:51:39] seed 1 fold 2: AUC 0.7855 optAcc 0.5593 quadF1 0.3110237565519167 (77.7s)\n"}
+,{"stream_name":"stdout","time":2942.239894091,"data":"[15:51:45] epoch 0: loss 1.8209 val AUC 0.7514 (6s)\n"}
+,{"stream_name":"stdout","time":2948.629171249,"data":"[15:51:51] epoch 1: loss 1.6666 val AUC 0.7737 (6s)\n"}
+,{"stream_name":"stdout","time":2954.876654116,"data":"[15:51:58] epoch 2: loss 1.6062 val AUC 0.7797 (6s)\n"}
+,{"stream_name":"stdout","time":2961.083683371,"data":"[15:52:04] epoch 3: loss 1.5801 val AUC 0.7830 (6s)\n"}
+,{"stream_name":"stdout","time":2967.434543841,"data":"[15:52:10] epoch 4: loss 1.5645 val AUC 0.7852 (6s)\n"}
+,{"stream_name":"stdout","time":2973.696355698,"data":"[15:52:17] epoch 5: loss 1.5546 val AUC 0.7861 (6s)\n"}
+,{"stream_name":"stdout","time":2979.938253227,"data":"[15:52:23] epoch 6: loss 1.5432 val AUC 0.7871 (6s)\n"}
+,{"stream_name":"stdout","time":2986.103699132,"data":"[15:52:29] epoch 7: loss 1.5365 val AUC 0.7865 (6s)\n"}
+,{"stream_name":"stdout","time":2992.495443579,"data":"[15:52:35] epoch 8: loss 1.5319 val AUC 0.7878 (6s)\n"}
+,{"stream_name":"stdout","time":2998.71277327,"data":"[15:52:42] epoch 9: loss 1.5208 val AUC 0.7879 (6s)\n"}
+,{"stream_name":"stdout","time":3004.83105327,"data":"[15:52:48] epoch 10: loss 1.5124 val AUC 0.7870 (6s)\n"}
+,{"stream_name":"stdout","time":3011.177967495,"data":"[15:52:54] epoch 11: loss 1.5072 val AUC 0.7875 (6s)\n"}
+,{"stream_name":"stdout","time":3013.416957819,"data":"[15:52:56] seed 1 fold 3: AUC 0.7878 optAcc 0.5612 quadF1 0.32434508340517376 (77.4s)\n"}
+,{"stream_name":"stdout","time":3019.548792411,"data":"[15:53:02] epoch 0: loss 1.8058 val AUC 0.7430 (6s)\n"}
+,{"stream_name":"stdout","time":3025.915158877,"data":"[15:53:09] epoch 1: loss 1.6532 val AUC 0.7640 (6s)\n"}
+,{"stream_name":"stdout","time":3032.19972155,"data":"[15:53:15] epoch 2: loss 1.5913 val AUC 0.7704 (6s)\n"}
+,{"stream_name":"stdout","time":3038.420662466,"data":"[15:53:21] epoch 3: loss 1.5670 val AUC 0.7738 (6s)\n"}
+,{"stream_name":"stdout","time":3044.614109496,"data":"[15:53:27] epoch 4: loss 1.5543 val AUC 0.7755 (6s)\n"}
+,{"stream_name":"stdout","time":3050.960990174,"data":"[15:53:34] epoch 5: loss 1.5400 val AUC 0.7763 (6s)\n"}
+,{"stream_name":"stdout","time":3057.184347143,"data":"[15:53:40] epoch 6: loss 1.5278 val AUC 0.7768 (6s)\n"}
+,{"stream_name":"stdout","time":3063.418113103,"data":"[15:53:46] epoch 7: loss 1.5210 val AUC 0.7773 (6s)\n"}
+,{"stream_name":"stdout","time":3069.793410956,"data":"[15:53:53] epoch 8: loss 1.5127 val AUC 0.7780 (6s)\n"}
+,{"stream_name":"stdout","time":3075.996741456,"data":"[15:53:59] epoch 9: loss 1.5058 val AUC 0.7782 (6s)\n"}
+,{"stream_name":"stdout","time":3082.215558839,"data":"[15:54:05] epoch 10: loss 1.4990 val AUC 0.7786 (6s)\n"}
+,{"stream_name":"stdout","time":3088.351296526,"data":"[15:54:11] epoch 11: loss 1.4917 val AUC 0.7779 (6s)\n"}
+,{"stream_name":"stdout","time":3094.709644492,"data":"[15:54:18] epoch 12: loss 1.4890 val AUC 0.7779 (6s)\n"}
+,{"stream_name":"stdout","time":3100.894821377,"data":"[15:54:24] epoch 13: loss 1.4793 val AUC 0.7783 (6s)\n"}
+,{"stream_name":"stdout","time":3103.11696441,"data":"[15:54:26] seed 1 fold 4: AUC 0.7786 optAcc 0.5489 quadF1 0.3108144770008267 (89.7s)\n"}
+,{"stream_name":"stdout","time":3110.055345572,"data":"[15:54:33] epoch 0: loss 1.8122 val AUC 0.7606 (6s)\n"}
+,{"stream_name":"stdout","time":3116.210016938,"data":"[15:54:39] epoch 1: loss 1.6671 val AUC 0.7778 (6s)\n"}
+,{"stream_name":"stdout","time":3122.415425332,"data":"[15:54:45] epoch 2: loss 1.6112 val AUC 0.7836 (6s)\n"}
+,{"stream_name":"stdout","time":3128.749045927,"data":"[15:54:52] epoch 3: loss 1.5854 val AUC 0.7877 (6s)\n"}
+,{"stream_name":"stdout","time":3135.015231657,"data":"[15:54:58] epoch 4: loss 1.5682 val AUC 0.7897 (6s)\n"}
+,{"stream_name":"stdout","time":3141.212798022,"data":"[15:55:04] epoch 5: loss 1.5578 val AUC 0.7904 (6s)\n"}
+,{"stream_name":"stdout","time":3147.426745407,"data":"[15:55:10] epoch 6: loss 1.5491 val AUC 0.7917 (6s)\n"}
+,{"stream_name":"stdout","time":3153.805318852,"data":"[15:55:17] epoch 7: loss 1.5421 val AUC 0.7915 (6s)\n"}
+,{"stream_name":"stdout","time":3160.003520413,"data":"[15:55:23] epoch 8: loss 1.5321 val AUC 0.7919 (6s)\n"}
+,{"stream_name":"stdout","time":3166.196896253,"data":"[15:55:29] epoch 9: loss 1.5256 val AUC 0.7925 (6s)\n"}
+,{"stream_name":"stdout","time":3172.614708882,"data":"[15:55:35] epoch 10: loss 1.5180 val AUC 0.7923 (6s)\n"}
+,{"stream_name":"stdout","time":3178.855828759,"data":"[15:55:42] epoch 11: loss 1.5121 val AUC 0.7929 (6s)\n"}
+,{"stream_name":"stdout","time":3185.057554561,"data":"[15:55:48] epoch 12: loss 1.5038 val AUC 0.7915 (6s)\n"}
+,{"stream_name":"stdout","time":3191.203602454,"data":"[15:55:54] epoch 13: loss 1.5015 val AUC 0.7926 (6s)\n"}
+,{"stream_name":"stdout","time":3197.518087756,"data":"[15:56:00] epoch 14: loss 1.4899 val AUC 0.7921 (6s)\n"}
+,{"stream_name":"stdout","time":3199.7104903,"data":"[15:56:03] seed 2 fold 0: AUC 0.7929 optAcc 0.5641 quadF1 0.3237016266339524 (96.0s)\n"}
+,{"stream_name":"stdout","time":3205.891099582,"data":"[15:56:09] epoch 0: loss 1.8143 val AUC 0.7502 (6s)\n"}
+,{"stream_name":"stdout","time":3212.343769176,"data":"[15:56:15] epoch 1: loss 1.6636 val AUC 0.7696 (6s)\n"}
+,{"stream_name":"stdout","time":3218.536764717,"data":"[15:56:21] epoch 2: loss 1.6035 val AUC 0.7774 (6s)\n"}
+,{"stream_name":"stdout","time":3224.71886613,"data":"[15:56:28] epoch 3: loss 1.5787 val AUC 0.7808 (6s)\n"}
+,{"stream_name":"stdout","time":3231.102957677,"data":"[15:56:34] epoch 4: loss 1.5607 val AUC 0.7828 (6s)\n"}
+,{"stream_name":"stdout","time":3237.327749296,"data":"[15:56:40] epoch 5: loss 1.5485 val AUC 0.7837 (6s)\n"}
+,{"stream_name":"stdout","time":3243.587287031,"data":"[15:56:46] epoch 6: loss 1.5410 val AUC 0.7844 (6s)\n"}
+,{"stream_name":"stdout","time":3249.773862628,"data":"[15:56:53] epoch 7: loss 1.5313 val AUC 0.7855 (6s)\n"}
+,{"stream_name":"stdout","time":3256.152331589,"data":"[15:56:59] epoch 8: loss 1.5233 val AUC 0.7855 (6s)\n"}
+,{"stream_name":"stdout","time":3262.397821405,"data":"[15:57:05] epoch 9: loss 1.5176 val AUC 0.7857 (6s)\n"}
+,{"stream_name":"stdout","time":3268.56487679,"data":"[15:57:11] epoch 10: loss 1.5082 val AUC 0.7863 (6s)\n"}
+,{"stream_name":"stdout","time":3274.96375392,"data":"[15:57:18] epoch 11: loss 1.5016 val AUC 0.7862 (6s)\n"}
+,{"stream_name":"stdout","time":3281.152232304,"data":"[15:57:24] epoch 12: loss 1.4984 val AUC 0.7859 (6s)\n"}
+,{"stream_name":"stdout","time":3287.337110003,"data":"[15:57:30] epoch 13: loss 1.4889 val AUC 0.7857 (6s)\n"}
+,{"stream_name":"stdout","time":3289.752562786,"data":"[15:57:33] seed 2 fold 1: AUC 0.7863 optAcc 0.5610 quadF1 0.3216652761494299 (90.0s)\n"}
+,{"stream_name":"stdout","time":3295.966086766,"data":"[15:57:39] epoch 0: loss 1.8090 val AUC 0.7498 (6s)\n"}
+,{"stream_name":"stdout","time":3302.227584088,"data":"[15:57:45] epoch 1: loss 1.6650 val AUC 0.7692 (6s)\n"}
+,{"stream_name":"stdout","time":3308.612063414,"data":"[15:57:51] epoch 2: loss 1.6082 val AUC 0.7756 (6s)\n"}
+,{"stream_name":"stdout","time":3314.87479633,"data":"[15:57:58] epoch 3: loss 1.5838 val AUC 0.7786 (6s)\n"}
+,{"stream_name":"stdout","time":3321.130747738,"data":"[15:58:04] epoch 4: loss 1.5700 val AUC 0.7813 (6s)\n"}
+,{"stream_name":"stdout","time":3327.591192231,"data":"[15:58:10] epoch 5: loss 1.5529 val AUC 0.7827 (6s)\n"}
+,{"stream_name":"stdout","time":3333.851705131,"data":"[15:58:17] epoch 6: loss 1.5484 val AUC 0.7820 (6s)\n"}
+,{"stream_name":"stdout","time":3340.035928688,"data":"[15:58:23] epoch 7: loss 1.5389 val AUC 0.7838 (6s)\n"}
+,{"stream_name":"stdout","time":3346.485878404,"data":"[15:58:29] epoch 8: loss 1.5350 val AUC 0.7849 (6s)\n"}
+,{"stream_name":"stdout","time":3352.741251224,"data":"[15:58:36] epoch 9: loss 1.5246 val AUC 0.7847 (6s)\n"}
+,{"stream_name":"stdout","time":3358.930905897,"data":"[15:58:42] epoch 10: loss 1.5145 val AUC 0.7851 (6s)\n"}
+,{"stream_name":"stdout","time":3365.341823237,"data":"[15:58:48] epoch 11: loss 1.5119 val AUC 0.7854 (6s)\n"}
+,{"stream_name":"stdout","time":3371.532286081,"data":"[15:58:54] epoch 12: loss 1.5055 val AUC 0.7853 (6s)\n"}
+,{"stream_name":"stdout","time":3377.764301716,"data":"[15:59:01] epoch 13: loss 1.5020 val AUC 0.7839 (6s)\n"}
+,{"stream_name":"stdout","time":3384.204877687,"data":"[15:59:07] epoch 14: loss 1.4934 val AUC 0.7836 (6s)\n"}
+,{"stream_name":"stdout","time":3386.47094476,"data":"[15:59:09] seed 2 fold 2: AUC 0.7854 optAcc 0.5604 quadF1 0.32300534697154215 (96.7s)\n"}
+,{"stream_name":"stdout","time":3392.66496097,"data":"[15:59:15] epoch 0: loss 1.8134 val AUC 0.7533 (6s)\n"}
+,{"stream_name":"stdout","time":3398.780495049,"data":"[15:59:22] epoch 1: loss 1.6655 val AUC 0.7717 (6s)\n"}
+,{"stream_name":"stdout","time":3405.097785849,"data":"[15:59:28] epoch 2: loss 1.6081 val AUC 0.7788 (6s)\n"}
+,{"stream_name":"stdout","time":3411.299187045,"data":"[15:59:34] epoch 3: loss 1.5804 val AUC 0.7823 (6s)\n"}
+,{"stream_name":"stdout","time":3417.508466584,"data":"[15:59:40] epoch 4: loss 1.5673 val AUC 0.7838 (6s)\n"}
+,{"stream_name":"stdout","time":3423.855843943,"data":"[15:59:47] epoch 5: loss 1.5520 val AUC 0.7851 (6s)\n"}
+,{"stream_name":"stdout","time":3430.052941908,"data":"[15:59:53] epoch 6: loss 1.5427 val AUC 0.7865 (6s)\n"}
+,{"stream_name":"stdout","time":3436.18996104,"data":"[15:59:59] epoch 7: loss 1.5368 val AUC 0.7862 (6s)\n"}
+,{"stream_name":"stdout","time":3442.646674909,"data":"[16:00:05] epoch 8: loss 1.5288 val AUC 0.7871 (6s)\n"}
+,{"stream_name":"stdout","time":3448.853279534,"data":"[16:00:12] epoch 9: loss 1.5236 val AUC 0.7868 (6s)\n"}
+,{"stream_name":"stdout","time":3455.041034885,"data":"[16:00:18] epoch 10: loss 1.5144 val AUC 0.7868 (6s)\n"}
+,{"stream_name":"stdout","time":3461.237635423,"data":"[16:00:24] epoch 11: loss 1.5078 val AUC 0.7869 (6s)\n"}
+,{"stream_name":"stdout","time":3463.67051084,"data":"[16:00:26] seed 2 fold 3: AUC 0.7871 optAcc 0.5613 quadF1 0.311893726114407 (77.2s)\n"}
+,{"stream_name":"stdout","time":3469.859299217,"data":"[16:00:33] epoch 0: loss 1.8027 val AUC 0.7437 (6s)\n"}
+,{"stream_name":"stdout","time":3476.068378101,"data":"[16:00:39] epoch 1: loss 1.6534 val AUC 0.7627 (6s)\n"}
+,{"stream_name":"stdout","time":3482.495981356,"data":"[16:00:45] epoch 2: loss 1.5947 val AUC 0.7691 (6s)\n"}
+,{"stream_name":"stdout","time":3488.748770638,"data":"[16:00:52] epoch 3: loss 1.5692 val AUC 0.7730 (6s)\n"}
+,{"stream_name":"stdout","time":3494.970435038,"data":"[16:00:58] epoch 4: loss 1.5540 val AUC 0.7753 (6s)\n"}
+,{"stream_name":"stdout","time":3501.349900497,"data":"[16:01:04] epoch 5: loss 1.5415 val AUC 0.7758 (6s)\n"}
+,{"stream_name":"stdout","time":3507.574784938,"data":"[16:01:10] epoch 6: loss 1.5347 val AUC 0.7768 (6s)\n"}
+,{"stream_name":"stdout","time":3513.789447509,"data":"[16:01:17] epoch 7: loss 1.5247 val AUC 0.7773 (6s)\n"}
+,{"stream_name":"stdout","time":3519.923597136,"data":"[16:01:23] epoch 8: loss 1.5154 val AUC 0.7780 (6s)\n"}
+,{"stream_name":"stdout","time":3526.276227595,"data":"[16:01:29] epoch 9: loss 1.5098 val AUC 0.7774 (6s)\n"}
+,{"stream_name":"stdout","time":3532.503054477,"data":"[16:01:35] epoch 10: loss 1.5002 val AUC 0.7783 (6s)\n"}
+,{"stream_name":"stdout","time":3538.743717641,"data":"[16:01:42] epoch 11: loss 1.4974 val AUC 0.7780 (6s)\n"}
+,{"stream_name":"stdout","time":3545.140563742,"data":"[16:01:48] epoch 12: loss 1.4877 val AUC 0.7779 (6s)\n"}
+,{"stream_name":"stdout","time":3551.330223262,"data":"[16:01:54] epoch 13: loss 1.4836 val AUC 0.7775 (6s)\n"}
+,{"stream_name":"stdout","time":3553.576119355,"data":"[16:01:56] seed 2 fold 4: AUC 0.7783 optAcc 0.5509 quadF1 0.33395028485934813 (89.9s)\n"}
+,{"stream_name":"stdout","time":3554.150554164,"data":"[16:01:57] DONE\n"}
+,{"stream_name":"stdout","time":3555.174143795,"data":"/usr/bin/python3 /kaggle/input/datasets/<KAGGLE_USERNAME>/remediaide-ml-src/scripts/train_cokt.py --variant no_option --seeds 20261118 1 2 --data-dir /kaggle/input/datasets/<KAGGLE_USERNAME>/remediaide-processed --out /kaggle/working\n"}
+,{"stream_name":"stdout","time":3559.386225502,"data":"[16:02:02] variant no_option: 1,107,657 rows, 7,492 windows, device cuda\n"}
+,{"stream_name":"stdout","time":3567.566360099,"data":"[16:02:10] epoch 0: loss 1.7760 val AUC 0.7611 (7s)\n"}
+,{"stream_name":"stdout","time":3573.746666538,"data":"[16:02:17] epoch 1: loss 1.6250 val AUC 0.7780 (6s)\n"}
+,{"stream_name":"stdout","time":3580.053967037,"data":"[16:02:23] epoch 2: loss 1.5599 val AUC 0.7846 (6s)\n"}
+,{"stream_name":"stdout","time":3586.275731132,"data":"[16:02:29] epoch 3: loss 1.5314 val AUC 0.7879 (6s)\n"}
+,{"stream_name":"stdout","time":3592.59254872,"data":"[16:02:35] epoch 4: loss 1.5127 val AUC 0.7896 (6s)\n"}
+,{"stream_name":"stdout","time":3599.049657181,"data":"[16:02:42] epoch 5: loss 1.4983 val AUC 0.7903 (6s)\n"}
+,{"stream_name":"stdout","time":3605.364289128,"data":"[16:02:48] epoch 6: loss 1.4891 val AUC 0.7919 (6s)\n"}
+,{"stream_name":"stdout","time":3611.554157684,"data":"[16:02:54] epoch 7: loss 1.4799 val AUC 0.7913 (6s)\n"}
+,{"stream_name":"stdout","time":3617.71624028,"data":"[16:03:01] epoch 8: loss 1.4706 val AUC 0.7916 (6s)\n"}
+,{"stream_name":"stdout","time":3624.039542203,"data":"[16:03:07] epoch 9: loss 1.4640 val AUC 0.7913 (6s)\n"}
+,{"stream_name":"stdout","time":3626.240484862,"data":"[16:03:09] seed 20261118 fold 0: AUC 0.7919 optAcc 0.5484 quadF1 0.4601986096678528 (66.9s)\n"}
+,{"stream_name":"stdout","time":3632.346001413,"data":"[16:03:15] epoch 0: loss 1.7689 val AUC 0.7531 (6s)\n"}
+,{"stream_name":"stdout","time":3638.674063917,"data":"[16:03:22] epoch 1: loss 1.6164 val AUC 0.7721 (6s)\n"}
+,{"stream_name":"stdout","time":3644.743646898,"data":"[16:03:28] epoch 2: loss 1.5522 val AUC 0.7780 (6s)\n"}
+,{"stream_name":"stdout","time":3650.841898094,"data":"[16:03:34] epoch 3: loss 1.5242 val AUC 0.7808 (6s)\n"}
+,{"stream_name":"stdout","time":3656.935595942,"data":"[16:03:40] epoch 4: loss 1.5054 val AUC 0.7827 (6s)\n"}
+,{"stream_name":"stdout","time":3663.220151062,"data":"[16:03:46] epoch 5: loss 1.4941 val AUC 0.7838 (6s)\n"}
+,{"stream_name":"stdout","time":3669.318685081,"data":"[16:03:52] epoch 6: loss 1.4819 val AUC 0.7840 (6s)\n"}
+,{"stream_name":"stdout","time":3675.511694611,"data":"[16:03:58] epoch 7: loss 1.4736 val AUC 0.7849 (6s)\n"}
+,{"stream_name":"stdout","time":3681.803623632,"data":"[16:04:05] epoch 8: loss 1.4679 val AUC 0.7847 (6s)\n"}
+,{"stream_name":"stdout","time":3687.979985477,"data":"[16:04:11] epoch 9: loss 1.4558 val AUC 0.7848 (6s)\n"}
+,{"stream_name":"stdout","time":3694.168192513,"data":"[16:04:17] epoch 10: loss 1.4510 val AUC 0.7835 (6s)\n"}
+,{"stream_name":"stdout","time":3696.52559205,"data":"[16:04:19] seed 20261118 fold 1: AUC 0.7849 optAcc 0.5503 quadF1 0.4655099844523133 (70.3s)\n"}
+,{"stream_name":"stdout","time":3702.721421237,"data":"[16:04:26] epoch 0: loss 1.7812 val AUC 0.7508 (6s)\n"}
+,{"stream_name":"stdout","time":3708.916902996,"data":"[16:04:32] epoch 1: loss 1.6280 val AUC 0.7684 (6s)\n"}
+,{"stream_name":"stdout","time":3715.201873792,"data":"[16:04:38] epoch 2: loss 1.5635 val AUC 0.7768 (6s)\n"}
+,{"stream_name":"stdout","time":3721.356745881,"data":"[16:04:44] epoch 3: loss 1.5301 val AUC 0.7800 (6s)\n"}
+,{"stream_name":"stdout","time":3727.498951276,"data":"[16:04:50] epoch 4: loss 1.5139 val AUC 0.7820 (6s)\n"}
+,{"stream_name":"stdout","time":3733.822198001,"data":"[16:04:57] epoch 5: loss 1.5037 val AUC 0.7821 (6s)\n"}
+,{"stream_name":"stdout","time":3739.984610517,"data":"[16:05:03] epoch 6: loss 1.4891 val AUC 0.7840 (6s)\n"}
+,{"stream_name":"stdout","time":3746.066109287,"data":"[16:05:09] epoch 7: loss 1.4772 val AUC 0.7842 (6s)\n"}
+,{"stream_name":"stdout","time":3752.363638371,"data":"[16:05:15] epoch 8: loss 1.4715 val AUC 0.7844 (6s)\n"}
+,{"stream_name":"stdout","time":3758.503238094,"data":"[16:05:21] epoch 9: loss 1.4639 val AUC 0.7846 (6s)\n"}
+,{"stream_name":"stdout","time":3764.653465668,"data":"[16:05:27] epoch 10: loss 1.4565 val AUC 0.7840 (6s)\n"}
+,{"stream_name":"stdout","time":3770.973938652,"data":"[16:05:34] epoch 11: loss 1.4499 val AUC 0.7843 (6s)\n"}
+,{"stream_name":"stdout","time":3777.120044725,"data":"[16:05:40] epoch 12: loss 1.4447 val AUC 0.7834 (6s)\n"}
+,{"stream_name":"stdout","time":3779.334346984,"data":"[16:05:42] seed 20261118 fold 2: AUC 0.7846 optAcc 0.5523 quadF1 0.46011766672535154 (82.8s)\n"}
+,{"stream_name":"stdout","time":3785.613494576,"data":"[16:05:48] epoch 0: loss 1.7726 val AUC 0.7535 (6s)\n"}
+,{"stream_name":"stdout","time":3791.757329509,"data":"[16:05:55] epoch 1: loss 1.6236 val AUC 0.7733 (6s)\n"}
+,{"stream_name":"stdout","time":3797.928368375,"data":"[16:06:01] epoch 2: loss 1.5572 val AUC 0.7792 (6s)\n"}
+,{"stream_name":"stdout","time":3804.325806676,"data":"[16:06:07] epoch 3: loss 1.5266 val AUC 0.7830 (6s)\n"}
+,{"stream_name":"stdout","time":3810.489382573,"data":"[16:06:13] epoch 4: loss 1.5089 val AUC 0.7845 (6s)\n"}
+,{"stream_name":"stdout","time":3816.679011672,"data":"[16:06:20] epoch 5: loss 1.4950 val AUC 0.7859 (6s)\n"}
+,{"stream_name":"stdout","time":3822.813779134,"data":"[16:06:26] epoch 6: loss 1.4847 val AUC 0.7862 (6s)\n"}
+,{"stream_name":"stdout","time":3829.108794637,"data":"[16:06:32] epoch 7: loss 1.4772 val AUC 0.7869 (6s)\n"}
+,{"stream_name":"stdout","time":3835.276802332,"data":"[16:06:38] epoch 8: loss 1.4679 val AUC 0.7864 (6s)\n"}
+,{"stream_name":"stdout","time":3841.35926846,"data":"[16:06:44] epoch 9: loss 1.4607 val AUC 0.7871 (6s)\n"}
+,{"stream_name":"stdout","time":3847.641205587,"data":"[16:06:50] epoch 10: loss 1.4553 val AUC 0.7863 (6s)\n"}
+,{"stream_name":"stdout","time":3853.802294914,"data":"[16:06:57] epoch 11: loss 1.4466 val AUC 0.7865 (6s)\n"}
+,{"stream_name":"stdout","time":3859.905575491,"data":"[16:07:03] epoch 12: loss 1.4399 val AUC 0.7861 (6s)\n"}
+,{"stream_name":"stdout","time":3862.240996745,"data":"[16:07:05] seed 20261118 fold 3: AUC 0.7871 optAcc 0.5524 quadF1 0.4626639308165543 (82.9s)\n"}
+,{"stream_name":"stdout","time":3868.395728339,"data":"[16:07:11] epoch 0: loss 1.7686 val AUC 0.7444 (6s)\n"}
+,{"stream_name":"stdout","time":3874.491714808,"data":"[16:07:17] epoch 1: loss 1.6120 val AUC 0.7639 (6s)\n"}
+,{"stream_name":"stdout","time":3880.567899063,"data":"[16:07:23] epoch 2: loss 1.5479 val AUC 0.7700 (6s)\n"}
+,{"stream_name":"stdout","time":3886.85310368,"data":"[16:07:30] epoch 3: loss 1.5183 val AUC 0.7734 (6s)\n"}
+,{"stream_name":"stdout","time":3893.041767684,"data":"[16:07:36] epoch 4: loss 1.5001 val AUC 0.7750 (6s)\n"}
+,{"stream_name":"stdout","time":3899.18240805,"data":"[16:07:42] epoch 5: loss 1.4872 val AUC 0.7761 (6s)\n"}
+,{"stream_name":"stdout","time":3905.519031825,"data":"[16:07:48] epoch 6: loss 1.4757 val AUC 0.7772 (6s)\n"}
+,{"stream_name":"stdout","time":3911.720413259,"data":"[16:07:55] epoch 7: loss 1.4671 val AUC 0.7764 (6s)\n"}
+,{"stream_name":"stdout","time":3917.915130091,"data":"[16:08:01] epoch 8: loss 1.4612 val AUC 0.7778 (6s)\n"}
+,{"stream_name":"stdout","time":3924.044362975,"data":"[16:08:07] epoch 9: loss 1.4503 val AUC 0.7770 (6s)\n"}
+,{"stream_name":"stdout","time":3930.305827283,"data":"[16:08:13] epoch 10: loss 1.4449 val AUC 0.7763 (6s)\n"}
+,{"stream_name":"stdout","time":3936.461495858,"data":"[16:08:19] epoch 11: loss 1.4382 val AUC 0.7768 (6s)\n"}
+,{"stream_name":"stdout","time":3938.653484802,"data":"[16:08:21] seed 20261118 fold 4: AUC 0.7778 optAcc 0.5415 quadF1 0.47193531550561707 (76.4s)\n"}
+,{"stream_name":"stdout","time":3945.499139218,"data":"[16:08:28] epoch 0: loss 1.7802 val AUC 0.7616 (6s)\n"}
+,{"stream_name":"stdout","time":3951.627480321,"data":"[16:08:34] epoch 1: loss 1.6180 val AUC 0.7799 (6s)\n"}
+,{"stream_name":"stdout","time":3957.773526417,"data":"[16:08:41] epoch 2: loss 1.5551 val AUC 0.7860 (6s)\n"}
+,{"stream_name":"stdout","time":3964.109899856,"data":"[16:08:47] epoch 3: loss 1.5256 val AUC 0.7888 (6s)\n"}
+,{"stream_name":"stdout","time":3970.30825338,"data":"[16:08:53] epoch 4: loss 1.5116 val AUC 0.7899 (6s)\n"}
+,{"stream_name":"stdout","time":3976.464622853,"data":"[16:08:59] epoch 5: loss 1.4981 val AUC 0.7910 (6s)\n"}
+,{"stream_name":"stdout","time":3982.697139731,"data":"[16:09:06] epoch 6: loss 1.4870 val AUC 0.7913 (6s)\n"}
+,{"stream_name":"stdout","time":3989.048327445,"data":"[16:09:12] epoch 7: loss 1.4783 val AUC 0.7913 (6s)\n"}
+,{"stream_name":"stdout","time":3995.230829507,"data":"[16:09:18] epoch 8: loss 1.4693 val AUC 0.7914 (6s)\n"}
+,{"stream_name":"stdout","time":4001.368537085,"data":"[16:09:24] epoch 9: loss 1.4638 val AUC 0.7915 (6s)\n"}
+,{"stream_name":"stdout","time":4007.738577414,"data":"[16:09:31] epoch 10: loss 1.4564 val AUC 0.7916 (6s)\n"}
+,{"stream_name":"stdout","time":4013.931246842,"data":"[16:09:37] epoch 11: loss 1.4475 val AUC 0.7909 (6s)\n"}
+,{"stream_name":"stdout","time":4020.087302404,"data":"[16:09:43] epoch 12: loss 1.4429 val AUC 0.7907 (6s)\n"}
+,{"stream_name":"stdout","time":4026.169630564,"data":"[16:09:49] epoch 13: loss 1.4339 val AUC 0.7903 (6s)\n"}
+,{"stream_name":"stdout","time":4028.540899645,"data":"[16:09:51] seed 1 fold 0: AUC 0.7916 optAcc 0.5504 quadF1 0.46974335312037574 (89.3s)\n"}
+,{"stream_name":"stdout","time":4034.739390907,"data":"[16:09:58] epoch 0: loss 1.7707 val AUC 0.7522 (6s)\n"}
+,{"stream_name":"stdout","time":4040.899761147,"data":"[16:10:04] epoch 1: loss 1.6118 val AUC 0.7728 (6s)\n"}
+,{"stream_name":"stdout","time":4047.227691685,"data":"[16:10:10] epoch 2: loss 1.5487 val AUC 0.7792 (6s)\n"}
+,{"stream_name":"stdout","time":4053.429545998,"data":"[16:10:16] epoch 3: loss 1.5247 val AUC 0.7822 (6s)\n"}
+,{"stream_name":"stdout","time":4059.577940732,"data":"[16:10:22] epoch 4: loss 1.5057 val AUC 0.7835 (6s)\n"}
+,{"stream_name":"stdout","time":4065.734536793,"data":"[16:10:29] epoch 5: loss 1.4944 val AUC 0.7843 (6s)\n"}
+,{"stream_name":"stdout","time":4072.078848074,"data":"[16:10:35] epoch 6: loss 1.4838 val AUC 0.7841 (6s)\n"}
+,{"stream_name":"stdout","time":4078.19975884,"data":"[16:10:41] epoch 7: loss 1.4739 val AUC 0.7848 (6s)\n"}
+,{"stream_name":"stdout","time":4084.323304466,"data":"[16:10:47] epoch 8: loss 1.4629 val AUC 0.7851 (6s)\n"}
+,{"stream_name":"stdout","time":4090.549773053,"data":"[16:10:53] epoch 9: loss 1.4591 val AUC 0.7846 (6s)\n"}
+,{"stream_name":"stdout","time":4096.700133319,"data":"[16:11:00] epoch 10: loss 1.4512 val AUC 0.7840 (6s)\n"}
+,{"stream_name":"stdout","time":4102.84680724,"data":"[16:11:06] epoch 11: loss 1.4424 val AUC 0.7849 (6s)\n"}
+,{"stream_name":"stdout","time":4105.176971793,"data":"[16:11:08] seed 1 fold 1: AUC 0.7851 optAcc 0.5512 quadF1 0.46712820268631605 (76.6s)\n"}
+,{"stream_name":"stdout","time":4111.287456195,"data":"[16:11:14] epoch 0: loss 1.7818 val AUC 0.7509 (6s)\n"}
+,{"stream_name":"stdout","time":4117.350021952,"data":"[16:11:20] epoch 1: loss 1.6166 val AUC 0.7712 (6s)\n"}
+,{"stream_name":"stdout","time":4123.660312393,"data":"[16:11:26] epoch 2: loss 1.5549 val AUC 0.7774 (6s)\n"}
+,{"stream_name":"stdout","time":4129.814840768,"data":"[16:11:33] epoch 3: loss 1.5252 val AUC 0.7813 (6s)\n"}
+,{"stream_name":"stdout","time":4135.979696833,"data":"[16:11:39] epoch 4: loss 1.5096 val AUC 0.7822 (6s)\n"}
+,{"stream_name":"stdout","time":4142.325764675,"data":"[16:11:45] epoch 5: loss 1.5023 val AUC 0.7834 (6s)\n"}
+,{"stream_name":"stdout","time":4148.493616063,"data":"[16:11:51] epoch 6: loss 1.4870 val AUC 0.7839 (6s)\n"}
+,{"stream_name":"stdout","time":4154.639467729,"data":"[16:11:57] epoch 7: loss 1.4775 val AUC 0.7842 (6s)\n"}
+,{"stream_name":"stdout","time":4160.973917401,"data":"[16:12:04] epoch 8: loss 1.4730 val AUC 0.7842 (6s)\n"}
+,{"stream_name":"stdout","time":4167.181472111,"data":"[16:12:10] epoch 9: loss 1.4616 val AUC 0.7842 (6s)\n"}
+,{"stream_name":"stdout","time":4173.323975466,"data":"[16:12:16] epoch 10: loss 1.4578 val AUC 0.7846 (6s)\n"}
+,{"stream_name":"stdout","time":4179.598435308,"data":"[16:12:22] epoch 11: loss 1.4515 val AUC 0.7841 (6s)\n"}
+,{"stream_name":"stdout","time":4185.695769789,"data":"[16:12:29] epoch 12: loss 1.4407 val AUC 0.7838 (6s)\n"}
+,{"stream_name":"stdout","time":4191.805178695,"data":"[16:12:35] epoch 13: loss 1.4390 val AUC 0.7839 (6s)\n"}
+,{"stream_name":"stdout","time":4194.21143491,"data":"[16:12:37] seed 1 fold 2: AUC 0.7846 optAcc 0.5522 quadF1 0.4584057361482592 (89.0s)\n"}
+,{"stream_name":"stdout","time":4200.323692877,"data":"[16:12:43] epoch 0: loss 1.7771 val AUC 0.7523 (6s)\n"}
+,{"stream_name":"stdout","time":4206.438371852,"data":"[16:12:49] epoch 1: loss 1.6143 val AUC 0.7744 (6s)\n"}
+,{"stream_name":"stdout","time":4212.747851799,"data":"[16:12:56] epoch 2: loss 1.5507 val AUC 0.7807 (6s)\n"}
+,{"stream_name":"stdout","time":4218.887541946,"data":"[16:13:02] epoch 3: loss 1.5239 val AUC 0.7830 (6s)\n"}
+,{"stream_name":"stdout","time":4225.008732166,"data":"[16:13:08] epoch 4: loss 1.5069 val AUC 0.7854 (6s)\n"}
+,{"stream_name":"stdout","time":4231.159586844,"data":"[16:13:14] epoch 5: loss 1.4946 val AUC 0.7859 (6s)\n"}
+,{"stream_name":"stdout","time":4237.406322934,"data":"[16:13:20] epoch 6: loss 1.4836 val AUC 0.7869 (6s)\n"}
+,{"stream_name":"stdout","time":4243.570013347,"data":"[16:13:26] epoch 7: loss 1.4759 val AUC 0.7870 (6s)\n"}
+,{"stream_name":"stdout","time":4249.657923101,"data":"[16:13:32] epoch 8: loss 1.4697 val AUC 0.7872 (6s)\n"}
+,{"stream_name":"stdout","time":4255.925794325,"data":"[16:13:39] epoch 9: loss 1.4604 val AUC 0.7872 (6s)\n"}
+,{"stream_name":"stdout","time":4262.05761015,"data":"[16:13:45] epoch 10: loss 1.4522 val AUC 0.7865 (6s)\n"}
+,{"stream_name":"stdout","time":4268.169243425,"data":"[16:13:51] epoch 11: loss 1.4452 val AUC 0.7870 (6s)\n"}
+,{"stream_name":"stdout","time":4270.496038809,"data":"[16:13:53] seed 1 fold 3: AUC 0.7872 optAcc 0.5534 quadF1 0.45454450879013747 (76.3s)\n"}
+,{"stream_name":"stdout","time":4276.664308308,"data":"[16:13:59] epoch 0: loss 1.7636 val AUC 0.7438 (6s)\n"}
+,{"stream_name":"stdout","time":4282.79498306,"data":"[16:14:06] epoch 1: loss 1.6036 val AUC 0.7642 (6s)\n"}
+,{"stream_name":"stdout","time":4288.903848647,"data":"[16:14:12] epoch 2: loss 1.5425 val AUC 0.7711 (6s)\n"}
+,{"stream_name":"stdout","time":4295.223624696,"data":"[16:14:18] epoch 3: loss 1.5128 val AUC 0.7742 (6s)\n"}
+,{"stream_name":"stdout","time":4301.362051521,"data":"[16:14:24] epoch 4: loss 1.4989 val AUC 0.7756 (6s)\n"}
+,{"stream_name":"stdout","time":4307.434436268,"data":"[16:14:30] epoch 5: loss 1.4851 val AUC 0.7766 (6s)\n"}
+,{"stream_name":"stdout","time":4313.715625324,"data":"[16:14:37] epoch 6: loss 1.4722 val AUC 0.7769 (6s)\n"}
+,{"stream_name":"stdout","time":4319.822419058,"data":"[16:14:43] epoch 7: loss 1.4661 val AUC 0.7771 (6s)\n"}
+,{"stream_name":"stdout","time":4325.952738366,"data":"[16:14:49] epoch 8: loss 1.4558 val AUC 0.7773 (6s)\n"}
+,{"stream_name":"stdout","time":4332.078768563,"data":"[16:14:55] epoch 9: loss 1.4482 val AUC 0.7776 (6s)\n"}
+,{"stream_name":"stdout","time":4338.338759316,"data":"[16:15:01] epoch 10: loss 1.4429 val AUC 0.7778 (6s)\n"}
+,{"stream_name":"stdout","time":4344.46128789,"data":"[16:15:07] epoch 11: loss 1.4357 val AUC 0.7771 (6s)\n"}
+,{"stream_name":"stdout","time":4350.513668911,"data":"[16:15:13] epoch 12: loss 1.4285 val AUC 0.7767 (6s)\n"}
+,{"stream_name":"stdout","time":4356.743299644,"data":"[16:15:20] epoch 13: loss 1.4238 val AUC 0.7764 (6s)\n"}
+,{"stream_name":"stdout","time":4358.875360893,"data":"[16:15:22] seed 1 fold 4: AUC 0.7778 optAcc 0.5404 quadF1 0.4731471144021752 (88.4s)\n"}
+,{"stream_name":"stdout","time":4365.50941447,"data":"[16:15:28] epoch 0: loss 1.7685 val AUC 0.7600 (6s)\n"}
+,{"stream_name":"stdout","time":4371.810581867,"data":"[16:15:35] epoch 1: loss 1.6172 val AUC 0.7781 (6s)\n"}
+,{"stream_name":"stdout","time":4377.991251543,"data":"[16:15:41] epoch 2: loss 1.5567 val AUC 0.7841 (6s)\n"}
+,{"stream_name":"stdout","time":4384.144393393,"data":"[16:15:47] epoch 3: loss 1.5284 val AUC 0.7875 (6s)\n"}
+,{"stream_name":"stdout","time":4390.28800564,"data":"[16:15:53] epoch 4: loss 1.5110 val AUC 0.7891 (6s)\n"}
+,{"stream_name":"stdout","time":4396.598640515,"data":"[16:15:59] epoch 5: loss 1.4999 val AUC 0.7902 (6s)\n"}
+,{"stream_name":"stdout","time":4402.762333965,"data":"[16:16:06] epoch 6: loss 1.4880 val AUC 0.7908 (6s)\n"}
+,{"stream_name":"stdout","time":4408.866980622,"data":"[16:16:12] epoch 7: loss 1.4791 val AUC 0.7915 (6s)\n"}
+,{"stream_name":"stdout","time":4415.160589285,"data":"[16:16:18] epoch 8: loss 1.4704 val AUC 0.7903 (6s)\n"}
+,{"stream_name":"stdout","time":4421.221477236,"data":"[16:16:24] epoch 9: loss 1.4640 val AUC 0.7912 (6s)\n"}
+,{"stream_name":"stdout","time":4427.32094435,"data":"[16:16:30] epoch 10: loss 1.4556 val AUC 0.7914 (6s)\n"}
+,{"stream_name":"stdout","time":4429.482973959,"data":"[16:16:32] seed 2 fold 0: AUC 0.7915 optAcc 0.5515 quadF1 0.44558602531765473 (70.1s)\n"}
+,{"stream_name":"stdout","time":4435.71948798,"data":"[16:16:39] epoch 0: loss 1.7704 val AUC 0.7492 (6s)\n"}
+,{"stream_name":"stdout","time":4441.836761561,"data":"[16:16:45] epoch 1: loss 1.6148 val AUC 0.7697 (6s)\n"}
+,{"stream_name":"stdout","time":4447.94205658,"data":"[16:16:51] epoch 2: loss 1.5524 val AUC 0.7780 (6s)\n"}
+,{"stream_name":"stdout","time":4454.193837473,"data":"[16:16:57] epoch 3: loss 1.5235 val AUC 0.7812 (6s)\n"}
+,{"stream_name":"stdout","time":4460.325654975,"data":"[16:17:03] epoch 4: loss 1.5054 val AUC 0.7826 (6s)\n"}
+,{"stream_name":"stdout","time":4466.47313745,"data":"[16:17:09] epoch 5: loss 1.4923 val AUC 0.7837 (6s)\n"}
+,{"stream_name":"stdout","time":4472.859187349,"data":"[16:17:16] epoch 6: loss 1.4844 val AUC 0.7840 (6s)\n"}
+,{"stream_name":"stdout","time":4479.031847287,"data":"[16:17:22] epoch 7: loss 1.4741 val AUC 0.7850 (6s)\n"}
+,{"stream_name":"stdout","time":4485.229715927,"data":"[16:17:28] epoch 8: loss 1.4669 val AUC 0.7842 (6s)\n"}
+,{"stream_name":"stdout","time":4491.578529445,"data":"[16:17:34] epoch 9: loss 1.4607 val AUC 0.7851 (6s)\n"}
+,{"stream_name":"stdout","time":4497.706759418,"data":"[16:17:41] epoch 10: loss 1.4504 val AUC 0.7848 (6s)\n"}
+,{"stream_name":"stdout","time":4499.829403678,"data":"[16:17:43] seed 2 fold 1: AUC 0.7850 optAcc 0.5535 quadF1 0.4656253055345221 (70.3s)\n"}
+,{"stream_name":"stdout","time":4505.98452668,"data":"[16:17:49] epoch 0: loss 1.7665 val AUC 0.7501 (6s)\n"}
+,{"stream_name":"stdout","time":4512.282763411,"data":"[16:17:55] epoch 1: loss 1.6148 val AUC 0.7688 (6s)\n"}
+,{"stream_name":"stdout","time":4518.43091785,"data":"[16:18:01] epoch 2: loss 1.5557 val AUC 0.7757 (6s)\n"}
+,{"stream_name":"stdout","time":4524.581583618,"data":"[16:18:07] epoch 3: loss 1.5277 val AUC 0.7791 (6s)\n"}
+,{"stream_name":"stdout","time":4530.876284514,"data":"[16:18:14] epoch 4: loss 1.5112 val AUC 0.7814 (6s)\n"}
+,{"stream_name":"stdout","time":4537.034824126,"data":"[16:18:20] epoch 5: loss 1.4957 val AUC 0.7825 (6s)\n"}
+,{"stream_name":"stdout","time":4543.214080886,"data":"[16:18:26] epoch 6: loss 1.4881 val AUC 0.7826 (6s)\n"}
+,{"stream_name":"stdout","time":4549.460777089,"data":"[16:18:32] epoch 7: loss 1.4788 val AUC 0.7841 (6s)\n"}
+,{"stream_name":"stdout","time":4555.587957007,"data":"[16:18:38] epoch 8: loss 1.4735 val AUC 0.7836 (6s)\n"}
+,{"stream_name":"stdout","time":4561.751975141,"data":"[16:18:45] epoch 9: loss 1.4637 val AUC 0.7841 (6s)\n"}
+,{"stream_name":"stdout","time":4568.07913874,"data":"[16:18:51] epoch 10: loss 1.4539 val AUC 0.7843 (6s)\n"}
+,{"stream_name":"stdout","time":4574.246228182,"data":"[16:18:57] epoch 11: loss 1.4496 val AUC 0.7843 (6s)\n"}
+,{"stream_name":"stdout","time":4580.395539554,"data":"[16:19:03] epoch 12: loss 1.4439 val AUC 0.7837 (6s)\n"}
+,{"stream_name":"stdout","time":4586.670903252,"data":"[16:19:09] epoch 13: loss 1.4388 val AUC 0.7831 (6s)\n"}
+,{"stream_name":"stdout","time":4588.925108843,"data":"[16:19:12] seed 2 fold 2: AUC 0.7843 optAcc 0.5532 quadF1 0.4627453632113856 (89.1s)\n"}
+,{"stream_name":"stdout","time":4595.009779614,"data":"[16:19:18] epoch 0: loss 1.7683 val AUC 0.7528 (6s)\n"}
+,{"stream_name":"stdout","time":4601.275804467,"data":"[16:19:24] epoch 1: loss 1.6137 val AUC 0.7725 (6s)\n"}
+,{"stream_name":"stdout","time":4607.387232501,"data":"[16:19:30] epoch 2: loss 1.5526 val AUC 0.7795 (6s)\n"}
+,{"stream_name":"stdout","time":4613.525244336,"data":"[16:19:36] epoch 3: loss 1.5230 val AUC 0.7829 (6s)\n"}
+,{"stream_name":"stdout","time":4619.803612333,"data":"[16:19:43] epoch 4: loss 1.5071 val AUC 0.7840 (6s)\n"}
+,{"stream_name":"stdout","time":4625.958363914,"data":"[16:19:49] epoch 5: loss 1.4938 val AUC 0.7858 (6s)\n"}
+,{"stream_name":"stdout","time":4632.074229731,"data":"[16:19:55] epoch 6: loss 1.4831 val AUC 0.7866 (6s)\n"}
+,{"stream_name":"stdout","time":4638.357454444,"data":"[16:20:01] epoch 7: loss 1.4750 val AUC 0.7863 (6s)\n"}
+,{"stream_name":"stdout","time":4644.469779793,"data":"[16:20:07] epoch 8: loss 1.4668 val AUC 0.7868 (6s)\n"}
+,{"stream_name":"stdout","time":4650.546736565,"data":"[16:20:13] epoch 9: loss 1.4606 val AUC 0.7866 (6s)\n"}
+,{"stream_name":"stdout","time":4656.613343113,"data":"[16:20:19] epoch 10: loss 1.4526 val AUC 0.7868 (6s)\n"}
+,{"stream_name":"stdout","time":4662.889965822,"data":"[16:20:26] epoch 11: loss 1.4450 val AUC 0.7863 (6s)\n"}
+,{"stream_name":"stdout","time":4665.056944275,"data":"[16:20:28] seed 2 fold 3: AUC 0.7868 optAcc 0.5536 quadF1 0.4583003475147077 (76.1s)\n"}
+,{"stream_name":"stdout","time":4671.093492764,"data":"[16:20:34] epoch 0: loss 1.7604 val AUC 0.7435 (6s)\n"}
+,{"stream_name":"stdout","time":4677.315352178,"data":"[16:20:40] epoch 1: loss 1.6055 val AUC 0.7627 (6s)\n"}
+,{"stream_name":"stdout","time":4683.460117002,"data":"[16:20:46] epoch 2: loss 1.5432 val AUC 0.7696 (6s)\n"}
+,{"stream_name":"stdout","time":4689.576200527,"data":"[16:20:52] epoch 3: loss 1.5154 val AUC 0.7738 (6s)\n"}
+,{"stream_name":"stdout","time":4695.898768452,"data":"[16:20:59] epoch 4: loss 1.5003 val AUC 0.7753 (6s)\n"}
+,{"stream_name":"stdout","time":4702.078775851,"data":"[16:21:05] epoch 5: loss 1.4841 val AUC 0.7756 (6s)\n"}
+,{"stream_name":"stdout","time":4708.204695389,"data":"[16:21:11] epoch 6: loss 1.4761 val AUC 0.7768 (6s)\n"}
+,{"stream_name":"stdout","time":4714.29736866,"data":"[16:21:17] epoch 7: loss 1.4662 val AUC 0.7776 (6s)\n"}
+,{"stream_name":"stdout","time":4720.543132555,"data":"[16:21:23] epoch 8: loss 1.4573 val AUC 0.7775 (6s)\n"}
+,{"stream_name":"stdout","time":4726.654410046,"data":"[16:21:29] epoch 9: loss 1.4512 val AUC 0.7770 (6s)\n"}
+,{"stream_name":"stdout","time":4732.777250863,"data":"[16:21:36] epoch 10: loss 1.4416 val AUC 0.7775 (6s)\n"}
+,{"stream_name":"stdout","time":4735.090589051,"data":"[16:21:38] seed 2 fold 4: AUC 0.7776 optAcc 0.5431 quadF1 0.4706420928870244 (70.0s)\n"}
+,{"stream_name":"stdout","time":4735.62477978,"data":"[16:21:38] DONE\n"}
+,{"stream_name":"stdout","time":4736.605302529,"data":"DONE\n"}
+,{"stream_name":"stderr","time":4738.822455,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":4738.822481228,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":4739.099746842,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":4739.099771739,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":4739.96561161,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":4740.96928659,"data":"[NbConvertApp] Writing 278333 bytes to __results__.html\n"}
+]

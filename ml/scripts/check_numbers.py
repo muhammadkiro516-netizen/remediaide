@@ -1,7 +1,7 @@
 """T53 / 07 §3: every number in the judge-facing documents must come from reports/ (golden rule 1).
 
   python scripts/check_numbers.py [--verbose]
-Documents: README.md, REPORT.md, MODEL_CARD.md, DATA_CARD.md. Sources: reports/RESULTS.md, reports/*.md,
+Documents: README.md, REPORT.md, MODEL_CARD.md, DATA_CARD.md and the repository README (../README.md). Sources: reports/RESULTS.md, reports/*.md,
 reports/tables/* (csv/json/md), data/manifest.json, models/l3_conformal_v1.json, configs/base.yaml and the
 protocol constants in scripts/number_whitelist.txt (each with a reason).
 A document number with d decimals matches a source value v if round(v, d) == x, or as a percentage
@@ -18,7 +18,7 @@ import sys
 
 from remediaide_ml.paths import ML_ROOT, MODELS, REPORTS, TABLES
 
-DOCS = ["README.md", "REPORT.md", "MODEL_CARD.md", "DATA_CARD.md"]
+DOCS = ["README.md", "REPORT.md", "MODEL_CARD.md", "DATA_CARD.md", "../README.md"]  # ../README.md = repo landing page
 NUM_DOC = re.compile(r"(?<![\w.,/#-])[-−+]?\d{1,3}(?:\.\d{3})+(?:,\d+)?(?![\w])|(?<![\w.,/#-])[-−+]?\d+(?:,\d+)?(?![\w])")
 NUM_SRC = re.compile(r"-?\d+(?:\.\d+)?(?:e-?\d+)?")
 

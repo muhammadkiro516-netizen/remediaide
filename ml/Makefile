@@ -1,7 +1,7 @@
 # Run from ml/. Targets marked (Txx) are implemented by Claude Code in that task.
 PY ?= .venv/bin/python
 
-.PHONY: setup env test lint all fix-libomp data-raw kaggle-outputs data l1 l2 l3 final check-repro
+.PHONY: setup env test lint all fix-libomp data-raw kaggle-outputs data l1 l2 l3 final evidence check-repro
 
 setup:            ## create venv + install (T01)
 	python3.12 -m venv .venv || python3.11 -m venv .venv || python3 -m venv .venv
@@ -98,7 +98,11 @@ l3:               ## T40-T45 + production artefacts
 final:            ## T46 test evaluation with frozen artefacts (re-run is logged in reports/TEST_OPENED.json)
 	$(PY) scripts/final_eval.py --rerun-reason "$${RERUN_REASON:-reproduction (make all, T47)}"
 
-all: data l1 l2 l3 final  ## full pipeline from raw data -> reports; then `make check-repro`
+evidence:         ## judge-facing evidence (CV + copies of existing test numbers; never reads test predictions)
+	$(PY) scripts/story_evidence.py
+	$(PY) scripts/export_kaggle_evidence.py
+
+all: data l1 l2 l3 final evidence  ## full pipeline from raw data -> reports; then `make check-repro`
 
 check-repro:      ## compare regenerated reports/tables with the committed versions (07 §6: +-0.005)
 	$(PY) scripts/check_repro.py

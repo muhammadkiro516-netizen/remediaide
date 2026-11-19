@@ -1,16 +1,22 @@
 # RESULTS — RemediAide 2.0 (CAC MLSC 2026)
 
+> **Angka utama (test, 20% siswa Eedi yang dikunci sejak awal; 58.963 kasus, 773 siswa).** Aturan CRI v1 salah
+> mengelompokkan **45,1%** kasus [CI 95% 43,1–46,9]. RemediAide 2.0 salah mengelompokkan **34,7%** [33,0–36,6]:
+> turun **10,3 poin** [9,7–10,9], atau **22,9% relatif** (aproksimasi 21,6–24,2%). Model lalu menyerahkan **20,6%**
+> kasus paling meragukan ke guru. Pada **79,4%** kasus sisanya, salah kelompok **28,3%**, sedangkan aturan v1 pada
+> kasus yang sama **39,2%**.
+> Sumber: `tables/headline.json` (diturunkan dari `tables/E8_impact.csv` dan `tables/L1_test.csv`; CI relatif adalah
+> aproksimasi CI selisih absolut dibagi titik B0, bukan bootstrap rasio). Gambar: `figures/E8_v1_vs_ml.png`.
+
 Status: **final Tingkat S (test dibuka sekali, 19 Nov 2026 06:52–06:59, run `20261119-0652_final_eval`; segel
 `ml/reports/TEST_OPENED.json`).** Setiap angka menunjuk ke file sumber di `ml/reports/`. Angka bertanda "CV" berasal
 dari validasi silang 80% siswa; angka bertanda "test" dari 20% siswa Eedi yang dikunci sejak awal (D-04) dan tidak
 pernah dipakai untuk melatih, memilih, atau mengkalibrasi model. MAP tidak punya fold test terkunci (D-06), sehingga
-semua angka Lapis 2 adalah CV.
+semua angka Lapis 2 adalah CV. Semua analisis yang ditambahkan setelah test dibuka (D-24, pembingkaian L2, analisis
+error) memakai CV saja.
 
 ## 1. Ringkasan angka utama
-**Kalimat utama** (sumber `tables/E8_impact.csv`, test):
-"Aturan CRI v1 salah mengelompokkan **45,1%** kasus siswa–soal. RemediAide 2.0 menurunkannya menjadi **34,7%**
-(selisih −10,3 poin [−10,9; −9,7]), dan **20,6%** kasus paling meragukan diserahkan ke guru; pada kasus yang tidak
-diserahkan, salah kelompok tinggal **28,3%**."
+Kalimat utama: lihat kotak di atas (sama persis di `README.md`, `ml/README.md`, dan `ml/REPORT.md`).
 
 | Angka kunci | Nilai | Sumber |
 | --- | --- | --- |
@@ -19,6 +25,7 @@ diserahkan, salah kelompok tinggal **28,3%**."
 | Recall jebakan jawaban benar, L2 TF-IDF (CV MAP; B0 = 0) | 0,375 [0,329–0,422] | `tables/E3_true_misconception.csv` |
 | Selisih MAP@3 EN → ID: mDeBERTa vs TF-IDF (CV MAP) | −0,016 vs −0,150 | `tables/E4_crosslingual.csv` |
 | Cakupan conformal L1, target 90% (test) | 0,900 (ukuran himpunan 1,90) | `tables/E5_test.json` |
+| Penurunan relatif salah kelompok karena defer 20,6% (test; target D-09 ≥ 25%, tidak tercapai) | 18,5% | `tables/E5_coverage_risk_L1_test.csv`, `tables/headline.json` |
 
 ## 2. Data
 Sumber: `tables/data_card_eedi.md`, `tables/data_card_map.md`, `tables/E0_eda_numbers.json`, `tables/E0_self_calibration.csv`.
@@ -110,7 +117,7 @@ Sumber: `tables/data_card_eedi.md`, `tables/data_card_map.md`, `tables/E0_eda_nu
 - **Catatan wajib:** terjemahan mesin bukan tulisan asli siswa Indonesia (QA 100 sampel: 20 kesalahan besar,
   `tables/translation_qa.csv`). Validasi native menyusul di pilot (E9).
 
-### E5 — Tahu batas diri
+### E5 — Ketidakpastian dan defer ke guru
 - **L1 test (`tables/E5_test.json`, `figures/E5_coverage_risk.png`, `figures/E5_reliability_L1.png`; parameter produksi
   tanpa refit, D-21):** ECE kuadran 0,0063 sebelum → 0,0068 sesudah temperature (CO-KT sudah terkalibrasi baik;
   kalibrasi tidak memperbaiki di test). Conformal LAC α = 0,1: cakupan **0,900**, ukuran himpunan rata-rata 1,90,
@@ -119,6 +126,9 @@ Sumber: `tables/data_card_eedi.md`, `tables/data_card_map.md`, `tables/E0_eda_nu
 - **L2 CV (`tables/E5_l3_final_cv.json`, `figures/E5_reliability_L2_final_cv.png`):** TF-IDF ECE 0,025 → 0,010
   (temperature 1,20); APS cakupan 0,950 (target 0,90; over-coverage karena skor diskret), ukuran himpunan 1,90.
 - **Pembanding literatur:** Mitton dkk. 2025 (+1,9–2,4 AUC pada coverage 80%); metrik berbeda.
+- **Klaim yang dipakai:** "menandai kasus ragu untuk guru, dengan cakupan conformal yang tepat". Aturan D-09 tidak
+  terpenuhi pada siswa kalibrasi model produksi, sehingga dipakai fallback 20%. Di test, defer 30% akan memberi
+  penurunan 26,8% (`tables/E5_coverage_risk_L1_test.csv`), tetapi ambang tidak dipilih dari test dan tidak diubah.
 
 ### E6 — Fairness (test)
 - **Setup:** Gender (1 perempuan vs 2 laki-laki), PremiumPupil (1 vs 0), kuartil kemampuan (Q1 vs Q4). Atribut tidak
@@ -191,6 +201,32 @@ Tingkat B — menunggu pilot.
 
 ### E10 — Dampak belajar
 Tingkat B — menunggu pilot.
+
+### Pembingkaian Lapis 2: kenapa TF-IDF menang di bahasa Inggris (CV MAP)
+`scripts/story_evidence.py --only l2gap`; sumber `tables/L2_split_gap_cv.csv`, `tables/L2_overlap_cv.csv`.
+
+| Bukti | TF-IDF+LR | mDeBERTa |
+| --- | --- | --- |
+| Macro-F1 kategori, split acak (soal sama di latih) | 0,840 [0,825–0,854] | 0,844 [0,827–0,856] |
+| Macro-F1 kategori, split per soal (`tables/L2_cv.csv`) | 0,611 [0,542–0,674] | 0,637 [0,584–0,685] |
+| Penurunan acak → per soal | −0,228 | −0,206 |
+| MAP@3 pada 8,83% baris yang alasannya persis ada di latih (soal sama) | 0,957 | 0,937 |
+| MAP@3 pada baris lain | 0,912 | 0,910 |
+
+- Selisih MAP@3 mDeBERTa − TF-IDF total −0,0036; baris duplikat menyumbang −0,0018. Keunggulan TF-IDF di bahasa Inggris
+  sekitar separuhnya hafalan teks per soal; untuk soal baru kedua model seri (CI selisih memuat 0, 15 klaster soal).
+- Untuk input Indonesia hanya encoder multibahasa yang bertahan (E4). T36 menunjukkan bahwa soal baru tetap butuh
+  contoh berlabel dari guru.
+
+### Analisis error (CV saja)
+`scripts/story_evidence.py --only errors`. Eedi hanya agregat; teks MAP (MIT) boleh dikutip.
+- **L1 (`tables/EA_l1_summary_cv.json`, `tables/EA_l1_confusion_cv.csv`, `tables/EA_l1_per_kc_cv.csv`,
+  `tables/EA_l1_buckets_cv.csv`):** CO-KT lebih baik dari B0 di 32 dari 32 KC dengan ≥ 1.000 baris (selisih −0,152
+  s.d. −0,058). 49,1% kasus *Miskonsepsi* masa depan diprediksi *Paham*. *Tebakan beruntung* recall 0,091; pada kelas
+  ini CO-KT lebih buruk dari B0 (0,909 vs 0,829).
+- **L2 (`tables/EA_l2_error_types_cv.csv`, `tables/EA_l2_examples_cv.csv`, `tables/EA_l2_per_question_cv.csv`):**
+  kesalahan TF-IDF terbanyak adalah Correct ↔ Neither (50,9%); jebakan jawaban benar terlewat 4,3% dari semua kesalahan.
+  Sepuluh contoh representatif dan rekomendasi perbaikan ada di `REPORT.md` §4.9.
 
 ### Pelengkap audit (D-24, CV saja; dihitung 19 Nov setelah test dibuka)
 Empat butir spesifikasi yang terlewat, dihitung oleh `scripts/gap_fill.py` dari OOF CV yang sudah ada. Tidak ada model,
