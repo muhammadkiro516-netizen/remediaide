@@ -247,12 +247,12 @@ Semua path ML relatif terhadap `ml/`.
 
 ## P7 — Pilot (saat izin keluar) · spesifikasi: 06_PILOT_PROTOCOL.md
 
-- [ ] **T70 [B] Instrumen 15 soal Indonesia di aplikasi + tes kering** — dep: T32, T62, T66
-- [ ] **T71 [B] PDF persetujuan + lembar info guru + `labeling_sheet.xlsx`** — dep: T13
+- [x] **T70 [B] Instrumen 15 soal Indonesia di aplikasi + tes kering** — dep: T32, T62, T66 · **19–20 Nov:** `docs/cac/pilot/instrument_map_id.json/.md` (soal kunci D-25), 3 SVG [cek guru], `scripts/seed-pilot-instrument.ts`, gambar di halaman soal, tombol *Catat persetujuan riset*; tes kering 3 siswa dummy lulus (`tests/e2e/pilot-dry-run.spec.ts`), CSV 45 baris lolos validator.
+- [x] **T71 [B] PDF persetujuan + lembar info guru + `labeling_sheet.xlsx`** — dep: T13 · `docs/cac/pilot/{consent_form.pdf, teacher_info.pdf, labeling_sheet.xlsx, PANDUAN_SESI.md}` (`ml/scripts/pilot_materials.py`).
 - [ ] **T72 [B][MANUAL] Sesi kelas** — butuh M11, M12, M14
-- [ ] **T73 [B] Ingest + validasi data pilot + data card pilot** — dep: T72
+- [ ] **T73 [B] Ingest + validasi data pilot + data card pilot** — dep: T72 · kode siap (`ml/scripts/pilot_analysis.py validate|sheets`), diuji dengan data sintetis; menunggu data.
 - [ ] **T74 [B][MANUAL] Label guru → E9 (kappa)** — butuh M13
-- [ ] **T75 [B] Evaluasi pilot: fusi, Pengaman nyata, E9; desain E10** — dep: T73, T74
+- [ ] **T75 [B] Evaluasi pilot: fusi, Pengaman nyata, E9; desain E10** — dep: T73, T74 · kode siap (`pilot_analysis.py analyze`; kappa, validasi fusi, Pengaman waktu nyata), diuji sintetis; hasil sintetis tidak dilaporkan.
 
 ## P8 — Bahan final (setelah 30 Nov)
 
