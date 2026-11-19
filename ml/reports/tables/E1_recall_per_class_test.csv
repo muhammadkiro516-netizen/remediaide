@@ -1,0 +1,9 @@
+model,kuadran_masa_depan,recall,benar,n,sumber
+B0 aturan v1,Paham,0.7129921026067335,24015,33682,E1_confusion_test.csv
+B0 aturan v1,Tebakan beruntung,0.14104296136179412,522,3701,E1_confusion_test.csv
+B0 aturan v1,Miskonsepsi,0.40025906735751293,6180,15440,E1_confusion_test.csv
+B0 aturan v1,Tidak paham,0.2739413680781759,1682,6140,E1_confusion_test.csv
+M1 CO-KT,Paham,0.8856362448785702,29830,33682,E1_confusion_cokt_test.csv
+M1 CO-KT,Tebakan beruntung,0.04998649013780059,185,3701,E1_confusion_cokt_test.csv
+M1 CO-KT,Miskonsepsi,0.36826424870466323,5686,15440,E1_confusion_cokt_test.csv
+M1 CO-KT,Tidak paham,0.4521172638436482,2776,6140,E1_confusion_cokt_test.csv

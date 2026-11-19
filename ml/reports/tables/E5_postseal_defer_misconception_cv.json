@@ -1,0 +1,14 @@
+{
+  "label": "pasca-segel, CV (D-26)",
+  "source": "runs/20261118-2202_cokt_kaggle/oof_b_ens5.parquet",
+  "temperature": 0.9723864427578951,
+  "defer_threshold_doubt": 0.5071500200613043,
+  "defer_rate_eval": 0.22568743271161287,
+  "n_eval_future_misconception": 46035,
+  "recall_misconception_cokt_eval": 0.4429673074834365,
+  "share_future_M_missed_by_model": 0.5570326925165635,
+  "share_of_missed_M_caught_by_defer": 0.24782591740435986,
+  "share_future_M_flagged_correct_or_deferred": 0.5810144455305746,
+  "recall_misconception_b0_eval": 0.42046269143043336,
+  "note": "Kasus yang diserahkan ke guru dianggap tertangkap hanya bila guru benar; akurasi guru belum diukur (E9)."
+}
