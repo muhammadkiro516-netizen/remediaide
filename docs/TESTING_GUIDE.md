@@ -8,13 +8,15 @@
 
 Semua akun berikut tersedia setelah menjalankan `npm run prisma:seed`.
 
+> **Password tidak ditulis di dokumen ini.** Seed membaca `SEED_PASSWORD` (semua akun demo) dan `SEED_SUPERADMIN_PASSWORD` (superadmin) dari environment; lihat `prisma/seed.ts` dan `docs/cac/SECURITY_NOTES.md`. Contoh: `SEED_PASSWORD='...' SEED_SUPERADMIN_PASSWORD='...' npm run prisma:seed`.
+
 | Role        | Email                        | Password    | Nama                      | Sekolah                   |
 |-------------|------------------------------|-------------|---------------------------|---------------------------|
-| SUPERADMIN  | `superadmin@remediaide.app`  | `remedi123` | Tim Internal RemediAide   | RemediAide Internal       |
-| TEACHER     | `guru@remediaide.app`        | `demo123`   | Guru Demo SMAN 1          | SMA Negeri 1 Demo (sman1) |
-| TEACHER     | `demo@remediaide.app`        | `demo123`   | Guru Demo (Legacy)        | SMA Negeri 1 Demo (sman1) |
-| PRINCIPAL   | `kepsek@remediaide.app`      | `demo123`   | Kepala Sekolah SMAN 1     | SMA Negeri 1 Demo (sman1) |
-| TEACHER     | `guru2@remediaide.app`       | `demo123`   | Guru Demo SMAN 2          | SMA Negeri 2 Demo (sman2) |
+| SUPERADMIN  | `superadmin@remediaide.app`  | `$SEED_SUPERADMIN_PASSWORD` | Tim Internal RemediAide   | RemediAide Internal       |
+| TEACHER     | `guru@remediaide.app`        | `$SEED_PASSWORD`   | Guru Demo SMAN 1          | SMA Negeri 1 Demo (sman1) |
+| TEACHER     | `demo@remediaide.app`        | `$SEED_PASSWORD`   | Guru Demo (Legacy)        | SMA Negeri 1 Demo (sman1) |
+| PRINCIPAL   | `kepsek@remediaide.app`      | `$SEED_PASSWORD`   | Kepala Sekolah SMAN 1     | SMA Negeri 1 Demo (sman1) |
+| TEACHER     | `guru2@remediaide.app`       | `$SEED_PASSWORD`   | Guru Demo SMAN 2          | SMA Negeri 2 Demo (sman2) |
 
 ### Data Pendukung yang Sudah Di-seed
 
@@ -101,7 +103,7 @@ Berikut adalah aturan proteksi yang di-enforce oleh `middleware.ts` + `auth.conf
 ```
 1. Login
    → Buka /login
-   → Masukkan: guru@remediaide.app / demo123
+   → Masukkan: guru@remediaide.app / $SEED_PASSWORD
    → Diarahkan ke /dashboard
 
 2. Buat Kelas (opsional, jika belum ada)
@@ -142,7 +144,7 @@ Berikut adalah aturan proteksi yang di-enforce oleh `middleware.ts` + `auth.conf
 ```
 1. Login
    → Buka /login
-   → Masukkan: kepsek@remediaide.app / demo123
+   → Masukkan: kepsek@remediaide.app / $SEED_PASSWORD
    → Diarahkan ke /dashboard (bisa juga langsung ke /principal/overview)
 
 2. Lihat Overview Sekolah
@@ -162,7 +164,7 @@ Berikut adalah aturan proteksi yang di-enforce oleh `middleware.ts` + `auth.conf
 ```
 1. Login
    → Buka /login
-   → Masukkan: superadmin@remediaide.app / remedi123
+   → Masukkan: superadmin@remediaide.app / $SEED_SUPERADMIN_PASSWORD
    → Diarahkan ke /admin/dashboard
 
 2. Kelola Sekolah
@@ -202,7 +204,7 @@ Siswa **tidak memiliki akun**. Mereka join menggunakan PIN yang diberikan guru.
 
 ### 4.1 Membuat Sesi Kuis Baru & Mendapatkan PIN
 
-1. Login sebagai `guru@remediaide.app` / `demo123`
+1. Login sebagai `guru@remediaide.app` / `$SEED_PASSWORD`
 2. Buka `/dashboard/sessions` → klik **"Buat Sesi"**
 3. Pilih Test (gunakan "Hukum Newton" yang sudah ada) dan Kelas (Kelas X-A)
 4. Setelah sesi dibuat, klik **"Aktifkan"**
@@ -238,7 +240,7 @@ Siswa **tidak memiliki akun**. Mereka join menggunakan PIN yang diberikan guru.
 
 ### 4.5 Testing Tenant Isolation
 
-1. Login sebagai `guru2@remediaide.app` / `demo123` (SMAN 2)
+1. Login sebagai `guru2@remediaide.app` / `$SEED_PASSWORD` (SMAN 2)
 2. Cek `/dashboard/classes` — hanya tampil Kelas X-B, tidak ada Kelas X-A
 3. Coba akses API langsung: `GET /api/classes/[id-kelas-sman1]` → harus return `403`
 
@@ -353,11 +355,11 @@ API **tidak pernah redirect** — selalu mengembalikan JSON:
 ╔══════════════════════════════════════════════════════════════╗
 ║               KREDENSIAL TEST — QUICK REFERENCE              ║
 ╠══════════════════════════════════════════════════════════════╣
-║  SUPERADMIN  superadmin@remediaide.app  remedi123            ║
-║  TEACHER     guru@remediaide.app        demo123              ║
-║  TEACHER     demo@remediaide.app        demo123  (legacy)    ║
-║  PRINCIPAL   kepsek@remediaide.app      demo123              ║
-║  TEACHER     guru2@remediaide.app       demo123  (SMAN 2)    ║
+║  SUPERADMIN  superadmin@remediaide.app  (env superadmin)     ║
+║  TEACHER     guru@remediaide.app        (env demo)           ║
+║  TEACHER     demo@remediaide.app        (env demo) (legacy)  ║
+║  PRINCIPAL   kepsek@remediaide.app      (env demo)           ║
+║  TEACHER     guru2@remediaide.app       (env demo) (SMAN 2)  ║
 ╠══════════════════════════════════════════════════════════════╣
 ║  PIN Sesi ACTIVE : 123456  (Test: Hukum Newton, SMAN 1)      ║
 ║  PIN Sesi LOCKED : 999999  (Untuk testing state machine)     ║

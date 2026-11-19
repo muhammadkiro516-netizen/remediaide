@@ -26,7 +26,7 @@ npm run prisma:seed
 
 This creates:
 - 1 School: "SD Demo" (subdomain: `demo`)
-- 1 Teacher: `demo@remediaide.app` / `demo123`
+- 1 Teacher: `demo@remediaide.app` / password dari `$SEED_PASSWORD` (lihat `prisma/seed.ts`)
 - 1 Class: "Kelas 5A"
 - 5 Students: `Siswa_01` … `Siswa_05`
 
