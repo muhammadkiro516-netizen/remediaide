@@ -1,5 +1,10 @@
 # RemediAide
 
+> **RemediAide 2.0 — CAC Machine Learning Solution Challenge 2026.** Mesin diagnosis miskonsepsi 3 lapis ML
+> (kode, data, eksperimen, laporan): **[`ml/README.md`](ml/README.md)** · laporan teknis [`ml/REPORT.md`](ml/REPORT.md) ·
+> hasil [`ml/reports/RESULTS.md`](ml/reports/RESULTS.md). Integrasi web (Mode AI, antrean "Perlu dicek guru", alasan
+> siswa) ada di aplikasi Next.js ini, dengan fallback ke aturan CRI v1.
+
 Sistem diagnosis kognitif siswa berbasis CRI (Certainty of Response Index) untuk remediasi terdiferensiasi.
 
 ## Stack Teknologi

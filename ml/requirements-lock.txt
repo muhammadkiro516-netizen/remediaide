@@ -132,8 +132,8 @@ PyYAML==6.0.3
 pyzmq==27.3.0
 referencing==0.37.0
 regex==2026.11.18
-# Editable Git install with no remote (remediaide-ml==0.1.0)
--e /Users/salmonella/Downloads/remediaide-main/ml
+# Editable install of this package (run from ml/)
+-e .
 requests==2.34.2
 rfc3339-validator==0.1.4
 rfc3986-validator==0.1.1
