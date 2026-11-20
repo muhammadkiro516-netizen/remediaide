@@ -9,8 +9,8 @@ Tim: Muhammad Salman Al Farisi (ketua), Lubna Maryam, Muhammad Farel Rizky · Un
 
 | Coba sendiri | |
 | --- | --- |
-| Web (akun juri, hanya-baca) | https://remediaide.vercel.app · email `[ISI]` · password ada di formulir submisi |
-| Kelas demo sebagai siswa | buka https://remediaide.vercel.app/student/join, PIN `[ISI]` |
+| Web (akun juri, hanya-baca) | https://remediaide.vercel.app · email `juri@remediaide.id` · password ada di formulir submisi |
+| Kelas demo sebagai siswa | buka https://remediaide.vercel.app/student/join, PIN `826730` |
 | Notebook 5 menit di Colab | [buka di Colab](https://colab.research.google.com/github/muhammadkiro516-netizen/remediaide/blob/main/ml/notebooks/00_demo_cepat.ipynb), tanpa GPU dan tanpa login |
 | Video demo 2 menit | [ISI: URL video] |
 | Dataset terjemahan Indonesia | [Hugging Face: remediaide-map-id](https://huggingface.co/datasets/avlfarizii/remediaide-map-id) (publik, MIT; cermin [Kaggle](https://www.kaggle.com/datasets/avlsalmoon/remediaide-map-id)) |

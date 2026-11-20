@@ -30,7 +30,7 @@ dengan formulir. **Jangan menempel password di dokumen ini.**
 **Aplikasi web:** https://remediaide.vercel.app
 
 **Akun juri (hanya-baca, data demo sintetis):** email `juri@remediaide.id` · password: lihat
-`~/Desktop/RAHASIA_password_juri.txt` (salin ke formulir, jangan ke dokumen lain) · PIN kelas demo siswa: [ISI: PIN]
+`~/Desktop/RAHASIA_password_juri.txt` (salin ke formulir, jangan ke dokumen lain) · PIN kelas demo siswa: `826730`
 
 **Notebook 5 menit (Colab, tanpa GPU/login):**
 https://colab.research.google.com/github/muhammadkiro516-netizen/remediaide/blob/main/ml/notebooks/00_demo_cepat.ipynb

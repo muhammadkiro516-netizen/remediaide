@@ -51,6 +51,19 @@ pada confidence yang banyak kosong — porsi baris yang bisa dievaluasi bisa kec
 
 ## Log
 
+### 2026-11-20 — Putaran final sebelum submisi (butir 0–8) — selesai kecuali video
+- **0** CI hijau; patch "hapus sebutan LIDM" sudah ada di main; tiga branch sinkron.
+- **1** Token GitHub dan password Neon tidak diganti (keputusan pemilik, risiko diterima). Password lima akun seed produksi
+  diganti (`~/Desktop/RAHASIA_password_seed.txt`); login `demo123`/`remedi123` terbukti gagal.
+- **2** Akun juri `juri@remediaide.id` (hanya-baca, `JUDGE_EMAILS` di Vercel, password `~/Desktop/RAHASIA_password_juri.txt`),
+  banner Mode juri, kelas demo sintetis di produksi (32 siswa, 480 jawaban, 512 hasil ML asli `rmd2-cokt5+l2-mdeberta`),
+  PIN coba `826730`; tes e2e juri lulus lokal.
+- **3** HF Space Docker butuh PRO → tanpa hosting (D-28). D-27 (mDeBERTa, token) tetap berlaku untuk paket Space.
+- **4** Dataset MAP-ID publik: https://huggingface.co/datasets/avlfarizii/remediaide-map-id (+ cermin Kaggle).
+- **5** Lisensi web MIT (M18); cek syarat dari slide TM (`docs/cac/CEK_RULEBOOK.md`; risiko syarat orisinalitas → M6).
+- **6** GIF demo `docs/media/demo.gif` (19 detik), naskah video (M20).
+- **7** Paket release, `FORMULIR_SUBMISI.md`, skrip GitHub Release.
+
 ### 2026-11-20 00:30 — Tugas penguatan juri (Bagian A–E) + /verifikasi — selesai
 - **A keamanan:** `ml/scripts/scan_secrets.py` (98 commit, 0 rahasia asli), `docs/cac/SECURITY_NOTES.md`, `.gitignore`
   diperketat, password seed dari env + `scripts/rotate-seed-passwords.ts`; M16 (cabut token, reset Neon, ganti password).
