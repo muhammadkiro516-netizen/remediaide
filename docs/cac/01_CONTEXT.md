@@ -20,7 +20,7 @@
 
 Status orisinalitas: menurut tim, panitia mengizinkan pemakaian konsep RemediAide karena yang dikembangkan
 adalah ML-nya. README submisi wajib memuat satu paragraf riwayat: v1 (aturan CRI tanpa ML) pernah ikut
-LIDM 2026, sedangkan seluruh komponen ML, dataset, eksperimen, dan hasil di sini baru.
+versi awal sebelumnya, sedangkan seluruh komponen ML, dataset, eksperimen, dan hasil di sini baru.
 
 ## B. Konsep RemediAide 2.0
 **Tagline:** bukan sekadar siapa yang salah, tapi kenapa salah, seberapa yakin mesinnya, dan apa yang
@@ -51,12 +51,12 @@ RemediAide 2.0 menurunkannya menjadi [Y]%, dan [Z]% kasus paling meragukan diser
   voting, kelompok remedial). Tabel `Response` menyimpan `chosenOptionKey`, `criValue`, `responseTimeMs`.
 - Ada `CalibrationConfig` + `/api/variants/[id]/calibration` (status manual) dan route override kelompok.
   Keduanya titik masuk ML.
-- **Ketidaksesuaian proposal LIDM vs kode** (laporan wajib memakai versi kode = B0):
+- **Ketidaksesuaian dokumen desain v1 vs kode** (laporan wajib memakai versi kode = B0):
   - Proposal: ambang CRI 2,5, penalti asimetris dengan α hanya untuk jawaban salah, syarat Aᵢ ≥ 0,7.
   - Kode: `cri >= 3`, semua respons di bawah τmin langsung INVALID (termasuk yang benar), rumus Iᵢ berbeda,
     voting per soal lintas varian.
   - Di Eedi kedua ambang setara (lihat DECISIONS D-03).
-- Landing page: label "Kompetisi LIDM ITDP 2026" (page.tsx baris 268 dan 689), statistik tanpa sumber
+- Landing page: label kompetisi lama (page.tsx baris 268 dan 689), statistik tanpa sumber
   ("68%", "3× lebih berbahaya", PISA 2022), dan link footer placeholder. Diperbaiki di T67.
 
 ## D. Fakta riset yang boleh dikutip (dengan sumber)

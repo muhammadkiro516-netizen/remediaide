@@ -47,7 +47,7 @@ remediaide-ml/
    perlu GPU Kaggle).
 8. Struktur repo.
 9. Keterbatasan dan etika.
-10. Riwayat: v1 (LIDM 2026, aturan tanpa ML) vs v2 (karya ini). Kontributor. Lisensi. Sitasi dataset.
+10. Riwayat: v1 (versi awal, aturan tanpa ML) vs v2 (karya ini). Kontributor. Lisensi. Sitasi dataset.
 
 ## 3. REPORT.md — dipetakan ke kriteria juri
 | Bab | Kriteria |

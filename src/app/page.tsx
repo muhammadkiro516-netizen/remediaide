@@ -270,7 +270,7 @@ export default function Home() {
           {/* Badge */}
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-sm font-medium text-blue-700">
             <Award className="h-4 w-4" />
-            RemediAide v1 · LIDM 2026 → v2 · CAC MLSC 2026
+            CAC Machine Learning Solution Challenge 2026
           </div>
 
           {/* Headline */}
@@ -724,12 +724,12 @@ export default function Home() {
                 </span>
               </div>
               <p className="text-sm leading-relaxed text-slate-600">
-                Inovasi Digital Pendidikan untuk Indonesia.
+                Diagnosis miskonsepsi matematika berbasis machine learning.
                 Sistem diagnosis kognitif berbasis CRI untuk membantu guru merencanakan remediasi. Hasil AI bukan nilai rapor.
               </p>
               <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700">
                 <Award className="h-3 w-3" />
-                RemediAide v1 · LIDM 2026 → v2 · CAC MLSC 2026
+                CAC Machine Learning Solution Challenge 2026
               </div>
             </div>
 

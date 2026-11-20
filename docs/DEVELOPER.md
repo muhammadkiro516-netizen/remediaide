@@ -3,7 +3,7 @@
 > Isi ini sebelumnya adalah README utama. README utama sekarang ditulis untuk juri; detail teknis tetap di sini.
 
 
-Submisi **CAC Machine Learning Solution Challenge 2026**. Aplikasi web RemediAide v1 (aturan CRI 2×2, LIDM 2026)
+Submisi **CAC Machine Learning Solution Challenge 2026**. Aplikasi web RemediAide v1 (aturan CRI 2×2, versi awal tanpa ML)
 ditambah mesin diagnosis **3 lapis ML + 1 pengaman**, dievaluasi pada test yang dikunci dan dibuka sekali.
 
 > **Angka utama (test, 20% siswa Eedi yang dikunci sejak awal; 58.963 kasus, 773 siswa).** Aturan CRI v1 salah
@@ -99,7 +99,7 @@ Kode ML: MIT (`ml/LICENSE`). Sitasi dataset ada di [`ml/README.md`](ml/README.md
 Keamanan: tidak ada rahasia di riwayat git (pemindaian di [`docs/cac/SECURITY_NOTES.md`](docs/cac/SECURITY_NOTES.md)).
 
 ## Riwayat
-RemediAide v1 (aplikasi web Next.js + aturan CRI 2×2 tanpa ML) diikutkan pada LIDM 2026. Semua komponen ML, data
+RemediAide v1 (aplikasi web Next.js + aturan CRI 2×2 tanpa ML) adalah versi awal yang kami buat sebelumnya. Semua komponen ML, data
 olahan, eksperimen, dan hasil di repo ini dibuat baru untuk CAC MLSC 2026. Aturan v1 dipakai apa adanya sebagai
 baseline B0 (27 tes kesetaraan dengan `engine.ts`).
 

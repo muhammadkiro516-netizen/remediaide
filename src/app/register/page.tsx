@@ -150,7 +150,7 @@ export default function RegisterPage() {
         {/* Credential badges */}
         <div className="flex flex-wrap gap-2">
           <span className="flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs text-white">
-            <Award className="h-3 w-3" /> LIDM ITDP 2026
+            <Award className="h-3 w-3" /> CAC MLSC 2026
           </span>
           <span className="flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs text-white">
             <ShieldCheck className="h-3 w-3" /> UU PDP Compliant

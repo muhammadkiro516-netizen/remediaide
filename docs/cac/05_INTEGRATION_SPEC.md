@@ -140,7 +140,7 @@ di log server tanpa isi datanya. Tes: tanpa consent → 403; kolom terlarang tid
 - Ganti statistik dengan angka bersumber (01_CONTEXT §D): PISA 2025 17% vs OECD 65%; Rapor Pendidikan 2025
   numerasi SMA 67,14%. Tautkan sumber di bawah angka.
 - Hapus "68%" dan "3× lebih berbahaya" kecuali ditemukan sumber yang kuat.
-- Label kompetisi → "RemediAide v1 · LIDM 2026 → v2 · CAC MLSC 2026".
+- Label kompetisi → "CAC Machine Learning Solution Challenge 2026".
 - Bagian baru "Mesin AI 3 Lapis" dengan diagram sederhana dan tautan ke halaman metodologi.
 - Link footer placeholder (`#`) dihapus atau diarahkan ke halaman nyata.
 

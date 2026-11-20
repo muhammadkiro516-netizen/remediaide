@@ -50,13 +50,13 @@ yang tidak akurat [4]. Aturan tetap ini punya tiga titik buta:
    menyerahkan kasus sulit ke guru.
 
 ### 1.2 Riwayat: dari RemediAide v1 ke v2
-RemediAide v1 adalah aplikasi web (Next.js) yang kami ikutkan pada LIDM 2026. v1 memakai aturan CRI 2×2 di atas apa
+RemediAide v1 adalah aplikasi web (Next.js) versi awal yang kami buat sebelumnya. v1 memakai aturan CRI 2×2 di atas apa
 adanya, tanpa machine learning. Seluruh komponen ML, data olahan, eksperimen, dan hasil di laporan ini **baru dibuat
 untuk CAC MLSC 2026**. Kode aturan v1 tidak diubah: ia menjadi baseline **B0** (`src/remediaide_ml/cri_rule.py`), dan
 27 tes kesetaraan membuktikan hasilnya identik dengan `engine.ts` di aplikasi v1. Dengan begitu, setiap angka
 "aturan v1" di laporan ini adalah perilaku aplikasi yang benar-benar dipakai, bukan versi yang dilemahkan.
 
-**Proposal LIDM ≠ kode v1.** Proposal LIDM menulis ambang CRI 2,5, penalti asimetris (α hanya untuk jawaban salah), dan
+**Dokumen desain v1 ≠ kode v1.** Dokumen desain v1 menulis ambang CRI 2,5, penalti asimetris (α hanya untuk jawaban salah), dan
 syarat Aᵢ ≥ 0,7. Kode v1 yang dipakai aplikasi berbeda: ambang `cri >= 3`, semua respons di bawah τmin langsung INVALID
 (termasuk yang benar), rumus indeks integritas berbeda, dan voting per soal lintas varian. B0 di laporan ini mengikuti
 **kode**, bukan proposal. Pada data Eedi kedua ambang setara, karena keyakinan 0–100 dikonversi ke CRI bilangan bulat

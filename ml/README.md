@@ -114,7 +114,7 @@ data/                README + skrip unduh + manifest sha256 (data mentah tidak d
 - Daftar lengkap: `REPORT.md` §6.
 
 ## 8. Riwayat, kontributor, lisensi
-- **Riwayat:** RemediAide v1 (aplikasi web Next.js dengan aturan CRI 2×2 tanpa ML) pernah diikutkan pada LIDM 2026.
+- **Riwayat:** RemediAide v1 (aplikasi web Next.js dengan aturan CRI 2×2 tanpa ML) adalah versi awal yang kami buat sebelumnya.
   Seluruh komponen ML, dataset olahan, eksperimen, dan hasil di repo ini baru dibuat untuk CAC MLSC 2026. Aturan v1
   dipakai apa adanya sebagai baseline B0 (`src/remediaide_ml/cri_rule.py`, setara dengan `engine.ts` — 27 tes kesetaraan).
 - **Tim:** Muhammad Salman Al Farisi (ketua), Lubna Maryam (anggota), Muhammad Farel Rizky (anggota).
