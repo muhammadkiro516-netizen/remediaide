@@ -62,7 +62,7 @@ Claude Code mengerjakan semua hal lainnya. Kerjakan item ini, centang, lalu keti
   6. Ketik `M17 sudah selesai` agar Claude Code menguji end-to-end di produksi.
 - [x] **M19. Nama lengkap tim** — selesai 20 Nov (Muhammad Salman Al Farisi, Lubna Maryam, Muhammad Farel Rizky) untuk README (`README.md` bagian Riwayat, `ml/README.md` §8): ganti `[nama lengkap]` untuk
   Salman (ketua), Luna, dan Farel. Cukup ketik nama lengkapnya ke Claude Code.
-- [ ] **M18. Lisensi kode aplikasi web:** README lama menulis "Proprietary"; kode ML sudah MIT. Putuskan lisensi kode web
+- [x] **M18. Lisensi kode aplikasi web:** — diputuskan 20 Nov: **MIT** (`LICENSE` di root). README lama menulis "Proprietary"; kode ML sudah MIT. Putuskan lisensi kode web
   (misalnya MIT) bila rulebook meminta kode terbuka.
 
 ## Minggu ini

@@ -157,4 +157,4 @@ masuk repo.
 RemediAide v1 adalah versi awal yang kami buat sebelumnya: aplikasi web dengan aturan CRI, tanpa ML. Semua komponen ML, data olahan,
 eksperimen, dan hasil di repo ini dibuat baru untuk CAC MLSC 2026, mulai 18 November 2026.
 
-Kode ML: MIT ([`ml/LICENSE`](ml/LICENSE)). Lisensi kode web: [ISI: keputusan M18]. Cara mengutip: [`CITATION.cff`](CITATION.cff).
+Kode ML: MIT ([`ml/LICENSE`](ml/LICENSE)). Lisensi kode web: MIT ([`LICENSE`](LICENSE)). Cara mengutip: [`CITATION.cff`](CITATION.cff).

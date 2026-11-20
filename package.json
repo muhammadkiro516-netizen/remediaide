@@ -2,6 +2,7 @@
   "name": "remediaide",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "description": "Sistem diagnosis kognitif siswa berbasis CRI untuk remediasi terdiferensiasi",
   "scripts": {
     "dev": "next dev",

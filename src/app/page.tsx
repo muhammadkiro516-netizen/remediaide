@@ -761,7 +761,7 @@ export default function Home() {
           </div>
 
           <div className="mt-10 flex flex-col items-center justify-between gap-2 border-t border-slate-200 pt-6 text-xs text-slate-400 sm:flex-row">
-            <p>© 2026 RemediAide. Semua hak dilindungi undang-undang.</p>
+            <p>© 2026 Tim RemediAide · Kode sumber berlisensi <a href="https://github.com/muhammadkiro516-netizen/remediaide/blob/main/LICENSE" className="underline">MIT</a>.</p>
             <p>
               Dibangun dengan ❤️ untuk Indonesia · Next.js 14 · Prisma · PostgreSQL · Tailwind CSS
             </p>
