@@ -151,7 +151,7 @@ di log server tanpa isi datanya. Tes: tanpa consent → 403; kolom terlarang tid
   memakai model lokal (tanpa L2 bila model L2 terlalu besar), lalu disinkronkan saat online.
 
 ## 10. Deploy (T69)
-- Web: Vercel (sudah ada: remediaidee.vercel.app). Tambahkan env ML_SERVICE_URL.
+- Web: Vercel (sudah ada: remediaide.vercel.app; domain lama remediaidee.vercel.app dari v1). Tambahkan env ML_SERVICE_URL.
 - Layanan ML: kontainer di layanan gratis/murah (Render, Railway, Fly.io, atau Hugging Face Spaces Docker).
   Pilih yang muat RAM model L2. Jika L2 terlalu besar untuk tier gratis, deploy L1 + L3 saja dan jalankan L2
   di demo lokal. Akun penyedia = M9.

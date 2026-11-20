@@ -55,7 +55,7 @@ export async function POST(request: NextRequest, context: RouteContext) {
   });
   const school = await prisma.school.findFirst({ where: { id: session.schoolId }, select: { name: true } });
   const teacher = await prisma.teacher.findUnique({ where: { id: session.userId }, select: { name: true } });
-  const base = (process.env.AUTH_URL ?? 'https://remediaidee.vercel.app').replace(/\/$/, '');
+  const base = (process.env.AUTH_URL ?? 'https://remediaide.vercel.app').replace(/\/$/, '');
   let pdf: Uint8Array;
   try {
     pdf = await generateLKPDPdf({

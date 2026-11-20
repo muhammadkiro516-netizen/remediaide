@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Kalau memakai kode atau dataset ini, mohon kutip seperti di bawah."
+title: "RemediAide 2.0: diagnosis miskonsepsi matematika tiga lapis yang menyerahkan kasus ragu ke guru"
+version: "1.0"
+date-released: "2026-11-27"
+authors:
+  - family-names: "Al Farisi"
+    given-names: "Muhammad Salman"
+    affiliation: "Universitas Pancasila"
+  - family-names: "Maryam"
+    given-names: "Lubna"
+    affiliation: "Universitas Pancasila"
+  - family-names: "Rizky"
+    given-names: "Muhammad Farel"
+    affiliation: "Universitas Pancasila"
+repository-code: "https://github.com/muhammadkiro516-netizen/remediaide"
+url: "https://remediaide.vercel.app"
+keywords:
+  - knowledge tracing
+  - misconception detection
+  - certainty of response index
+  - conformal prediction
+  - selective prediction
+  - Indonesian NLP

@@ -18,6 +18,7 @@
 
 import type { NextAuthConfig } from "next-auth";
 import type { NextRequest } from "next/server";
+import { judgeBlock } from "./lib/auth/judge";
 
 // ─── Route Matchers ───────────────────────────────────────────────────────────
 
@@ -148,6 +149,22 @@ export const authConfig: NextAuthConfig = {
           );
         }
         return false; // NextAuth redirects to pages.signIn
+      }
+
+      // Akun juri (JUDGE_EMAILS): hanya-baca, tanpa ekspor. Dicek di server, bukan hanya di UI.
+      const email = (auth as { user?: { email?: string | null } } | null)?.user?.email;
+      const blocked = judgeBlock(email, (request as NextRequest).method, pathname);
+      if (blocked) {
+        const message = blocked === "EXPORT"
+          ? "Akun juri tidak dapat mengekspor data"
+          : "Akun juri hanya dapat melihat (mode baca)";
+        if (isApi) {
+          return new Response(
+            JSON.stringify({ success: false, error: { code: "READ_ONLY", message } }),
+            { status: 403, headers: { "Content-Type": "application/json" } }
+          );
+        }
+        return Response.redirect(new URL("/dashboard?mode=juri", nextUrl));
       }
 
       // SUPERADMIN routes
