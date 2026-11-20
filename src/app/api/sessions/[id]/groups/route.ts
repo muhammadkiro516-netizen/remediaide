@@ -10,6 +10,9 @@ import { requireTeacherSession } from '@/lib/auth/session';
 import { prisma } from '@/lib/db/client';
 import { computeConceptDiagnosis } from '@/lib/diagnosis/compute';
 
+// ML diagnosis (Hugging Face Space, mDeBERTa on CPU) can take longer than the default function limit (D-27)
+export const maxDuration = 60;
+
 interface RouteContext {
   params: { id: string };
 }

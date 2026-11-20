@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends libgomp1 && rm 
 RUN useradd -m -u 1000 user
 USER user
 ENV HOME=/home/user PATH=/home/user/.local/bin:$PATH PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 \
-    RA_MODELS_DIR=/home/user/app/models RA_L2_LANG=id RA_L2_MODEL=student
+    RA_MODELS_DIR=/home/user/app/models RA_L2_LANG=id RA_L2_MODEL=mdeberta
 WORKDIR /home/user/app
 COPY --chown=user pyproject.toml requirements-lock.txt ./
 # CPU-only torch (the default Linux wheel bundles CUDA and is several GB); same version as the lock file

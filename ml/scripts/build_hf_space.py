@@ -2,7 +2,7 @@
 
   python scripts/build_hf_space.py [--out ../submission/hf_space]
 Copies src/, service/, pyproject.toml, requirements-lock.txt and the production models that the Space needs
-(L2 = student ONNX; mDeBERTa is left out), writes the Space README/Dockerfile at the root and a .gitattributes for
+(L2 = mDeBERTa for Indonesian input, D-27; student ONNX left out), writes the Space README/Dockerfile at the root and a .gitattributes for
 Git LFS, then prints the size. The output folder is git-ignored (submission/).
 """
 
@@ -15,9 +15,9 @@ import shutil
 from remediaide_ml.paths import ML_ROOT, MODELS, REPO_ROOT
 
 MODEL_FILES = ["l1_cokt_v1", "l1_lgbm_v1", "l1_features_v1.json", "l1_calibrator_v1.joblib", "l1_bin_calibrator_v1.joblib",
-               "l2_student_v1", "l2_tfidf_v1.joblib", "l2_candidates_v1.json", "l3_conformal_v1.json",
+               "l2_mdeberta_v1", "l2_tfidf_v1.joblib", "l2_candidates_v1.json", "l3_conformal_v1.json",
                "misconception_dictionary.json", "README.md"]
-LFS = ["*.pt", "*.onnx", "*.joblib", "*.bin", "*.safetensors", "models/l1_lgbm_v1/*.txt", "tokenizer.json"]
+LFS = ["*.pt", "*.onnx", "*.joblib", "*.bin", "*.safetensors", "*.model", "models/l1_lgbm_v1/*.txt", "tokenizer.json"]
 
 
 def size(p) -> int:
