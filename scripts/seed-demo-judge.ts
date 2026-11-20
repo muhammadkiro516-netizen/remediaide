@@ -109,7 +109,8 @@ async function main() {
   const r = rng(20261118);
   const pick = <T,>(xs: T[]) => xs[Math.floor(r() * xs.length)];
   const rows = [];
-  for (const [si, st] of students.entries()) {
+  for (let si = 0; si < students.length; si++) {
+    const st = students[si];
     const profile = MIX[si];
     let clock = t0.getTime() + Math.floor(r() * 60_000);
     for (const v of variants) {
