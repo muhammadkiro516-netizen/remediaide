@@ -21,7 +21,7 @@ dengan formulir. **Jangan menempel password di dokumen ini.**
 
 **Repositori (source code):** https://github.com/muhammadkiro516-netizen/remediaide
 
-**Rilis penyisihan (zip kode):** [ISI: URL GitHub Release v1.0-cac-penyisihan]
+**Rilis penyisihan (zip kode):** https://github.com/muhammadkiro516-netizen/remediaide/releases/tag/v1.0-cac-penyisihan
 
 **Dataset:**
 - Eedi NeurIPS 2020 (CC BY-NC-ND 4.0): tidak dibagikan ulang sesuai lisensi; skrip unduh + sha256 di `ml/data/`.
