@@ -28,6 +28,12 @@ https://github.com/muhammadkiro516-netizen/remediaide (**publik**: API GitHub ta
 | `.env.vercel.local` (AUTH_SECRET acak) | hanya di laptop, di-ignore git | rendah | tidak perlu tindakan; jangan dibagikan |
 | Kredensial Kaggle | `~/.kaggle/credentials.json` (di luar repo) | rendah | tidak perlu tindakan |
 
+### Keputusan pemilik (20 Nov 2026)
+Pemilik repo memutuskan **tidak** mencabut token GitHub lama dan **tidak** mereset password Neon; risiko dari dua rahasia
+yang pernah ditempel di chat diterima secara sadar. Keduanya tidak pernah masuk git (pemindaian §1). Mitigasi yang tetap
+berlaku: password akun seed di produksi diganti dengan `scripts/rotate-seed-passwords.ts` begitu kredensial database
+tersedia lewat `npx vercel env pull` (tanpa reset Neon).
+
 ## 3. Cara mengganti password akun seed di produksi
 Sejak commit Bagian A, `prisma/seed.ts` membaca `SEED_PASSWORD` dan `SEED_SUPERADMIN_PASSWORD` dari environment
 (nilai lama hanya dipakai bila variabel kosong, dengan peringatan). Seed **tidak** mengubah akun yang sudah ada, jadi
