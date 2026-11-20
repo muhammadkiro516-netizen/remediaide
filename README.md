@@ -13,7 +13,7 @@ Tim: Muhammad Salman Al Farisi (ketua), Lubna Maryam, Muhammad Farel Rizky · Un
 | Kelas demo sebagai siswa | buka https://remediaide.vercel.app/student/join, PIN `[ISI]` |
 | Notebook 5 menit di Colab | [buka di Colab](https://colab.research.google.com/github/muhammadkiro516-netizen/remediaide/blob/main/ml/notebooks/00_demo_cepat.ipynb), tanpa GPU dan tanpa login |
 | Video demo 2 menit | [ISI: URL video] |
-| Dataset terjemahan Indonesia | [ISI: URL Hugging Face / Kaggle MAP-ID] |
+| Dataset terjemahan Indonesia | [Kaggle: remediaide-map-id](https://www.kaggle.com/datasets/avlsalmoon/remediaide-map-id) (publik, MIT) |
 
 ![Demo: guru membuka kelas demo, melihat panel "Perlu dicek guru" dan alasan SHAP (data demo sintetis)](docs/media/demo.gif)
 
@@ -142,7 +142,7 @@ Aplikasi web (Node.js 20, PostgreSQL 15): lihat [`docs/DEVELOPER.md`](docs/DEVEL
 | Dataset | Isi | Lisensi | Di repo |
 | --- | --- | --- | --- |
 | [Eedi NeurIPS 2020](https://eedi.com/projects/neurips-education-challenge), Task 3 & 4 | 1.382.727 jawaban, 4.918 siswa, 948 soal, keyakinan siswa | CC BY-NC-ND 4.0 | Tidak. Lisensinya melarang membagikan versi olahan, jadi kami sertakan skrip unduh dan sha256 |
-| MAP, Charting Student Math Misunderstandings | 36.696 alasan siswa, 15 soal, 35 label miskonsepsi | MIT | Terjemahan Indonesia: [ISI: URL Hugging Face]. Hasil QA 100 sampel: [`translation_qa.csv`](ml/reports/tables/translation_qa.csv) |
+| MAP, Charting Student Math Misunderstandings | 36.696 alasan siswa, 15 soal, 35 label miskonsepsi | MIT | Terjemahan Indonesia: [Kaggle remediaide-map-id](https://www.kaggle.com/datasets/avlsalmoon/remediaide-map-id). Hasil QA 100 sampel: [`translation_qa.csv`](ml/reports/tables/translation_qa.csv) |
 | Kamus miskonsepsi Indonesia | 39 pasangan (soal, miskonsepsi) dari Tabel 1 Rittle-Johnson dkk., dengan deskripsi Bahasa Indonesia | MIT | [`map_misconception_dictionary.csv`](ml/reports/tables/map_misconception_dictionary.csv) |
 
 Kartu data: [`ml/DATA_CARD.md`](ml/DATA_CARD.md). Kartu model: [`ml/MODEL_CARD.md`](ml/MODEL_CARD.md).

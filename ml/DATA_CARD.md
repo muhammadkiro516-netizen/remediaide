@@ -12,6 +12,7 @@ Checksum file mentah: `data/manifest.json`.
 | Sumber | https://eedi.com/projects/neurips-education-challenge (arXiv:2007.12061) | https://www.kaggle.com/competitions/map-charting-student-math-misunderstandings | karya kami (`src/remediaide_ml/data/translate.py`) |
 | Lisensi | **CC BY-NC-ND 4.0** | **MIT** (`data/raw/map/LICENSE_NOTE.md`) | turunan MIT; model terjemahan Apache-2.0 |
 | Dalam submisi | skrip unduh + sha256 (arsip 657 MB; versi olahan **tidak** disertakan, sesuai ND) | `data/original/map/train.csv` asli | `data/derived/map_id/map_id.csv` |
+| Publikasi terbuka | — | — | https://www.kaggle.com/datasets/avlsalmoon/remediaide-map-id (MIT; + kamus 39 pasangan dan QA 100 sampel; `scripts/build_map_id_dataset.py`) |
 
 ## 2. Preprocessing
 - **Eedi:**

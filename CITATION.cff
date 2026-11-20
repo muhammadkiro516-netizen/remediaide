@@ -22,3 +22,24 @@ keywords:
   - conformal prediction
   - selective prediction
   - Indonesian NLP
+references:
+  - type: dataset
+    title: "RemediAide MAP-ID: terjemahan Bahasa Indonesia dari MAP — Charting Student Math Misunderstandings"
+    authors:
+      - name: "Tim RemediAide"
+    url: "https://www.kaggle.com/datasets/avlsalmoon/remediaide-map-id"
+    license: MIT
+  - type: dataset
+    title: "MAP — Charting Student Math Misunderstandings"
+    authors:
+      - name: "The Learning Agency LLC"
+      - name: "Vanderbilt University"
+    url: "https://www.kaggle.com/competitions/map-charting-student-math-misunderstandings"
+    license: MIT
+  - type: dataset
+    title: "Diagnostic Questions: The NeurIPS 2020 Education Challenge (Eedi)"
+    authors:
+      - family-names: "Wang"
+        given-names: "Zichao"
+    url: "https://eedi.com/projects/neurips-education-challenge"
+    license: CC-BY-NC-ND-4.0
