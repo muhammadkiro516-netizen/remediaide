@@ -581,7 +581,7 @@ dilaporkan sebagai hasil.
 2. Rapor Pendidikan 2025, numerasi. https://www.gebrak.id/?p=18182
 3. Hasan, S., Bagayoko, D., & Kelley, E. L. (1999). Misconceptions and the Certainty of Response Index (CRI). *Physics Education*, 34(5). https://iopscience.iop.org/article/10.1088/0031-9120/34/5/304
 4. Repositori Univ. Pretoria tentang penerapan model Hasan pada skor mentah. https://repository.up.ac.za/handle/2263/16658
-5. Wang, Z. dkk. (2020). *Diagnostic Questions: The NeurIPS 2020 Education Challenge.* arXiv:2007.12061. https://eedi.com/projects/neurips-education-challenge
+5. Wang, Z. dkk. (2020). *Diagnostic Questions: The NeurIPS 2020 Education Challenge.* arXiv:2007.12061. https://arxiv.org/abs/2007.12061
 6. Rittle-Johnson, B. dkk. (2025). MAP/MIME dataset, AIME-Con WIP. https://aclanthology.org/2025.aimecon-wip.3.pdf ; Kaggle: https://www.kaggle.com/competitions/map-charting-student-math-misunderstandings
 7. Liu, Z. dkk. (2023). *simpleKT.* arXiv:2302.06881. https://arxiv.org/pdf/2302.06881
 8. arXiv:2606.23205 (jebakan jawaban benar di Eedi). https://arxiv.org/pdf/2606.23205

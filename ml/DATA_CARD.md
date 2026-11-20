@@ -9,7 +9,7 @@ Checksum file mentah: `data/manifest.json`.
 | Isi | jawaban pilihan ganda (4 opsi) + keyakinan 0–100 + metadata siswa | soal + jawaban + alasan satu kalimat + label `Category:Misconception` | kolom soal, jawaban, alasan dalam Bahasa Indonesia |
 | Ukuran | 1.382.727 jawaban, 4.918 siswa, 948 soal, 57 konsep | 36.696 alasan, 15 soal, 65 target, 35 label miskonsepsi | 36.696 baris |
 | Periode | Sep 2019 – Mei 2020 | — | dibuat 18 Nov 2026 |
-| Sumber | https://eedi.com/projects/neurips-education-challenge (arXiv:2007.12061) | https://www.kaggle.com/competitions/map-charting-student-math-misunderstandings | karya kami (`src/remediaide_ml/data/translate.py`) |
+| Sumber | https://arxiv.org/abs/2007.12061 (arXiv:2007.12061) | https://www.kaggle.com/competitions/map-charting-student-math-misunderstandings | karya kami (`src/remediaide_ml/data/translate.py`) |
 | Lisensi | **CC BY-NC-ND 4.0** | **MIT** (`data/raw/map/LICENSE_NOTE.md`) | turunan MIT; model terjemahan Apache-2.0 |
 | Dalam submisi | skrip unduh + sha256 (arsip 657 MB; versi olahan **tidak** disertakan, sesuai ND) | `data/original/map/train.csv` asli | `data/derived/map_id/map_id.csv` |
 | Publikasi terbuka | — | — | https://huggingface.co/datasets/avlfarizii/remediaide-map-id (cermin: https://www.kaggle.com/datasets/avlsalmoon/remediaide-map-id; MIT; + kamus 39 pasangan dan QA 100 sampel; `scripts/build_map_id_dataset.py`) |

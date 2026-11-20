@@ -52,7 +52,7 @@ Indonesia (sejauh ini dengan terjemahan mesin; tulisan asli siswa menunggu pilot
 ## 3. Data
 | Dataset | Isi | Lisensi | Peran |
 | --- | --- | --- | --- |
-| [Eedi NeurIPS 2020 Task 3&4](https://eedi.com/projects/neurips-education-challenge) | 1.382.727 jawaban, 4.918 siswa, 948 soal, 57 konsep, keyakinan 0–100 | CC BY-NC-ND 4.0 | L1, E1, E2, E5, E6, E8 |
+| [Eedi NeurIPS 2020 Task 3&4](https://arxiv.org/abs/2007.12061) | 1.382.727 jawaban, 4.918 siswa, 948 soal, 57 konsep, keyakinan 0–100 | CC BY-NC-ND 4.0 | L1, E1, E2, E5, E6, E8 |
 | [MAP — Charting Student Math Misunderstandings](https://www.kaggle.com/competitions/map-charting-student-math-misunderstandings) | 36.696 alasan, 15 soal, 65 target (kategori:miskonsepsi) | MIT | L2, E3, E4 |
 | Terjemahan MAP → Indonesia (karya kami) | opus-mt-en-id + pelindung ekspresi matematika, QA manual 100 sampel | turunan MIT | E4 |
 
