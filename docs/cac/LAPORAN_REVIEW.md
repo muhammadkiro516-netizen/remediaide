@@ -1,6 +1,6 @@
 # LAPORAN REVIEW — RemediAide 2.0 (CAC MLSC 2026)
 
-Disusun 19 Nov 2026 oleh Claude Code untuk ditinjau pihak luar (juri ML yang skeptis); **versi 4, 20 Nov 2026** (perubahan v3 di §0b, v4 di §0c). Laporan ini **tidak mengubah kode
+Disusun 19 Nov 2026 oleh Claude Code untuk ditinjau pihak luar (juri ML yang skeptis); **versi 5, 20 Nov 2026** (perubahan v3 di §0b, v4 di §0c, v5 di §0d). Laporan ini **tidak mengubah kode
 atau hasil apa pun** (versi 2: ditambah §7 "Pelengkap audit D-24" — empat butir spesifikasi yang terlewat, dihitung dari OOF CV saja dengan skrip baru `ml/scripts/gap_fill.py`, tanpa mengubah model/angka lama); semua angka disalin dari file di `ml/reports/` (path disebut di setiap tabel). Angka di tabel
 ditampilkan 4 desimal (nilai < 1e-4 dalam notasi ilmiah); nilai presisi penuh ada di file sumber dan sebagian disalin
 mentah di Lampiran D. Istilah: **CV** = validasi silang pada 80% siswa Eedi; **test** = 20% siswa Eedi yang dikunci
@@ -13,7 +13,7 @@ mentah di Lampiran D. Istilah: **CV** = validasi silang pada 80% siswa Eedi; **t
 ```
 ........................................................................ [ 75%]
 .......................                                                  [100%]
-95 passed in 5.99s
+95 passed in 5.68s
 ```
 
 **Tes leakage (`ml/tests/test_features_leakage.py`) + kausalitas CO-KT (`ml/tests/test_cokt.py`)**
@@ -28,28 +28,49 @@ tests/test_features_leakage.py::test_vector_quadrant_equals_b0_scalar PASSED
 tests/test_cokt.py::test_sequences_windows_and_padding PASSED
 tests/test_cokt.py::test_next_correct_is_causal PASSED
 tests/test_cokt.py::test_training_smoke_loss_and_outputs PASSED
-============================== 10 passed in 1.53s ==============================
+============================== 10 passed in 1.51s ==============================
 ```
 
 **`npm test`** (di worktree `feat/ml-integration` = `main`)
 ```
- Test Files  48 passed (48)
-      Tests  593 passed (593)
-   Duration  1.37s (transform 847ms, setup 0ms, import 2.03s, tests 3.87s, environment 1.87s)
+ Test Files  50 passed (50)
+      Tests  600 passed (600)
+   Duration  1.39s (transform 909ms, setup 0ms, import 2.16s, tests 3.85s, environment 2.02s)
 ```
 
 **`git status`**
 ```
-checkout utama, branch cac/ml:
-M README.md
- M docs/cac/MANUAL_ACTIONS.md
- M ml/README.md
-worktree .worktrees/web, branch feat/ml-integration:
+checkout utama, branch main:
+(bersih, tidak ada perubahan)
+worktree .worktrees/web, branch main:
 (bersih, tidak ada perubahan)
 ```
 
 **`git log --oneline -40`** (branch `main`)
 ```
+cd52828 7: formulir — tautan GitHub Release
+3b93efe 8: ganti tautan proyek Eedi yang sudah 404 dengan makalah resmi arXiv 2007.12061
+8b798e2 2: README — email juri dan PIN demo (terverifikasi di produksi); PROGRESS putaran final
+69c012e 2: perbaiki build Vercel — iterasi indeks di seed-demo-judge.ts (target TS lama)
+203a3dc 2: skrip uji produksi akun juri (login, 403 untuk tulis/ekspor, data ML demo, PIN)
+f7d848b 1: password akun seed produksi diganti; login password lama terbukti gagal
+e89059c 3/4: D-28 layanan ML tidak dihosting (HF Space Docker butuh PRO); dataset MAP-ID publik di Hugging Face (+ cermin Kaggle); uji login HTTP
+2995087 7: skrip GitHub Release via API (kredensial git lokal, token tidak dicetak)
+67f98a9 1: catat keputusan pemilik — token GitHub dan password Neon tidak diganti (risiko diterima); rotasi password seed tetap direncanakan
+fb965f5 4: dataset terbuka MAP-ID publik di Kaggle (avlsalmoon/remediaide-map-id) — README, DATA_CARD, CITATION.cff, formulir
+8e94c27 7: draf FORMULIR_SUBMISI (teks siap salin; tautan HF, release, PIN, video menyusul)
+7a604a3 7: paket release (git archive, tanpa data/env/bobot turunan Eedi) + scan_secrets --zip
+948645e 6: naskah video diperpanjang ke ±245 kata; rujukan bagian README diperbaiki
+c6cb921 6: GIF demo 19 detik (kelas demo → Mode AI → Perlu dicek guru → alasan SHAP) + naskah video 2 menit (M20)
+1255832 3: D-27 hosting layanan ML — HF Space privat dengan mDeBERTa (L2 Indonesia), token baca, maxDuration 60 pada rute ML
+7c20e7f 2: banner Mode juri, seed kelas demo sintetis (32 siswa, 15 soal, hasil v1 + ML tersimpan, PIN coba), tes e2e juri hanya-baca
+3672b0c 4: skrip dataset publik MAP-ID (MAP asli + terjemahan Indonesia + flag kualitas, kamus 39, QA 100, dataset card)
+8904da2 5: cek syarat submisi (M6) dari slide Technical Meeting — temuan: syarat orisinalitas vs aplikasi v1
+5ecb3c6 5: lisensi kode web MIT (M18) — LICENSE di root, README, package.json, footer website
+12780db Fokus ke CAC MLSC 2026: hapus sebutan LIDM dari README, website, dan laporan
+036388e v5: README juri, notebook Colab 5 menit, CI, CITATION.cff, akun juri hanya-baca
+119599c merge cac/ml (nama tim)
+32a0f77 5: nama lengkap tim — Muhammad Salman Al Farisi (ketua), Lubna Maryam, Muhammad Farel Rizky
 8bfcbfd merge cac/ml (REVIEW_INDEX v4)
 d3a21f2 7: REVIEW_INDEX v4 — SHA f9ed9b4 + tautan baris ke semua bagian yang berubah
 f9ed9b4 merge cac/ml (LAPORAN_REVIEW v4)
@@ -67,29 +88,6 @@ fcfb7c4 merge cac/ml (butir 1-3)
 7f0a544 D-26: analisis pasca-segel (CV) — recall per kuadran (test dari confusion tersimpan + CV), defer vs miskonsepsi, mode prioritas miskonsepsi
 4a7252b merge cac/ml (paket submisi v3)
 55d69cf E: paket submisi memuat bukti Kaggle + materi pilot; tes pilot jalan di dalam paket
-8422899 merge cac/ml (REVIEW_INDEX)
-2877ca5 E: REVIEW_INDEX — tautan blob ke semua bukti pada commit d5210ed
-d5210ed merge cac/ml (LAPORAN_REVIEW v3)
-cdf7fe8 E: LAPORAN_REVIEW v3 — semua perubahan A–E, yang masih kurang, risiko
-8c12476 chore: sw.js hasil build
-c419bc9 E: audit /verifikasi — klaim Indonesia dilunakkan, proposal vs kode v1 di REPORT, materi pilot deterministik
-34a3c05 merge cac/ml (E audit)
-cf8b152 E: lunakkan klaim Lapis 2 di landing page (baru diuji dengan terjemahan mesin)
-bcf11ed D: panduan sesi pilot langkah demi langkah; T70/T71 selesai
-a63de35 D: web — tombol Catat persetujuan riset, gambar pilot di public/, tes kering pilot (Playwright) + tes instrumen
-d802524 merge cac/ml (D panduan)
-93b3903 merge cac/ml (D)
-ea8bbce D: web — gambar soal pilot, seed instrumen pilot, token opsional layanan ML (HF Space privat)
-187b6cc D: instrumen pilot 15 soal MAP-ID (D-25), PDF persetujuan + info guru, labeling_sheet.xlsx, skrip analisis pilot + tes sintetis, paket HF Space
-905d45c B: lunakkan klaim web — 'Menandai Kasus Ragu', target defer tidak tercapai, baseline di setiap angka /metodologi
-7ef113e merge cac/ml (B, C)
-40b782b C: dokumen juri — REPORT dipetakan ke 5 kriteria, README ringkas, kartu model/data lengkap, bukti kernel Kaggle
-3952053 B: cerita juri — kalimat utama dari angka test yang ada, gambar v1 vs ML, bukti pembingkaian L2 dan analisis error (CV)
-db20072 A: password seed dari env + skrip rotasi password akun seed produksi
-5c59f17 A: keamanan — pemindai rahasia (0 temuan asli), SECURITY_NOTES, .gitignore diperketat, M16
-04f3078 merge cac/ml (A: keamanan)
-6153b04 docs: LAPORAN_REVIEW v2 — tambah bagian pelengkap audit D-24
-05623c4 merge cac/ml (LAPORAN_REVIEW v2)
 ```
 
 ## 0b. Perubahan versi 3 (19–20 Nov 2026): penguatan untuk juri, tanpa membuka test
@@ -200,6 +198,22 @@ bobot untuk produk harus diuji di data baru (pilot), bukan di test ini.
 
 **Masih kurang (v4):** E9/E10; hosting layanan ML (M17); CI relatif kalimat utama hanya aproksimasi;
 default password demo masih ada di `prisma/seed.ts` dan spec e2e untuk pengembangan lokal (produksi harus diganti, M16).
+
+
+## 0d. Perubahan versi 5 (20 Nov 2026): putaran final sebelum submisi
+| Butir | Hasil | Bukti |
+| --- | --- | --- |
+| 1 Keamanan produksi | token GitHub dan password Neon **tidak** diganti (keputusan pemilik, risiko diterima); password 5 akun seed produksi **diganti**, login password lama terbukti gagal lewat request HTTP | `docs/cac/SECURITY_NOTES.md`, `scripts/check_login.py` |
+| 2 Akun juri | `juri@remediaide.id` hanya-baca (`JUDGE_EMAILS`), banner "Mode juri", kelas demo sintetis (32 siswa, 15 soal MAP-ID, 480 jawaban beralasan, 512 hasil ML asli dari `rmd2-cokt5+l2-mdeberta`), PIN coba `826730`; tes e2e + uji produksi | `scripts/seed-demo-judge.ts`, `tests/e2e/judge.spec.ts`, `scripts/check_judge_prod.py` |
+| 3 Layanan ML | **tidak dihosting** (HF Space Docker perlu PRO; D-28). Paket Space (mDeBERTa, D-27) tetap teruji lokal | `docs/cac/DECISIONS.md` D-27/D-28 |
+| 4 Dataset terbuka | MAP-ID publik di Hugging Face (+ cermin Kaggle), MIT | https://huggingface.co/datasets/avlfarizii/remediaide-map-id |
+| 5 Lisensi + rulebook | kode web MIT; rulebook resmi tidak ditemukan, syarat dicek dari slide Technical Meeting. **Risiko:** syarat "belum pernah diikutsertakan dalam kompetisi lain" vs aplikasi v1 → tanyakan panitia (M6) | `LICENSE`, `docs/cac/CEK_RULEBOOK.md` |
+| 6 Media | GIF demo 19 detik di README; naskah video 2 menit (rekaman: M20) | `docs/media/demo.gif`, `docs/cac/NASKAH_VIDEO.md` |
+| 7 Rilis | tag `v1.0-cac-penyisihan` + Release dengan zip kode (tanpa data, `.env`, bobot turunan Eedi) | `scripts/build_release_zip.py`, `scripts/github_release.py` |
+
+**Risiko yang tersisa (v5):** token/password lama yang pernah ditempel di chat masih aktif (diterima pemilik); bobot
+LightGBM turunan Eedi (`public/models/*.onnx`) sudah publik sejak T68 untuk mode offline; syarat orisinalitas belum
+dikonfirmasi panitia; video demo belum direkam.
 
 
 ## 1. Ringkasan
@@ -1451,6 +1465,8 @@ Keputusan di bawah ini dikunci sebelum melihat hasil. Perubahan hanya boleh lewa
 | D-24 | 2026-11-19 | **Pelengkap audit (bukan revisi), dihitung setelah test dibuka di T46, hanya CV.** Empat butir spesifikasi yang terlewat dihitung dengan `ml/scripts/gap_fill.py` dari file OOF CV yang sudah ada, tanpa melatih, memilih, atau mengkalibrasi ulang model produksi: (1) B0 framing (a) 03 §1, skor = kuadran B0 terakhir siswa di KC yang sama sebelum t (ordinal P=3, L=2, T=1, M=0, dan biner {P, L}); baris tanpa kuadran sebelumnya tidak punya skor B0 → dilaporkan pada subset yang punya skor + varian semua baris (nilai kosong = 1,5); (2) LAC biner L1 03 §3 dengan siswa kalibrasi dan temperature yang sama seperti `e6_e8 --calib temperature`; (3) akurasi kepala opsi CO-KT (T24) dengan pembanding acak dan opsi terbanyak per soal dari fold latih; (4) Gender kode 0 (04 E6, n ≥ 200 di siswa evaluasi CV); kode 3 di bawah ambang → hanya dihitung jumlahnya. Untuk test hanya jumlah siswa per kode dari metadata; tidak ada prediksi test yang dibaca. Hasil tidak mengubah angka utama, model, atau ambang mana pun. | Menutup kekurangan yang diungkap di `LAPORAN_REVIEW.md` §3/§14; test tetap dibuka sekali |
 | D-25 | 2026-11-19 | **Soal kunci pilot yang meminta alasan (06 §1, T70).** Aturan: 5 soal dengan entropi label miskonsepsi tertinggi di MAP (dihitung pada baris kategori Misconception; seri → porsi baris Misconception). Hasil: MAP 31774, 32829, 31777, 76870, 33472. Daftar sementara di 06 §1 (desimal, menjumlah pecahan, bilangan negatif, mencari y, pecahan × bilangan bulat) hanya sama pada 32829 dan 33472; protokol menyebut daftar final ditetapkan di T70 dari distribusi MAP, jadi daftar sementara diganti. Juga: tanda desimal diubah ke koma, nama Sally/Robert diganti Sari/Rudi, dan tiga gambar digambar ulang (ditandai untuk dicek guru). | Sumber `ml/reports/tables/T70_key_question_selection.csv`, `docs/cac/pilot/instrument_map_id.json`. Tidak memakai data Eedi test atau hasil model |
 | D-26 | 2026-11-20 | **Analisis pasca-segel, CV (review eksternal; dikunci sebelum dihitung).** Test tidak dibuka lagi. (1) Recall per kuadran di test hanya dihitung dari confusion matrix yang sudah ada (`E1_confusion_test.csv` = B0, `E1_confusion_cokt_test.csv` = CO-KT); confusion test B1b/LightGBM tidak tersimpan, jadi keempat model dibandingkan di OOF CV pada baris E1 yang sama. (2a) Porsi kasus Miskonsepsi masa depan yang salah diprediksi CO-KT tetapi masuk antrean defer 20%: OOF CV CO-KT, temperature + ambang ragu untuk defer 20% dipasang di siswa kalibrasi (20%, `calibration_groups`), dievaluasi di 80% siswa sisanya. (2b) **Mode prioritas miskonsepsi**: prediksi = argmax(p_k · w_k) dengan w_M ∈ {1,0; 1,1; …; 3,0} dan bobot kelas lain 1. Aturan pemilihan: w_M terkecil yang membuat recall Miskonsepsi di siswa kalibrasi ≥ recall Miskonsepsi aturan v1 (B0) di siswa yang sama; bila tidak ada, w_M = 3,0. Dievaluasi di siswa evaluasi CV yang terpisah: recall Miskonsepsi, macro-F1, salah kelompok, dan selisihnya terhadap B0 (bootstrap klaster siswa berpasangan 1000×). Ini opsi produk berlabel "pasca-segel, CV, belum diuji di test" dan **tidak** menggantikan model produksi atau angka utama. | Review eksternal: recall Miskonsepsi CO-KT di test 0,368 vs aturan v1 0,400 |
+| D-27 | 2026-11-20 | **Hosting layanan ML (M17).** Hugging Face Space **privat** (Docker, CPU basic) berisi model produksi D-18/D-21: CO-KT 5 seed (+ LightGBM penjelas), L2 **mDeBERTa** untuk input Indonesia (bukan student: ambang `hidden_misconception` student belum tervalidasi sehingga penanda itu mati), L3 `l3_conformal_v1.json`. Web memanggil Space dengan token baca HF di env Vercel `ML_SERVICE_TOKEN` (header Bearer); bobot turunan Eedi tidak publik. `ML_TIMEOUT_MS=45000` dan `maxDuration = 60` pada rute yang memanggil ML; bila Space tidur/mati, aplikasi tetap memakai aturan v1 (fallback). Data kelas demo juri dihitung sekali oleh layanan yang sama lalu disimpan. | Paling sederhana dan aman: satu URL + satu token baca; tidak ada bobot Eedi di repo publik |
+| D-28 | 2026-11-20 | **Mengganti D-27: layanan ML tidak dihosting.** Hugging Face menolak Space Docker di CPU gratis (HTTP 402, perlu PRO); pemilik memilih tanpa hosting. Akibatnya: (1) kelas demo juri memakai hasil model **asli** (`rmd2-cokt5+l2-mdeberta`) yang dihitung sekali oleh layanan yang sama di laptop tim lalu disimpan di database; juri hanya-baca sehingga tidak memicu diagnosis baru; (2) sesi baru di produksi memakai aturan v1 (fallback) ditambah Lapis 1 di browser; (3) paket Space (`ml/service/hf_space/`, `scripts/build_hf_space.py`) tetap ada dan teruji lokal untuk reproduksi. Dataset MAP-ID tetap di Hugging Face Datasets (gratis). | Biaya; hasil yang ditampilkan tetap keluaran model sungguhan, bukan buatan tangan |
 
 ##### Catatan verifikasi data (diisi Claude Code saat T10–T13)
 - [x] Nama dan kolom file Eedi sesuai 02_DATA_SPEC? **Ya.** Path di zip: `data/train_data/…`, `data/metadata/…`. Kolom answer_metadata: `AnswerId, DateAnswered, Confidence, GroupId, QuizId, SchemeOfWorkId` (kunci join AnswerId; tidak ada kolom UserId). 1.382.727 baris, 4.918 siswa, 948 soal, 57 KC terdalam. Tidak ada duplikat, tidak ada IsCorrect yang tidak konsisten, tidak ada percobaan ulang (attempt_no selalu 1). Confidence hanya {0,25,50,75,100} → CRI {0,1,3,4,5}.
