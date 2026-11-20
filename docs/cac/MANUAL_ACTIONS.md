@@ -82,4 +82,6 @@ Claude Code mengerjakan semua hal lainnya. Kerjakan item ini, centang, lalu keti
 - [ ] **M14.** Klik "Ekspor riset" di dasbor sebelum auto-wipe.
 
 ## Submisi
+- [ ] **M20. Rekam video demo 2 menit** mengikuti `docs/cac/NASKAH_VIDEO.md`, unggah (YouTube Unlisted / Drive), lalu kirim
+  tautannya ke Claude Code untuk mengisi `[ISI: URL video]` di README dan `FORMULIR_SUBMISI.md`.
 - [ ] **M15.** Kirim link repo/berkas lewat formulir panitia (Claude Code menyiapkan isinya), lalu simpan bukti kirim.

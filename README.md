@@ -15,6 +15,8 @@ Tim: Muhammad Salman Al Farisi (ketua), Lubna Maryam, Muhammad Farel Rizky · Un
 | Video demo 2 menit | [ISI: URL video] |
 | Dataset terjemahan Indonesia | [ISI: URL Hugging Face / Kaggle MAP-ID] |
 
+![Demo: guru membuka kelas demo, melihat panel "Perlu dicek guru" dan alasan SHAP (data demo sintetis)](docs/media/demo.gif)
+
 ![Aturan v1 dibandingkan ML pada siswa test yang sama](ml/reports/figures/E8_v1_vs_ml.png)
 
 ## Masalahnya
