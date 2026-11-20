@@ -27,7 +27,7 @@ references:
     title: "RemediAide MAP-ID: terjemahan Bahasa Indonesia dari MAP — Charting Student Math Misunderstandings"
     authors:
       - name: "Tim RemediAide"
-    url: "https://www.kaggle.com/datasets/avlsalmoon/remediaide-map-id"
+    url: "https://huggingface.co/datasets/avlfarizii/remediaide-map-id"
     license: MIT
   - type: dataset
     title: "MAP — Charting Student Math Misunderstandings"

@@ -65,3 +65,6 @@ submission/
 # onnxruntime-web runtime (copied from node_modules at predev/prebuild)
 public/ort/
 test-results/
+
+# Python caches of root scripts
+__pycache__/

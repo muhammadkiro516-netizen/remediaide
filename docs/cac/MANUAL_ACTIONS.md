@@ -42,7 +42,7 @@ Claude Code mengerjakan semua hal lainnya. Kerjakan item ini, centang, lalu keti
      Hasil yang benar: `Password diganti: 4 akun demo, 1 akun superadmin.` Simpan password baru di password manager.
 - [ ] **M1b. Login ulang Kaggle** (token OAuth kedaluwarsa): `~/Downloads/remediaide-main/ml/.venv/bin/kaggle auth login --force`.
 
-- [ ] **M17. Hosting layanan ML di Hugging Face Spaces** (semua file sudah disiapkan; butuh akun HF Salman).
+- [x] **M17. Hosting layanan ML** — diputuskan 20 Nov: **tanpa hosting** (HF Space Docker butuh PRO; D-28). Rincian lama: (semua file sudah disiapkan; butuh akun HF Salman).
   Ukuran unggahan 393,3 MB (L2 = student ONNX; mDeBERTa 1,1 GB tidak ikut). Disarankan **Space privat**: bobot Lapis 1
   dilatih dari Eedi (CC BY-NC-ND), jadi jangan dipakai komersial.
   1. huggingface.co → New Space → nama `remediaide-ml`, SDK **Docker** (Blank), hardware **CPU basic**, visibilitas **Private**.

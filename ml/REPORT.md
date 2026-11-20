@@ -525,6 +525,8 @@ Pada 20% interaksi terakhir tiap siswa test, semua model memburuk (salah kelompo
    - Aplikasi web https://remediaide.vercel.app (branch `feat/ml-integration`): Mode AI, antrean "Perlu dicek guru",
      LKPD per miskonsepsi, umpan balik guru, ekspor riset dengan persetujuan orang tua, dan Lapis 1 di browser (ONNX).
      Bila layanan ML tidak tersedia, aplikasi kembali ke aturan v1.
+     Di produksi layanan ML Python tidak dihosting (D-28); kelas demo juri menampilkan keluaran model asli yang
+     dihitung sekali lalu disimpan.
    - `POST /v1/diagnose`: latensi satu kelas 40 siswa × 15 soal di CPU laptop 0,59 detik tanpa L2, 0,47 detik dengan
      TF-IDF, dan 8,25 detik dengan mDeBERTa untuk 600 alasan (`reports/tables/E7_latency_service_cpu.json`).
    - **Offline (Tingkat A):** student MiniLM int8 118,3 MB dengan MAP@3 Indonesia 0,834 (TF-IDF: 0,766; teacher: 0,895)

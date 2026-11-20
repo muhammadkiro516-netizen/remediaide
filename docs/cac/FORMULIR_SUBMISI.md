@@ -25,7 +25,7 @@ dengan formulir. **Jangan menempel password di dokumen ini.**
 
 **Dataset:**
 - Eedi NeurIPS 2020 (CC BY-NC-ND 4.0): tidak dibagikan ulang sesuai lisensi; skrip unduh + sha256 di `ml/data/`.
-- MAP (MIT) + terjemahan Indonesia kami (MAP-ID): https://www.kaggle.com/datasets/avlsalmoon/remediaide-map-id
+- MAP (MIT) + terjemahan Indonesia kami (MAP-ID): https://huggingface.co/datasets/avlfarizii/remediaide-map-id (cermin: https://www.kaggle.com/datasets/avlsalmoon/remediaide-map-id)
 
 **Aplikasi web:** https://remediaide.vercel.app
 
