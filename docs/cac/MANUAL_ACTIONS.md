@@ -66,7 +66,8 @@ Claude Code mengerjakan semua hal lainnya. Kerjakan item ini, centang, lalu keti
   (misalnya MIT) bila rulebook meminta kode terbuka.
 
 ## Minggu ini
-- [ ] **M6. Panitia:** simpan bukti izin pemakaian konsep RemediAide. Minta rulebook revisi terbaru dan tanyakan
+- [ ] **M6. Panitia (diperbarui 20 Nov, lihat `docs/cac/CEK_RULEBOOK.md`):** minta rulebook revisi terbaru (format penamaan, ukuran, larangan identitas). **Tanyakan juga:** aplikasi web v1 pernah ikut lomba lain; apakah boleh dipakai sebagai dasar/baseline bila semua komponen ML baru? Simpan jawabannya tertulis.
+- [ ] **M6-lama. Panitia:** simpan bukti izin pemakaian konsep RemediAide. Minta rulebook revisi terbaru dan tanyakan
   format pengumpulan dataset (link, unggah, batas ukuran) dan apakah ada laporan wajib.
 - [ ] **M7. (Untuk P6)** pasang Docker Desktop untuk Mac, atau izinkan Claude Code memasang PostgreSQL via Homebrew.
 - [ ] **M8. (Cadangan GPU)** akun Google untuk Colab, jika kuota Kaggle habis.
