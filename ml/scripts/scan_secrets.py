@@ -43,7 +43,26 @@ def scan(text: str, where: str) -> list[tuple[str, str, str, bool]]:
     return out
 
 
+def scan_zip(path: str) -> int:
+    """Scan every text file inside a release zip (scripts/build_release_zip.py)."""
+    import zipfile
+
+    findings = []
+    with zipfile.ZipFile(path) as z:
+        for n in z.namelist():
+            data = z.read(n)
+            if len(data) < 5_000_000:
+                findings += scan(data.decode("utf-8", errors="replace"), f"zip {n}")
+    real = [f for f in findings if not f[3]]
+    print(f"zip files scanned: {len(z.namelist())}; findings: {len(findings)} (placeholder {len(findings) - len(real)}, real {len(real)})")
+    for w, n, v, ph in sorted(set(findings)):
+        print(f"  [{'placeholder' if ph else 'REAL'}] {n:28s} {w:40s} {v}")
+    return 1 if real else 0
+
+
 def main() -> int:
+    if len(sys.argv) > 2 and sys.argv[1] == "--zip":
+        return scan_zip(sys.argv[2])
     git = ["git", "-C", str(ROOT)]
     commits = subprocess.run(git + ["rev-list", "--all"], capture_output=True, text=True, check=True).stdout.split()
     findings = []
