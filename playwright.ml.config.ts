@@ -3,7 +3,7 @@ import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests/e2e',
-  testMatch: /(ml-mode|pilot-dry-run)\.spec\.ts/,
+  testMatch: /(ml-mode|pilot-dry-run|judge)\.spec\.ts/,
   timeout: 60_000,
   use: { baseURL: process.env.PLAYWRIGHT_BASE_URL ?? 'http://localhost:3000', channel: 'chrome', headless: true },
 });

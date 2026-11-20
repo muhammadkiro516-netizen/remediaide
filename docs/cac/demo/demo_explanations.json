@@ -1,0 +1,3136 @@
+{
+ "source": "MAP (MIT) + terjemahan mesin MAP-ID; hanya untuk data demo sintetis",
+ "questions": {
+  "31772": {
+   "correct_key": "A",
+   "by_option": {
+    "A": {
+     "True_Correct": [
+      {
+       "text": "3 dari 9 tidak berbayang, yang sama dengan sepertiga",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think demikian karena itu adalah tiga ninghths yang sama dengan sepertiga.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini karena pecahan dari berapa banyak yang tidak berbayang adalah 3/9. Namun 3/9 dapat disederhanakan ke 1/3.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Ada 9 segitiga, tapi tiga tidak berbayang.",
+       "misconception": "NA"
+      }
+     ],
+     "True_Misconception": [
+      {
+       "text": "3/9 dari bentuk tidak berbayang",
+       "misconception": "Incomplete"
+      },
+      {
+       "text": "Jika ada sembilan segitiga dan enam dibayangi maka 3/9 yang tersisa kosong 3/9 dalam bentuk paling sederhana adalah sepertiga",
+       "misconception": "Incomplete"
+      },
+      {
+       "text": "karena 3 tidak dibayangkan yang berarti itu adalah pembilang dan 6 adalah ia denomiator dibagi dengan 3 yang 1/3",
+       "misconception": "WNB"
+      },
+      {
+       "text": "ada 3 tidak berbayang dan 6 teduh d yang membuatnya 3/6=1/3.",
+       "misconception": "WNB"
+      }
+     ],
+     "True_Neither": [
+      {
+       "text": "Answrr adalah 3/9.",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena tiga sembilan dibayangi sebagai yang simplyfyed adalah sepertiga",
+       "misconception": "NA"
+      },
+      {
+       "text": "Karena itu 1/9 dalam bentuk yang paling sederhana.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Karena itu adalah dari 9 dan 3 yang dibayangi di kemudian saya setengah 3/9 untuk mendapatkan 1/3",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "B": {
+     "False_Correct": [
+      {
+       "text": "Karena 3 dari 9 tidak dibayangi sebagai pecahan sederhana itu akan 1 3",
+       "misconception": "NA"
+      },
+      {
+       "text": "ada 9 segitiga dan 3 dari 9 tidak berbayang disederhanakan = 1/3",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena 3 dari 9 tidak dibayangi sebagai pecahan sederhana itu akan 1 3.",
+       "misconception": "NA"
+      },
+      {
+       "text": "benar ada 9 segitiga dan 3 dari 9 tidak dibayangi sederhana = 1/3",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "Karena bit non shared adalah 3 dibandingkan dengan bit biru yang 6.",
+       "misconception": "WNB"
+      },
+      {
+       "text": "karena jika Anda menghitung sisi-sisinya 6 dan jika Anda menghitung yang tidak berbayang 3 sehingga 3/6 nya",
+       "misconception": "WNB"
+      },
+      {
+       "text": "Aku menghitung yang berbayang dan ada 6 bayangan dan 3 tidak berbayang.",
+       "misconception": "WNB"
+      },
+      {
+       "text": "Saya memilih B karena ada 6 segitiga sama sekali dan 3 tidak berbayang yang berarti akan 3/6 yang disederhanakan 1/2.",
+       "misconception": "WNB"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "i Anda menghitung segitiga berbayang Anda akan mendapatkan 3/6",
+       "misconception": "NA"
+      },
+      {
+       "text": "Aku melakukannya di kepalaku.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir itu adalah B karena Anda memiliki 6 segitiga dan 1 dibayangi",
+       "misconception": "NA"
+      },
+      {
+       "text": "Jika Anda menghitung bagian berbayang adalah 8 dan bagian un-shaded adalah 3.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "C": {
+     "False_Correct": [
+      {
+       "text": "Saya pikir jawabannya adalah C sebagai 3/9 adalah sama dengan 1/3 seperti ketika kita membagi pembilang dan penyebut oleh 3 kita mendapatkan 1/3",
+       "misconception": "NA"
+      },
+      {
+       "text": "Jawabannya adalah 1/3 karena saya menghitung semua segitiga (ada 9) dan 3 di antaranya belum dibayangi.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini karena ada 9 segitiga dan 3 tidak berbayang di sehingga 3/9 tetapi dalam bentuk yang paling sederhana adalah 1/3.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini karena ada 9 segitiga dan 3 tidak berbayang di sehingga 3/9 tetapi dalam bentuk paling sederhana 1/3",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "Saya pikir karena menghitung semua putih dan biru yang 9 kemudian 3 yang berbayang",
+       "misconception": "Incomplete"
+      },
+      {
+       "text": "6 bagian dari bentuk berwarna dan 3 bagian tidak.",
+       "misconception": "WNB"
+      },
+      {
+       "text": "Saya pikir ini karena jika pembilang Anda adalah 3, penyebut Anda akan harus 9, sehingga jawaban Anda akan 3/9.",
+       "misconception": "Incomplete"
+      },
+      {
+       "text": "Saya pikir ini karena itu mendapat coulor 6 dan tidak couler tiga",
+       "misconception": "WNB"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "sejak 15 dan 6 adalah kelipatan dari 2, jawabannya adalah 2.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini karena ini adalah pecahan.",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena thre adalah 8 segitiga in thete",
+       "misconception": "NA"
+      },
+      {
+       "text": "Aku memikirkannya di kepalaku.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "D": {
+     "False_Correct": [
+      {
+       "text": "Karena ada 9 kotak dan 3 tidak berbayang dan 9 dibagi dengan 3 = 3 sehingga 1 ketiga",
+       "misconception": "NA"
+      },
+      {
+       "text": "Ada 9 segitiga secara total yang denominator Anda dan 3 tidak berbayang yang numerator Anda. Dengan demikian dapat disederhanakan ke 1 / 3",
+       "misconception": "NA"
+      },
+      {
+       "text": "ada sre 9 segitiga berbayang dan 3 tidak=3/9=1/3.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini karena 3 dibagi dengan 3 sama dengan 1 dan 9 dibagi 3 adalah 3",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "Ada 9 segitiga sama sekali dan 6 dari mereka adalah bayangan berarti ada 3 dari 9 yang tersisa.",
+       "misconception": "Incomplete"
+      },
+      {
+       "text": "Saya pikir tiga kesembilan karena ada 9 segitiga bahkan jika mereka dibayangi dan ada 3 segitiga yang tidak berbayang.",
+       "misconception": "Incomplete"
+      },
+      {
+       "text": "Karena ada 9 Segitiga di sana 3 tak berbayang sehingga akan D",
+       "misconception": "Incomplete"
+      },
+      {
+       "text": "Karena ada 9 segitiga sama sekali dan hanya ada 6 segitiga berbayang dan 3 yang tersisa di atas",
+       "misconception": "Incomplete"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "Jika Anda melihat lebih dekat Anda dapat melihat bahwa akan ada 9 segitiga kecil di segitiga besar dan 3 dibayangi",
+       "misconception": "NA"
+      },
+      {
+       "text": "Karena ada 9 segitiga dan 6 berbayang",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini karena ada bentuk tak berbayang dari 9.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Karena ada sre 9 segitiga dan 3 di antaranya berbayang",
+       "misconception": "NA"
+      }
+     ]
+    }
+   }
+  },
+  "31774": {
+   "correct_key": "A",
+   "by_option": {
+    "C": {
+     "False_Correct": [
+      {
+       "text": "1/2 dikali 1/6 memberikan jawabanmu yaitu 1/12.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya tahu jawabannya adalah 1/12.I tahu karena ketika Anda melakukan KFC (Terus Perubahan Flip) Saya mendapat jawaban 1/12.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir jawabannya adalah A karena Anda melakukan 1/2 kali 1/6 yang memberi Anda jawaban Anda yang 1/12",
+       "misconception": "NA"
+      },
+      {
+       "text": "Karena membagi dengan 6 adalah th sama dengan waktu oleh 1/6",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "Saya pikir ini karena 1/2 6 adalah 3.",
+       "misconception": "Mult"
+      },
+      {
+       "text": "dua dibagi enam adalah tiga",
+       "misconception": "FlipChange"
+      },
+      {
+       "text": "setengah dari 6 adalah 3 jadi kita tahu bahwa setengah berarti setengah.",
+       "misconception": "Mult"
+      },
+      {
+       "text": "Divied the bottom number by 6 then you get your Spawnser",
+       "misconception": "FlipChange"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "Sejak 62=3 jadi jawabannya adalah 3.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Ada 6 1/2 dalam 6, sehingga akan 3",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think b karena 3 / 6 adalah 3.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya thunk ini karena jika Anda kali 2 oleh 6, kemudian dibagi dengan satu, itu akan menyebabkan tiga.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "A": {
+     "True_Correct": [
+      {
+       "text": "Saya telah memilih A karena semua yang perlu Anda lakukan adalah 6x lapisan bawah dan meninggalkan atas saja yang akan 1/12.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Ketika Anda membagi Anda harus flip recipricle, sehingga menjadi 1/2 kali 1/6, sama dengan 1/12.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Anda harus menggunakan timbal balik dari 6",
+       "misconception": "NA"
+      },
+      {
+       "text": "Jawabannya harus 6 kali lebih kecil jadi 2 kali 6 = 12 dan pembilang tetap sama.",
+       "misconception": "NA"
+      }
+     ],
+     "True_Misconception": [
+      {
+       "text": "6/ 1/2 = 12 sehingga beralih mereka akan 1/12",
+       "misconception": "SwapDividend"
+      },
+      {
+       "text": "Anda dapat memperoleh/6 oleh 1/2 sehingga anda akan dikalikan di seluruh",
+       "misconception": "Mult"
+      },
+      {
+       "text": "6 dibagi 2 adalah metode u harus menggunakan yang memberikan u 3 dan u dikali nominasi dengan 3",
+       "misconception": "SwapDividend"
+      },
+      {
+       "text": "Its karena setengah dari 6",
+       "misconception": "Mult"
+      }
+     ],
+     "True_Neither": [
+      {
+       "text": "Karena keseluruhan 12 setengah adalah 6 jadi saya pikir itu 1/12",
+       "misconception": "NA"
+      },
+      {
+       "text": "Anda kali 6 dengan 2 dan 1 dengan 1",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini karena 2 kali 3 adalah 6, dan 6 kali 2 adalah 12.",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena pada dasarnya berubah menjadi 6/1 dan itu adalah penyebut umum",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "B": {
+     "False_Correct": [
+      {
+       "text": "Karena Anda perlu melakukan KFC untuk melakukan jawaban Anda",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "Karena saya melakukan 6 dibagi dengan penyebut 1/2 dan aku punya 1/3.",
+       "misconception": "SwapDividend"
+      },
+      {
+       "text": "Karena ketika Anda flip dan kalikan itu akan 1/3.",
+       "misconception": "FlipChange"
+      },
+      {
+       "text": "Setengah dari 6 adalah 3 dan 3 dibagi dengan 6 akan menjadi kurang dari 3 jadi saya pikir itu 1 3",
+       "misconception": "Mult"
+      },
+      {
+       "text": "Saya pikir ini karena 2 dibagi 6 adalah tiga.",
+       "misconception": "FlipChange"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "0.33 sama dengan 1/3 setengah 2 1 sehingga akan 1/3",
+       "misconception": "NA"
+      },
+      {
+       "text": "Aku pikir ini karena aku pintar",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya menebak karena saya tidak tahu jawabannya",
+       "misconception": "NA"
+      },
+      {
+       "text": "Karena 1/2 dibagi dengan 6 adalah bahwa",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "D": {
+     "False_Correct": [
+      {
+       "text": "1x1=1, 2x6=12:1/12",
+       "misconception": "NA"
+      },
+      {
+       "text": "i did the kfc metode yang berarti terus flip perubahan.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini karena saya terus, perubahan, flip.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Aku melakukan metode KFC yang berarti Keep Flip Change.",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "Anda wiuld kali 1 dan 6 dan meninggalkan 2.",
+       "misconception": "Mult"
+      },
+      {
+       "text": "Karena saya melakukannya seperti dua fraksi maka saya menambahkan mereka bersama-sama dan saya punya 6/2",
+       "misconception": "Mult"
+      },
+      {
+       "text": "Aku tahu ini karena menggunakan metode 'keep, change, flip' itu adalah 6/2",
+       "misconception": "SwapDividend"
+      },
+      {
+       "text": "membagi berarti \"of\" sehingga Anda harus dikali pembilang oleh integer",
+       "misconception": "Mult"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "Karena Anda harus membagi dengan 6, dan itu adalah jawaban Anda.",
+       "misconception": "NA"
+      },
+      {
+       "text": "ketika Anda membagi pecahan itu adalah sama dengan waktu tabel pada pecahan. Anda juga meninggalkan penyebut",
+       "misconception": "NA"
+      },
+      {
+       "text": "Karena jika Anda mengambil satu dan menempatkan enam ada yang akan menjadi jawaban",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir demikian karena penyebut adalah sama dengan jumlah.",
+       "misconception": "NA"
+      }
+     ]
+    }
+   }
+  },
+  "31777": {
+   "correct_key": "D",
+   "by_option": {
+    "A": {
+     "False_Correct": [
+      {
+       "text": "i think 72 karena pas 120 adalah 24 dan saya kalikan dengan 3 dan memberi saya jawaban",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena kita membagi 120 dengan 5, dan mendapat jawaban 24, dan kemudian kita dikalikan 24 dengan 3, 24x3=72.",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think ini karena tiga seperlima dari 120 adalah 72.",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think itu adalah 72 karena 1/5 120 = 24",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "i memilih b karena 120 dibagi dengan 5 sama dengan 24 yang b.",
+       "misconception": "Incomplete"
+      },
+      {
+       "text": "3 / 5 dari 120 adalah 24, jadi ada 24 counter merah.",
+       "misconception": "Incomplete"
+      },
+      {
+       "text": "karena 120 dibagi 5 sama dengan 24",
+       "misconception": "Incomplete"
+      },
+      {
+       "text": "i think ini adalah karena 120 dibagi dengan 5 adalah 24, sehingga ada 24 kotak merah.",
+       "misconception": "Incomplete"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "i think karena saya hanya berpikir bahwa itu adalah 30.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini adalah jawabannya karena ketika Anda membagi 120 dengan 5, Anda mendapatkan 16.",
+       "misconception": "NA"
+      },
+      {
+       "text": "itu adalah yang satu ini karena yang terendah dan 3/5 harus banyak itu mengambil.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Aku melakukannya dengan guruku, Nyonya Rachel.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "B": {
+     "False_Correct": [
+      {
+       "text": "3/5 adalah 6/10. 1/10 adalah 12. 12 tims 6 adalah 72.",
+       "misconception": "NA"
+      },
+      {
+       "text": "3/5 adalah 6/10. 1/10 adalah 12. 12 dikalikan dengan 6 adalah 72",
+       "misconception": "NA"
+      },
+      {
+       "text": "120 dibagi 5 adalah 24. 24 kali 3 sama dengan 72.",
+       "misconception": "NA"
+      },
+      {
+       "text": "3/5 dari counter merah. 120 dibagi 5 adalah 24. 24 kali 3 sama dengan 72.",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "Saya pikir ini karena 120 dibagi 5 adalah 24 kemudian 24 kali dengan 2 adalah 48.",
+       "misconception": "Wrong_Fraction"
+      },
+      {
+       "text": "Aku memilih D karena 120 dibagi 5 adalah 24, jadi seperlima adalah 24, tapi kita perlu dua perlima jadi aku kalikan dengan 2, yang 48.",
+       "misconception": "Wrong_Fraction"
+      },
+      {
+       "text": "Pasangan saya membantu saya jadi saya dibagi dengan lima = 24 kemudian kali dua = 48",
+       "misconception": "Wrong_Fraction"
+      },
+      {
+       "text": "Karena 120 harus dibagi dengan 5, thatt adalah 24. Oleh karena itu, 3by5 adalah 72, sehingga sisanya adalah 48.",
+       "misconception": "Wrong_Fraction"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "Aku punya sedikit terjebak yang satu ini tapi 3/5 adalah 75% jadi saya mengambil 75 jauh dari 120.",
+       "misconception": "NA"
+      },
+      {
+       "text": "KARENA 1/5 ADALAH 6 DAN JIKA ANDA TIMES IT BY3 ANDA GET 48",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir jawabannya adalah d karena saya bekerja itu dan saya mendapat jawaban ini",
+       "misconception": "NA"
+      },
+      {
+       "text": "120 dibagi 5 adalah 24 andd 24 x 3=72. kemudian, 120 - 24 = 48.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "C": {
+     "False_Correct": [
+      {
+       "text": "devide oleh lima dan timeas oleh 3.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini adalah jawabannya karena Anda bekerja keluar 1/5 kemudian waktu itu dengan 3",
+       "misconception": "NA"
+      },
+      {
+       "text": "120 dibagi 5 = 24 24 x 3 = 72 Ada 72 counter merah",
+       "misconception": "NA"
+      },
+      {
+       "text": "120 dibagi 5 = 24 24 x 3 = 72 Ada 72 counter merah.",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "Aku melakukan 2/5 120 dan aku mendapat jawaban",
+       "misconception": "Wrong_Fraction"
+      },
+      {
+       "text": "Aku mendapatkan jawaban ini karena itu satu-satunya di meja 5 kali",
+       "misconception": "Irrelevant"
+      },
+      {
+       "text": "Saya pikir ini karena 60 adalah satu-satunya dari angka lima dan dapat mencapai 120.",
+       "misconception": "Irrelevant"
+      },
+      {
+       "text": "5 dibagi 120= 24 kemudian kali dengan 2",
+       "misconception": "Wrong_Fraction"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "KARENA 3/5 ADALAH 60 DAN UNTUK MENDAPATKAN 120 ADALAH 60 LAIN",
+       "misconception": "NA"
+      },
+      {
+       "text": "aku tahu bahwa 1/2 adalah setengah jadi itu berarti bahwa 3/5 harus 60",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini karena saya melakukan 3/5 dibagi dengan 120 maka Anda mendapatkan C.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Karena 120 dibagi dengan 5 adalah 20 (1/5), dan 3 x 20 adalah 60.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "D": {
+     "True_Correct": [
+      {
+       "text": "bagi 120 dengan mendapatkan 24 kemudian kali 3 untuk mendapatkan 72",
+       "misconception": "NA"
+      },
+      {
+       "text": "Karena 120 dibagi dengan 5 = 24 dan 24 x 3 = 72",
+       "misconception": "NA"
+      },
+      {
+       "text": "Karena 120 dibagi 5 adalah 24 dan 24 kali 3 adalah 72 jadi itulah jawaban saya",
+       "misconception": "NA"
+      },
+      {
+       "text": "120 dibagi 5 adalah 24 dan 24x3 adalah 72.",
+       "misconception": "NA"
+      }
+     ],
+     "True_Neither": [
+      {
+       "text": "Saya melakukan pembagian dan perkalian dan mendapat 72",
+       "misconception": "NA"
+      },
+      {
+       "text": "Aku tidak tahu bagaimana aku mendapat jawabannya.",
+       "misconception": "NA"
+      },
+      {
+       "text": "guru melakukannya di papan",
+       "misconception": "NA"
+      },
+      {
+       "text": "Aku melakukannya di kepalaku",
+       "misconception": "NA"
+      }
+     ]
+    }
+   }
+  },
+  "31778": {
+   "correct_key": "C",
+   "by_option": {
+    "A": {
+     "False_Correct": [
+      {
+       "text": "Saya pikir ini karena 15/3x2=10 jadi 9/3x2=6",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya bekerja keluar 3/5 60 kemudian dikalikan dengan 2",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena 9/15 dalam bentuk yang paling sederhana adalah 3/5 sehingga Anda kalikan bahwa dengan 2 untuk menemukan",
+       "misconception": "NA"
+      },
+      {
+       "text": "i did 15 by 2 because 30 is the lowest comman multiple and then i did 9 x 2 which is 18 so i knew a would be 18 and that was how i dibagi menjadi 6.",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "i think karena jika Anda melakukan 9 dibagi dengan 3 Anda mendapatkan 3.",
+       "misconception": "Irrelevant"
+      },
+      {
+       "text": "Pergi bekerja keluar apa yang masuk ke 9 sandwich adalah tiga",
+       "misconception": "Irrelevant"
+      },
+      {
+       "text": "karena 9 dibagi dengan 3 adalah 3 dan lima masuk ke 15 3 kali",
+       "misconception": "Irrelevant"
+      },
+      {
+       "text": "a. Karena 9 ada di meja 3 Tumes.",
+       "misconception": "Irrelevant"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "Saya pikir karena jika Anda",
+       "misconception": "NA"
+      },
+      {
+       "text": "siplify 2 fraksi dan te outher harus sama",
+       "misconception": "NA"
+      },
+      {
+       "text": "saya melakukan 3 quaters pergi di wo 15 dan kemudian j'm dividied oleh empat.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Itu adalah jawabannya, saya percaya.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "B": {
+     "False_Correct": [
+      {
+       "text": "Karena untuk mendapatkan 10 sampai 15 Anda membagi dengan 2 dan kali dengan 3 dan kemudian Anda melakukan terbalik untuk pembilang",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini karena 6 persepuluh dapat dikalikan dengan 3 untuk membuatnya 18 tiga puluh dan kemudian setengah untuk membuat 9 15",
+       "misconception": "NA"
+      },
+      {
+       "text": "Untuk mendapatkan 10 sampai 15 Anda membagi dengan 2, kali dengan 3, dan kemudian Anda melakukan terbalik untuk pembilang",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "Untuk mendapatkan jawaban Anda harus mengambil 5 dari 9 dan kemudian menambahkan 5 sampai 10.",
+       "misconception": "Additive"
+      },
+      {
+       "text": "Saya rasa ini karena 10+5=15 dan saya tahu bahwa 4 + 5 = 9.",
+       "misconception": "Additive"
+      },
+      {
+       "text": "5 kurang dari angka itu adalah 4.",
+       "misconception": "Additive"
+      },
+      {
+       "text": "perbedaan antara 10 dan 15 adalah 4, menemukan perbedaan dengan 9 dan? sebagai 4.",
+       "misconception": "Additive"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "karena saya melihat apa yang terjadi pada penyebut dan melakukannya untuk pembilang mundur saya!",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think Anda menambahkan 5 sampai 10, kemudian menambahkan 5.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Karena jika kau mengetahuinya, itu benar.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Aku tidak yakin dengan jawabanku.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "C": {
+     "False_Neither": [
+      {
+       "text": "tha answear adalah d becase yoy 't menyederhanakan 9.",
+       "misconception": "NA"
+      },
+      {
+       "text": "i bekerja itu di papan putih saya",
+       "misconception": "NA"
+      },
+      {
+       "text": "Karena pada pecahan kedua memiliki 9.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Karena ketika saya bekerja adalah dengan rthe bar methood che awser datang dengan 9.",
+       "misconception": "NA"
+      }
+     ],
+     "True_Correct": [
+      {
+       "text": "c ketika saya mengambil 1/3 dari 9 dari dirinya sendiri untuk mendapatkan 6.",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena bentuk sederhana keduanya 3/5",
+       "misconception": "NA"
+      },
+      {
+       "text": "Karena 2 pertiga dari 15 adalah 10 dan 2 pertiga dari 9 adalah 6",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini karena pecahan asli adalah 3/5 sehingga Anda kalikan 3 dengan 2 dan kalikan 5 dengan 2 jadi jawabannya adalah 6/10.",
+       "misconception": "NA"
+      }
+     ],
+     "True_Misconception": [
+      {
+       "text": "Karena hanya ada 9 dari 15 jadi aku menghitung 10 11 12 13 14 15 bahwa enam kiri menambahkan 6 sampai 9 = 15",
+       "misconception": "Additive"
+      },
+      {
+       "text": "Karena penyebut adalah kelipatan dari 5 dan pembilang adalah kelipatan dari 6",
+       "misconception": "Irrelevant"
+      },
+      {
+       "text": "Jika Anda mengambil engkau istilah pertama dan kalikan dengan 3, Anda mendapatkan istilah kedua yang 6 dibagi dengan 3.",
+       "misconception": "Irrelevant"
+      },
+      {
+       "text": "Saya melihat mereka berada di meja lima kali jadi saya dikalikan dengan 2",
+       "misconception": "Irrelevant"
+      }
+     ],
+     "True_Neither": [
+      {
+       "text": "saya mengerjakan pertanyaan ini dalam buku saya tapi saya harus berpikir dalam satu ini.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya melakukan 5,10 kemudian 2 kali tiga adalah 6",
+       "misconception": "NA"
+      },
+      {
+       "text": "Yang membuatnya lebih besar untuk 6/10.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini karena saya mencoba 3 sebagai A di beggining Namun itu salah. Saya kemudian memutuskan untuk mencoba 6 dan berhasil.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "D": {
+     "False_Correct": [
+      {
+       "text": "karena sama dengan 9/15",
+       "misconception": "NA"
+      },
+      {
+       "text": "Jika Anda mengambil penyebut dan pembilang 3/5 dan kalikan dengan 2, Anda akan mendapatkan 6/10.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Hal ini karena Anda dapat waktu baik 10 dan 15 untuk mendapatkan 30. Kemudian, 9 berubah menjadi 18 sehingga Anda mendapatkan 18/30 yang mudah untuk memahami.",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "Aku tahu bahwa itu akan harus sama di kedua sisi jadi aku D yang 9.",
+       "misconception": "WNB"
+      },
+      {
+       "text": "D karena jika Anda menghitung dalam 5 waktu Anda tabel itu akan 3/5,6/10,9/15",
+       "misconception": "Irrelevant"
+      },
+      {
+       "text": "Aku menebak D karena 3 kali 3 adalah 9.",
+       "misconception": "Irrelevant"
+      },
+      {
+       "text": "i think itu akan menjadi 9 karena yang lain juga 9.",
+       "misconception": "WNB"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "D karena jika Anda menghitung dalam Anda 5 waktu tabel itu akan 3/5,6/10,9/15",
+       "misconception": "NA"
+      },
+      {
+       "text": "Ini akan c. Alasan saya menganggap ini adalah karena Anda dapat mengenali penyebut telah ditambahkan",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya perlu bekerja di atasnya Saya tidak tahu",
+       "misconception": "NA"
+      },
+      {
+       "text": "AKU GUESSING KARENA ITU KERAS",
+       "misconception": "NA"
+      }
+     ],
+     "True_Correct": [
+      {
+       "text": "i think ini karena 9/15=18/30 dan 6/10 =18-30.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Ini adalah enam karena mereka berdua sama dengan 3over5.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Untuk mendapatkan penyebut 10, kita perlu membagi dengan 3 dan kalikan dengan 2. Kemudian, 9/15=3/5=6/10, jadi A = 6.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya membagi 9/15 dengan 3, kemudian mendapat 3/5 dan timsed dengan 2 dan mendapat 6/10.",
+       "misconception": "NA"
+      }
+     ],
+     "True_Misconception": [
+      {
+       "text": "ini karena angka-angka atas naik tiga, dan angka bawah turun dalam lima.",
+       "misconception": "Irrelevant"
+      }
+     ],
+     "True_Neither": [
+      {
+       "text": "Karena 10 adalah 2 / 3 15, dan 2 adalah 6.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Anda harus mengubah penyebut menjadi 150 maka Anda akan mendapatkan jawabannya.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Il percaya bahwa adalah penanggulang karena saya kalulated iti.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Jika Anda menyederhanakannya ke 3/5 maka Anda mendapatkan 9/15.",
+       "misconception": "NA"
+      }
+     ]
+    }
+   }
+  },
+  "32829": {
+   "correct_key": "B",
+   "by_option": {
+    "B": {
+     "True_Correct": [
+      {
+       "text": "i think jawabannya adalah b karena saya dibagi 24 dengan 2 karena mengatakan 2y. maka jawaban yang saya dapatkan adalah 12.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini karena 12 kali 2 = 24",
+       "misconception": "NA"
+      },
+      {
+       "text": "kita membagi persamaan dengan dua di kedua sisi karena kita ingin menyingkirkan 2. ini kemudian memberikan y=12",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir itu adalah 12 karena 2 kali 12 adalah 24",
+       "misconception": "NA"
+      }
+     ],
+     "True_Misconception": [
+      {
+       "text": "i think karena 2 * 12 adalah 24 sehingga itulah sebabnya aku semacam menebak-nebak",
+       "misconception": "Not_variable"
+      }
+     ],
+     "True_Neither": [
+      {
+       "text": "itu hanya tebakan tapi saya pikir itu karena 12 adalah faktor 24",
+       "misconception": "NA"
+      },
+      {
+       "text": "ini adalah apa yang telah kita pelajari di kelas",
+       "misconception": "NA"
+      },
+      {
+       "text": "jika ia mengatakan mis 2y Anda kali 2 oleh y",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena 2 dikalikan dengan 12 Anda mendapatkan 24",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "C": {
+     "False_Correct": [
+      {
+       "text": "2y adalah 24 sehingga dibagi dengan 2 y adalah 12",
+       "misconception": "NA"
+      },
+      {
+       "text": "24 jadi jawabannya adalah 12 karena 2xy=24 Anda berpikir bahwa dan dari membagi 244%2=12 jadi 12=y",
+       "misconception": "NA"
+      },
+      {
+       "text": "24%2=12 12 jadi jawabannya adalah 12 karena 2xy=24 anda berpikir bahwa dan dari membagi 24% 2=12 jadi 12=y",
+       "misconception": "NA"
+      },
+      {
+       "text": "24 dibagi 2 y adalah 12",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "i think its d karena 22+2=24 dan ia mengatakan apa nilai y dan itu harus ditambahkan.",
+       "misconception": "Adding_terms"
+      },
+      {
+       "text": "saya tidak yakin tapi saya pikir mungkin ini seolah-olah Anda menambahkan 22 sampai 2 Anda mendapatkan 24.",
+       "misconception": "Adding_terms"
+      },
+      {
+       "text": "karena 2 bernilai 2 22 tambah 2 adalah 24",
+       "misconception": "Adding_terms"
+      },
+      {
+       "text": "jika Anda melihat itu mengatakan menambahkan dua ke 22 maka membuat 24",
+       "misconception": "Adding_terms"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "karena itu adalah 2y Anda kali 2 dan Anda baissacly -2",
+       "misconception": "NA"
+      },
+      {
+       "text": "Aku meletakkan 4 terakhir kali jadi saya pikir saya sudah bisa menjadi jawaban ini",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think itu 22 karena itu lebih dekat ke 24",
+       "misconception": "NA"
+      },
+      {
+       "text": "Karena dua adalah angka genap dan begitu juga empat, maka 22 akan menjadi nilai.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "A": {
+     "False_Misconception": [
+      {
+       "text": "karena 24 adalah sama dengan 24 sehingga 4",
+       "misconception": "Not_variable"
+      },
+      {
+       "text": "ithink itu 4 karena itu = 24",
+       "misconception": "Not_variable"
+      },
+      {
+       "text": "i think ini karena terlihat seperti 20 dengan y sehingga u membutuhkan 4 untuk mendapatkan 24",
+       "misconception": "Not_variable"
+      },
+      {
+       "text": "saya akan menganggap itu menjadi 24 karena ada sre empat di akhir.",
+       "misconception": "Not_variable"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "Saya pikir itu karena saya melakukannya di kelas",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini karena sakit meletakkannya di samping 2 untuk membuat 24",
+       "misconception": "NA"
+      },
+      {
+       "text": "tidak sangat percaya diri di aljabar dan bisa dilakukan dengan beberapa bantuan",
+       "misconception": "NA"
+      },
+      {
+       "text": "itu sedikit rumit jadi saya tidak yakin.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "D": {
+     "False_Correct": [
+      {
+       "text": "saya menggunakan operasi terbalik jadi saya membagi 24 dengan 2 dan saya mendapat 12 jadi itu jawaban saya",
+       "misconception": "NA"
+      },
+      {
+       "text": "i memilih c karena jika Anda kalikan 2 dan 12 produk akan 24.",
+       "misconception": "NA"
+      },
+      {
+       "text": "jawabannya adalah 12 karena 2 x 12 akan sampai ke 24.",
+       "misconception": "NA"
+      },
+      {
+       "text": "i memilih pilihan c karena ketika Anda kalikan dua dan dua belas, produk akan 24.",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "saya melihat bahwa 2 masuk ke 24 jadi saya melakukan 24×2 yang memberi saya 48",
+       "misconception": "Inverse_operation"
+      },
+      {
+       "text": "ini adalah jawabannya karena Anda perlu melakukan 24 kali 2 untuk mendapatkan jawaban y yang 48.",
+       "misconception": "Inverse_operation"
+      },
+      {
+       "text": "24 adalah ganda ke 48 sehingga bisa karena matematika.",
+       "misconception": "Inverse_operation"
+      },
+      {
+       "text": "saya pikir ini karena saya dikalikan dengan 2",
+       "misconception": "Inverse_operation"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "Aku juga tidak tahu tentang yang satu ini.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir itu adalah ini karena Anda akan dua kali lipat",
+       "misconception": "NA"
+      },
+      {
+       "text": "Aku melihat 2 masuk ke 24, jadi aku melakukan 242 yang memberiku 48.",
+       "misconception": "NA"
+      },
+      {
+       "text": "aku punya ide butt aku tidak benar-benar yakin, mungkin 24 karena nomor yang sama.",
+       "misconception": "NA"
+      }
+     ]
+    }
+   }
+  },
+  "32833": {
+   "correct_key": "B",
+   "by_option": {
+    "B": {
+     "True_Correct": [
+      {
+       "text": "i think ini karena 2/3 x 5/1 adalah 10/3 atau 3 1/3.",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think ini karena i kali 2 dan lima dan meninggalkan tiga maka saya menyederhanakan jawaban",
+       "misconception": "NA"
+      },
+      {
+       "text": "i menjawab d, sebagai 2/3 dikalikan oleh 5/1 (5) =10/3 (3 1/3)",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena Anda melakukan 2/3 x 5/1 yang 10/3 yang Anda ubah menjadi angka campuran",
+       "misconception": "NA"
+      }
+     ],
+     "True_Misconception": [
+      {
+       "text": "Kemudian Anda kalikan penyebut dengan 5 dan menjaga pembilang sama.",
+       "misconception": "Inversion"
+      },
+      {
+       "text": "Anda kalikan penyebut dengan 5 dan menjaga pembilang yang sama",
+       "misconception": "Inversion"
+      },
+      {
+       "text": "i menempatkan satu di bawah 5 kemudian * itu pembilang lebih besar jadi saya harus melakukan barang-barang saya dan kemudian saya mendapat jawaban yang",
+       "misconception": "Inversion"
+      },
+      {
+       "text": "jika Anda dikalikan dengan angka paling bawah, yaitu 15, maka itu akan keluar ke 10/15.",
+       "misconception": "Duplication"
+      }
+     ],
+     "True_Neither": [
+      {
+       "text": "jadi 5 kali 3 adalah 15 sehingga ada tiga linglungan dan 1 tersisa.",
+       "misconception": "NA"
+      },
+      {
+       "text": "jika kita menempatkan 1 sebagai penyebut pada 5, kemudian 5 keseluruhan, dan 4 dibagi dengan 1, kita mendapatkan 3 colete per sen.",
+       "misconception": "NA"
+      },
+      {
+       "text": "1 + 2 = 3 dan ketika Anda kalikan dengan 2, hasilnya adalah 10 yang dapat kita tulis sebagai x 3, jadi 3 ditambah 1/3 sama dengan 10.",
+       "misconception": "NA"
+      },
+      {
+       "text": "2x5 is 10 so 3x3 is 9 gives me my answer",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "C": {
+     "False_Correct": [
+      {
+       "text": "ketika Anda kalikan pecahan yang bawah satu tetap sama seperti itu dan kemudian atas akan dikalikan.",
+       "misconception": "NA"
+      },
+      {
+       "text": "saya percaya ini karena 2x5=10 dan Anda tidak mengalikan penyebut jadi kemudian Anda mengubahnya menjadi angka campuran. Oleh karena itu, jawabannya adalah c.",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "i madr itu 5 x 3 dan kemudian menambahkan atas.",
+       "misconception": "Inversion"
+      },
+      {
+       "text": "Aku tahu ini karena aku menggunakan papan putihku untuk melakukan 5 x 2 dan 5x 3.",
+       "misconception": "Duplication"
+      },
+      {
+       "text": "saya tahu ini karena saya menggunakan papan putih saya untuk melakukan 5 x 2 dan 5 x 3 dan kemudian disederhanakan",
+       "misconception": "Duplication"
+      },
+      {
+       "text": "Saya pikir ini karena 2 / 3x5=10/15 dibagi dengan 5 = 5.",
+       "misconception": "Duplication"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "i think it is c karena 5 x 3=15 dan 15 + 2=17",
+       "misconception": "NA"
+      },
+      {
+       "text": "alasan mengapa saya pikir itu karena jika Anda memiliki lima kali lima jadi 23 akan itu akan menjadi 5/13 anggapan Anda sibuk hanya kali di dalamnya benar nomor",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena lima adalah angka keseluruhan.",
+       "misconception": "NA"
+      },
+      {
+       "text": "itu akan 10/3 dan itu adalah pecahan yang tidak tepat",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "D": {
+     "False_Correct": [
+      {
+       "text": "i did 2x5 dan itu anser saya",
+       "misconception": "NA"
+      },
+      {
+       "text": "Anda kali 2 dengan 5 dan Anda mendapatkan 10",
+       "misconception": "NA"
+      },
+      {
+       "text": "jika Anda kali 2 oleh 5, thr jawaban akhir adalah 10.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir jawaban ini karena saya timed atas dan bawah oleh 5",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "2 kali 5 adalah 10 dan 3 kali 5 adalah 15",
+       "misconception": "Duplication"
+      },
+      {
+       "text": "karena 3 kali 5 adalah 15, dan 2 kali 5, jadi 10 * 15 = 150.",
+       "misconception": "Duplication"
+      },
+      {
+       "text": "i think it is karena 2 x 5 sama dengan 10 dan 3 x 5 = 15.",
+       "misconception": "Duplication"
+      },
+      {
+       "text": "Anda kalikan kedua penyebut dan pembilang dengan 5.",
+       "misconception": "Duplication"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "ini adalah karena Anda harus dikali angka dengan tiga.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Kami telah mempelajari subjek ini dalam matematika",
+       "misconception": "NA"
+      },
+      {
+       "text": "10 * 2 = 20 dan 5x3 = 15 sehingga menempatkan 10 di atas 15 itu akan 10/15.",
+       "misconception": "NA"
+      },
+      {
+       "text": "dan 3 x 5 = 15 jadi 10 + 5.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "A": {
+     "False_Correct": [
+      {
+       "text": "i think jawabannya adalah b karena 2/3 x 5/1 = 10/3 dan 10/3 disederhanakan adalah 3 1/3",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "perhitungan adalah 2 1/3 x 1/5 dan jawabannya adalah 1/25.",
+       "misconception": "Inversion"
+      },
+      {
+       "text": "2/3×5 tidak bekerja jadi saya melakukan 3×5 = 15 maka pembilang tetap sama sehingga jawabannya adalah 2/15",
+       "misconception": "Inversion"
+      },
+      {
+       "text": "karena 2x5=10 dan 5x3=15 jadi jawabannya adalah 10/15",
+       "misconception": "Duplication"
+      },
+      {
+       "text": "Anda membuat 5 pecahan kemudian kali 2 dengan 1 waktu berikutnya 3 nya 5.",
+       "misconception": "Inversion"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "i bekerja itu di atas selembar kertas",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think ini karena jika 10/15 itu akan setara dengan 2/3 sehingga tidak itu dan 5 tidak dalam pecahan sehingga x penyebut dan 5x3=15",
+       "misconception": "NA"
+      },
+      {
+       "text": "5 kali 3 adalah 15 menempatkan 2 kembali di atas",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini adalah jawabannya karena 3 kali 5 sama dengan 15.",
+       "misconception": "NA"
+      }
+     ]
+    }
+   }
+  },
+  "32835": {
+   "correct_key": "D",
+   "by_option": {
+    "A": {
+     "False_Correct": [
+      {
+       "text": "a is the greatest because if you add the number of zero as d you will get a big number with no desimals",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini karena angka ini memiliki dua persepuluh, yang lain hanya memiliki apa-apa atau seperseratus atau seribu setelah tempat desimal.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Oleh karena itu, ia memiliki vslue di kolom pertama kesepuluh.",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think ini karena nomor ini memiliki 2 persepuluh, yang lain hanya memiliki apa-apa atau keseratus atau seribu setelah tempat desimal.",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "karena 6 adalah satu-satunya angka di sana dan seluruh angka lebih besar dari desimal.",
+       "misconception": "Whole_numbers_larger"
+      },
+      {
+       "text": "karena ia tidak memiliki apapun. di dalamnya",
+       "misconception": "Whole_numbers_larger"
+      },
+      {
+       "text": "desimal yang lebih sedikit Anda memiliki angka yang lebih besar",
+       "misconception": "Shorter_is_bigger"
+      },
+      {
+       "text": "i think ini karena nomor wholr lebih besar dari sepuluh, atau desimal apapun.",
+       "misconception": "Whole_numbers_larger"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "Sepersepuluh, seperseratus dan seribu lebih kecil dari satuan.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Tidak ada itu maka atau desimal, atau hundreth.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Tidak ada tanda desimalnya.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Jika Anda menambahkan pemegang tempat, maka Anda akan melihat 6000. Sisanya rr enam koma sesuatu dan nol koma apa-apa. Itu berarti jawabannya adalah a.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "B": {
+     "False_Misconception": [
+      {
+       "text": "Saya pikir ini karena memiliki pemegang tempat paling",
+       "misconception": "Longer_is_bigger"
+      },
+      {
+       "text": "i think d karena memiliki lebih banyak tempat desimal.",
+       "misconception": "Longer_is_bigger"
+      },
+      {
+       "text": "karena satu adalah dalam kolom keseribu itu adalah sedikit lebih besar",
+       "misconception": "Longer_is_bigger"
+      },
+      {
+       "text": "karena angka dengan paling digest harus menjadi yang terbesar",
+       "misconception": "Longer_is_bigger"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "karena memiliki nomor i di tempat paling akhir",
+       "misconception": "NA"
+      },
+      {
+       "text": "Karena itu adalah seluruh angka dan desimal disatukan",
+       "misconception": "NA"
+      },
+      {
+       "text": "♪ because it is smaller than all the rest ♪",
+       "misconception": "NA"
+      },
+      {
+       "text": "colom adalah nilai tempat paling dalam colam",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "C": {
+     "False_Correct": [
+      {
+       "text": "6,2000 adalah jawabannya sebagai equivelant ke 6 2000",
+       "misconception": "NA"
+      },
+      {
+       "text": "6.2 adalah tertinggi karena 2 lebih besar dari 0001.079 dan 6",
+       "misconception": "NA"
+      },
+      {
+       "text": "saya pikir ini karena setelah 6 2 adalah sepersepuluh tertinggi dari semua angka",
+       "misconception": "NA"
+      },
+      {
+       "text": "b adalah jawabannya sebagai equivelant untuk 6.2000",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "karena jika Anda mengambil 0 itu adalah 6.79",
+       "misconception": "Ignores_zeroes"
+      },
+      {
+       "text": "bc itu memiliki .79 sehingga yang lebih besar u dont caunt nol",
+       "misconception": "Ignores_zeroes"
+      },
+      {
+       "text": "Saya pikir ini karena ada lebih banyak digit di sana",
+       "misconception": "Longer_is_bigger"
+      },
+      {
+       "text": "itu memiliki.79 sehingga yang lebih besar Anda tidak bisa menghitung nol",
+       "misconception": "Ignores_zeroes"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "karena mereka memiliki digit tertinggi",
+       "misconception": "NA"
+      },
+      {
+       "text": "Jika Anda membuat mereka semua sepuluh kali lebih besar, maka Anda dapat melihat yang terbesar",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena itu adalah 0,25 jauh dari 7",
+       "misconception": "NA"
+      },
+      {
+       "text": "becouse saya dikalikan semua angka dengan 10000",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "D": {
+     "True_Correct": [
+      {
+       "text": "ini karena memiliki yang paling dalam persepuluh",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena itu adalah salah satu yang mendapat nomor terbesar setelah titik desimal.",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think ini karena semua nomor lain tidak memiliki apa-apa pada kolom kesepuluh tapi b tidak",
+       "misconception": "NA"
+      },
+      {
+       "text": "mereka semua memiliki enam satu tapi 2 lebih besar dari nol dan 0001",
+       "misconception": "NA"
+      }
+     ],
+     "True_Misconception": [
+      {
+       "text": "6,2 lebih besar karena 6 hanya keseluruhan angka dan yang lain memiliki nol dalam angka-angka",
+       "misconception": "Shorter_is_bigger"
+      },
+      {
+       "text": "karena ditutup digit adalah untuk seluruh nomor semakin besar itu mendapat",
+       "misconception": "Shorter_is_bigger"
+      },
+      {
+       "text": "karena hanya memiliki 1 angka setelah desimal bukan 2,3 atau 4",
+       "misconception": "Shorter_is_bigger"
+      },
+      {
+       "text": "i think itu adalah b karena 6,2 memiliki 0.2 lebih dari 6 dan yang lain memiliki lebih banyak tempat desimal yang membuat mereka lebih kecil.",
+       "misconception": "Shorter_is_bigger"
+      }
+     ],
+     "True_Neither": [
+      {
+       "text": "karena itu adalah angka tertinggi",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena itu adalah 6 dan sedikit",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think ini karena 6.2 lebih besar maka nomor lainnya",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena ketika u baris mereka semua nol tapi",
+       "misconception": "NA"
+      }
+     ]
+    }
+   }
+  },
+  "33471": {
+   "correct_key": "D",
+   "by_option": {
+    "D": {
+     "True_Correct": [
+      {
+       "text": "Anda akan melakukan 5 8 dari 24 yang adalah 15",
+       "misconception": "NA"
+      },
+      {
+       "text": "Anda membagi 24 dengan penyebut dan waktu yang menjawab oleh pembilang.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Karena 24 dibagi 8 adalah 3 kemudian 3 kali 3 adalah 9 Anda kemudian mengambil 9 dari 24 untuk mendapatkan jawabannya.",
+       "misconception": "NA"
+      },
+      {
+       "text": "i bekerja bahwa 5 perdelapan bola hijau dan 5 perdelapan dari 24 adalah 15",
+       "misconception": "NA"
+      }
+     ],
+     "True_Misconception": [
+      {
+       "text": "karena 1/8 adalah 3 sehingga Anda dikali 3 karena 3/8",
+       "misconception": "Wrong_fraction"
+      },
+      {
+       "text": "24 dibagi 8 sama dengan 3 dan 3 kali 3 sama dengan 9",
+       "misconception": "Wrong_fraction"
+      },
+      {
+       "text": "karena saya menemukan apa itu 3/8 bukan sebagai pecahan",
+       "misconception": "Wrong_fraction"
+      },
+      {
+       "text": "3/8 bernilai 9. i mengambilnya dari 24",
+       "misconception": "Wrong_fraction"
+      }
+     ],
+     "True_Neither": [
+      {
+       "text": "Jawabannya adalah 15 karena 24 takeaway 9 adalah 15.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Anda kali botom dan kali oleh atas",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena 9 telah diambil dan ada 15 kiri",
+       "misconception": "NA"
+      },
+      {
+       "text": "9 dari mereka adalah kuning jadi saya mengurangi 9 dari 24 untuk mendapatkan 15",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "A": {
+     "False_Correct": [
+      {
+       "text": "pertama Anda harus menemukan 3/8 dari 24 yang 9 dan kemudian saya lakukan 24-9 yang sama dengan 15",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think jawabannya adalah d karena 24}8 = 3 dan 3x3 = 9, 24-9 = 15",
+       "misconception": "NA"
+      },
+      {
+       "text": "d karena 248=3 dan 3x3 =9 jadi 24-9=15",
+       "misconception": "NA"
+      },
+      {
+       "text": "1/8 sama dengan 3 dan Anda ingin mengetahui apa 5/8 itu sehingga Anda hanya melakukan 3x5 yang sama dengan 15",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "i think jawabannya adalah d karena 3 banyak 8 masuk ke 24",
+       "misconception": "Incomplete"
+      },
+      {
+       "text": "24 dibagi 8 memberikan Anda tiga dan itulah yang saya pikir jawabannya adalah",
+       "misconception": "Incomplete"
+      },
+      {
+       "text": "8 kali 3 adalah 24 sehingga Wilk menjadi tiga saya pikir.",
+       "misconception": "Incomplete"
+      },
+      {
+       "text": "Anda melihat berapa kali 8 masuk ke 24",
+       "misconception": "Incomplete"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "Bagi dengan bagian bawah dan kalikan dengan nomor ini.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya tidak yakin bagaimana Anda bekerja jenis pertanyaan keluar jadi saya hanya memiliki perkiraan",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini karena saya hanya menebak-nebak tapi saya berpikir bahwa akan ada tiga tersisa dari mencoba untuk bekerja itu.",
+       "misconception": "NA"
+      },
+      {
+       "text": "d karena tiga banyak 8 pergi intoo 24",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "B": {
+     "False_Correct": [
+      {
+       "text": "saya pikir ini karena 1/8 24 akan menjadi 3 sehingga 3/8 24 akan 9 berarti sisanya akan 15",
+       "misconception": "NA"
+      },
+      {
+       "text": "1 / 8 dari 24 akan menjadi 3 sehingga 3 /8 dari 24, akan perlu 9 berarti sisanya akan menjadi 15.",
+       "misconception": "NA"
+      },
+      {
+       "text": "24 dibagi dengan delapan sama dengan 3 maka kamu lakukan 5 kali 3 sama dengan 15 sehingga ada r 15 hijau.",
+       "misconception": "NA"
+      },
+      {
+       "text": "24 dibagi dengan delapan sama dengan 3 maka Anda melakukan 5 kali tiga sama dengan 15 sehingga ada 15.",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "Saya pikir ini karena saya melakukan 24 dibagi dengan 3.",
+       "misconception": "Incomplete"
+      },
+      {
+       "text": "i think ini karena saya melakukan 24 dibagi dengan 3.",
+       "misconception": "Incomplete"
+      },
+      {
+       "text": "a dan d karena mengatakan 3/8 24 jadi saya mencoba 24 dibagi dengan 8 yang sama dengan 3",
+       "misconception": "Incomplete"
+      },
+      {
+       "text": "24 adalah sama dengan 3/8 yang berarti bahwa ia masuk ke 8 kali tabel tiga kali sehingga jawabannya akan 3.",
+       "misconception": "Incomplete"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "Saya bekerja bahwa 24 dibagi dengan 3 = 8.",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think itu karena 3x8=24.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Karena saya bekerja keluar pada selembar kertas",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena jika Anda membagi 24 dengan 3 Anda mendapatkan 8",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "C": {
+     "False_Correct": [
+      {
+       "text": "karena 3/8 dari 24 adalah 9 dan 24-9 = 15 jadi 15 adalah apa yang tersisa",
+       "misconception": "NA"
+      },
+      {
+       "text": "15 karena Anda dibagi 24 oleh 8 dan kali dengan 3, kemudian mengambilnya dari 24.",
+       "misconception": "NA"
+      },
+      {
+       "text": "ada tiga 8s dalam 24, sehingga Anda melakukan 3x3 yang =9.",
+       "misconception": "NA"
+      },
+      {
+       "text": "15 karena Anda dibagi 24 dengan 8 dan kali 3 mengambilnya dari 24",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "i think ini adalah becsuse 24 dibagi 8 sama dengan 3 dan tiga kali 3 = 9.",
+       "misconception": "Wrong_fraction"
+      },
+      {
+       "text": "i think ini karena saya berubah pertanyaan ke 3/8 24 yang 9.",
+       "misconception": "Wrong_fraction"
+      },
+      {
+       "text": "Div dengan 8 dan kalikan dengan 3.",
+       "misconception": "Wrong_fraction"
+      },
+      {
+       "text": "jawabannya adalah 9 karena 24 dibagi oleh penyebut yang 3 kemudian lakukan jawaban x 3.",
+       "misconception": "Wrong_fraction"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "kali 8 dibagi 6 dan kemudian kali 3 kali.",
+       "misconception": "NA"
+      },
+      {
+       "text": "ada 9 kuning jadi 24-9=jawaban",
+       "misconception": "NA"
+      },
+      {
+       "text": "24 dibagi 8 adalah 3 kali dengan 3, jadi 9 = 27.",
+       "misconception": "NA"
+      },
+      {
+       "text": "9 bola berwarna hijau",
+       "misconception": "NA"
+      }
+     ]
+    }
+   }
+  },
+  "33472": {
+   "correct_key": "C",
+   "by_option": {
+    "C": {
+     "True_Correct": [
+      {
+       "text": "jika Anda mengubahnya menjadi 15ths dan kemudian menambahkan mereka bersama-sama Anda mendapatkan 11/15.",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena jika u kali penyebut dengan 3 dan 5 untuk mendapatkan 15 untuk kedua u juga perlu kali atas yang merupakan atas",
+       "misconception": "NA"
+      },
+      {
+       "text": "i dikonversi 1/3 ke 5/15 dan 2/5 ke 6/15. maka saya menambahkan mereka bersama-sama yang hanya 5+6=11 sehingga harus 11/15",
+       "misconception": "NA"
+      },
+      {
+       "text": "menemukan penyebut yang sama yang 15 maka Anda dikali 1 dengan 5 maka 2 dengan 3 maka Anda menambahkan pembilang.",
+       "misconception": "NA"
+      }
+     ],
+     "True_Misconception": [
+      {
+       "text": "karena sekali bekerja keluar adalah 11/30",
+       "misconception": "Incorrect_equivalent_fraction_addition"
+      },
+      {
+       "text": "jika Anda mengubah 1/3 menjadi 5/15 dan Anda mengubah 2/5 menjadi 6/15 5/15+6/15=11/15 jadi 11/15 adalah jawabannya",
+       "misconception": "Denominator-only_change"
+      },
+      {
+       "text": "karena Anda menambahkan 5 sampai 6 untuk mendapatkan 11 kemudian keluar lebih dari 30",
+       "misconception": "Incorrect_equivalent_fraction_addition"
+      },
+      {
+       "text": "i think ini adalah jawabannya karena 3 kali 5 adalah 15 dan 1 ditambah 2 adalah 3 jadi jawabannya adalah 3/15.",
+       "misconception": "Denominator-only_change"
+      }
+     ],
+     "True_Neither": [
+      {
+       "text": "karena pembilang tidak dapat 3",
+       "misconception": "NA"
+      },
+      {
+       "text": "u perlu untuk mengkonversi sehingga kedua angka memiliki penyebut yang sama kemudian menambahkan em",
+       "misconception": "NA"
+      },
+      {
+       "text": "Anda harus menemukan penyebut umum dan kemudian menambahkan dua fraksi bersama-sama.",
+       "misconception": "NA"
+      },
+      {
+       "text": "i did 3x5 which is 15 than 3x2 and 1x5",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "D": {
+     "False_Correct": [
+      {
+       "text": "membuat penyebut sama - itu menjadi 15 1 kali 5 = 5 2 kali 3 = 6 5+6 = 1 sehingga 11/15",
+       "misconception": "NA"
+      },
+      {
+       "text": "menemukan penyebut umum untuk kedua fraksi sehingga 15 untuk pertanyaan ini. 1/3 = 5/15, 2/5 = 6/15, 5/15 + 6/15 = 11/15",
+       "misconception": "NA"
+      },
+      {
+       "text": "1/3 dikali 5 sama dengan 5/15 dan 2/5 dikali 3 sama dengan 6/15 jadi jika Anda menambahkan mereka bersama-sama, itu akan sama dengan 11/15.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Jawabannya adalah c karena 1/3 adalah 5/15 dan 2/5 adalah 6/15 jadi ketika Anda menambahkan mereka bersama-sama itu adalah 11/15.",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "i mengubah penyebut dan menambahkan pembilang.",
+       "misconception": "Denominator-only_change"
+      },
+      {
+       "text": "3 dan 5 lcm adalah 15 jadi kemudian 1 + 2 = 3 sehingga 3 - 15",
+       "misconception": "Denominator-only_change"
+      },
+      {
+       "text": "Anda harus membuat penyebut umum, yaitu 30, maka 1 tambah 2 adalah 3",
+       "misconception": "Denominator-only_change"
+      },
+      {
+       "text": "ketika Anda menemukan penyebut umum dan kemudian menambahkan pembilang up",
+       "misconception": "Denominator-only_change"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "Saya pikir ini adalah karena 3 dan 5 memiliki lcm dari 15 15/3=5 15/5=3 5+2 BURT3)=+5+6+11",
+       "misconception": "NA"
+      },
+      {
+       "text": "im tidak terlalu yakin di pecahan",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think ini karena dalam lima kali tabel 15 adalah di dalamnya dan sama dalam tiga kali tabel dan jika Anda menambahkan",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think ini karena jika Anda melakukan sesuatu ke bawah Anda melakukan hal yang sama ke atas",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "A": {
+     "False_Correct": [
+      {
+       "text": "Karena saya menemukan penyebut umum (15) dan kemudian menambahkan angkator.",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena 5 dan 3 keduanya masuk ke 15.",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena Anda perlu dikali tiga kali lima karena mereka tidak di meja waktu yang sama, Anda mendapatkan 15 dan kemudian menambahkan 1 ke 2",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena 2/5=6/15 dan 1/3=5/15 tambahkan mereka bersama-sama Anda mendapatkan 11/15",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "karena lcm terendah keduanya adalah 15 dan 2+1=3",
+       "misconception": "Denominator-only_change"
+      },
+      {
+       "text": "3x5=15 dan 1+2=3, sehingga akan 3/15.",
+       "misconception": "Denominator-only_change"
+      },
+      {
+       "text": "i think ini karena jika Anda mengubahnya menjadi denominasi umum maka Anda akan mendapatkan 15 dan kemudian menambahkan 1+2 sehingga akan 3/15.",
+       "misconception": "Denominator-only_change"
+      },
+      {
+       "text": "i memilih b karena Anda harus membuat penyebut nomor yang sama dan jumlah yang 15 dan kemudian Anda menambahkan 1 dan 2 yang sama dengan 3 dan jawabannya 3/15",
+       "misconception": "Denominator-only_change"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "saya tahu ini karena Anda perlu menemukan beberapa cimon",
+       "misconception": "NA"
+      },
+      {
+       "text": "jika penyebut adalah maka 1 maka produk dari 3 kali 5 adalah 15 yang merupakan pembilang maka 3 + 1 = 4.",
+       "misconception": "NA"
+      },
+      {
+       "text": "kali di bagian bawah ditambahkan oleh atas",
+       "misconception": "NA"
+      },
+      {
+       "text": "sehingga Anda akan kali 3 dan 5 kali satu sama lain yang 15 dan 15 akan denominasi Anda.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "B": {
+     "False_Correct": [
+      {
+       "text": "saya pikir 11/15 karena 3 membuat 15 jadi 1 adalah 5. kemudian 5 membuat 15 jadi 2 membuat 6 ' kemudian 5 tambah 6 adalah 11",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir itu 11/15 karena 3 membuat 15 jadi 1 adalah 5. maka 5 membuat 15, jadi 2 membuat 6 jadi 1 + 6 adalah 11.",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "Aku tahu ini karena 3+5=8, dan 1+2=3.",
+       "misconception": "Adding_across"
+      },
+      {
+       "text": "1+2=3 dan 3+5 =8, dan itu satu-satunya jawaban yang berisi 3 dibagi 8.",
+       "misconception": "Adding_across"
+      },
+      {
+       "text": "karena Anda menambahkan bagian atas dan menambahkan bagian bawah",
+       "misconception": "Adding_across"
+      },
+      {
+       "text": "hanya menambahkan penyebut dan pembilang bersama",
+       "misconception": "Adding_across"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "1 / 3 + 2 /5 = apa a",
+       "misconception": "NA"
+      },
+      {
+       "text": "ini adalah salah satu dari banyak fraksi suasana hati saya",
+       "misconception": "NA"
+      },
+      {
+       "text": "Tambahkan penyebut dan pembilang bersama-sama.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Hanya menambahkan penyebut dan pembilang bersama-sama.",
+       "misconception": "NA"
+      }
+     ]
+    }
+   }
+  },
+  "33474": {
+   "correct_key": "A",
+   "by_option": {
+    "A": {
+     "True_Correct": [
+      {
+       "text": "jika Anda ingin 1/3 sepotong, itu 2/3 keseluruhan, sehingga Anda perlu melakukan 1/3 x 2 1/3.",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena Anda harus kali mereka bersama-sama untuk mengetahui berapa banyak ia makan.",
+       "misconception": "NA"
+      },
+      {
+       "text": "berarti multiply sehingga Anda kalikan pecahan yang diberikan",
+       "misconception": "NA"
+      },
+      {
+       "text": "1/3 tumes 2/3 adalah 2/9.",
+       "misconception": "NA"
+      }
+     ],
+     "True_Misconception": [
+      {
+       "text": "Anda harus menemukan penyebut umum kemudian mengambil pembilang",
+       "misconception": "Subtraction"
+      },
+      {
+       "text": "Jika Anda membagi 1/3 yang dimakan oleh 2 1/3 Anda dapatkan, Anda sudah mendapat sisa persamaan.",
+       "misconception": "Division"
+      },
+      {
+       "text": "karena saya melakukan 2/3 dibagi dengan 1/3.",
+       "misconception": "Division"
+      },
+      {
+       "text": "Jika Anda perlu untuk bekerja keluar sepertiga sesuatu, Anda melakukan hal ini dengan membagi dengan tiga.",
+       "misconception": "Division"
+      }
+     ],
+     "True_Neither": [
+      {
+       "text": "Ini adalah bagaimana yiu datang dengan total.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Karena disana lebih kecil dari 1, jadi akan lebih kecil.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Aku hanya tahu bagaimana melakukannya.",
+       "misconception": "NA"
+      },
+      {
+       "text": "1/3 ditambah 2/3 jelas bukan jawabannya.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "B": {
+     "False_Misconception": [
+      {
+       "text": "Jika Anda menambahkan hem bersama-sama kemudian mengambil berapa banyak robert telah makan (1/3) Anda akan mendapatkan jawaban Anda.",
+       "misconception": "Subtraction"
+      },
+      {
+       "text": "aku pikir ini benar karena kau harus mengambilnya karena dia telah memakan sepotong kue",
+       "misconception": "Subtraction"
+      },
+      {
+       "text": "karena itu memberitahu Anda berapa banyak seluruh kue itu kemudian mengambil 1/3 dari penyihir yang 2/3",
+       "misconception": "Subtraction"
+      },
+      {
+       "text": "menyebabkan jika Anda melakukan 2 mengambil 1 itu = jawaban 1",
+       "misconception": "Subtraction"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "karena Anda menambahkan mereka bersama-sama, kemudian membawa mereka jauh dari jumlah yang ada",
+       "misconception": "NA"
+      },
+      {
+       "text": "aku tidak tahu bagaimana menyelesaikannya jadi aku hanya menduga",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena kau harus menemukan jawabannya seperti itu.",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena itu adalah satu-satunya solusi untuk jumlah tersebut.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "C": {
+     "False_Correct": [
+      {
+       "text": "timsing adalah sama dengan \"of\" sehingga ketika mereka mengatakan 1/3 x 2/3 yang sama dengan 1/3 dari 2/3.",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think ini karena jika sally memiliki 2/3 dan robert makan 1/3 dari sally 2/3 berarti Anda perlu bekerja keluar 1/3 kali 2/3",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "i menjawab c karena saya pikir itu adalah jawaban yang paling masuk akal karena mengatakan 2 dibagi dengan 1 dan 3 dibagi dengan 3 yang 2/1.",
+       "misconception": "Division"
+      },
+      {
+       "text": "2/3 dibagi oleh 1/3 akan memberikan jawaban sebagai Robert memiliki 1/3 dari apa yang Sally miliki. Sally memiliki 2/3.",
+       "misconception": "Division"
+      },
+      {
+       "text": "2/3 dibagi oleh 1/3 akan memberikan jawabanmu",
+       "misconception": "Division"
+      },
+      {
+       "text": "ada 1/3 tersisa setelah Robert makan beberapa kue. 2/3 1/3 = 1/3 yang adalah apa yang kita butuhkan untuk menemukan.",
+       "misconception": "Division"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "Ini adalah cara untuk mengetahui berapa banyak ia makan",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena kita perlu menemukan sepertiga biji sally itu",
+       "misconception": "NA"
+      },
+      {
+       "text": "Aku tidak tahu, tapi aku sangat yakin dengan ini.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Dia memakan 2/3 dari 1/3. bukan 1/3",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "D": {
+     "False_Correct": [
+      {
+       "text": "karena 2 3rds minus 1 3rd adalah 1 3rd yang merupakan jawaban yang benar",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "saya melakukan dua pertiga mengambil sepertiga untuk mendapatkan awer saya",
+       "misconception": "Subtraction"
+      },
+      {
+       "text": "karena 2/3 dikurangi 1/3 robert makan adalah \"/3 ambil 1/3",
+       "misconception": "Subtraction"
+      },
+      {
+       "text": "kue dimulai dengan 2/3 kemudian robert makan 1/3 sehingga Anda mengambil.",
+       "misconception": "Subtraction"
+      },
+      {
+       "text": "saya tahu ini adalah jawabannya karena Anda perlu untuk mendapatkan ke 1/3 dan dengan mengambil 1/3 jauh dari 2/3 Anda mendapatkan 1/3.",
+       "misconception": "Subtraction"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "karena ia makan yang berarti mengambil sepotong kue",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena ia makan 1/3 itu",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena Anda dikurangi itu dari kue",
+       "misconception": "NA"
+      },
+      {
+       "text": "dia makan setengah dari kue dan itu sama",
+       "misconception": "NA"
+      }
+     ]
+    }
+   }
+  },
+  "76870": {
+   "correct_key": "C",
+   "by_option": {
+    "D": {
+     "False_Correct": [
+      {
+       "text": "144 x 10 = 1440 yang merupakan jumlah sudut dalam delahedron",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini karena bentuk 10 sisi memiliki 1440 derajat di dalamnya dan 10x144=1440.",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think ini karena bentuk 10 sisi memiliki 1440 derajat di dalamnya dan 10x144=1440",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "tidak cukup informasi untuk menyelesaikannya",
+       "misconception": "Unknowable"
+      },
+      {
+       "text": "untuk mengetahui howw banyak sisi ada, saya perlu tahu seberapa besar sudut luar.",
+       "misconception": "Unknowable"
+      },
+      {
+       "text": "karena itu hanya memberi kita satu sudut",
+       "misconception": "Unknowable"
+      },
+      {
+       "text": "karena Anda hanya melihat satu sudut, dan dari sudut yang Anda tidak bisa mengatakan.",
+       "misconception": "Unknowable"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "karena hanya ada dua baris",
+       "misconception": "NA"
+      },
+      {
+       "text": "saya tidak yakin bagaimana saya seharusnya bekerja ini tanpa x144 kali",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think ini karena poligon adalah bentuk apapun yang memiliki lebih dari 3 sisi",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya nott sangat baik di poligons",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "C": {
+     "True_Correct": [
+      {
+       "text": "(10-2)180=1440 1440/10=144 ini menunjukkan ia memiliki 10 sisi.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Karena sebuah decagon memiliki 144 x 10 = 1440.",
+       "misconception": "NA"
+      },
+      {
+       "text": "trial and error 180x8=1440 1440/10= 144 yang merupakan sudut",
+       "misconception": "NA"
+      },
+      {
+       "text": "sudut eksterior = jumlah sisi dibagi 360 (36) artinya jawabannya adalah 10",
+       "misconception": "NA"
+      }
+     ],
+     "True_Misconception": [
+      {
+       "text": "karena poligon memiliki 3 sisi jadi kemudian Anda harus ganda itu saya pikir",
+       "misconception": "Definition"
+      },
+      {
+       "text": "Saya pikir Anda harus ganda karena poligon memiliki 3 sisi sehingga Anda perlu tiga kali lipat itu.",
+       "misconception": "Definition"
+      },
+      {
+       "text": "karena sejumlah poligon memiliki 10 sisi",
+       "misconception": "Definition"
+      }
+     ],
+     "True_Neither": [
+      {
+       "text": "Sudut luar selalu menambah 360. sudut eksterior dalam poligon reguler = 180 sudut interior.",
+       "misconception": "NA"
+      },
+      {
+       "text": "144 masuk ke 720 5 kali dan setiap sisi bernilai 144.",
+       "misconception": "NA"
+      },
+      {
+       "text": "itu bahkan dan bentuk 6 bersisian sama dengan 720 *",
+       "misconception": "NA"
+      },
+      {
+       "text": "Hanya saja aku tak mengerti bagaimana menjelaskannya.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "A": {
+     "False_Correct": [
+      {
+       "text": "Jumlah sudut interior pada decagon adalah 1440, dan 144 x 10 = 14 40.",
+       "misconception": "NA"
+      },
+      {
+       "text": "jumlah sudut interior pada decagon adalah 1440 dan 144 x 10 = 1440",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "b adalah jawabannya sebagai poligon memiliki 5 sisi.",
+       "misconception": "Definition"
+      },
+      {
+       "text": "i think ini karena 5 x 144 = 720 dan pentagon memiliki 5 sisi dan sama dengan 320 derajat",
+       "misconception": "Interior"
+      },
+      {
+       "text": "karena poligon reguler memiliki lima sisi",
+       "misconception": "Definition"
+      },
+      {
+       "text": "karena 144 kali 5 adalah 720 berarti itu akan menambahkan hingga 722 secara total berarti ia memiliki 5 sisi",
+       "misconception": "Interior"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "bagian terbesar dari bentuk sisi 5 tidak digunakan",
+       "misconception": "NA"
+      },
+      {
+       "text": "setengah lainnya memiliki sisi lurus",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya tidak yakin saya pikir ini adalah itu",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena 20 menambahkan hingga 180.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "B": {
+     "False_Misconception": [
+      {
+       "text": "Saya memilih ini karena saya tahu poligons reguler memiliki enam sisi.",
+       "misconception": "Definition"
+      },
+      {
+       "text": "i did 144 dikalikan dengan sisi",
+       "misconception": "Interior"
+      },
+      {
+       "text": "6 sisi memiliki jumlah sudut interior 720 144*5 = 720 Oleh karena itu, ia memiliki 6 sisi",
+       "misconception": "Interior"
+      },
+      {
+       "text": "Hal ini karena jika Anda melakukan 144 kali 6 itu adalah 720 yaitu jumlah derajat dalam segi enam.",
+       "misconception": "Interior"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "karena ini terlihat seperti sisi hexagon sehingga akan memiliki 6 sisi?",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena terlihat seperti sudut dari segi enam",
+       "misconception": "NA"
+      },
+      {
+       "text": "Aku jujur, aku menggunakan Google untuk ini.",
+       "misconception": "NA"
+      },
+      {
+       "text": "itu 6 karena jika Anda melihat hexagon biasa bahwa ia memiliki 6 sisi dan gambar terlihat seperti hexagon dengan 6 sisi",
+       "misconception": "NA"
+      }
+     ]
+    }
+   }
+  },
+  "89443": {
+   "correct_key": "B",
+   "by_option": {
+    "A": {
+     "False_Misconception": [
+      {
+       "text": "i menambahkan 8 dan 5 (yang sama dengan 13) kemudian membuatnya negatif",
+       "misconception": "Tacking"
+      },
+      {
+       "text": "Saya pikir ini karena 8 + 5 = 13, dan kemudian Anda menambahkan -",
+       "misconception": "Tacking"
+      },
+      {
+       "text": "8+5=13 tetapi sisi negatifnya",
+       "misconception": "Tacking"
+      },
+      {
+       "text": "karena jika kita menambahkan 8 dan 5 itu akan memberi Anda 13 tetapi karena mereka adalah angka negatif itu membuat -13",
+       "misconception": "Tacking"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "negatif 8 dikurangi dengan negatif 5 akan menjadi negatif. jadi, jawabannya adalah -13",
+       "misconception": "NA"
+      },
+      {
+       "text": "-8 -5 yaitu -13",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think jawabannya adalah karena ketika Anda - dalam angka negetif jumlah mendapat lebih jauh ke 0.",
+       "misconception": "NA"
+      },
+      {
+       "text": "jika Anda membayangkan -8 pada garis bilangan dan kemudian turun dengan 5, Anda akan mencapai -13.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "B": {
+     "True_Correct": [
+      {
+       "text": "karena ketika ada 2 minus di samping satu sama lain itu berarti penambahan jadi persamaan sebenarnya -8+5, jadi jawabannya adalah 3.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir itu adalah d karena dua minus di samping satu sama lain adalah sama dengan plus, yang berarti -8 ditambah 5 adalah 3.",
+       "misconception": "NA"
+      },
+      {
+       "text": "dua tanda pengurangan menempatkan satu sama lain sama dengan tanda +",
+       "misconception": "NA"
+      },
+      {
+       "text": "Persamaan ini mengurangi bilangan negatif, jadi akan pergi ke kanan bukan ke kiri.",
+       "misconception": "NA"
+      }
+     ],
+     "True_Misconception": [
+      {
+       "text": "ini karena keduanya negatif Anda akan jus mengambilnya seperti biasa dan Anda sudah tahu itu akan menjadi negatif dan 8-5 adalah 3 jadi ya",
+       "misconception": "Tacking"
+      },
+      {
+       "text": "8 kurangi 5 adalah 3 tambahkan pada tanda negatif",
+       "misconception": "Tacking"
+      },
+      {
+       "text": "i think it is d karena 8-5=3 jadi -8--5=-3.",
+       "misconception": "Tacking"
+      },
+      {
+       "text": "8-5 adalah 3 dan karena mereka adalah angka negatif dan dalam kurung saya menempatkan - di depan",
+       "misconception": "Tacking"
+      }
+     ],
+     "True_Neither": [
+      {
+       "text": "aku tahu itu benar tapi aku tidak tahu bagaimana menjelaskannya",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini karena a. ..? n = SEP> Saya akan berpikir bahwa ini akan benar, karena '' jika dia tidak makan daging, saya pikir kau akan. :-)",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena -8 -5 = -3 Anda mengambilnya",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya percaya bahwa ini adalah jawaban yang sesuai dengan perhitungan.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "D": {
+     "False_Correct": [
+      {
+       "text": "Ini adalah negatif ganda yang sama dengan satu positif.",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "minise dan minise menjadi plus sehingga Anda melakukan 8 ditambah 5 dan Anda mendapatkan 13",
+       "misconception": "Positive"
+      },
+      {
+       "text": "untuk menambahkan 2 negatif adalah positif.",
+       "misconception": "Positive"
+      },
+      {
+       "text": "ke minuses membuat positif sehingga mereka menambahkan bersama-sama",
+       "misconception": "Positive"
+      },
+      {
+       "text": "bilangan negatif menambahkan membuat mereka positif",
+       "misconception": "Positive"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "Kurasa itu jawaban yang benar.",
+       "misconception": "NA"
+      },
+      {
+       "text": "Ketika Anda mengambil negatif Anda mendapatkan nomor yang lebih besar.",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think itu b karena dua numbrrs membagi satu sama lain membuat positif dan 8 dan 5 keduanya -minus nomor karena itu 8 + 5 yang 13",
+       "misconception": "NA"
+      },
+      {
+       "text": "alasan yang sama bahwa saya jawaban untuk pertanyaan sebelumnya",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "C": {
+     "False_Correct": [
+      {
+       "text": "ketika Anda memiliki dua negatif, itu adalah positif jadi (8) - (-5) = (8) + 5 = (3)",
+       "misconception": "NA"
+      },
+      {
+       "text": "jika Anda memiliki dua negatif, jumlah positif, jadi -8) minus (-5) adalah (8 + 5) = (3).",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "i menjawab c sebagai satu negatif dikurangi oleh negatif lain sama dengan positif, yang dalam hal ini akan sama dengan 3.",
+       "misconception": "Positive"
+      },
+      {
+       "text": "karena negatif mengambil negatif = positif",
+       "misconception": "Positive"
+      },
+      {
+       "text": "Ketika Anda mengambil negatif itu berakhir dalam positif.",
+       "misconception": "Positive"
+      },
+      {
+       "text": "karena minus dan minus membuatnya positif dan -8 -5 adalah tiga",
+       "misconception": "Positive"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "c adalah benar karena jika anda dikurangi sebuah bilangan bulat negatif dengan menguranginya menjadi b, yaitu 0; c sama dengan satu.",
+       "misconception": "NA"
+      },
+      {
+       "text": "aku tahu ini karena itu akan berubah menjadi posit",
+       "misconception": "NA"
+      },
+      {
+       "text": "Aku tahu karena apa yang pernah kau lakukan di satu sisi kau lakukan untuk yang lain. (pasangan nol)",
+       "misconception": "NA"
+      },
+      {
+       "text": "i berada di antara derek jadi saya hanya memilih satu",
+       "misconception": "NA"
+      }
+     ]
+    }
+   }
+  },
+  "91695": {
+   "correct_key": "C",
+   "by_option": {
+    "A": {
+     "False_Misconception": [
+      {
+       "text": "Karena itu menambahkan 4 baris setiap kali.",
+       "misconception": "Wrong_term"
+      },
+      {
+       "text": "sebagai pola menambahkan +3 setiap kali",
+       "misconception": "Wrong_term"
+      },
+      {
+       "text": "saya pikir ini karena naik 4s",
+       "misconception": "Wrong_term"
+      },
+      {
+       "text": "karena angkanya terus meningkat 4 kali",
+       "misconception": "Wrong_term"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "karena mereka adalah kip menambahkan satu titik dalam setiap pola",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya sangat tidak yakin karena semua jawaban ini salah.",
+       "misconception": "NA"
+      },
+      {
+       "text": "menambahkan 2 pada menyebabkan baris semakin besar setiap waktu.",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena untuk menemukan jumlah titik untuk area berikutnya, akan ada 5 titik lebar dan panjang 4. melipatgandakan mereka akan memberikan Anda daerah.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "B": {
+     "False_Correct": [
+      {
+       "text": "Apakah saya memberitahu Anda hanya menambahkan 8?",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think ini karena setiap kali pola baru terjadi, 4 titik ditambahkan. dalam pola 4, jika ada 18 titik, pola 6 akan 26",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think ini karena setiap kali pola baru terjadi, 4 titik ditambahkan. Jadi dalam pola 4, jika ada 18 titik, dalam pola berikutnya (pola 6), akan ada 26 titik.",
+       "misconception": "NA"
+      },
+      {
+       "text": "betwren 1 dan 2 kita membuat +4 kemudian pada pola 4 kita membuat +8 untuk mendapatkan nomor 6.",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "pola adalah +4, soz tapi aku benar-benar bosan dari menghitung",
+       "misconception": "Wrong_term"
+      },
+      {
+       "text": "Ketika menulis surat o, akan ada baris lain dari 4 + 1 ekstra titik di akhir.",
+       "misconception": "Wrong_term"
+      },
+      {
+       "text": "karena polanya naik dalam 4",
+       "misconception": "Wrong_term"
+      },
+      {
+       "text": "i think jawaban saya adalah d karena menambahkan 4 titik setiap kali",
+       "misconception": "Wrong_term"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "karena pola meningkat dengan 4 titik",
+       "misconception": "NA"
+      },
+      {
+       "text": "jika kita menemukan urutan dan menemukan yang berikutnya",
+       "misconception": "NA"
+      },
+      {
+       "text": "menambahkan 1 titik lagi untuk melakukan 5, dan pada baris terakhir saya tidak menambahkan 1, lebih Dot = 7.",
+       "misconception": "NA"
+      },
+      {
+       "text": "i bekerja keluar berapa banyak itu menambahkan setiap kali",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "C": {
+     "True_Correct": [
+      {
+       "text": "karena jika Anda menambahkan 4 sampai 22 itu adalah 26",
+       "misconception": "NA"
+      },
+      {
+       "text": "26 karena itu adalah 6 dengan 4 yang merupakan 24 ditambahkan pada 2 adalah 26.",
+       "misconception": "NA"
+      },
+      {
+       "text": "itu akan menjadi 26 karena Anda punya 18 dan kemudian menambahkan pada 8 (dua 4)",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena ada 4 titik lagi dalam setiap pola",
+       "misconception": "NA"
+      }
+     ],
+     "True_Misconception": [
+      {
+       "text": "dalam pola pertama ada 6 titik jadi i waktu bahwa dengan 6",
+       "misconception": "Firstterm"
+      },
+      {
+       "text": "because it goes up 6 each time #",
+       "misconception": "Firstterm"
+      },
+      {
+       "text": "karena titik-titik setiap pola menambahkan 5 titik",
+       "misconception": "Wrong_term"
+      },
+      {
+       "text": "itu menambahkan 4 setiap kali jadi jika pola 4 adalah 18 kemudian ditambah 4 adalah 22",
+       "misconception": "Wrong_term"
+      }
+     ],
+     "True_Neither": [
+      {
+       "text": "ini karena saya menghitung mereka",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think ini karena pola 6 memiliki 26 titik.",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena itu jumlah titik-titik akan ada",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think ini karena 6 + (4 x n)",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "D": {
+     "False_Correct": [
+      {
+       "text": "Hal ini karena saya menambahkan 8 pada karena aturan istilah adalah 4 setiap kali dand karena empat kali 2 adalah 8.",
+       "misconception": "NA"
+      },
+      {
+       "text": "akan ada 6 baris dari 4 dan kemudian Anda perlu menambahkan 2.",
+       "misconception": "NA"
+      },
+      {
+       "text": "akan ada 6 baris dari 4 kemudian tambah 2",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "i think ini karena selalu dalam 4",
+       "misconception": "Wrong_term"
+      },
+      {
+       "text": "Anda menambahkan 6 setiap kali?",
+       "misconception": "Firstterm"
+      },
+      {
+       "text": "i did pola pada kali enam dan ada enam titik sehingga akan enam kali keenam",
+       "misconception": "Firstterm"
+      },
+      {
+       "text": "c karena saya tahu bahwa itu",
+       "misconception": "Firstterm"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "tidak mungkin 26 karena terlalu kecil",
+       "misconception": "NA"
+      },
+      {
+       "text": "rumus adalah 6n + 0 karena itu istilah 6 adalah 24",
+       "misconception": "NA"
+      },
+      {
+       "text": "Anda dapat menggunakan pola untuk menarik harimau owm Anda!",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena pola pergi dua kali lebih besar",
+       "misconception": "NA"
+      }
+     ]
+    }
+   }
+  },
+  "104665": {
+   "correct_key": "A",
+   "by_option": {
+    "C": {
+     "False_Correct": [
+      {
+       "text": "c karena jika ada 4 kali lebih banyak orang itu akan menjadi lebih cepat jadi kemudian Anda membaginya dengan 4 dan Anda akan mendapatkan 48 jam",
+       "misconception": "NA"
+      },
+      {
+       "text": "c karena jika ada empat kali lebih banyak orang proses akan lebih cepat sehingga Anda membagi dengan empat dan Anda akan mendapatkan 48 jam.",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "untuk membangun dinding masih membutuhkan 192 jam tapi setiap orang bekerja 16 jam bukan 64",
+       "misconception": "Base_rate"
+      },
+      {
+       "text": "Untuk membangun dinding membutuhkan 192 jam tapi setiap orang bekerja 16 jam bukan 64.",
+       "misconception": "Base_rate"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "Aku tidak yakin bagaimana menyelesaikannya. Aku tidak mengerti bagaimana melakukannya",
+       "misconception": "NA"
+      },
+      {
+       "text": "Aku tidak yakin bagaimana melakukan ini dan aku tidak tahu bagaimana kau melakukannya.",
+       "misconception": "NA"
+      },
+      {
+       "text": "c nya karena 12 adalah 3, 4s sehingga Anda lakukan 192 dibagi dengan 4 yang 48.",
+       "misconception": "NA"
+      },
+      {
+       "text": "dibutuhkan 192 jam untuk membangun dinding yang sama wll akan mengambil waktu yang sama persis setiap orang akan mengambil 1/4 jam pertama pembangun mengambil",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "A": {
+     "True_Correct": [
+      {
+       "text": "karena 3 dibagi dengan 12 adalah 4 maka Anda membagi 192 dengan 4 yang merupakan seperempat dari 192 yang 48",
+       "misconception": "NA"
+      },
+      {
+       "text": "3x4 = 12 sehingga akan 4 kali lebih cepat jika 12 orang membangun dinding. 192/4 = 48 48 jam",
+       "misconception": "NA"
+      },
+      {
+       "text": "jika Anda membagi 192 dengan 4 kali lebih banyak pembangun yang membangun itu memberi Anda 48",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think bahwa 3 x 4 adalah 12 jadi saya membagi 192 dengan 4 untuk mendapatkan berapa banyak waktu itu akan mengambil 12 orang",
+       "misconception": "NA"
+      }
+     ],
+     "True_Misconception": [
+      {
+       "text": "i think ini karena Anda perlu membagi 192 dengan 3 dan kemudian Anda perlu untuk kali jawaban itu dengan 12 untuk mendapatkan jawaban akhir Anda.",
+       "misconception": "Multiplying_by_4"
+      },
+      {
+       "text": "karena Anda pergi ke satu orang dan kemudian kali dengan 12",
+       "misconception": "Multiplying_by_4"
+      },
+      {
+       "text": "Anda kalikan dengan 4 karena Anda melakukan 12 dibagi dengan 3",
+       "misconception": "Multiplying_by_4"
+      },
+      {
+       "text": "karena Anda membagi dengan 3 dari 192",
+       "misconception": "Base_rate"
+      }
+     ],
+     "True_Neither": [
+      {
+       "text": "ini karena Anda melakukan sebaliknya sehingga 48",
+       "misconception": "NA"
+      },
+      {
+       "text": "b karena 12 dibagi 192",
+       "misconception": "NA"
+      },
+      {
+       "text": "Anda melakukan 192 dibagi dengan 3 yang 64 dan kemudian dibagi dengan 12 dan kalikan dengan 4",
+       "misconception": "NA"
+      },
+      {
+       "text": "12 orang bisa melakukannya 3 kali lebih cepat sehingga dinding akan mengambil 48 jam untuk membangun",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "B": {
+     "False_Misconception": [
+      {
+       "text": "3 orang = 192 jam i peron = 64 jam",
+       "misconception": "Base_rate"
+      },
+      {
+       "text": "karena Anda dikalikan dengan 4",
+       "misconception": "Multiplying_by_4"
+      },
+      {
+       "text": "bc Anda lakukan 192 dibagi dengan 3",
+       "misconception": "Base_rate"
+      },
+      {
+       "text": "jika Anda mengambil jumlah jam dan kalikan dengan 3, Anda mendapatkan jawaban dari 64 yang adalah apa yang diperlukan untuk melakukan 12 pembangun dalam jam.",
+       "misconception": "Base_rate"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "ini karena Anda hanya membawanya pergi",
+       "misconception": "NA"
+      },
+      {
+       "text": "Saya pikir ini karena 192 dibagi dengan 12 sama dengan 16. Ada empat dari 3 dari 12, sehingga Anda melakukan 16 kali 4 sama dengan 64.",
+       "misconception": "NA"
+      },
+      {
+       "text": "i picked d karena itu akan mengambil sedikit panjang.",
+       "misconception": "NA"
+      },
+      {
+       "text": "ada 9 orang lebih dari Thann bahwa Anda membagi dengan 9.",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "D": {
+     "False_Misconception": [
+      {
+       "text": "192 dived dengan 3, yang memberikan Anda jumlah bahwa setiap pembangun tidak, maka lakukan itu dikali 12",
+       "misconception": "Multiplying_by_4"
+      },
+      {
+       "text": "karena satu orang akan = 64 jadi 64 kali 12",
+       "misconception": "Multiplying_by_4"
+      },
+      {
+       "text": "ini karena 12 dibagi 3 sama dengan 4 maka Anda kalikan 192 dengan 4 yang akan sama dengan 768 jam",
+       "misconception": "Multiplying_by_4"
+      },
+      {
+       "text": "karena saya multiple itu dengan 4",
+       "misconception": "Multiplying_by_4"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "Aku melakukan metode kotak dan itu berhasil untukku.",
+       "misconception": "NA"
+      },
+      {
+       "text": "192 dibagi empat adalah 144 kali empat, jadi jika Anda ingin menemukan 96 kali tiga, Anda harus dikalikan dengan dua belas.",
+       "misconception": "NA"
+      },
+      {
+       "text": "nomor terdekat yang saya dapatkan adalah 744 jadi saya pikir itu adalah",
+       "misconception": "NA"
+      },
+      {
+       "text": "i got 744 jadi saya pikir itu adalah",
+       "misconception": "NA"
+      }
+     ]
+    }
+   }
+  },
+  "109465": {
+   "correct_key": "A",
+   "by_option": {
+    "D": {
+     "False_Correct": [
+      {
+       "text": "0,9 dekat dengan 1 sehingga mungkin akan terjadi.",
+       "misconception": "NA"
+      },
+      {
+       "text": "b karena 0,9 dekat dengan 1 lubang",
+       "misconception": "NA"
+      }
+     ],
+     "False_Misconception": [
+      {
+       "text": "c2 sedikit lebih baik dari kelihatannya, karena meskipun 0.1% mati, stilll terlalu rendah.",
+       "misconception": "Scale"
+      },
+      {
+       "text": "Ada kemungkinan bahwa 1 akan terjadi dan karena 0,9 lebih dekat dengan 1 daripada yang pasti.",
+       "misconception": "Certainty"
+      },
+      {
+       "text": "tertentu karena ada 9 dari 10 kesempatan",
+       "misconception": "Certainty"
+      },
+      {
+       "text": "jawaban kamu adalah b. ini karena lebih pasti maka apa pun yang lain.",
+       "misconception": "Certainty"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "Ini adalah 9 dari 10 kali Anda akan menang. sehingga memiliki kesempatan yang baik!",
+       "misconception": "NA"
+      },
+      {
+       "text": "kemungkinan karena peristiwa yang tidak pasti terjadi tapi tidak mungkin karena di atas 0,5",
+       "misconception": "NA"
+      },
+      {
+       "text": "0,9 dari 1 sangat dekat dengan 1, sehingga akan lebih mungkin.",
+       "misconception": "NA"
+      },
+      {
+       "text": "karena itu paling dekat dengan 10 yang pasti",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "C": {
+     "False_Misconception": [
+      {
+       "text": "itu di bawah 0 sehingga tidak mungkin",
+       "misconception": "Scale"
+      },
+      {
+       "text": "Hal ini di bawah 0 sehingga tidak mungkin.",
+       "misconception": "Scale"
+      },
+      {
+       "text": "Karena kurang dari 0 maka tidak dapat dilakukan.",
+       "misconception": "Scale"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "itu tidak mungkin karena lebih dekat ke mustahil daripada tidak mungkin",
+       "misconception": "NA"
+      },
+      {
+       "text": "itu kesempatan yang sangat rendah itu terjadi",
+       "misconception": "NA"
+      },
+      {
+       "text": "ada kemungkinan sangat rendah itu terjadi.",
+       "misconception": "NA"
+      },
+      {
+       "text": "probabilitas dan koma desimal",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "A": {
+     "True_Correct": [
+      {
+       "text": "itu likeley karena ada 0,1 kesempatan itu tidak terjadi",
+       "misconception": "NA"
+      },
+      {
+       "text": "saya tahu ini karena ada 0.1 atau 10% kesempatan acara tidak terjadi karena itu kemungkinan.",
+       "misconception": "NA"
+      },
+      {
+       "text": "1 sudah pasti 0 tidak mungkin jadi 0,9 tidak akan mungkin",
+       "misconception": "NA"
+      },
+      {
+       "text": "i think itu akan ini karena 1 adalah yang paling mungkin dan paling mungkin adalah 0,9",
+       "misconception": "NA"
+      }
+     ],
+     "True_Neither": [
+      {
+       "text": "itu tidak akan yakin karena bahwa represeted oleh 1 tapi lebih dekat untuk bahkan kesempatan",
+       "misconception": "NA"
+      },
+      {
+       "text": "ada kemungkinan tinggi itu terjadi",
+       "misconception": "NA"
+      },
+      {
+       "text": "itu adalah 0,9 sehingga kemungkinan bahwa yang akan terjadi",
+       "misconception": "NA"
+      },
+      {
+       "text": "itu tidak pasti terjadi tapi mungkin akan terjadi",
+       "misconception": "NA"
+      }
+     ]
+    },
+    "B": {
+     "False_Misconception": [
+      {
+       "text": "Kemungkinannya kurang dari 50%.",
+       "misconception": "Scale"
+      },
+      {
+       "text": "Karena 0,9 bahkan belum sampai 1 dan 1 dengan dirinya sendiri adalah kesempatan kecil.",
+       "misconception": "Scale"
+      },
+      {
+       "text": "sangat tidak mungkin bahwa hal ini akan terjadi, tetapi tidak mungkin karena apa pun lebih tinggi dari 0.",
+       "misconception": "Scale"
+      },
+      {
+       "text": "itu bukan 50 dan itu adalah mumber kecil",
+       "misconception": "Scale"
+      }
+     ],
+     "False_Neither": [
+      {
+       "text": "karena thre adalah kesempatan yang sangat kecil",
+       "misconception": "NA"
+      },
+      {
+       "text": "Maksudku, ada kemungkinan, tapi itu tidak terlalu hugh karena ini bukan sesuatu yang bisa terjadi.",
+       "misconception": "NA"
+      },
+      {
+       "text": "bc ini kesempatan itu mungkin terjadi.",
+       "misconception": "NA"
+      },
+      {
+       "text": "peristiwa di bawah 1 adalah peristiwa yang sangat tidak mungkin terjadi.",
+       "misconception": "NA"
+      }
+     ]
+    }
+   }
+  }
+ }
+}

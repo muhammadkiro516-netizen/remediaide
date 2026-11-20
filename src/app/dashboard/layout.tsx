@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
 import { cn } from "@/lib/utils";
+import { JudgeBanner } from "@/components/teacher/JudgeBanner";
 import {
   Users,
   PlayCircle,
@@ -188,7 +189,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           </button>
         </header>
 
-        <main className="flex-1 p-4 sm:p-6">{children}</main>
+        <main className="flex-1 p-4 sm:p-6"><JudgeBanner />{children}</main>
       </div>
     </div>
   );

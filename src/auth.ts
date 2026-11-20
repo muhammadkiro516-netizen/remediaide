@@ -24,6 +24,7 @@ declare module "next-auth" {
     studentId?: string;
     sessionPinId?: string;
     anonymousLabel?: string;
+    isJudge?: boolean; // JUDGE_EMAILS (read-only judge account), computed server-side
   }
 }
 

@@ -18,7 +18,7 @@
 
 import type { NextAuthConfig } from "next-auth";
 import type { NextRequest } from "next/server";
-import { judgeBlock } from "./lib/auth/judge";
+import { isJudge, judgeBlock } from "./lib/auth/judge";
 
 // ─── Route Matchers ───────────────────────────────────────────────────────────
 
@@ -274,6 +274,7 @@ export const authConfig: NextAuthConfig = {
       session.studentId = token["studentId"] as string | undefined;
       session.sessionPinId = token["sessionPinId"] as string | undefined;
       session.anonymousLabel = token["anonymousLabel"] as string | undefined;
+      session.isJudge = isJudge(session.user?.email);
 
       if (session.user) {
         session.user.id = token.sub ?? "";
