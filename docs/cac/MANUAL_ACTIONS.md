@@ -27,7 +27,7 @@ Claude Code mengerjakan semua hal lainnya. Kerjakan item ini, centang, lalu keti
   2 guru matematika sebagai pelabel (±2 jam total per guru).
 
 ## Mendesak (19 Nov)
-- [~] **M16. KEAMANAN** — 20 Nov: pemilik memutuskan tidak mencabut token dan tidak mereset Neon (risiko diterima, `SECURITY_NOTES.md`). Tersisa langkah 3 (ganti password akun seed), dikerjakan Claude Code setelah `npx vercel login`. Rincian lama: (rinci: `docs/cac/SECURITY_NOTES.md`). Repo GitHub **publik**.
+- [x] **M16. KEAMANAN** — 20 Nov: token dan password Neon tidak diganti (keputusan pemilik, risiko diterima); password akun seed produksi **sudah diganti** dan password lama terbukti gagal (`SECURITY_NOTES.md`). Password baru: `~/Desktop/RAHASIA_password_seed.txt`. Rincian lama: (rinci: `docs/cac/SECURITY_NOTES.md`). Repo GitHub **publik**.
   1. **Cabut token GitHub** yang pernah ditempel di chat: github.com → Settings → Developer settings →
      Personal access tokens → pilih token itu → *Delete*. Untuk push berikutnya buat token baru (jangan tempel di chat).
   2. **Reset password Neon**: console.neon.tech → project → Branches → `main` → Roles → *Reset password*. Salin connection

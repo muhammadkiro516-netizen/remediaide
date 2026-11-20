@@ -34,6 +34,12 @@ yang pernah ditempel di chat diterima secara sadar. Keduanya tidak pernah masuk 
 berlaku: password akun seed di produksi diganti dengan `scripts/rotate-seed-passwords.ts` begitu kredensial database
 tersedia lewat `npx vercel env pull` (tanpa reset Neon).
 
+### Rotasi password akun seed — selesai 20 Nov 2026
+`scripts/rotate-seed-passwords.ts` dijalankan ke database produksi (Neon `neon-celeste-sail`, terverifikasi berisi 5 akun
+seed): 4 akun demo + 1 superadmin diganti dengan password acak baru yang hanya disimpan di
+`~/Desktop/RAHASIA_password_seed.txt` (izin 600, di luar repo). Uji lewat request login ke https://remediaide.vercel.app
+(`scripts/check_login.py`): password lama `demo123` dan `remedi123` **GAGAL** untuk kelima akun; password baru **OK**.
+
 ## 3. Cara mengganti password akun seed di produksi
 Sejak commit Bagian A, `prisma/seed.ts` membaca `SEED_PASSWORD` dan `SEED_SUPERADMIN_PASSWORD` dari environment
 (nilai lama hanya dipakai bila variabel kosong, dengan peringatan). Seed **tidak** mengubah akun yang sudah ada, jadi
